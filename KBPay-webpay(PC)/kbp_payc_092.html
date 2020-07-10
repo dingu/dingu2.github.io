@@ -1,0 +1,138 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-07-08          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연결된 기기</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>연결된 기기 1</h1> 
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_092"> <!-- 화면ID -->
+                <!-- 본문 -->
+
+                <div class="device-info">
+                    <dl>
+                        <dt>별칭</dt>
+                        <dd>별칭을 등록해주세요</dd>
+                    </dl>
+                    <dl>
+                        <dt>브라우저</dt>
+                        <dd>Chrome</dd>
+                    </dl>
+                    <dl>
+                        <dt>접속채널</dt>
+                        <dd>PC</dd>
+                    </dl>
+                    <dl>
+                        <dt>등록일시</dt>
+                        <dd>2018-11-14 12:12:12</dd>
+                    </dl>
+                    <dl>
+                        <dt>OS</dt>
+                        <dd>Window</dd>
+                    </dl>
+                    <dl>
+                        <dt>IP주소</dt>
+                        <dd>000.00.000.00</dd>
+                    </dl>
+                    <dl>
+                        <dt>국가</dt>
+                        <dd>대한민국</dd>
+                    </dl>
+                    <dl>
+                        <dt>최근로그인 일시</dt>
+                        <dd>2018-11-14 12:12:12</dd>
+                    </dl>
+                    <div class="btn-list">
+                        <button type="button" onclick="openLayer('layer01')"><span>별칭관리</span></button>
+                        <button type="button" onclick="openLayer('alert01', this)"><span>인증해제</span></button>
+                    </div>
+                </div>
+                
+                <!-- //본문 -->                
+
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div class="l-dim"></div>
+
+
+    <!-- 별칭관리 -->
+    <div class="l-pop" id="layer01">
+        <div class="l-pop-wrap">
+            <div class="l-header">
+                <h1>별칭관리</h1>
+
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+                
+                <div class="form_text mb8"> <!-- 오류 class :  'error' 추가 -->
+                    <label for="device-nickname">기기별칭</label>
+                    <input type="text" id="device-nickname" class="text" placeholder="" value="길동이방컴터">
+                </div>
+
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>확인</span></button> <!-- 활성화 시 disabled 제거 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 별칭관리 -->
+
+
+    <div class="l-pop-alert" id="alert01" style="display: none;">
+        <div class="alert-wrap">
+            <div class="alert-inner">
+                <p class="msg01 align-c">
+                    기기 정보를<br>인증해제 하시겠습니까?
+                </p>
+
+                <div class="bottom-group pb0">
+                    <div class="btn-group half">
+                        <button type="button" class="btn-type type02"><span>취소</span></button>
+                        <button type="button" class="btn-type type01" onclick="showToast('wrap', '기기 정보가 인증해제 되었습니다.');"><span>확인</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

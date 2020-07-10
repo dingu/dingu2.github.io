@@ -1,0 +1,109 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-15          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인덱스</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>본문</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            
+            <div class="contents kbp_payc_002"> <!-- 화면ID -->
+                <!-- 본문 -->
+
+
+                <!-- //본문 -->                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>확인</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+    <!-- Layer popup -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="layer01">
+        <div class="l-pop-wrap">
+            <div class="l-header">
+                <h1>KBpay 설치하기</h1>
+
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+                
+                <p class="txt">빠르고 간편한 KBpay<br>지금 바로 설치해서 사용해보세요</p>
+                
+                <ul class="app-guide">
+                    <li>
+                        <p class="qr"><img src="./images/etc/sample_qr.png" alt="QR"></p>
+                        <div class="market-box">
+                            <p class="img-area"><img src="./images/icon/ico_playstore.png" alt="Play Store"></p>
+                            <p class="tit-area">
+                                <span class="os">Android</span>
+                                <span class="market">Play Store</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="qr"><img src="./images/etc/sample_qr.png" alt="QR"></p>
+                        <div class="market-box">
+                            <p class="img-area"><img src="./images/icon/ico_appstore.png" alt="App Store"></p>
+                            <p class="tit-area">
+                                <span class="os">IOS</span>
+                                <span class="market">App Store</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" onclick=""><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+
+    <script>
+        openLayer('layer01');
+    </script>
+
+</body>
+</html>

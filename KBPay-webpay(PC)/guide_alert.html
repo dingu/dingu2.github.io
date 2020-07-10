@@ -1,0 +1,97 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+유현우             2020-06-16          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert sample</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container kbp_webp_000"> <!-- 화면ID -->
+            <!-- Header -->
+            <div class="header">
+                <h1>결제완료</h1>
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents">                
+                <!-- 본문 -->
+
+                <button type="button" onclick="openLayer('alert01', this);">하단 버튼 1개</button>
+                <button type="button" onclick="openLayer('alert02', this);">하단 버튼 2개</button>
+
+                <!-- //본문 -->                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>확인</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+
+    <!-- Layer popup -->
+    <div class="l-dim" style="display: block;"></div>
+
+    <div class="l-pop-alert" id="alert01" style="display: none;">
+        <div class="alert-wrap">
+            <div class="alert-inner">
+                <p class="msg01 align-c">
+                    환금성 결제 상품은<br>
+                    다른 결제수단을 이용해 주세요.
+                </p>
+
+                <div class="bottom-group pb0">
+                    <div class="btn-group">
+                        <button type="button" class="btn-type type01" onclick="closeLayer('alert01')"><span>확인</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="l-pop-alert" id="alert02">
+        <div class="alert-wrap">
+            <div class="alert-inner">
+                <p class="msg01 align-c">
+                    50만원이상의 결제 상품은<br>
+                    추가인증 이후 결제할 수 있습니다.
+                </p>
+
+                <div class="bottom-group pb0">
+                    <div class="btn-group half">
+                        <button type="button" class="btn-type type02" onclick="closeLayer('alert02')"><span>취소</span></button>
+                        <button type="button" class="btn-type type01" onclick="closeLayer('alert02')"><span>확인</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KB금융 오픈API 서비스 약관동의</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <header class="header">
+        <h1>KB금융 정보조회 약관동의</h1>
+        <button type="button" class="btn close">닫기</button>
+    </header>
+    <div class="container">
+        <div class="contents-wrap">
+
+            <!--contents-->
+            <div class="contents kbp_webp_068"> <!-- contents + 페이지별 class 삽입 -->                
+                <p class="top-text txt02">KB국민은행의 계좌 정보 조회를 위해<br>약관동의가 필요합니다.</p>
+
+                <!-- 약관동의 -->
+                <div class="agree-terms">
+                    <ul>
+                        <li>
+                            <div class="head">
+                                <label for="" class="f-chk checkAll"><input type="checkbox"><span>약관 전체동의</span></label>
+                                <button class="ico btn on" type="button" onclick="agreeCombo(this);">열고닫기</button>
+                            </div>
+                            <ul class="list">
+                                <li>
+                                    <label for="terms1" class="f-chk type02"><input id="terms1" name="terms1" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[필수] 개인(신용) 정보수집・이용・제공동의서 (KB금융 오픈API 서비스용)</a></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //약관동의 -->
+            </div>
+            <!--//contents-->
+
+            <!-- Bottom button area -->
+            <div class="bottom-btn-area">
+                <div class="resend-tip">
+                    <button type="button"><span>동의하지않기</span></button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn large yellow" type="button" disabled> <!-- 약관 전체 동의 시 disabled 삭제-->
+                        <span>확인</span>
+                    </button>
+                </div>
+            </div>
+            <!-- //Bottom button area -->
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

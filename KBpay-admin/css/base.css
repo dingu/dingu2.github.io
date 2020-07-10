@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+/* Reset style */
+* {word-break: keep-all; word-wrap: break-word; box-sizing: border-box; -webkit-box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, em, font, img, ins, q, s, small, strike, strong, sub, sup,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, thead, tbody, tfoot, tr, th, td {
+    margin: 0; padding: 0;
+}
+
+blockquote, button, fieldset, iframe {border: 0;}
+cite, em, u, address, i {font-style: normal;}
+img {border: 0; vertical-align: top;}
+caption, hr, legend {position: absolute; left: -9999px; top: -9999px;}
+li {list-style: none;}
+table {width: 100%; table-layout: fixed; border-collapse: collapse;}
+a:link, a:visited, a:hover, a:active {text-decoration: none;}
+
+html, body {height: 100%; overflow: hidden;}
+body {font-family: AppleGothic, 'Malgun Gothic', sans-serif;}
+
+/* Blind 숨김처리 */
+.blind {position: absolute; left: -9999px; top: -9999px;}
+
+/* Align 정렬 */
+.align-l {text-align: left !important;}
+.align-c {text-align: center !important;}
+.align-r {text-align: right !important;}
+.v-align-t {vertical-align: top;}
+.v-align-m {vertical-align: middle;}
+.v-align-b {vertical-align: bottom;}
+
+/* Length 길이 */
+.w-full {width: 100%;}
+.w-half {width: 50%;}
+.w-quarter {width: 25%;}
+.w-15 {width: 15px !important;}
+.w-70 {width: 70px !important;}
+.w-87 {width: 87px !important;}
+.w-95 {width: 95px !important;}
+.w-100 {width: 100px !important;}
+.w-120 {width: 120px !important;}
+.w-140 {width: 140px !important;}
+.w-150 {width: 150px !important;}
+.w-750 {width: 750px !important;}
+.w-1100 {width: 1100px !important;}
+
+/* Float */
+.fl {float: left;}
+.fr {float: right;}
+.cf {content: ""; display: block; clear: both;}
+
+/* Position */
+.disp-b {display: block;}
+.disp-i {display: inline-block;}
+.disp-ib {display: inline-block;}
+
+/* Form */
+input::-ms-clear {display:none;}
+input {padding:0; margin:0; background:transparent; border: 0; font-family: AppleGothic, 'Malgun Gothic', sans-serif;}
+input:focus {cursor: none; outline: none;}
+/* input type number 일때 우측 화살표 제거 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none;}
+input[type=text]:read-only,
+input[type=text]:disabled {background: #f8f8f8;}
+
+input::placeholder {color:#999 !important;}
+input:-ms-input-placeholder {color:#999 !important;}
+input::-webkit-input-placeholder {color:#999 !important;}
+
+textarea {font-family: AppleGothic, 'Malgun Gothic', sans-serif;}
+textarea::placeholder {color:#999;}
+textarea:-ms-input-placeholder {color:#999 !important;}
+textarea::-webkit-input-placeholder {color:#999 !important;}
+
+select {-webkit-appearance: none; -moz-appearance: none; appearance: none; font-family: AppleGothic, 'Malgun Gothic', sans-serif;}
+select::-ms-expand {display: none;}
+
+button > span {position: relative;}
+
+/* margin, padding 여백 */
+.mt5 {margin-top: 5px !important;}
+.mt10 {margin-top: 10px !important;}
+.mt20 {margin-top: 20px !important;}
+.mt30 {margin-top: 30px !important;}
+.mt40 {margin-top: 40px !important;}
+.mr5 {margin-right: 5px !important;}
+.mr10 {margin-right: 10px !important;}
+.mb10 {margin-bottom: 10px !important;}
+.ml5 {margin-left: 5px !important;}
+.ml10 {margin-left: 10px !important;}
+.ml15 {margin-left: 15px !important;}
+.ml20 {margin-left: 20px !important;}
+
+.pt10 {padding-top: 10px !important;}
+.pb10 {padding-bottom: 10px !important;}

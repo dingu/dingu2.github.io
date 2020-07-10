@@ -1,0 +1,92 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-15          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원정보 입력</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>본인인증</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_012"> <!-- 화면ID -->                
+                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>다음</span></button> <!--활성화 시 disabled 삭제-->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+<!-- Layer popup -->
+<div class="l-dim" style="display: block;"></div>
+
+<div class="l-pop" id="layer01">
+    <div class="l-pop-wrap kbp_payc_052">
+        <div class="l-header">
+            <h1>휴대폰 인증번호 문자 미수신 안내</h1>
+            <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+        </div>
+
+        <div class="l-contents">
+            <p class="txt01">
+                고객님의 휴대폰으로 인증번호 문자가 수신되지 않을 경우, 당사 문자알림번호인 1588-1688번 스팸문자 처리 여부를 확인해주시고 아래 내용 확인을 부탁드립니다.
+            </p>
+            <ul class="list-ico">
+                <li class="li1"><span class="strong">통신사 문의</span>휴대폰 이용정지 (발신정지, 수신정지 등) 상태일 경우</li>
+                <li class="li2"><span class="strong">휴대폰의 설정에서 확인</span>휴대폰 기기에서 스팸처리 된 경우(번호 차단, 문구 차단 등)</li>
+                <li class="li3"><span class="strong">해당 전화걸기 앱의 설정에서 확인</span>전화 앱(whowho, T전화 등)에서 스팸처리 된 경우</li>
+                <li class="li4"><span class="strong">휴대폰 인증 보호앱 설치</span>SKT 통신사의 휴대폰인증보호서비스 가입 고객으로 휴대폰 인증보호 앱을 미설치한 경우</li>
+            </ul>
+            <ul class="list-dot">
+                <li>KB국민카드 고객센터 : 1588-1688</li>
+                <li>홈페이지 : <a href="https://m.kbcard.com" target="_blank" title="국민카드 모바일 홈페이지 새창열림">https://m.kbcard.com</a> </li>
+            </ul>
+        </div>
+
+        <div class="l-bottom-group">
+            <div class="btn-group">
+                <button type="button" class="btn-type type01" onclick="closeLayer('layer01')"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Layer popup -->
+
+<script>
+    // 레이어 팝업 호출 함수
+    openLayer('layer01');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-05-22          최초작성
+이진규             2020-05-27          last-border 클래스 추가, 카드리스트 구조 변경
+이진규             2020-06-05          포인트리, 상품권포인트 이미지 변경
+이진규             2020-06-19          기프트카드 ~ 상품권 구조 변경
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제수단관리</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="header">
+            <h1>결제수단관리</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+
+        <div class="container">
+            <div class="contents-wrap">
+                
+                <div class="contents kbp_webp_026">
+                    
+                    
+                    <dl class="list-type04">
+                        <dt>
+                            <span>신용/체크카드</span>
+                            <a href="#" class="btn-more">더보기</a>
+                        </dt>
+                        <dd>
+                            <!-- 카드가 없는 경우 -->
+                            <p class="list-none">카드등록 후 결제할 수 있습니다.</p>
+                            <!-- 카드가 없는 경우 -->
+
+                            <!-- 05-27 카드리스트 구조 변경 -->
+                            <!-- <ul class="list">
+                                <li>
+                                    <div class="card-box">
+                                        <p class="img-area">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
+                                            </span>
+                                        </p>
+                                        <p class="txt-area">
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">Liiv M 체크카드</span>
+                                            <span class="card-type">신용</span>
+                                            <span class="card-num">9445 - 20** - **** - 4759</span>
+                                            <button type="button" class="btn-del">삭제</button>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-box">
+                                        <p class="img-area">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card02.png" alt="카카오페이 체크카드">
+                                            </span>
+                                        </p>
+                                        <p class="txt-area">
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">카카오페이 체크카드</span>
+                                            <span class="card-type">체크</span>
+                                            <span class="card-num">9445 - 20** - **** - 4759</span>
+                                            <button type="button" class="btn-del">삭제</button>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-box">
+                                        <p class="img-area">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card03.png" alt="펭수 노리 체크카드">
+                                            </span>
+                                        </p>
+                                        <p class="txt-area">
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">펭수 노리 체크카드</span>
+                                            <span class="card-type">기업개별</span>
+                                            <span class="card-num">9445 - 20** - **** - 4759</span>
+                                            <button type="button" class="btn-del">삭제</button>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul> -->
+                            <!-- // 05-27 카드리스트 구조 변경 -->
+
+                        </dd>
+                        <dt>
+                            <span>기업공용카드</span>
+                            <a href="#" class="btn-more">더보기</a>
+                        </dt>
+                        <dd>
+                            <!-- 카드가 없는 경우 -->
+                            <!-- <p class="list-none">카드등록 후 결제할 수 있습니다.</p> -->
+                            <!-- 카드가 없는 경우 -->
+
+                            <!-- 05-27 카드리스트 구조 변경 -->
+                            <ul class="list">
+                                <li>
+                                    <div class="card-box">
+                                        <p class="img-area">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
+                                            </span>
+                                        </p>
+                                        <p class="txt-area">
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">Liiv M 체크카드</span>
+                                            <span class="card-type">기업공용</span>
+                                            <span class="card-num">9445 - 20** - **** - 4759</span>
+                                            <button type="button" class="btn-del">삭제</button>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- // 05-27 카드리스트 구조 변경 -->
+                        </dd>
+                        <dt>
+                            <span>증권카드</span>
+                            <a href="#" class="btn-more">더보기</a>
+                        </dt>
+                        <dd>
+                            <!-- 카드가 없는 경우 -->
+                            <!-- <p class="list-none">카드등록 후 결제할 수 있습니다.</p> -->
+                            <!-- 카드가 없는 경우 -->
+
+                            <!-- 05-27 카드리스트 구조 변경 -->
+                            <ul class="list">
+                                <li>
+                                    <div class="card-box">
+                                        <p class="img-area">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card04.png" alt="Liiv M 체크카드">
+                                            </span>
+                                            
+                                        </p>
+                                        <p class="txt-area">
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">Liiv M 체크카드</span>
+                                            <span class="card-type">증권</span>
+                                            <span class="card-num">9445 - 20** - **** - 4759</span>
+                                            <button type="button" class="btn-del">삭제</button>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- // 05-27 카드리스트 구조 변경 -->
+                        </dd>
+                        <!-- 06-19 기프트카드, 은행계좌, 포인트리, 상품권포인트 구조 변경 -->
+                        <dt>
+                            <span>기프트카드</span>
+                            <a href="#" class="btn-more">더보기</a>
+                        </dt>
+                        <dd>
+                            <!-- 카드가 없는 경우 -->
+                            <!-- <p class="list-none">카드등록 후 결제할 수 있습니다.</p> -->
+                            <!-- 카드가 없는 경우 -->
+
+                            <!-- 05-27 카드리스트 구조 변경 -->
+                            <ul class="list">
+                                <li>
+                                    <div class="card-box">
+                                        <p class="img-area">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card05.png" alt="Liiv M 체크카드">
+                                            </span>
+                                            
+                                        </p>
+                                        <p class="txt-area">
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_local.png" alt="국내">기프트카드 5만원권</span>
+                                            <span class="card-type">기프트</span>
+                                            <span class="card-num">9445 - 20** - **** - 4759</span>
+                                            <button type="button" class="btn-del">삭제</button>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- // 05-27 카드리스트 구조 변경 -->
+                        </dd>
+                        <dt>
+                            <span>은행계좌</span>
+                            <a href="#" class="btn-more">더보기</a>
+                        </dt>
+                        <dd class="last-border"> <!-- // 05-27 last-border 클래스 추가 -->
+                            <!-- 계좌가 없는 경우 -->
+                            <!-- <p class="list-none">계좌등록 후 결제할 수 있습니다.</p> --> <!-- 06-19 은행계좌 없는 경우 메세지 수정 -->
+                            <!-- 계좌가 없는 경우 -->
+
+                            <!-- 05-27 카드리스트 구조 변경 -->
+                            <ul class="list">
+                                <li>
+                                    <div class="card-box">
+                                        <p class="img-area">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card02.png" alt="카카오페이 체크카드">
+                                            </span>
+                                            
+                                        </p>
+                                        <p class="txt-area">
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_local.png" alt="국내">직장인우대통장</span>
+                                            <span class="card-type">계좌</span>
+                                            <span class="card-num">9445 - 20** - **** - 4759</span>
+                                            <button type="button" class="btn-del">삭제</button>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-box">
+                                        <p class="img-area">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card03.png" alt="펭수 노리 체크카드">
+                                            </span>
+                                        </p>
+                                        <p class="txt-area">
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_local.png" alt="국내">KB스타통장</span>
+                                            <span class="card-type">계좌</span>
+                                            <span class="card-num">9445 - 20** - **** - 4759</span>
+                                            <button type="button" class="btn-del">삭제</button>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- // 05-27 카드리스트 구조 변경 -->
+
+                        </dd>
+                        <dt>
+                            <span>포인트리</span>
+                            <div class="btn-box">
+                                <button type="button">충전</button>
+                            </div>
+                        </dt>
+                        <dd>
+                            <!-- 05-27 카드리스트 구조 변경 -->
+                            <ul class="list">
+                                <li>
+                                    <div class="card-box point">
+                                        <p class="img-area">
+                                            <span class="img">
+                                                <img src="./images/etc/card_pointree.png" alt="포인트리"> <!-- // 06-05 포인트리 이미지 변경 -->
+                                            </span>
+                                            
+                                        </p>
+                                        <p class="txt-area">
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_local.png" alt="국내">포인트리</span>
+                                            <span class="card-point">잔액 : <em>50,000</em>P</span>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- // 05-27 카드리스트 구조 변경 -->
+                        </dd>
+                        <dt>
+                            <span>상품권포인트</span>
+                            <div class="btn-box">
+                                <button type="button">해피캐시충전</button>
+                                <button type="button">해피머니충전</button>
+                            </div>
+                        </dt>
+                        <dd>
+                            <!-- 05-27 카드리스트 구조 변경 -->
+                            <ul class="list">
+                                <li>
+                                    <div class="card-box voucher">
+                                        <p class="img-area">
+                                            <span class="img">
+                                                <img class="card-img" src="./images/etc/card_gift.png" alt="상품권포인트"> <!-- // 06-05 상품권포인트 이미지 변경 -->
+                                            </span>
+                                        </p>
+                                        <p class="txt-area">
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_local.png" alt="국내">상품권 포인트</span>
+                                            <span class="card-point">잔액 : <em>50,000</em>P</span>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- // 05-27 카드리스트 구조 변경 -->
+                        </dd>
+                        <!-- // 06-19 기프트카드, 은행계좌, 포인트리, 상품권포인트 구조 변경 -->
+
+                    </dl>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- dimmed -->
+    <div class="l-dim"></div>
+    <!-- // dimmed -->
+
+    <!-- popup -->
+    <div class="l-pop" id="pop01">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <span>보유중인 카드가 없습니다<br>직접 등록하시겠습니까?</span>
+                </p>
+            </div>
+            <div class="l-footer">
+                <div class="btn-group pt0 half">
+                    <button class="btn medium gray" type="button">취소</button>
+                    <button class="btn medium yellow" type="button">직접등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="l-pop" id="pop02">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <span>등록된 결제수단을<br>삭제하시겠습니까?</span>
+                </p>
+            </div>
+            <div class="l-footer">
+                <div class="btn-group pt0 half">
+                    <button class="btn medium gray" type="button">취소</button>
+                    <button class="btn medium yellow" type="button">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // popup -->
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-16          최초작성
+김수영             2020-06-30          주소입력 변경(input > textarea)
+이진규             2020-07-02          디자인 변경으로 인한 마크업 수정
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객정보 입력</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>카드사용등록</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_041"> <!-- 화면ID -->                
+                <!--form 입력 목록-->
+                <div class="form-wrap">
+                    <ul class="form-text-list">
+                        <li>
+                            <div class="cell">
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="id-number">주민등록번호 앞 7자리</label>
+                                    <!--준회원 > 직접입력-->
+                                    <input type="text" id="id-number" class="text" value="" placeholder="생년월일+성별" >
+                                    <!--KB회원 > 수정불가
+                                    <input type="text" id="id-number" class="text" value="202001-1&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" placeholder="생년월일+성별" disabled> -->
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="email">이메일</label>
+                                    <input type="text" class="text" id="email" value="test@test.co.kr">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cell ph-select">
+                                <div class="form_text select"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="ph">통신사</label>
+                                    <select name="ph" id="ph" class="text">
+                                        <option value="">선택</option>
+                                        <option value="" selected>KT</option>
+                                        <option value="">SKT</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="form_text ph"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="ph-number">휴대폰번호</label>
+                                    <input type="tel" class="text" id="ph-number" placeholder="휴대폰번호를 입력해주세요" value="01012345678">
+                                    <button class="ph-certi-btn" type="button">인증요청</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_text address clickable"> <!--//2020-06-30 class 추가 'address'--> <!-- 오류 class :  'error' 추가 -->
+                                <label for="address">자택주소</label>
+                                <textarea name="" id="address" class="text"  value="서울특별시 종로구 000로 00길 101동 1201호" placeholder="자택주소를 입력해주세요"></textarea> <!--//2020-06-30 input > textarea 로 변경-->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--//form 입력 목록-->
+
+                <div class="align-c pt16">
+                    <label for="cash" class="f-chk"><input type="checkbox" id="cash" name="cash"><span>소득공제 신청</span></label>
+                </div>
+
+                <div class="bottom-btn">
+                    <button type="button" class="btn-line" onclick="openLayer('layer01', this);">소득공제 신청 시 유의사항</button>
+                </div>
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>등록</span></button> <!--활성화 시 disabled 삭제-->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+<!-- Layer popup -->
+<div class="l-dim"></div>
+
+<div class="l-pop" id="layer01">
+    <div class="l-pop-wrap kbp_payc_052">
+        <div class="l-header">
+            <h1>소득공제 신청 시 유의사항</h1>
+            <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+        </div>
+
+        <div class="l-contents">
+            <!-- 07-02 디자인 변경으로 인한 마크업 수정 -->
+            <!-- <p class="txt01">
+                선불카드 사용등록 시 전자상거래 이용가능. <br><br>
+                소득공제 신청 시 신청 시점 이후 선불카드 사용 금액에 대한 소득공제 혜택이 적용됩니다. <br><br>
+                입력정보와 기존 KB국민카드 등록 정보가 다른 경우 현재 입력한 정보로 변경되오니 정확히 입력하여 주시기 바랍니다.
+            </p>   -->
+            <ul class="list-txt05">
+                <li>선불카드 사용등록 시 전자상거래 이용가능</li>
+                <li>소득공제 신청 시 신청 시점 이후 선불카드 사용금액에 대한 소득공제 혜택이 적용됩니다.</li>
+                <li>입력정보와 기존 KB국민카드 등록 정보가 다른 경우 현재 입력한 정보로 변경되오니 정확히 입력하여 주시기 바랍니다.</li>
+            </ul>
+            <!-- // 07-02 디자인 변경으로 인한 마크업 수정 -->
+        </div>
+
+        <div class="l-bottom-group">
+            <div class="btn-group">
+                <button type="button" class="btn-type type01"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Layer popup -->
+
+</body>
+</html>

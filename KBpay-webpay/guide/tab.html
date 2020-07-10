@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab - WEB Pay Style Guide</title>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="../util/swiper.min.css">
+    <script src="../util/swiper.min.js"></script>
+    <!-- //Swiper -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./guide.css">
+    <script src="../js/jquery-2.2.4.min.js"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div class="guide-wrap">
+        <header class="guide-header">
+            <h1>WEB Pay - HTML Guide</h1>
+            <ul class="guide-gnb">
+                <li><a href="index.html">기본규칙</a></li>
+                <li><a href="layout.html">Layout</a></li>
+                
+                
+                <li><a href="button.html">Button</a></li>
+                <li><a href="form.html">Form</a></li>
+                
+                
+                <li><a href="popup.html">Popup</a></li>
+                
+                <li><a class="active" href="tab.html">Tab</a></li>
+                <li><a href="etc.html">Etc</a></li>
+            </ul>
+        </header>
+
+        <div class="guide-container">
+            <h2 class="guide-tit">Tab</h2>
+
+            <h3 class="guide-tit02">일반</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <!-- Tab 영역 -->
+                    <div class="tab-ui tabUI">
+                        <ul class="tab-list type01 tabType01">
+                            <li><a class="active" href="#tabView01">Tab 1</a></li>
+                            <li><a href="#tabView02">Tab 2</a></li>
+                        </ul>
+
+                        <div class="tab-contents">
+                            <div class="tab-item" id="tabView01">내용1
+                            </div>
+                            <div class="tab-item" id="tabView02">내용2
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //Tab 영역 -->
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">Swiper</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <!-- Tab 영역 -->
+                    <div class="tab-ui-swiper tabUI">
+                        <ul class="tab-list type01 tabType02">
+                            <li><a class="active" href="">Tab 1</a></li>
+                            <li><a href="">Tab 2</a></li>
+                        </ul>
+
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">내용1
+                                </div>
+                                <div class="swiper-slide">내용2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //Tab 영역 -->         
+
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <script>
+        var swiper = new Swiper(".swiper-container");
+        $(".tab-ui-swiper .tab-list a").click(function(e) {
+            e.preventDefault();
+            $(this).parents(".tab-list").find("a").removeClass("active");
+            $(this).addClass("active");
+            swiper.slideTo($(this).parents(".tab-list").find("a").index(this));
+        });
+    </script>
+</body>
+</html>

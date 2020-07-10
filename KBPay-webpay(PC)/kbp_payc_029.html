@@ -1,0 +1,167 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-15          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신용/체크카드 등록</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <button type="button" class="btn-tyepe back">Go Back</button>
+                <h1>신용/체크카드 등록</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_029"> <!-- 화면ID -->                
+                <!--form 입력 목록-->
+                <div class="form-wrap">
+                    <ul class="form-text-list">
+                        <li>
+                            <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                <label for="card_number">카드번호</label>
+                                <input type="text" class="text card-number" name="card_number" id="card_number" maxlength="19" placeholder="카드번호 16자리"> 
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cell">
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="period">유효기간</label>
+                                    <input type="number" id="period" class="text" value="" placeholder="MM/YY">
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="cvc">CVC</label>
+                                    <input type="password" class="text" id="cvc" placeholder="3자리 숫자">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--//form 입력 목록-->
+
+                <div class="bottom-btn">
+                    <button type="button" class="btn-line" onclick="openLayer('layer01', this);">CVC(CVV)란?</button>
+                </div>
+
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>다음</span></button> <!--활성화 시 disabled 삭제-->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+    <!-- Layer popup -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="layer01">
+        <div class="l-pop-wrap kbp_payc_030">
+            <div class="l-header">
+                <h1>CVC(CVV))란?</h1>
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+                <div class="cvc-wrap">
+                    <div class="cvc-img">
+                        <img src="images/etc/cvc_pop_img.png" alt="">
+                    </div>
+                    <p>카드 뒷면 서명란 번호 중 뒤 3자리 숫자</p>
+                </div>
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" onclick=""><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+
+    <!-- alert popup -->
+    <div class="l-pop-alert" id="alert02" style="display: none;">
+        <div class="alert-wrap">
+            <div class="alert-inner">
+                <p class="msg01 align-c">결제수단으로 등록 가능한 카드가 아닙니다.<br>확인 후 다시 입력해주세요</p>
+                <!--<p class="msg01 align-c">카드정보가 일치하지 않습니다.<br>확인 후 다시 입력해주세요</p>-->
+
+                <div class="bottom-group pb0">
+                    <div class="btn-group">
+                        <button type="button" class="btn-type type01"><span>확인</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //alert popup -->
+
+    <script>
+        //카드번호 하이픈 자동 생성
+        var cardNumber = document.getElementById('card_number');
+        cardNumber.onkeyup = function(event){
+            event = event || window.event;
+            var _val = this.value.trim();
+            this.value = autoHypenCard(_val) ;
+        };
+        function autoHypenCard(str){
+            str = str.replace(/[^0-9]/g, '');
+            var tmp = '';
+            if( str.length < 4){
+                return str;
+            }
+            else if(str.length < 8){
+                tmp += str.substr(0, 4);
+                tmp += '-';
+                tmp += str.substr(4,4);
+                return tmp;
+            }else if(str.length < 12){
+                tmp += str.substr(0, 4);
+                tmp += '-';
+                tmp += str.substr(4, 4);
+                tmp += '-';
+                tmp += str.substr(8,4);
+                return tmp;
+            }else if(str.length < 17) {
+                tmp += str.substr(0, 4);
+                tmp += '-';
+                tmp += str.substr(4, 4);
+                tmp += '-';
+                tmp += str.substr(8,4);
+                tmp += '-';
+                tmp += str.substr(12,4);
+                return tmp;
+            }
+            return str;
+        }
+    </script>
+</body>
+</html>

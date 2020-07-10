@@ -1,0 +1,293 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-05-20          최초작성
+이진규             2020-05-22          alert 팝업 추가
+이진규             2020-05-26          아이콘 이미지 추가, 텍스트 수정
+이진규             2020-06-05          탭 타이틀 띄어쓰기 수정, 배너슬라이드 관련 소스 삭제
+이진규             2020-06-19          간편제휴결제 구조 변경, 텍스트 수정, 배너슬라이드 추가
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인덱스</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!-- slickJs -->
+    <link rel="stylesheet" href="./util/slick.css">
+    <script src="./util/slick.min.js"></script>
+    <!-- // slickJs -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <div class="contents-wrap">
+                
+                <div class="contents kbp_webp_001">
+                    <!-- Tab UI -->
+                    <div class="tab-ui tabUI">
+                        <ul class="tab-list type01 tabType01">
+                            <li><a class="active" href="#tabView01">KBpay 결제</a></li><!-- // 05-26 텍스트 수정 -->
+                            <li><a href="#tabView02">제휴 간편결제</a></li><!-- // 06-05 띄어쓰기 수정 -->
+                        </ul>
+
+                        <div class="tab-contents">
+                            <!-- Tab 1 -->
+                            <div class="tab-item" id="tabView01">
+                                <dl class="list-type01">
+                                    <dt>
+                                        <span class="icon"><img src="images/icon/ico_kbpay.png" alt="KBpay"></span><!-- // 05-26 아이콘 이미지 추가 -->
+                                    </dt>
+                                    <dd>
+                                        <span>APP으로 결제</span> <!-- // 06-19 텍스트 수정 -->
+                                        <a href="#">APP 설치하고 바로 결제</a>
+                                    </dd>
+                                </dl>
+                                <dl class="list-type01">
+                                    <dt>
+                                        <img class="icon" src="images/icon/ico_direct_pay.png" alt="직접결제">
+                                    </dt>
+                                    <dd>
+                                        <span>APP 없이 바로 결제</span>
+                                    </dd>
+                                </dl>
+                                <ul class="list-type01">
+                                    <li>
+                                        <p>카카오뱅크 / KB증권 / 한화투자증권</p>
+                                        <span>ISP 인증서로 결제하기</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //Tab 1 -->
+
+                            <!-- Tab 2 -->
+                            <div class="tab-item" id="tabView02">
+                                
+                                <!-- 06-19 제휴간편결제 구조 변경 -->
+                                <ul class="partner-payment">
+                                    <li>
+                                        <a href="#" class="samsungpay">
+                                            <p class="txt-area">결제비밀번호 / 지문인증 결제</p>
+                                            <p class="logo"><img src="./images/etc/logo_samsungpay.png" alt="삼성페이"></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="lgpay">
+                                            <p class="txt-area">결제비밀번호 / 지문인증 결제</p>
+                                            <p class="logo"><img src="./images/etc/logo_lgpay.png" alt="LG페이"></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="payco">
+                                            <p class="txt-area">페이코앱을 통해 결제</p>
+                                            <p class="logo"><img src="./images/etc/logo_payco.png" alt="페이코"></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="ars">
+                                            <p class="tit-area">ARS 인증</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- // 06-19 제휴간편결제 구조 변경 -->
+
+                            </div>
+                            <!-- //Tab 2 -->
+                        </div>
+                    </div>
+                    <!-- //Tab UI -->
+                    
+
+                    <!-- 06-19 배너 슬라이드 추가 -->
+                    <!-- 06-05 배너 슬라이드 삭제 -->
+                    <div class="banner-slide">
+                        <div class="slide-area">
+                            <a href="#" class="slide">
+                                <img src="./images/etc/sample_banner01.png" alt="KB국민 앱카드 리뉴얼 이벤트 참여만 해도 혜택 100%!">
+                            </a>
+                            <a href="#" class="slide">
+                                <img src="./images/etc/sample_banner02.png" alt="KB국민 앱카드 리뉴얼 이벤트 참여만 해도 혜택 100%!">
+                            </a>
+                            <a href="#" class="slide">
+                                <img src="./images/etc/sample_banner01.png" alt="KB국민 앱카드 리뉴얼 이벤트 참여만 해도 혜택 100%!">
+                            </a>
+                            <a href="#" class="slide">
+                                <img src="./images/etc/sample_banner02.png" alt="KB국민 앱카드 리뉴얼 이벤트 참여만 해도 혜택 100%!">
+                            </a>
+                            <a href="#" class="slide">
+                                <img src="./images/etc/sample_banner01.png" alt="KB국민 앱카드 리뉴얼 이벤트 참여만 해도 혜택 100%!">
+                            </a>
+                        </div>
+                        <div class="slide-nav">
+                            <button type="button" class="btn-active" aria-label="Pause">정지</button>
+                            <div class="slide-control">
+                                <button type="button" class="btn-prev" aria-label="Prev">이전</button>
+                                <p class="page">
+                                    <span class="showIndex"></span>
+                                    <span class="totalIndex"></span>
+                                </p>
+                                <button type="button" class="btn-next" aria-label="Next">다음</button>
+                            </div>
+                                
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+
+    <!-- dimmed -->
+    <div class="l-dim"></div>
+    <!-- // dimmed -->
+
+    <!-- bottom sheet layer -->
+    <div class="l-bottom" id="layerBottom01">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>KBpay 설치하기</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div class="l-contents kbp_webp_002">
+                <!-- 컨텐츠영역 -->
+
+                    <p class="txt">빠르고 간편한 KBpay<br>지금 바로 설치해서 사용해보세요</p>
+
+                    <ul class="market-list">
+                        <li class="aos">
+                            <p class="qr">
+                                <img src=""><!-- QR -->
+                            </p>
+                            <div class="tb-logo">
+                                <p class="logo"><img src="./images/etc/play_store.png" alt="Play Store"></p>
+                                <p class="txt-area">
+                                    <span class="os">Android</span>
+                                    <span class="market">Play Store</span>
+                                </p>
+                            </div>
+                            
+                        </li>
+                        <li class="ios">
+                            <p class="qr">
+                                <img src=""><!-- QR -->
+                            </p>
+                            <div class="tb-logo">
+                                <p class="logo"><img src="./images/etc/app_store.png" alt="App Store"></p>
+                                <p class="txt-area">
+                                    <span class="os">IOS</span>
+                                    <span class="market">App Store</span>
+                                </p>
+                            </div>
+                            
+                        </li>
+                    </ul>
+
+
+                <!-- //컨텐츠영역 -->
+            </div>
+        </div>
+    </div>
+    <!-- //bottom sheet layer -->
+
+    <!-- popup -->
+    <div class="l-pop" id="pop01">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <!-- 50만원 이상 결제 시 -->
+                    <span>
+                        50만원 이상의 결제 상품은<br>추가 인증 이후<br>결제할 수 있습니다.
+                    </span>
+                    <!-- // 50만원 이상 결제 시 -->
+
+                    <!-- 환금성 결제인 경우 -->
+                    <!-- <span>
+                        환금성 결제 상품은<br>
+                        추가 인증 이후 결제할 수 있습니다.
+                    </span> -->
+                    <!-- // 환금성 결제인 경우 -->
+                </p>
+            </div>
+            <div class="l-footer">
+                <!-- 50만원 이상 결제 시 -->
+                <div class="btn-group pt0 half">
+                    <button class="btn medium gray" type="button">취소</button>
+                    <button class="btn medium yellow" type="button">확인</button>
+                </div>
+                <!-- // 50만원 이상 결제 시 -->
+
+                <!-- 환금성 결제인 경우 -->
+                <!-- <div class="btn-group pt0">
+                    <button class="btn medium yellow" type="button">확인</button>
+                </div> -->
+                <!-- // 환금성 결제인 경우 -->
+            </div>
+        </div>
+    </div>
+    <!-- // popup -->
+
+
+    <!-- 06-19 슬라이드 스크립트 추가 -->
+    <script>
+        // Slider
+        var slideState = true;
+            var slideLength = $(".slide-area > a").length;
+
+
+            // 슬라이더 페이징
+            $(".slide-area").on('init reInit afterChange', function(event, slick, currentSlide){
+                var i = (currentSlide ? currentSlide : 0) + 1;
+                $(".slide-control .page .showIndex").text(i);
+                $(".slide-control .page .totalIndex").text(slideLength);
+            });
+
+            $(".slide-area").slick({
+                dots: false,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: true,
+                prevArrow: $(".banner-slide .slide-nav .btn-prev"),
+                nextArrow: $(".banner-slide .slide-nav .btn-next")
+            });
+
+            $(".slide-nav .btn-active").click(function(){
+                if( slideState == true ){
+                    $(this).addClass("play");
+                    $(this).attr("aria-label", "Play");
+                    $(this).text("재생");
+                    $(".slide-area").slick("slickPause");
+                    slideState = false;
+                }else{
+                    $(this).removeClass("play");
+                    $(this).attr("aria-label", "Pause");
+                    $(this).text("정지");
+                    $(".slide-area").slick("slickPlay");
+                    slideState = true;
+                }
+                
+            });
+
+            // 이벤트 1개일 때 슬라이드 종료
+            if( slideLength == 1 ){
+                $(".slide-area").slick("unslick");
+                $(".banner-slide .slide-nav").hide();
+            }
+
+    </script>
+    
+
+</body>
+</html>

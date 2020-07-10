@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Sheet - WEB Pay Style Guide</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./guide.css">
+    <script src="../js/jquery-2.2.4.min.js"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>Bottom Sheet : 레이어팝업으로 나중에 변경됨</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+                <div class="contents">
+
+                    <div class="btn-group">
+                        <button class="btn medium gray" type="button" onclick="opBotSheet('layerBottom01')"><span>Click</span></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bottom sheet layer -->
+    <div class="l-dim"></div>
+    <div class="l-bottom" id="layerBottom01">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>할부선택</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div class="l-contents">
+                <!-- 컨텐츠영역 -->
+
+                <ul class="bottom-list">
+                    <li><button type="button">일시불</button></li>
+                    <li><button type="button">1개월</button></li>
+                    <li><button type="button">2개월</button></li>
+                    <li><button type="button">3개월</button></li>
+                    <li><button type="button">4개월</button></li>
+                    <li><button type="button">5개월</button></li>
+                    <li><button type="button">6개월</button></li>
+                    <li><button type="button">7개월</button></li>
+                    <li><button type="button">8개월</button></li>
+                    <li><button type="button">9개월</button></li>
+                    <li><button type="button">10개월</button></li>
+                    <li><button type="button">11개월</button></li>
+                    <li><button type="button">12개월</button></li>
+                </ul>
+
+                <!-- //컨텐츠영역 -->
+            </div>
+
+            <div class="btn-group">
+                <button class="btn medium yellow" type="button" onclick="closeBotSheet('layerBottom01')"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- //bottom sheet layer -->
+
+    
+</body>
+</html>

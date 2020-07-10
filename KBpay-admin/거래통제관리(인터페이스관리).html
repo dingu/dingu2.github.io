@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>거래통제관리(인터페이스) - 업무포털</title>
+    <script src="./js/jquery-3.5.0.min.js"></script>
+    <!-- util -->
+    <link rel="stylesheet" href="./util/jquery.mCustomScrollbar.min.css">
+    <script src="./util/jquery.mCustomScrollbar.js"></script>
+    <link rel="stylesheet" href="./util/jquery-ui.min.css">
+    <script src="./util/jquery-ui.min.js"></script>
+    <!-- util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+    <a href="#contents" class="skip-navi">본문 바로가기</a>
+
+    <div class="wrap">
+        <div class="wrap-inner">
+            <!-- LEFT 영역 -->
+            <div class="left-side">
+                <div class="top">
+                    <h1><a href=""><img src="./images/logo.png" alt="KB국민카드"></a></h1>
+
+                    <div class="private-info">
+                        <strong>홍길동님 안녕하세요.</strong>
+                        <dl>
+                            <dt>접속시간</dt>
+                            <dd>2020년 05월 10일 16시 55분</dd>
+                        </dl>
+                        <dl>
+                            <dt>현재시간</dt>
+                            <dd>09:16:22</dd>
+                        </dl>
+                    </div>
+
+                    <div class="btn-area">
+                        <button type="button" class="btn-type type01" onclick=""><span>로그아웃</span></button>
+                        <button type="button" class="btn-type type01" onclick=""><span>내결재함</span></button>
+                    </div>
+                </div>
+
+                <!-- 주메뉴 -->
+                <div class="navigation">
+                    <div class="navi-wrap">
+                        <ul>
+                            <li><a href="" onclick="accordionCtr(this); return false;">회원관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">알림/전시 관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">결제관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">인증관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">제휴/가맹점 관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">앱 관리</a>
+                                <ul>
+                                    <li><a href="">앱 버전관리</a></li>
+                                    <li><a href="">앱오류조회</a></li>
+                                    <li><a href="">앱관리</a></li>
+                                    <li><a href="">메뉴관리</a></li>
+                                    <li><a href="">약관관리</a></li>
+                                    <li><a href="">분류별 약관설정 관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">통계</a>
+                                <ul>
+                                    <li><a href=""></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">시스템 관리</a>
+                                <ul>
+                                    <li><a href=""></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- //주메뉴 -->
+            </div>
+            <!-- //LEFT 영역 -->
+
+            <!-- 메인 영역 -->
+            <div class="container">
+                <div class="contents-wrap">
+                    <div class="contents" id="contents">
+                        <!-- 본문 start -->
+
+                        <div class="contents-top">
+                            <div class="left-col">
+                                <h2 class="tit01">거래통제관리</h2>
+                            </div>
+                            
+                            <div class="right-col">
+                                <span>KB PAY</span>
+                                <span>거래통제관리</span>
+                                <span>인터페이스 관리</span>
+                            </div>
+                        </div>
+
+                        <div class="tab-type01 two mt10">
+                            <ul>
+                                <li><a href="" class="on">인터페이스 관리</a></li>
+                                <li><a href="">거래코드 관리</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="article-top mt30">
+                            <div class="left-col">
+                                <h3 class="tit02">인터페이스 목록</h3>
+                            </div>
+                            
+                            <div class="right-col">
+                                <button type="button" class="btn-type type02"><span>초기화</span></button>                      
+                            </div>                            
+                        </div>
+
+                        <!-- 검색조건 -->
+                        <div class="condition mt10">
+                            <div class="left-col">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 180px;">
+                                        <col style="width: 300px;">
+                                        <col style="width: 180px;">
+                                        <col style="width: auto;">
+                                    </colgroup>
+                                    <tr>
+                                        <td class="tit"><span>인터페이스 ID</span></td>
+                                        <td>
+                                            <input class="f-ipt-txt w-full" type="text" name="" value="" placeholder="">
+                                        </td>
+                                        <td class="tit"><span>인터페이스명</span></td>
+                                        <td>
+                                            <input class="f-ipt-txt w-full" type="text" name="" value="" placeholder="">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tit"><span>수신거래코드</span></td>
+                                        <td>
+                                            <input class="f-ipt-txt w-full" type="text" name="" value="" placeholder="">
+                                        </td>
+                                        <td class="tit"><span>등록자</span></td>
+                                        <td>
+                                            <input class="f-ipt-txt w-full" type="text" name="" value="" placeholder="">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tit"><span>수신업무/기관</span></td>
+                                        <td>
+                                            <label for="" class="f-select w-full">
+                                                <select name="" id="">
+                                                    <option value="">선택</option>
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td class="tit"><span>송신업무/기관</span></td>
+                                        <td>
+                                            <label for="" class="f-select w-full">
+                                                <select name="" id="">
+                                                    <option value="">선택</option>
+                                                </select>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tit"><span>연계구분</span></td>
+                                        <td>
+                                            <label for="" class="f-select w-full">
+                                                <select name="" id="">
+                                                    <option value="">선택</option>
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td class="tit"><span>거래유형</span></td>
+                                        <td>
+                                            <label for="" class="f-select w-full">
+                                                <select name="" id="">
+                                                    <option value="">선택</option>
+                                                </select>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="right-col">
+                                <button type="button" class="btn-type" onclick=""><span>조회</span></button>
+                            </div>
+                        </div>
+                        <!-- 검색조건 -->
+
+                        <!-- 게시판 목록 -->
+                        <div class="board-top">
+                            <div class="left-col">
+                                <span class="result-count">
+                                    조회결과
+                                    <span>250/4580</span>
+                                </span>
+                            </div>
+
+                            <div class="right-col">
+                            </div>
+                        </div>
+
+                        <div class="board-list">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 55px">
+                                    <col style="width: 150px">
+                                    <col style="width: 110px">
+                                    <col style="width: auto;">
+                                    <col style="width: 60px;">
+                                    <col style="width: 93px;">
+                                    <col style="width: 70px;">
+                                    <col style="width: 80px;">
+                                    <col style="width: 90px;">
+                                    <col style="width: 70px;">
+                                </colgroup>
+                                <tr class="head">
+                                    <td rowspan="2">No</td>
+                                    <td rowspan="2">인터페이스 ID</td>
+                                    <td rowspan="2">거래코드</td>
+                                    <td rowspan="2">거래명</td>
+                                    <td rowspan="2">버전</td>
+                                    <td colspan="2">대응답 설정</td>                                    
+                                    <td colspan="3">타임아웃 설정</td>                                    
+                                </tr>
+                                <tr class="head">
+                                    <td>대응답</td>
+                                    <td>설정</td>
+                                    <td>타임아웃</td>
+                                    <td>적용타임아웃</td>
+                                    <td>설정</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>UBB_2_GADS0011</td>
+                                    <td>GAD0301541</td>
+                                    <td class="align-l">RF카드거래정지관리(조회)</td>
+                                    <td>1</td>
+                                    <td>미사용</td>
+                                    <td>
+                                        <button type="button" class="btn-type type03"><span>설정</span></button>
+                                    </td>
+                                    <td>25</td>
+                                    <td>미사용</td>
+                                    <td>
+                                        <button type="button" class="btn-type type03"><span>설정</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>UBB_2_GADS0011</td>
+                                    <td>GAD0301541</td>
+                                    <td class="align-l">RF카드거래정지관리(조회)</td>
+                                    <td>1</td>
+                                    <td>미사용</td>
+                                    <td>
+                                        <button type="button" class="btn-type type03"><span>설정</span></button>
+                                    </td>
+                                    <td>25</td>
+                                    <td>미사용</td>
+                                    <td>
+                                        <button type="button" class="btn-type type03"><span>설정</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>UBB_2_GADS0011</td>
+                                    <td>GAD0301541</td>
+                                    <td class="align-l">RF카드거래정지관리(조회)</td>
+                                    <td>1</td>
+                                    <td>미사용</td>
+                                    <td>
+                                        <button type="button" class="btn-type type03"><span>설정</span></button>
+                                    </td>
+                                    <td>25</td>
+                                    <td>미사용</td>
+                                    <td>
+                                        <button type="button" class="btn-type type03"><span>설정</span></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- 항목 빠진 case
+                        <div class="board-list">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 55px">
+                                    <col style="width: 150px">
+                                    <col style="width: 110px">
+                                    <col style="width: auto;">
+                                    <col style="width: 60px;">
+                                    <col style="width: 80px;">
+                                    <col style="width: 90px;">
+                                    <col style="width: 70px;">
+                                </colgroup>
+                                <tr class="head">
+                                    <td rowspan="2">No</td>
+                                    <td rowspan="2">인터페이스 ID</td>
+                                    <td rowspan="2">거래코드</td>
+                                    <td rowspan="2">거래명</td>
+                                    <td rowspan="2">버전</td>
+                                    <td colspan="3">타임아웃 설정</td>
+                                </tr>
+                                <tr class="head">
+                                    <td>타임아웃</td>
+                                    <td>적용타임아웃</td>
+                                    <td>설정</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>UBB_2_GADS0011</td>
+                                    <td>GAD0301541</td>
+                                    <td class="align-l">RF카드거래정지관리(조회)</td>
+                                    <td>1</td>                                    
+                                    <td>25</td>
+                                    <td>미사용</td>
+                                    <td>
+                                        <button type="button" class="btn-type type03"><span>설정</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>UBB_2_GADS0011</td>
+                                    <td>GAD0301541</td>
+                                    <td class="align-l">RF카드거래정지관리(조회)</td>
+                                    <td>1</td>                                    
+                                    <td>25</td>
+                                    <td>미사용</td>
+                                    <td>
+                                        <button type="button" class="btn-type type03"><span>설정</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>UBB_2_GADS0011</td>
+                                    <td>GAD0301541</td>
+                                    <td class="align-l">RF카드거래정지관리(조회)</td>
+                                    <td>1</td>                                    
+                                    <td>25</td>
+                                    <td>미사용</td>
+                                    <td>
+                                        <button type="button" class="btn-type type03"><span>설정</span></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div> -->
+
+                        <!-- //게시판 목록 -->
+                        
+                        <!-- scroll Top -->
+                        <div class="scrolltop">
+                            <button type="button"><span>TOP</span></button>
+                        </div>
+                        <!-- //scroll Top -->
+
+                        <!-- //본문 end -->
+                    </div>
+
+                    <!-- footer -->
+                    <div class="footer">
+                        <p>KB 국민카드 COPYRIGHT &copy; 2020 KB Kookmin Card. LTD ALL RIGHTS RESERVED</p>
+                    </div>
+                    <!-- //footer -->
+                </div>
+            </div>
+            <!-- //메인 영역 -->
+        </div>
+    </div>
+
+
+
+    <!-- 레이어팝업 -->
+
+    <!-- 
+        팝업 호출 함수 : openLayer('레이어팝업ID') => ex) openLayer('layer01');
+     -->
+
+
+    <div class="l-dim" style="display: block;"></div><!-- modal dim -->
+
+    <!-- 대응답 설정 팝업 -->
+    <div class="l-pop" id="layer01" style="display: block;">
+        <div class="l-pop-wrap">
+            <div class="l-header">
+                <h1>대응답 설정</h1>
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+    
+            <div class="l-container">
+                <div class="board-detail bdt-line">
+                    <table>
+                        <colgroup>
+                            <col style="width: 160px;">
+                            <col style="width: auto;">
+                            <col style="width: 160px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tr>
+                            <td class="tit">인터페이스 ID</td>
+                            <td>
+                                UBB_2_GACS00002
+                            </td>
+                            <td class="tit">버전</td>
+                            <td>
+                                2
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tit">인터페이스명</td>
+                            <td>
+                                생년월일본인인증SMS확인
+                            </td>
+                            <td class="tit">연계구분</td>
+                            <td>
+                                대내EAI
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tit">거래유형</td>
+                            <td>
+                                동기
+                            </td>
+                            <td class="tit">중계기관코드</td>
+                            <td>
+                                GAC
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tit">거래코드</td>
+                            <td>
+                                GAC0311141
+                            </td>
+                            <td class="tit">타임아웃</td>
+                            <td>
+                                25(초)
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="board-detail bdt-line mt30">
+                    <table>
+                        <colgroup>
+                            <col style="width: 160px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tr>
+                            <td class="tit">대응답 여부</td>
+                            <td>
+                                <label for="" class="f-select">
+                                    <select name="" id="">
+                                        <option value="">사용</option>
+                                        <option value="">미사용</option>
+                                    </select>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tit">대응답 데이터</td>
+                            <td>
+                                <textarea name="" cols="3" rows="10" title="내용" class="f-txtar w-full"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    
+            <div class="l-footer">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type02 w-95" onclick="closeLayer('layer01')"><span>취소</span></button>
+                    <button type="button" class="btn-type type02 w-95"><span>저장</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 타임아웃 설정 -->
+    <div class="l-pop" id="layer02" style="display: none;">
+        <div class="l-pop-wrap">
+            <div class="l-header">
+                <h1>타임아웃 설정</h1>
+                <button type="button" class="btn-type close" onclick="closeLayer('layer02')">닫기</button>
+            </div>
+    
+            <div class="l-container">
+                <div class="board-detail bdt-line">
+                    <table>
+                        <colgroup>
+                            <col style="width: 160px;">
+                            <col style="width: auto;">
+                            <col style="width: 160px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tr>
+                            <td class="tit">인터페이스 ID</td>
+                            <td>
+                                UBB_2_GACS00002
+                            </td>
+                            <td class="tit">버전</td>
+                            <td>
+                                2
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tit">인터페이스명</td>
+                            <td>
+                                외부 SSO 검증용 데이터
+                            </td>
+                            <td class="tit">연계구분</td>
+                            <td>
+                                대내EAI
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tit">거래유형</td>
+                            <td>
+                                비동기
+                            </td>
+                            <td class="tit">중계기관코드</td>
+                            <td>
+                                GAC
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tit">거래코드</td>
+                            <td>
+                                GAC0311141
+                            </td>
+                            <td class="tit">타임아웃</td>
+                            <td>
+                                <input class="f-ipt-txt w-70" type="text" name="" value="" placeholder="">
+                                (초)
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    
+            <div class="l-footer">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type02 w-95" onclick="closeLayer('layer02')"><span>취소</span></button>
+                    <button type="button" class="btn-type type02 w-95"><span>저장</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- //레이어팝업 -->
+
+    
+</body>
+</html>

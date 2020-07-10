@@ -1,0 +1,102 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-16          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드비밀번호 인증</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>카드비밀번호 인증</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_061 pass"> <!-- 화면ID -->                
+                <p class="txt02 align-c" style="display:none">카드 비밀번호 4자리 입력</p> <!--//비밀번호 4자리 받을 때-->
+                <p class="txt02 align-c">카드 비밀번호 앞 2자리 입력</p> <!--//비밀번호 2자리 받을 때-->
+
+                <div class="passWrap card-pass">
+                    <!--비밀번호 4자리 받을 때-->
+                    <div class="pass-input-match password" style="display:none">
+                        <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                        <div class="pass-input">
+                            <span class="dot yellow on">1</span> <!--활성화 class 'on'-->
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                        </div>
+                    </div>
+                    <!--//비밀번호 4자리 받을 때-->
+
+                    <!--비밀번호 2자리 받을 때-->
+                    <div class="pass-input-match password">
+                        <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                        <div class="pass-input">
+                            <span class="dot yellow"></span> <!--활성화 class 'on'-->
+                            <span class="dot yellow"></span>
+                            <span class="dot black"></span> <!--마킹 활성화 class 'black'-->
+                            <span class="dot black"></span>
+                        </div>
+                    </div>
+                    <!--//비밀번호 4자리 받을 때-->
+
+                </div>
+
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group" style="display: none;">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>다음</span></button> <!--활성화 시 disabled 삭제-->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+    <div class="l-dim"></div>
+    <!-- alert popup -->
+    <div class="l-pop-alert" id="alert02" style="display: none;">
+        <div class="alert-wrap">
+            <div class="alert-inner">
+                <p class="msg01 align-c">카드번호가 일치하지 않습니다.</p>
+                <!-- 오류 횟수에 따른 메시지
+                <p class="msg01 align-c">카드번호가 일치하지 않습니다.<br>[비밀번호 오류(3회)입니다.]</p>
+                <p class="msg01 align-c">카드번호 오류 횟수(3회)를 초과하여 이용이 제한되었습니다.<br>잠김해제 후 이용 바랍니다.<br><br>카드 잠김해제 방법<br>KB국민카드 앱 또는 웹사이트의 "비밀번호 오류횟수 해제" 메뉴에서 가능합니다.</p>
+            -->
+
+                <div class="bottom-group pb0">
+                    <div class="btn-group">
+                        <button type="button" class="btn-type type01"><span>확인</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //alert popup -->
+
+</body>
+</html>

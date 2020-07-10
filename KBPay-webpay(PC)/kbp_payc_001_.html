@@ -1,0 +1,254 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-15          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인덱스</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    <link rel="stylesheet" href="./util/slick.css">
+    <script src="./util/slick.min.js"></script>    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="index">
+            
+            <div class="contents kbp_payc_001"> <!-- 화면ID -->
+                <!-- 본문 -->
+
+                <!-- Tab UI -->
+                <div class="tab-ui tabUI">
+                    <ul class="tab-list type01 tabType01">
+                        <li><a class="active" href="#tabView01">KBpay 결제</a></li>
+                        <li><a href="#tabView02">제휴간편결제</a></li>
+                    </ul>
+
+                    <div class="tab-contents">
+                        <!-- Tab 1 -->
+                        <div class="tab-item" id="tabView01">
+                            <div class="btn-border">
+                                <button type="button" onclick="openLayer('layer01', this);"><span>APP 설치하고 바로 결제</span></button>
+                            </div>
+                            <ul class="payment-box">
+                                <li>
+                                    <a href="#">
+                                        <p class="icon"><img src="./images/icon/ico_kbpay_app.png" alt="APP으로 결제"></p>
+                                        <p class="tit-area"><strong>APP</strong>으로<br>결제</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="icon"><img src="./images/icon/ico_direct_pay.png" alt="APP 없이 결제"></p>
+                                        <p class="tit-area"><strong>APP</strong>없이<br>바로 결제</p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="isp-payment-box">
+                                <button type="button"><span>ISP 인증서로 결제</span></button>
+                                <p class="txt-area">카카오뱅크 / KB증권 / 한화투자증권</p>
+                            </div>
+
+                        </div>
+                        <!-- //Tab 1 -->
+
+                        <!-- Tab 2 -->
+                        <div class="tab-item" id="tabView02">
+                            <ul class="partner-payment">
+                                <li>
+                                    <a href="#" class="samsungpay">
+                                        <p class="txt-area">결제비밀번호 / 지문인증 결제</p>
+                                        <p class="logo-area"><img src="./images/etc/logo_samsungpay.png" alt="삼성페이"></p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="lgpay">
+                                        <p class="txt-area">결제비밀번호 / 지문인증 결제</p>
+                                        <p class="logo-area lgpay"><img src="./images/etc/logo_lgpay.png" alt="LG페이"></p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="payco">
+                                        <p class="txt-area">페이코 앱을 통해 결제</p>
+                                        <p class="logo-area"><img src="./images/etc/logo_payco.png" alt="PAYCO"></p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="ars">
+                                        <p class="tit-area">ARS 인증</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //Tab 2 -->
+                    </div>
+                </div>
+                <!-- //Tab UI -->
+
+                <!-- //본문 -->                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                
+                <div class="banner-slide">
+                    <div class="slide-area">
+                        <a href="#" class="slide">
+                            <img src="./images/etc/sample_banner.png" alt="KB국민 앱카드 리뉴얼 이벤트 참여만 해도 혜택 100%!">
+                        </a>
+                        <a href="#" class="slide">
+                            <img src="./images/etc/sample_banner.png" alt="KB국민 앱카드 리뉴얼 이벤트 참여만 해도 혜택 100%!">
+                        </a>
+                    </div>
+                    <div class="slide-nav">
+                        <button type="button" class="btn-active" aria-label="Pause">정지</button>
+                        <div class="slide-control">
+                            <button type="button" class="btn-prev" aria-label="Prev">이전</button>
+                            <p class="page">
+                                <span class="showIndex"></span>
+                                <span class="totalIndex"></span>
+                            </p>
+                            <button type="button" class="btn-next" aria-label="Next">다음</button>
+                        </div>
+                            
+                    </div>
+                </div>
+
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+    <!-- Layer popup -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="layer01">
+        <div class="l-pop-wrap">
+            <div class="l-header">
+                <h1>KBpay 설치하기</h1>
+
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+                
+                <p class="txt">빠르고 간편한 KBpay<br>지금 바로 설치해서 사용해보세요</p>
+                
+                <ul class="app-guide">
+                    <li>
+                        <p class="qr"><img src="./images/etc/sample_qr.png" alt="QR"></p>
+                        <div class="market-box">
+                            <p class="img-area"><img src="./images/icon/ico_playstore.png" alt="Play Store"></p>
+                            <p class="tit-area">
+                                <span class="os">Android</span>
+                                <span class="market">Play Store</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="qr"><img src="./images/etc/sample_qr.png" alt="QR"></p>
+                        <div class="market-box">
+                            <p class="img-area"><img src="./images/icon/ico_appstore.png" alt="App Store"></p>
+                            <p class="tit-area">
+                                <span class="os">IOS</span>
+                                <span class="market">App Store</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" onclick=""><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+
+    <script>
+        $(document).ready(function(){
+            // Tab
+            $(".tabType01 li a").click(function(e) {
+                e.preventDefault();
+                $(this).parents(".tab-list").find("a").removeClass("active");
+                $(this).addClass("active");
+                $(this).parents(".tabUI").find(".tab-item").hide();
+                $($(this).attr("href")).show();
+            });
+
+
+            // Slider
+            var slideState = true;
+            var slideLength = $(".slide-area > a").length;
+
+
+            // 슬라이더 페이징
+            $(".slide-area").on('init reInit afterChange', function(event, slick, currentSlide){
+                var i = (currentSlide ? currentSlide : 0) + 1;
+                $(".slide-control .page .showIndex").text(i);
+                $(".slide-control .page .totalIndex").text(slideLength);
+            });
+
+            $(".slide-area").slick({
+                dots: false,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: true,
+                prevArrow: $(".banner-slide .slide-nav .btn-prev"),
+                nextArrow: $(".banner-slide .slide-nav .btn-next")
+            });
+
+            $(".slide-nav .btn-active").click(function(){
+                if( slideState == true ){
+                    $(this).addClass("play");
+                    $(this).attr("aria-label", "Play");
+                    $(this).text("재생");
+                    $(".slide-area").slick("slickPause");
+                    slideState = false;
+                }else{
+                    $(this).removeClass("play");
+                    $(this).attr("aria-label", "Pause");
+                    $(this).text("정지");
+                    $(".slide-area").slick("slickPlay");
+                    slideState = true;
+                }
+                
+            });
+
+            // 이벤트 1개일 때 슬라이드 종료
+            if( slideLength == 1 ){
+                $(".slide-area").slick("unslick");
+                $(".banner-slide .slide-nav").hide();
+            }
+
+
+            
+        });
+        
+        
+
+    </script>
+
+</body>
+</html>

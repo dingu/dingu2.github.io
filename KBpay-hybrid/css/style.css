@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+/* Reset style */
+* {word-break: keep-all; word-wrap: break-word; box-sizing: border-box; -webkit-box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, em, font, img, ins, q, s, small, strike, strong, sub, sup,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, thead, tbody, tfoot, tr, th, td {
+    margin: 0; padding: 0;
+}
+
+blockquote, button, fieldset, iframe {border: 0;}
+cite, em, u, address, i {font-style: normal;}
+img {border: 0; vertical-align: top;}
+caption, hr, legend {position: absolute; left: -9999px; top: -9999px;}
+li {list-style: none;}
+table {width: 100%; table-layout: fixed; border-collapse: collapse;}
+a:link, a:visited, a:hover, a:active {text-decoration: none;}
+
+
+/* Layout */
+.cts-wrap {padding: 32px 16px 16px 16px;}
+
+.tb-layout01 {border-top: 1px solid #eee;}
+.tb-layout01 dl {display: table; width: 100%; border-bottom: 1px solid #eee;}
+.tb-layout01 dl > * {display: table-cell; width: auto; color: #424142; line-height: 24px; letter-spacing: -0.4px; vertical-align: middle;}
+.tb-layout01 dl dt {font-size: 15px; text-align: center; background: #f8f8f8;}
+.tb-layout01 dl dt.lb-90 {width: 90px;}
+.tb-layout01 dl dd {padding: 8px 9px; font-size: 15px;}
+@media only screen and (max-width: 320px) {
+    .tb-layout01 dl > * {line-height: 20px;}
+    .tb-layout01 dl dt {font-size: 14px;}
+    .tb-layout01 dl dd {font-size: 14px;}
+}
+
+
+/* Blind 숨김처리 */
+.blind {position: absolute; left: -9999px; top: -9999px;}
+
+/* Form */
+input[type="number"] {appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {margin: 0; -webkit-appearance: none;}
+input[type="number"]::-ms-clear {display: none;}
+input[type="text"]::-ms-clear {display: none;}
+
+select {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+select::-ms-expand {display: none;}
+
+/* Button */
+.btn-type {display: inline-block; background: none;}
+
+.btn-combo {position: relative; margin-top: 16px; padding: 0 16px;}
+.btn-combo::after {content: ""; display: block; position: absolute; right: 24px; top: 8px; width: 24px; height: 24px; background: url(../images/ico_arrow_down.png) no-repeat; background-size: contain;}
+.btn-combo button {display: block; width: 100%; height: 40px; padding-left: 16px; border: 1px solid #ddd; border-radius: 8px; color: #222; font-size: 14px; font-weight: 500; text-align: left; line-height: 40px; background: none;}
+
+/* Layer */
+.l-dim {z-index: 10; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #000000; opacity: 0.75;}
+.l-pop {z-index: 11; position: fixed; left: 0; bottom: 0; width: 100%;}
+.bottom-sheet {padding: 16px 0 0 0; border-radius: 16px 16px 0 0; background: #fff;}
+.bottom-sheet > ul {padding: 16px 0;}
+.bottom-sheet > ul > li a {display: block; height: 48px; padding: 0 16px; color: #666; font-size: 16px; line-height: 48px;}
+.l-head {position: relative; width: 100%; height: 56px; padding-top: 12px;} 
+.l-head h1 {height: 32px; padding: 0 56px 0 16px; color: #222; font-size: 20px; line-height: 32px; letter-spacing: -0.4px;}
+.l-head .close {display: block; position: absolute; right: 0; top: 0; width: 56px; height: 56px; background: url(../images/ico_close.png) no-repeat center; background-size: 24px;}
+
+/* Tab */
+.tab-list {position: relative; width: 100%; margin-top: 28px; padding: 0 16px;}
+.tab-list::after {content: ""; display: block; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: #ddd;}
+.tab-list ul {display: table; width: 100%;}
+.tab-list ul::after {content: ""; display: block; clear: both;}
+.tab-list ul li {float: left;}
+.tab-list ul li a {display: block; position: relative; height: 48px; padding: 0 15px; color: #888; font-size: 16px; line-height: 48px; letter-spacing: -0.4px;}
+.tab-list ul li a.on {color: #222; font-weight: 700;}
+.tab-list ul li a.on::after {content: ""; display: block; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: #222; z-index: 1;}
+
+.tab-list.three ul li {width: 33.33%;}
+.tab-list.three ul li a {padding: 0; text-align: center;}
+@media only screen and (max-width: 320px) {
+    .tab-list.three ul li a {font-size: 13px;}
+}
+
+/* Title */
+.tit01 {color: #222; font-size: 16px; font-weight: 700; line-height: 24px; letter-spacing: -0.4px;}
+
+/* Attention */
+.attention01 {position: relative; padding-left: 15px; color: #666; font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: -0.4px;}
+.attention01::before {content: "※"; position: absolute; left: 0; top: 0px;}
+
+/* Text */
+.txt01 {color: #666; font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: -0.4px;}
+
+/* Example */
+.example01 {color: #666; font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: -0.4px;}
+.example01 dd {padding-left: 42px;}
+
+/* Icon list */
+.ico-list {margin-top: 8px;}
+.ico-list ul {width: 336px; margin: 0 auto;}
+.ico-list ul::after {content: ""; display: block; clear: both;}
+.ico-list ul li {float: left; margin: 16px 12px 0 12px; vertical-align: top;}
+.ico-list.barCode ul li {display: none;}
+.ico-list ul li:nth-child(3n) {margin-right: 0;}
+.ico-list ul li a {display: block; width: 88px; height: 88px; border: 1px solid #eee; border-radius: 50%; pointer-events: none;}
+.ico-list ul li a img {max-width: 100%;}
+@media (max-width: 320px) {
+    .ico-list ul {width: 300px;}
+    .ico-list ul li {margin: 16px 6px 0 6px;}
+}
+
+/* Space */
+.mt16 {margin-top: 16px !important;}
+.mt24 {margin-top: 24px !important;}
+.mt32 {margin-top: 32px !important;}
+
+.kbp_alph_005 .img-sample {height: 246px; margin: 8px -16px 0; background: #f8f8f8 url(../images/img_kbp_alph_005.png) center top no-repeat; background-size: auto 246px;}
+.kbp_alph_005 .tb-layout01 {margin-top: 16px;}
+
+.kbp_cust_006 ul {padding: 0 16px;}
+.kbp_cust_006 ul li {margin-top: 32px; color: #666; font-size: 14px; line-height: 20px;}
+.kbp_cust_006 ul li span {display: block; margin-top: 8px;}
+.kbp_cust_006 ul li strong {display: block; height: 24px; color: #222; font-size: 16px; font-weight: 700; line-height: 24px;}
+

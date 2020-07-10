@@ -1,0 +1,93 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-15          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(팝업)실명확인 오류 안내</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>본인인증</h1>
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_050">  <!-- 화면ID -->
+                
+                본문
+
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>등록</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+    <!-- Layer popup -->
+    <div class="l-dim" style="display: block;"></div>
+
+    <div class="l-pop" id="layer01" style="display: block;">
+        <div class="l-pop-wrap">
+            <div class="l-header">
+                <h1>실명확인 오류 안내</h1>
+
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+                
+                <p class="txt08">입력하신 주민번호와 성명이 일치하지 않습니다.</p>
+
+                <dl class="list-txt01">
+                    <dt>주민번호와 성명을 바르게 입력하였는데 본 에러메세지가 뜨는 경우는 다음과 같습니다.</dt>
+                    <dd>실명확인에 사용되는 정보는 재정경제부로부터 신용조회업을 허가 받은 SCI평가정보(주)의 DB(금융권 정보와 SIREN24회원사인 비금융권으로부터 취합되는 정보)를 사용합니다.</dd>
+                    <dd>취합된 정보 중 입력하는 과정에서 주민번호 및 성명 정보를 잘못 기입하는 경우가 있습니다.<br>(예) 라가명 → 나가명, 나불량 → 나불양, 홍길동 → 홍길도</dd>
+                    <dt>실명확인방법</dt>
+                    <dd>서울신용평가정보(주) SIREN24로 문의하시면 정보 수정이 진행됩니다.</dd>
+                </dl>
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <a href="http://www.siren24.com/servlet/sCi_realname3" class="btn-line" target="_blank">SIREN24 실명확인 바로가기</a>
+                    <button type="button" class="btn-type type01" onclick=""><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+
+    <script>
+        openLayer('layer01');
+    </script>
+
+</body>
+</html>
