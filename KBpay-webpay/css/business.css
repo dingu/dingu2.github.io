@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* 주소검색목록 */
+/* 주소검색 */
 .addr-list {padding-top: 30px;}
 .addr-list ul li {padding: 16px 0; border-bottom: 1px solid #eee;}
 .addr-list ul li a {display: block;}
@@ -8,6 +8,25 @@
 .addr-list .post-num {color: #888; font-size: 14px; font-weight: 400; letter-spacing: -0.2px;}
 .addr-list .addr-new {margin-top: 8px; color: #222; font-size: 16px; font-weight: 500; letter-spacing: -0.4px; text-decoration: underline;}
 .addr-list .addr-old {margin-top: 4px; color: #666; font-size: 14px; font-weight: 500; letter-spacing: -0.4px; line-height: 20px;}
+.addr-list .no-data {padding: 66px 0 70px 0; color: #888; font-size: 14px; font-weight: 400; letter-spacing: -0.2px; line-height: 20px; text-align: center;}
+.addr-list .no-data::before {content: ""; display: block; width: 48px; height: 48px; margin: 0 auto; padding-bottom: 8px; background: url(../images/icon/ico_nodata.png) no-repeat; background-size: contain;}
+@media only screen and (max-width: 320px) {
+    .addr-list .no-data {padding: 30px 0;}
+}
+
+.addr-top {padding: 16px 0; border-bottom: 1px solid #ddd;}
+.addr-top span {display: block;}
+.addr-top .post-num {color: #888; font-size: 14px; font-weight: 400; letter-spacing: -0.2px;}
+.addr-top .addr-new {margin-top: 8px; color: #222; font-size: 16px; font-weight: 500; letter-spacing: -0.4px; line-height: 24px;}
+.addr-top .addr-old {margin-top: 4px; color: #666; font-size: 14px; font-weight: 500; letter-spacing: -0.4px; line-height: 20px;}
+
+.addr-list-detail dl {display: table; width: 100%;}
+.addr-list-detail dl > * {display: table-cell; vertical-align: middle;}
+.addr-list-detail dl dt {width: 40px;}
+.addr-list-detail dl dt span {display: block;}
+.addr-list-detail dl dd {padding: 16px 0;}
+.addr-list-detail .addr-new {color: #888; font-size: 14px; line-height: 20px; letter-spacing: -0.2px;}
+.addr-list-detail .addr-old {color: #666; font-size: 16px; line-height: 24px; letter-spacing: -0.4px;}
 
 /* KB Pay 결제 */
 .cd-change .cd-name {margin-top: 36px;}

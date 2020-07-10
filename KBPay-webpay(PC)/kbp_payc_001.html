@@ -152,12 +152,8 @@
 
                     </div>
                     <div class="slide-nav">
-                        <div class="slide-control">
-                            <p class="page">
-                                <span class="showIndex"></span>
-                                <span class="totalIndex"></span>
-                            </p>
-                        </div>
+                        <span class="showIndex"></span>
+                        <span class="totalIndex"></span>
                         <button type="button" class="btn-active" aria-label="Pause">정지</button>
                     </div>
                 </div>
@@ -239,8 +235,8 @@
             // 슬라이더 페이징
             $(".slide-area").on('init reInit afterChange', function(event, slick, currentSlide){
                 var i = (currentSlide ? currentSlide : 0) + 1;
-                $(".slide-control .page .showIndex").text(i);
-                $(".slide-control .page .totalIndex").text(slideLength);
+                $(".slide-nav .showIndex").text(i);
+                $(".slide-nav .totalIndex").text(slideLength);
             });
 
             $(".slide-area").slick({
@@ -248,9 +244,7 @@
                 infinite: true,
                 autoplay: true,
                 autoplaySpeed: 4000,
-                arrows: true,
-                prevArrow: $(".banner-slide .slide-nav .btn-prev"),
-                nextArrow: $(".banner-slide .slide-nav .btn-next")
+                arrows: false
             });
 
             $(".slide-nav .btn-active").click(function(){

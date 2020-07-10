@@ -81,7 +81,7 @@
                                                     <dd>2018-11-14 12:12:12</dd>
                                                 </dl>
                                                 <div class="btn-list">
-                                                    <button type="button"><span>별칭관리</span></button>
+                                                    <button type="button" onclick="opBotSheet('pop02', this);"><span>별칭관리</span></button>
                                                     <button type="button"><span>인증해제</span></button>
                                                 </div>
                                             </li>
@@ -139,13 +139,9 @@
                                         <li>브라우저를 업데이트하거나 캐시를 삭제하는 경우, 해당 브라우저에 등록된 정보는 삭제되므로 재등록 후 이용 바랍니다.</li>
                                     </ul>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
-                    
-                    
 
                 </div>
 
@@ -176,12 +172,11 @@
     <!-- // popup -->
 
     <!-- layerpopup -->
-    <div class="l-dim"></div>
-    <div class="l-bottom" id="layerBottom01">
+    <div class="l-bottom" id="pop02">
         <div class="l-bottom-wrap">
             <div class="head">
                 <h1>별칭관리</h1>
-                <button type="button" class="close">닫기</button>
+                <button type="button" class="close" onclick="closeBotSheet('pop02')">닫기</button>
             </div>
             <div class="l-contents kbp_webp_094">
                 <!-- 컨텐츠영역 -->
