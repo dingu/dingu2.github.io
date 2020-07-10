@@ -149,8 +149,9 @@
                         <div class="slide-nav">
                             <span class="showIndex"></span>
                             <span class="totalIndex"></span>
-                            <button type="button" class="btn-active" aria-label="Pause">정지</button>
                         </div>
+                        <button type="button" class="btn-active" aria-label="Pause">정지</button>
+
                     </div>
                     
 
@@ -181,7 +182,7 @@
                 arrows: false
             });
 
-            $(".slide-nav .btn-active").click(function(){
+            $(".banner-slide .btn-active").click(function(){
                 if( slideState == true ){
                     $(this).addClass("play");
                     $(this).attr("aria-label", "Play");
@@ -202,6 +203,7 @@
             if( slideLength == 1 ){
                 $(".slide-area").slick("unslick");
                 $(".banner-slide .slide-nav").hide();
+                $(".banner-slide .btn-active").hide();
             }
 
     </script>
