@@ -260,9 +260,9 @@
         /*
             Bottom Sheet
         */
-        // console.log( "window - 16 : " + ($(window).height() - 16) );
-        // console.log( ".l-bottom-wrap .head : " + $(".l-bottom-wrap .head").outerHeight() );
-        // console.log( ".l-bottom .btn-group : " + $(".l-bottom .btn-group").outerHeight() );
+        console.log( "window : " + ($(window).height()) );
+        console.log( ".l-bottom-wrap .head : " + $(".l-bottom-wrap .head").outerHeight() );
+        console.log( ".l-bottom .btn-group : " + $(".l-bottom .btn-group").outerHeight() );
 
         if ($(".l-bottom").length > 0) {
             // 레이어마다 각각의 스크롤 되는 높이를 설정
@@ -273,11 +273,13 @@
                         window - 16 : 가장 높은 레이어가 상단 여백 16px을 남겨둔다
                         윈도우 높이(상단 여백 16제외) < 현재 레이어 높이 + 레이어 내부의 버튼그룹 높이
                     */
-                    if (($(window).height() - 16) < ($(this).outerHeight() + $(this).find(".btn-group").outerHeight())) {
+                    if (($(window).height() - 16) < ($(this).find(".l-contents").outerHeight() + $(this).find(".btn-group").outerHeight())) {
                         /*
-                            하단 레이어 컨텐츠 높이 : 윈도우 높이 - 16(화면상단최소여백) - 16(레이어헤더 위쪽라운딩된 여백) - 레이어헤더 - 버튼영역
+                            팝업 컨텐츠 높이 : 윈도우 높이 - 32(상하단 여백) - 팝업 헤더 - 버튼영역
                         */
-                        $(this).find(".l-contents").outerHeight( $(window).height() - 32 - $(this).find(".l-bottom-wrap .head").outerHeight() - $(this).find(".btn-group").outerHeight());
+                       console.log($(window).height() - 32 - $(this).find(".l-bottom-wrap .head").outerHeight() - $(this).find(".btn-group").outerHeight());
+
+                        $(this).find(".l-contents").height( $(window).height() - 32 - $(this).find(".l-bottom-wrap .head").outerHeight() - $(this).find(".btn-group").outerHeight());
                         $(this).find(".l-bottom-wrap .l-contents").addClass("scroll");
                     }
                 // 하단 버튼 x
