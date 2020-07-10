@@ -1,0 +1,94 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-22          최초작성
+김수영             2020-05-25          alert 팝업 추가
+김수영             2020-05-27          비밀번호 필드/하단버튼명 수정
+-->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>결제비밀번호 확인</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/jquery-2.2.4.min.js"></script>
+        <script src="./js/ui.js"></script>
+        <script src="util/placeholder.js"></script>
+    </head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>결제비밀번호 확인</h1>
+            <button type="button" class="btn close" onclick="openLayerPop('pop01')">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+                <!--contents-->
+                <div class="contents kbp_webp_016"> <!-- contents + 페이지별 class 삽입 -->
+                    <p class="txt02 align-c">결제비밀번호 확인</p>
+                    
+                    <div class="passWrap card-pass">
+                        <!--2020-05-27 수정-->
+                        <div class="pass-input-match password">
+                            <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                            <div class="pass-input">
+                                <span class="dot yellow on"></span> <!--활성화 class 'on'-->
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                            </div>
+                        </div>
+                        <!--//2020-05-27 수정-->
+
+                        <!--error text-->
+                        <em class="error-txt certi">결제 비밀번호가 일치하지 않습니다.</em> <!--케이스별 에러문구-->
+                        <!--//error text--> 
+                    </div>
+                    
+                    <!-- 맞게 입력 시 노출-->
+                    <div class="bottom-btn-area fixed">
+                        <div class="btn-group">
+                            <button class="btn large yellow" type="button"> 
+                                <span>회원가입</span> <!--//2020-05-27 버튼명 수정-->
+                            </button>
+                        </div>
+                    </div>
+                    <!-- //맞게 입력 시 노출-->
+
+                </div>
+                <!--//contents-->
+            </div>
+        </div>
+    </div>
+
+    <!--2020-05-25 추가-->
+    <!-- dimmed -->
+    <div class="l-dim"></div>
+    <!-- // dimmed -->
+    <!-- popup -->
+    <div class="l-pop" id="pop01">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <span>
+                        회원가입을 종료하시면<br>프로세스를 다시 진행하셔야 합니다.<br>종료하시겠습니까?
+                    </span>
+                </p>
+            </div>
+            <div class="l-footer">
+                <div class="btn-group pt0 half">
+                    <button class="btn medium gray" type="button">취소</button>
+                    <button class="btn medium yellow" type="button">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // popup -->
+    <!--//2020-05-25 추가-->
+
+</body>
+</html>

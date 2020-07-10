@@ -1,0 +1,103 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-16          최초작성
+이진규             2020-06-22          카드박스 구조 변경
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>은행계좌선택</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <button type="button" class="btn-tyepe back">Go Back</button>
+                <h1>은행계좌 등록</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_042"> <!-- 화면ID -->
+                <!-- 본문 -->
+
+
+                <p class="txt">등록 가능한 은행계좌입니다.<br>결제수단으로 등록을 원하시는 카드의 비밀번호를 입력 후 등록해주세요</p>
+
+                <!-- 06-22 카드박스 구조 변경 -->
+                <div class="list-card-box">
+                    <button type="button" class="btn-prev"><span>이전</span></button>
+
+                    <div class="card-box">
+                        <a href="#" class="img-area">
+                            <span class="img">
+                                <img src="./images/etc/card_account.png" alt="국민 직장인 우대 통장">
+                            </span>
+                        </a>
+                        <p class="txt-area">
+                            <span class="card-tit">국민 직장인 우대 통장</span>
+                            <span class="card-num">12345678****90</span>
+                        </p>
+                    </div>
+
+                    <button type="button" class="btn-next"><span>다음</span></button>
+
+                </div>
+                <!-- // 06-22 카드박스 구조 변경 -->
+                
+
+                <div class="bottom-btn type03">
+                    <button type="button" class="btn-line"><span>직접등록</span></button>
+                </div>
+
+                <p class="txt02 align-c">카드 비밀번호 4자리 입력</p> <!--//비밀번호 4자리 받을 때-->
+
+                <div class="passWrap card-pass">
+                    <div class="pass-input-match password">
+                        <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                        <div class="pass-input">
+                            <span class="dot yellow on">1</span> <!--활성화 class 'on'-->
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- //본문 -->                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>선택 결제수단 등록</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+
+            
+        </div>
+    </div>
+
+</body>
+</html>

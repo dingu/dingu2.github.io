@@ -1,0 +1,185 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-17          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해피머니 상품권 정보입력</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <button type="button" class="btn-tyepe back">Go Back</button>
+                <h1>상품권포인트 충전</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_046"> <!-- 화면ID -->   
+                <!--form 입력 목록-->
+                <div class="form-wrap">
+                    <ul class="form-text-list">
+                        <li>
+                            <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                <label for="card_number">핀번호/바코드번호 16자리</label>
+                                <input type="text" class="text card-number" name="card_number" id="card_number" maxlength="19" placeholder="16자리 숫자"> <!--카드번호 하이픈 자동생성 스크립트 > 페이지 하단-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                <label for="number8">발행일/인증번호 8자리</label>
+                                <input type="number" id="number8" class="text" value="" placeholder="8자리 숫자">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--//form 입력 목록-->
+
+                <div class="bottom-btn">
+                    <button type="button" class="btn-line" onclick="openLayer('layer01', this);">상품권포인트 충전 안내</button>
+                </div>
+
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>등록</span></button> <!--활성화 시 disabled 삭제-->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+    <!-- Layer popup -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="layer01">
+        <div class="l-pop-wrap kbp_payc_045">
+            <div class="l-header">
+                <h1>상품권포인트 충전 안내</h1>
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+                
+                <dl class="list-txt01">
+                    <dt>충전한도(회원/준회원 동일)</dt>
+                    <dd>
+                        <div class="table-type01">
+                            <table>
+                                <caption>상품권 충전한도(회원/준회원 동일)</caption>
+                                <colgroup>
+                                    <col style="width: 36%">
+                                    <col style="width: 32%">
+                                    <col style="width: 32%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2" class="bb-none">구분</th>
+                                        <th scope="col" colspan="2">충전한도</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1일</th>
+                                        <th scope="col">월간</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">해피머니 캐시</th>
+                                        <td>100,000P</td>
+                                        <td>500,000P</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">해피머니 상품권</th>
+                                        <td>100,000P</td>
+                                        <td>500,000P</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </dd>
+                    <dd>충전한도는 해피머니 캐시 + 해피머니 상품권 합산된 금액으로 관리됩니다.</dd>
+                    <dt>수수료</dt>
+                    <dd>충전 금액의 8% 차감 후 상품권 포인트로 적립됩니다.</dd>
+                    <dt>소멸</dt>
+                    <dd>적립월로부터 60개월 후 소멸됩니다.</dd>
+                    <dt>환급</dt>
+                    <dd>최근 60개월 충전 금액 총 합계의 80% 이상 사용한 경우 포인트 잔액을 환급 받으실 수 있습니다.</dd>
+                    <dd>환급은 본인 KB계좌(KB국민은행, KB증권, KB저축은행)로 보내기 가능합니다.</dd>
+                    <dt>충전 후 취소(환불)</dt>
+                    <dd>상품권 포인트로 충전 후에는 취소(환불)가 불가능합니다.</dd>
+                </dl>
+                
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" onclick=""><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+
+    <script>
+        //카드번호 하이픈 자동 생성
+        var cardNumber = document.getElementById('card_number');
+        cardNumber.onkeyup = function(event){
+            event = event || window.event;
+            var _val = this.value.trim();
+            this.value = autoHypenCard(_val) ;
+        };
+        function autoHypenCard(str){
+            str = str.replace(/[^0-9]/g, '');
+            var tmp = '';
+            if( str.length < 4){
+                return str;
+            }
+            else if(str.length < 8){
+                tmp += str.substr(0, 4);
+                tmp += '-';
+                tmp += str.substr(4,4);
+                return tmp;
+            }else if(str.length < 12){
+                tmp += str.substr(0, 4);
+                tmp += '-';
+                tmp += str.substr(4, 4);
+                tmp += '-';
+                tmp += str.substr(8,4);
+                return tmp;
+            }else if(str.length < 17) {
+                tmp += str.substr(0, 4);
+                tmp += '-';
+                tmp += str.substr(4, 4);
+                tmp += '-';
+                tmp += str.substr(8,4);
+                tmp += '-';
+                tmp += str.substr(12,4);
+                return tmp;
+            }
+            return str;
+        }
+    </script>
+</body>
+</html>

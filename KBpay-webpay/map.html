@@ -1,0 +1,1577 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>WEB Pay map</title>
+<style>
+* {padding:0;margin:0;}
+div,li,ul,ol,p,span,img,a,dl,dt,dd,table,tr,thead,tbody,th,td,button,textarea,input,strong,caption,h1,h2,h3,h4,h5,h6,em,select {padding:0;margin:0;box-sizing:border-box;}
+a {text-decoration:none;}
+li {list-style:none}
+html,body {width:100%;height:100%;}
+h1 {display:block;width:100%;padding:5px 10px;background:#a6d3e3;color:#333;font-size:14px}
+h1 span {float:right;font-size:12px;}
+
+.wrap {position:relative;width:100%;height:100%;padding:0 15px;overflow:hidden;}
+.table {float:left;position:relative;height:100%;width:calc(100% - 385px);width:-webkit-calc(100% - 385px);overflow-y:scroll}
+.iframe {width:375px;float:right;padding:15px 0 0}
+.iframe iframe {border:1px solid #ccc;padding:0;margin:0;float:right}
+
+.depth {width:100%;display:table;table-layout:fixed;padding:15px 0 0}
+.depth li {display:table-cell;background:#888;text-align:center;color:#fff;font-size:13px;padding:15px 0}
+.depth li:nth-child(1) {width:15%}
+.depth li:nth-child(2) {width:10%}
+/* .depth li:nth-child(3) {width:10%}
+.depth li:nth-child(4) {width:14%} */
+.depth li:nth-child(3) {width:7%}
+.depth li:nth-child(4) {width:7%}
+.depth li:nth-child(5) {width:7%}
+.depth li:nth-child(6) {width:18%;text-align:left}
+.depth:first-child li:nth-child(6) {text-align:center}
+
+.depth li + li {border-left:1px solid #fff;}
+
+.depth.type2 {padding:0;}
+.depth.type2 li {background:#fff;border-bottom:0.5px solid #ddd;padding:5px 10px;color:#222;font-size:11px; word-wrap: break-word;}
+.depth.type2 li + li {border-left:1px solid #ddd;}
+.depth.type2 li a {display:inline-block; color: #222;}
+.depth.type2 li:nth-child(1),
+.depth.type2 li:nth-child(2),
+/* .depth.type2 li:nth-child(3),
+.depth.type2 li:nth-child(4), */
+/* .depth.type2 li:nth-child(9) {text-align:left} */
+.depth.type2 li:nth-child(7) {text-align:left}
+.depth.type2 li .red {color: red;}
+.depth.type2.guide li {background:#d6ebf3;padding:10px}
+
+.blank {border-radius:5px;padding:5px 10px;background:#7b6d9a;color:#fff !important;margin-left:5px;font-size:10px;}
+
+.file-nm.active {color: blue !important; text-decoration: underline;}
+.depth.type2.deleted li {border-color: #fff; background: #ddd;}
+
+.depth.type2.new li {background: yellow;}
+
+</style>
+
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script>
+$(function() {
+	$(".file-nm").click(function() {
+		$(".file-nm").removeClass("active");
+		$(this).addClass("active");
+	});
+});
+</script>
+
+</head>
+<body>
+<div class="wrap">
+	<div class="table">
+		<ul class="depth">
+			<li>화면명</li>
+			<li>화면ID</li>
+			<!-- <li>&nbsp;</li> -->
+			<!-- <li>4Depth</li> -->
+			<li>작업완료</li>
+			<li>작업자</li>
+			<li>폴더명</li>
+			<li>파일명</li>
+			<li>비고</li>
+		</ul>
+
+		<!-- WEB Pay -->
+		<h1>WEB Pay (Mobile) coding map <span>2020.04.01~</span></h1>
+		<ul class="depth type2 guide">
+			<li>html 가이드</li>
+			<li></li>
+			<!-- <li></li> -->
+			<!-- <li></li> -->
+			<li></li>
+			<li>유현우</li>
+			<li>guide</li>
+			<li><a class="file-nm" href="./guide/index.html" target="_blank">index.html</a></li>
+			<li>작업중</li>
+		</ul>
+
+		<ul class="depth type2 group">
+			<li>인덱스</li> <!--1depth-->
+			<li>kbp_webp_001</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-20<br><span class="red">05-22</span><br><span class="red">05-26</span><br><span class="red">06-05</span><br><span class="red">06-19</span><br><span class="red">07-08</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_001.html" target="_aa">kbp_webp_001.html</a>
+				<a href="./kbp_webp_001.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">alert 팝업 추가</span><br>
+				<span class="red">아이콘 이미지 추가, 텍스트 수정</span><br>
+				<span class="red">탭 타이틀 띄어쓰기 수정, 배너슬라이드 관련 소스 삭제</span><br>
+				<span class="red">간편제휴결제 구조 변경, 텍스트 수정, 배너슬라이드 추가</span><br>
+				<span class="red">07-08 : UI 전체 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group deleted">
+			<li><span class="red">(팝업)KBPAY 설치하기(삭제)</span></li> <!--1depth-->
+			<li>kbp_webp_002</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-21</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_001.html" target="_aa">kbp_webp_001.html</a>
+				<a href="./kbp_webp_001.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				
+				인덱스 화면(kbp_webp_001.html)내 버튼 클릭시 노출
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group deleted">
+			<li><span class="red">QR 결제코드(삭제)</span></li> <!--1depth-->
+			<li>kbp_webp_001_1</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-21</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_001_1.html" target="_aa">kbp_webp_001_1.html</a>
+				<a href="./kbp_webp_001_1.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group deleted">
+			<li><span class="red">로그인(삭제)</span></li> <!--1depth-->
+			<li>kbp_webp_003</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-20<br><span class="red">05-27</span><br><span class="red">05-29</span><br><span class="red">06-05</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_003.html" target="_aa">kbp_webp_003.html</a>
+				<a href="./kbp_webp_003.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">아이콘 이미지 추가</span><br>
+				<span class="red">메뉴 삭제</span><br>
+				<span class="red">06-05 : 기획 삭제</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group deleted">
+			<li><span class="red">추가로그인안내(삭제)</span></li> <!--1depth-->
+			<li>kbp_webp_004</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-20<br><span class="red">05-27</span><br><span class="red">06-05</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_004.html" target="_aa">kbp_webp_004.html</a>
+				<a href="./kbp_webp_004.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>				
+				<span class="red">아이콘 이미지 추가, 텍스트 수정</span><br>
+				<span class="red">텍스트 수정, 메뉴 삭제</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>휴대폰번호로그인</li> <!--1depth-->
+			<li>kbp_webp_005</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-21<br>05-27<br>05-29<br>06-02<br>06-05<br>06-08<br>06-17<br><span class="red">06-24</span><br><span class="red">07-02</span><br><span class="red">07-06</span><br><span class="red">07-09</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_005.html" target="_aa">kbp_webp_005.html</a>
+				<a href="./kbp_webp_005.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				05/27 : <br>통신사선택+전화번호 입력 수정, 통신사선택 팝업 하단 버튼 삭제, 주민등록번호 마크업 수정<br>
+				05/29 : <br>밑줄링크 클래스 수정<br>
+				06/02 : <br>전화번호 > 휴대폰번호 문구 수정<br>
+				06/05 : h2 강조 범위 수정<br>06/08 : 전체수정(kbp_webp_021 과 통합)<br>06/17 : 정보입력 수정<br>
+				<span class="red">
+					06/24 : 생년월일 > 주민번호 문구 수정, 공공장소 로그인 시 안내 팝업 추가
+				</span><br>
+				<span class="red">07-02 : KBpay 간편가입하기 버튼 수정</span><br>
+				<span class="red">07-06 : 공공장소 안내 팝업 삭제, 오류 case 별 팝업 추가</span><br>
+				<span class="red">07-09 : 거래정지회원 안내 팝업 추가</span>	
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group deleted">
+			<li><span class="red">생년월일 입력(삭제)</span></li> <!--1depth-->
+			<li>kbp_webp_066</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-08<br><span class="red">06-17<br>06-18</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_066.html" target="_aa">kbp_webp_066.html</a>
+				<a href="./kbp_webp_066.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>06/05 : 기획추가<br>06/17 : 정보입력 수정<br>06/18 : 타이틀 강조위치 수정<br><span class="red">06/24 : 메뉴삭제</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group deleted">
+			<li><span class="red">회원가입안내(삭제)</span></li> <!--1depth-->
+			<li>kbp_webp_006</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-20<br><span class="red">05-27</span><br><span class="red">06-05</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_006.html" target="_aa">kbp_webp_006.html</a>
+				<a href="./kbp_webp_006.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				
+				<span class="red">아이콘 이미지 추가, 텍스트 수정</span><br>
+				<span class="red">텍스트 수정</span><br>
+				<span class="red">07-03 : 기획 삭제</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>보안인증</li> <!--1depth-->
+			<li>kbp_webp_079</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-01<br><span class="red">07-06</span></br></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_079.html" target="_aa">kbp_webp_079.html</a>
+				<a href="./kbp_webp_079.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				신규 06-29 : 기획 추가<br>
+				<span class="red">07-06 : 텍스트 수정, 버튼갯수 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group deleted">
+			<li><span class="red">QR인증/KB Pay 앱 인증선택(삭제)</span></li> <!--1depth-->
+			<li>kbp_webp_096</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_096.html" target="_aa">kbp_webp_096.html</a>
+				<a href="./kbp_webp_096.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				06-29 : 기획 추가<br>
+				<span class="red">07-03 : 기획 삭제</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group deleted">
+			<li><span class="red">QR인증/KB Pay 앱 인증선택(삭제)</span></li> <!--1depth-->
+			<li>kbp_webp_096</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_096.html" target="_aa">kbp_webp_096.html</a>
+				<a href="./kbp_webp_096.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				06-29 : 기획 추가<br>
+				<span class="red">07-03 : 기획 삭제</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>증권카드비밀번호 입력</li> <!--1depth-->
+			<li>kbp_webp_096</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_096.html" target="_aa">kbp_webp_096.html</a>
+				<a href="./kbp_webp_096.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">07-08 : 기존아이디로 기획 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>카드선택</li> <!--1depth-->
+			<li>kbp_webp_097</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-10</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_097.html" target="_aa">kbp_webp_097.html</a>
+				<a href="./kbp_webp_097.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">신규</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>선택등록</li> <!--1depth-->
+			<li>kbp_webp_098</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-10</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_098.html" target="_aa">kbp_webp_098.html</a>
+				<a href="./kbp_webp_098.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">신규</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group deleted">
+			<li><span class="red">KB Pay 앱 인증실행(삭제)</span></li> <!--1depth-->
+			<li>kbp_webp_080</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_080.html" target="_aa">kbp_webp_080.html</a>
+				<a href="./kbp_webp_080.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				06-29 : 기획 추가<br>
+				<span class="red">07-03 : 기획 삭제</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>약관동의</li> <!--1depth-->
+			<li>kbp_webp_007</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-20<br><span class="red">06-03</span></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_007.html" target="_aa">kbp_webp_007.html</a>
+				<a href="./kbp_webp_007.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				
+				본인인증 로그인 약관동의<br>
+				05/27 ico_arrow_up.png 수정
+				<br><span class="red">Combo버튼 스크립트함수로 변경</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>약관동의</li> <!--1depth-->
+			<li>kbp_webp_060</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-20<br><span class="red">05-29</span><br><span class="red">06-02</span><br><span class="red">06-03</span><br><span class="red">06-30</span></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_007_1.html" target="_aa">kbp_webp_007_1.html</a>
+				<a href="./kbp_webp_007_1.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>회원가입 본인인증 약관동의
+				<br><span class="red">플랫폼 마케팅 수신동의 항목 삭제</span>
+				<br><span class="red">하단 버튼 고정 bottom-btn-area 에 fixed 클래스 추가</span>
+				<br><span class="red">Combo버튼 스크립트함수로 변경</span>
+				<br><span class="red">06-30 : 약관 항목 추가, 아이디 변경</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>약관동의 상세보기</li> <!--1depth-->
+			<li>kbp_webp_008</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-20<br>
+				<span class="red">05-27</span><br>
+				<span class="red">05-28</span><br>
+				<span class="red">06-05</span>
+			</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_008.html" target="_aa">kbp_webp_008.html</a>
+				<a href="./kbp_webp_008.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">좌우버튼 삭제 & Swipe기능 추가</span><br>
+				<span class="red">터치슬라이드영역 높이 조절 버그수정</span><br>
+				<span class="red">06/05 : swiper 삭제</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>정보입력</li> <!--1depth-->
+			<li>kbp_webp_012</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-21<br>05-25<br>05-27<br>06-02<br><span class="red">06-05</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_012.html" target="_aa">kbp_webp_012.html</a>
+				<a href="./kbp_webp_012.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				05/25 : <br>- form_text 활성 class 주석 표기<br>- kbp_webp_058레이어 포함 <br>
+				05/27 : <br>- 통신사선택+전화번호 입력 수정<br>- 통신사선택 팝업 하단 버튼 삭제<br>- 주민등록번호 마크업 수정<br>
+				06/02 : <br>validation 문구 적용, 전화번호 > 휴대폰번호 문구 수정	<br>
+				<span class="red">
+					06/05 : h2 강조 범위 수정
+				</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>인증번호입력</li> <!--1depth-->
+			<li>kbp_webp_013</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-13<br>05-27<br>06-04<br><span class="red">06-05</span><br><span class="red">07-06</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_013.html" target="_aa">kbp_webp_013.html</a>
+				<a href="./kbp_webp_013.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>05/27: 입력필드 마크업 수정<br>06/04 : 버튼추가<br><span class="red">06/04 : h2 강조 범위 수정</span><br><span class="red">07-06 : 팝업 추가</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>(팝업)인증번호미수신</li> <!--1depth-->
+			<li>kbp_webp_052</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-20</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_052.html" target="_aa">kbp_webp_052.html</a>
+				<a href="./kbp_webp_052.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>kbp_webp_013 에서 노출<br>
+				<span class="red">수정 : ico_layer_close.png <br>삭제 :<br> ico_sms_info_01.png<br>ico_sms_info_02.png<br>ico_sms_info_03.png<br>ico_sms_info_04.png<br>하단에 확인버튼 click하면 닫히는 샘플</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>회원가입</li> <!--1depth-->
+			<li>kbp_webp_059<br></li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-21<br><span class="red">05-27</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_015.html" target="_aa">kbp_webp_015.html</a>
+				<a href="./kbp_webp_015.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li><span class="red">디자인 수급 필요</span><br>kbp_webp_015 에서 아이디변경<br><span class="red">텍스트 클래스 수정</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>카드인증</li> <!--1depth-->
+			<li>kbp_webp_014</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br>05-27<br><span class="red">07-01</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_014.html" target="_aa">kbp_webp_014.html</a>
+				<a href="./kbp_webp_014.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				05/27 : <br>카드박스, 비밀번호 필드 수정, ico_btn_tip_close_24.png 수정<br>
+				<span class="red">
+				06/05 : <br>ico_btn_tip_close_24.png 수정</span><br>
+				<span class="red">07-01 : 회원가입중단 알림 팝업 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group ">
+			<li>KB금융 오픈API 서비스 약관동의</li> <!--1depth-->
+			<li>kbp_webp_068</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-19</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_068.html" target="_aa">kbp_webp_068.html</a>
+				<a href="./kbp_webp_068.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>6-19 추가</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group ">
+			<li>(팝업)계좌비밀번호 입력</li> <!--1depth-->
+			<li>kbp_webp_069</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-18<br><span class="red">07-01</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_069.html" target="_aa">kbp_webp_069.html</a>
+				<a href="./kbp_webp_069.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				6-18 추가<br>
+				<span class="red">07-01 : 회원가입중단 알림 팝업 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group ">
+			<li>(팝업)계좌선택</li> <!--1depth-->
+			<li>kbp_webp_070</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-19</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_070.html" target="_aa">kbp_webp_070.html</a>
+				<a href="./kbp_webp_070.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>6-19 추가</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group ">
+			<li>(팝업)ARS인증</li> <!--1depth-->
+			<li>kbp_webp_071</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-19<br><span class="red">06-30</span><br><span class="red">07-06</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_071.html" target="_aa">kbp_webp_071.html</a>
+				<a href="./kbp_webp_071.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				6-19 추가<br>
+				<span class="red">06-30 : 마크업 구조 변경</span><br>
+				<span class="red">07-06 : 텍스트 수정, 인증번호 4자리로 변경, 팝업 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group ">
+			<li>결제수단 추가등록</li> <!--1depth-->
+			<li>kbp_webp_072</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-19<br><span class="red">07-06</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_072.html" target="_aa">kbp_webp_072.html</a>
+				<a href="./kbp_webp_072.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				6-19 추가<br>
+				<span class="red">07-06 : 리스트 항목 추가, 텍스트 수정, 팝업 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group ">
+			<li>결제수단 추가등록</li> <!--1depth-->
+			<li>kbp_webp_078</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-19</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_078.html" target="_aa">kbp_webp_078.html</a>
+				<a href="./kbp_webp_078.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>6-19 추가</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>카드선택</li> <!--1depth-->
+			<li>kbp_webp_053</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br><span class="red">05-27</span><br><span class="red">06-02</span><br><span class="red">06-19</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_053.html" target="_aa">kbp_webp_053.html</a>
+				<a href="./kbp_webp_053.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				
+				<span class="red">카드리스트 구조변경</span><br>
+				<span class="red">하단 버튼 삭제</span><br>
+				<span class="red">카드아이콘 이미지 삭제</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>결제비밀번호등록</li> <!--1depth-->
+			<li>kbp_webp_015</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br><span class="red">05-27</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_015_1.html" target="_aa">kbp_webp_015_1.html</a>
+				<a href="./kbp_webp_015_1.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li><span class="red">비밀번호 필드 수정, 하단버튼 삭제</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>결제비밀번호확인</li> <!--1depth-->
+			<li>kbp_webp_016</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br>05-25<br><span class="red">05-27</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_016.html" target="_aa">kbp_webp_016.html</a>
+				<a href="./kbp_webp_016.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>05/25 : alert 팝업 추가<br>
+				<span class="red">05/27 : 비밀번호 필드 수정, 하단버튼 명 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>인증방식 선택</li> <!--1depth-->
+			<li>kbp_webp_054</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br><span class="red">06-19</span><br><span class="red">07-07</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_054.html" target="_aa">kbp_webp_054.html</a>
+				<a href="./kbp_webp_054.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">환금성결제 안내문구 추가, 메뉴 추가, 하단 버튼 추가</span><br>
+				<span class="red">07-07 : 환금성 결제 case 관련 주석 추가, 팝업 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>카드인증 정보입력</li> <!--1depth-->
+			<li>kbp_webp_055</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br>05-27<br>06-02<br>06/05<br>06/11<br><span class="red">06/17</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_055.html" target="_aa">kbp_webp_055.html</a>
+				<a href="./kbp_webp_055.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				05/27 : <br> 페이지 타이틀 수정, 입력필드 수정. 타이틀 강조 위치 수정, label명 수정<br>
+				06/02 : <br>validation 문구 적용<br>06/05 : <br>h2 강조 범위 수정<br>
+				06/11 : 카드번호 2번째자리 모두 blcak 마스킹 적용<br>
+				<span class="red">06/17 : 카드번호 입력폼수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>카드비밀번호 인증</li> <!--1depth-->
+			<li>kbp_webp_061</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br>05-27<br><span class="red">06-02</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_061.html" target="_aa">kbp_webp_061.html</a>
+				<a href="./kbp_webp_061.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>05/27 : <br>입력필드 수정<br>
+				<span class="red">06/02 : <br>validation 문구 적용</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>결제 및 카드변경</li> <!--1depth-->
+			<li>kbp_webp_017</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25
+				<br>05-29
+				<br>06-05
+				<br><span class="red">06-30</span>
+				<br><span class="red">07-01</span>
+			</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_017.html" target="_aa">kbp_webp_017.html</a>
+				<a href="./kbp_webp_017.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				화면 중앙 안내텍스트 3줄에서 2줄로 변경
+				<br>카드 아이콘 추가, ico_current_card_mark.png 수정
+				<br><span class="red">06-30 : 결제수단관리 버튼 텍스트 수정</span>
+				<br><span class="red">07-01 : 상단 스와이핑 카드에 왼쪽 추가기능 삭제</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>결제 및 카드변경</li> <!--1depth-->
+			<li>kbp_webp_018</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br><span class="red">05-29</span><br><span class="red">06-05</span><br><span class="red">07-03</span></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_018.html" target="_aa">kbp_webp_018.html</a>
+				<a href="./kbp_webp_018.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				화면 중앙 안내텍스트 3줄에서 2줄로 변경<br><span class="red">카드 아이콘 추가</span><br>
+				<span class="red">07-03 : 버튼 텍스트 변경</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>결제 및 카드변경</li> <!--1depth-->
+			<li>kbp_webp_019</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br><span class="red">05-29</span><br><span class="red">06-05</span><br><span class="red">07-03</span></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_019.html" target="_aa">kbp_webp_019.html</a>
+				<a href="./kbp_webp_019.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				화면 중앙 안내텍스트 3줄에서 2줄로 변경<br><span class="red">카드 아이콘 추가</span><br>
+				<span class="red">07-03 : 버튼 텍스트 변경</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>(팝업)할부선택</li> <!--1depth-->
+			<li>kbp_webp_020</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_018.html" target="_aa">kbp_webp_020.html</a>
+				<a href="./kbp_webp_018.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>일시불 click하면 나옴</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 deleted">
+			<li><span class="red">결제인증공통(삭제)</span></li> <!--1depth-->
+			<li>kbp_webp_021</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br>05-27<br>06-02<br><span class="red">06-05</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_021.html" target="_aa">kbp_webp_021.html</a>
+				<a href="./kbp_webp_021.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				05/27 : <br>입력 필드 수정<br>
+				06/02 : <br>validation 문구 적용, tootip 추가<br>
+				06/05 : tooltip 수정<br>
+				<span class="red">06/05 : kbp_webp_005 로 통합</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>완료</li> <!--1depth-->
+			<li>kbp_webp_022</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br><span class="red">06-05</span></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_022.html" target="_aa">kbp_webp_022.html</a>
+				<a href="./kbp_webp_022.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li><span class="red">카드 아이콘 추가</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>실패(잔액부족)</li> <!--1depth-->
+			<li>kbp_webp_023</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br><span class="red">06-05</span></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_023.html" target="_aa">kbp_webp_023.html</a>
+				<a href="./kbp_webp_023.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li><span class="red">카드 아이콘 추가</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>실패(비밀번호3회이상 오류)</li> <!--1depth-->
+			<li>kbp_webp_024</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br><span class="red">06-05</span></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_024.html" target="_aa">kbp_webp_024.html</a>
+				<a href="./kbp_webp_024.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>클래스명 변경, br사용 4회에서 2회로 변경<br><span class="red">카드 아이콘 추가</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>실패(efds감지)</li> <!--1depth-->
+			<li>kbp_webp_025</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br><span class="red">06-05</span></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_025.html" target="_aa">kbp_webp_025.html</a>
+				<a href="./kbp_webp_025.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li><span class="red">카드 아이콘 추가</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>결제수단관리</li> <!--1depth-->
+			<li>kbp_webp_026</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br><span class="red">05-27</span><br><span class="red">06-05</span><br><span class="red">06-19</span><br><span class="red">07-07</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_026.html" target="_aa">kbp_webp_026.html</a>
+				<a href="./kbp_webp_026.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">클래스 추가, 카드리스트 구조 변경</span><br>
+				<span class="red">포인트리, 상품권포인트 카드이미지 변경</span><br>
+				<span class="red">기프트카드 ~ 상품권 구조 변경</span><br>
+				<span class="red">07-07 : UI 전체 변경</span>
+			</li><!--비고-->
+		</ul>
+		<ul class="depth type2 new">
+			<li>신용/체크카드 관리</li> <!--1depth-->
+			<li>kbp_webp_089</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_089.html" target="_aa">kbp_webp_089.html</a>
+				<a href="./kbp_webp_089.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 new">
+			<li>기업공용카드 관리</li> <!--1depth-->
+			<li>kbp_webp_090</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_090.html" target="_aa">kbp_webp_090.html</a>
+				<a href="./kbp_webp_090.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 new">
+			<li>증권카드 관리</li> <!--1depth-->
+			<li>kbp_webp_091</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_091.html" target="_aa">kbp_webp_091.html</a>
+				<a href="./kbp_webp_091.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 new">
+			<li>기프트카드 관리</li> <!--1depth-->
+			<li>kbp_webp_092</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_092.html" target="_aa">kbp_webp_092.html</a>
+				<a href="./kbp_webp_092.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 new">
+			<li>은행계좌 관리</li> <!--1depth-->
+			<li>kbp_webp_093</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_093.html" target="_aa">kbp_webp_093.html</a>
+				<a href="./kbp_webp_093.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 new">
+			<li>인증받은 기기</li> <!--1depth-->
+			<li>kbp_webp_086</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-07</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_086.html" target="_aa">kbp_webp_086.html</a>
+				<a href="./kbp_webp_086.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규<br>kbp_webp_085 팝업 포함</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 new">
+			<li>(팝업)별칭관리</li> <!--1depth-->
+			<li>kbp_webp_094</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-10</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_094.html" target="_aa">kbp_webp_094.html</a>
+				<a href="./kbp_webp_086.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 new">
+			<li>최근로그인 조회</li> <!--1depth-->
+			<li>kbp_webp_095</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-07</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_095.html" target="_aa">kbp_webp_095.html</a>
+				<a href="./kbp_webp_095.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>신용/체크카드 등록</li> <!--1depth-->
+			<li>kbp_webp_027</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br><span class="red">05-27</span><br><br><span class="red">05-29</span><br><span class="red">06-05</span><br><span class="red">06-19</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_027.html" target="_aa">kbp_webp_027.html</a>
+				<a href="./kbp_webp_027.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				
+				<span class="red">카드리스트 구조 변경, 텍스트 수정</span><br>
+				<span class="red">5/28 기획: 보유카드 없는 경우 추가</span><br>
+				<span class="red">타이틀 삭제</span><br>
+				<span class="red">보유카드 없을 때 case 추가, 보유카드 없을 때 하단버튼 case 추가</span><br>
+				<span class="red">보유 카드 없을 때 case 삭제, 카드아이콘 삭제, 하단 버튼 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 deleted">
+			<li><span class="red">(팝업)선택해제(삭제)</span></li> <!--1depth-->
+			<li>kbp_webp_028</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li></li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="" target="_aa">kbp_webp_028.html</a>
+				<a href="" class="blank" target="_blank">새창</a>
+			</li>
+			<li><span class="red">kbp_webp_027 의 alert pop</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>직접입력(신용/체크카드 등록)</li> <!--1depth-->
+			<li>kbp_webp_029</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22
+				<br>05-27
+				<br>06-02
+				<br>06-11
+				<br>06-17
+				<br><span class="red">07-07</span>
+			</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_029.html" target="_aa">kbp_webp_029.html</a>
+				<a href="./kbp_webp_029.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>05/27 : 
+				<br>입력필드 수정. h2 삭제, label명 수정
+				<br>06/02 : <br>validation 문구 적용
+				<br>06/11 : 카드번호 2번째자리 모두 blcak 마스킹 적용
+				<br>06/17 : 카드번호 입력폼수정
+				<br><span class="red">07/07 : 카드번호 16자리 입력폼수정(필드4개로)</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>(팝업)CVC안내</li> <!--1depth-->
+			<li>kbp_webp_030<br>kbp_webp_062</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_030.html" target="_aa">kbp_webp_030.html</a>
+				<a href="./kbp_webp_030.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>029, 031, 034, 035, 036, 055 에서 노출<br>05/27 : cvc_pop_img.png 수정</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>직접입력(기업공용카드 등록)</li> <!--1depth-->
+			<li>kbp_webp_031</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br>05-27<br>06-02<br>06/11<br><span class="red">06/17</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_031.html" target="_aa">kbp_webp_031.html</a>
+				<a href="./kbp_webp_031.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>05/27 : <br>입력필드 수정. h2 삭제, label명 수정<br>06/02 : <br>validation 문구 적용<br>
+				06/11 : 카드번호 2번째자리 모두 blcak 마스킹 적용<br>
+				<span class="red">06/17 : 카드번호 입력폼수정</span></li><!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>담당자승인요청</li> <!--1depth-->
+			<li>kbp_webp_032</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br>05-28<br><span class="red">06-05</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_032.html" target="_aa">kbp_webp_032.html</a>
+				<a href="./kbp_webp_032.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>05/28 : <br>입력필드 수정, 중간 버튼 삭제 > 하단버튼 하나로 통일<br><span class="red">06/05 : h2 강조 범위,문구 수정, 사용승인안내 팝업 수정</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>(팝업)카드사용승인안내</li> <!--1depth-->
+			<li>kbp_webp_033</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_033.html" target="_aa">kbp_webp_033.html</a>
+				<a href="./kbp_webp_033.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>kbp_webp_032 에서 노출</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>직접입력(증권카드 등록)</li> <!--1depth-->
+			<li>kbp_webp_034</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br>05-28<br>06-02<br>06-11<br><span class="red">06-17</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_034.html" target="_aa">kbp_webp_034.html</a>
+				<a href="./kbp_webp_034.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>05/28 :<br> h2 삭제, label명 수정, 입력필드 수정<br>06/02 : <br>validation 문구 적용<br>
+				06/11 : 카드번호 2번째자리 모두 blcak 마스킹 적용<br>
+				<span class="red">06/17 : 카드번호 입력폼수정</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>(팝업)증권카드이용안내</li> <!--1depth-->
+			<li>kbp_webp_035</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_035.html" target="_aa">kbp_webp_035.html</a>
+				<a href="./kbp_webp_035.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>기획/디자인 X</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>직접입력(기프트카드 등록)</li> <!--1depth-->
+			<li>kbp_webp_036</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br>05-28<br>06-02<br>06-05<br>06-11<br><span class="red">06-17</span></li></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_036.html" target="_aa">kbp_webp_036.html</a>
+				<a href="./kbp_webp_036.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>05/28 :<br> h2 삭제, label명 수정, 입력필드 수정<br>06/02 : <br>validation 문구 적용<br>06/05 : cvc > cvc2 수정<br>
+				06/11 : 카드번호 2번째자리 모두 blcak 마스킹 적용<br>
+				<span class="red">06/17 : 카드번호 입력폼수정</span></li> <!--비고-->
+		</ul>
+
+		<!-- <h1>Web pay coding map</h1> -->
+		<ul class="depth type2">
+			<li>(팝업)약관</li> <!--1depth-->
+			<li>kbp_webp_037</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br><span class="red">06-03</span></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_037.html" target="_aa">kbp_webp_037.html</a>
+				<a href="./kbp_webp_037.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li><span class="red">Combo버튼 스크립트함수로 변경</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>카드정보 입력</li> <!--1depth-->
+			<li>kbp_webp_038</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br>05-26<br>05-28<br>06-02<br>06-11<br><span class="red">06-17</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_038.html" target="_aa">kbp_webp_038.html</a>
+				<a href="./kbp_webp_038.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				05/26 : <br>cvc2 정의/팝업 설계에 없음<br>팝업내용 추가<br>
+				05/28 : <br>h2 삭제, label명 수정, 입력필드 수정<br>06/02 : <br> validation 문구 적용<br>
+				06/11 : 카드번호 2번째자리 모두 blcak 마스킹 적용<br>
+				<span class="red">06/17 : 카드번호 입력폼수정</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>(팝업)CVC2안내</li> <!--1depth-->
+			<li>kbp_webp_030_1</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-26</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_030_1.html" target="_aa">kbp_webp_030_1.html</a>
+				<a href="./kbp_webp_030_1.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>kbp_webp_038 에서 노출</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>카드비밀번호 등록</li> <!--1depth-->
+			<li>kbp_webp_039</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br><span class="red">05-28 </span><br><span class="red">07-02</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_039.html" target="_aa">kbp_webp_039.html</a>
+				<a href="./kbp_webp_039.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				타이틀만 차이가 있음<br>
+				<span class="red">입력필드 수정</span><br>
+				<span class="red">07-02 : 텍스트 수정</span>	
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>카드비밀번호 확인</li> <!--1depth-->
+			<li>kbp_webp_040</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25
+				<br>05-28
+				<br>07-02
+				<br><span class="red">07-07</span>
+			</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_040.html" target="_aa">kbp_webp_040.html</a>
+				<a href="./kbp_webp_040.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				입력필드 수정
+				<br><span class="red">07-02 : 텍스트 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>고객정보입력</li> <!--1depth-->
+			<li>kbp_webp_041</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25
+				<br>05-28
+				<br>06-02
+				<br>06/05
+				<br>06/18
+				<br><span class="red">07/02</span>
+			</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_041.html" target="_aa">kbp_webp_041.html</a>
+				<a href="./kbp_webp_041.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>05/28 : h2 삭제, 입력필드 수정, ico_input_delete02.png 추가<br>
+				06/02 : validation 문구 적용, 전화번호 > 휴대폰번호 문구 수정<br>
+				06/05 : 소득공제신청 문구수정<br>
+				06/18 : KB회원 주민등록번호(수정불가) class 추가
+				<br><span class="red">07/02 : 자택주소 clickable class 추가</span>
+				<br><span class="red">07/07 : 우편물수령처 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 new">
+			<li>주소검색</li> <!--1depth-->
+			<li>kbp_webp_082</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_082.html" target="_aa">kbp_webp_082.html</a>
+				<a href="./kbp_webp_082.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규
+				<br>Back button Sample
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 new">
+			<li>(팝업)상세주소 입력</li> <!--1depth-->
+			<li>kbp_webp_083</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_083.html" target="_aa">kbp_webp_083.html</a>
+				<a href="./kbp_webp_083.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>은행계좌등록 완료 (or 선택)</li> <!--1depth-->
+			<li>kbp_webp_042</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br><span class="red">05-28</span><br><span class="red">05-29</span><br><span class="red">06-19</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_042.html" target="_aa">kbp_webp_042.html</a>
+				<a href="./kbp_webp_042.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				
+				<span class="red">카드리스트 구조 변경, 하단 버튼 수정</span><br>
+				<span class="red">타이틀 삭제</span><br>
+				<span class="red">계좌리스트 구조 변경, 하단 버튼 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>해피머니 캐쉬 충전 약관동의</li> <!--1depth-->
+			<li>kbp_webp_043</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>
+				05-25
+				<br>06-03
+				<br><span class="red">07-02</span>
+			</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_043.html" target="_aa">kbp_webp_043.html</a>
+				<a href="./kbp_webp_043.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				Combo버튼 스크립트함수로 변경
+				<br><span class="red">07/02 : 항목 1개 삭제</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>충전금액입력</li> <!--1depth-->
+			<li>kbp_webp_044</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->  
+			<li>05-25<br><span class="red">05-29</span><br><span class="red">06-02</span><br><span class="red">06-05</span><br><span class="red">07-07</span><br><span class="red">07-09</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명--> 
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_044.html" target="_aa">kbp_webp_044.html</a>
+				<a href="./kbp_webp_044.html" class="blank" target="_blank">새창</a> 
+			</li> 
+			<li>
+				
+				<span class="red">상품권충전안내 팝업 내용 추가</span><br>
+				<span class="red">충전안내 팝업 내용 추가, 텍스트 수정, 보유포인트 추가, 에러케이스 수정</span><br>
+				<span class="red">충전안내 팝업 수정</span><br>
+				<span class="red">07-07 : alert 팝업 추가</span><br>
+				<span class="red">07-09 : alert 팝업 case 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>(팝업)상품권 포인트 충전 안내</li> <!--1depth-->
+			<li>kbp_webp_045</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22</li> <!--작업일--> 
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명--> 
+				<a class="file-nm" href="./kbp_webp_044.html" target="_aa">kbp_webp_044.html</a>
+				<a href="./kbp_webp_044.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				상품권포인트 충전 안내 click 하면 팝업나옴<br>
+				044, 046, 047, 048 화면 안에 팝업 포함
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>해피머니 상품권 정보입력</li> <!--1depth-->
+			<li>kbp_webp_046</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br>05-28<br>05-29<br>06-02<br>06-05<br><span class="red">06-17</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_046.html" target="_aa">kbp_webp_046.html</a>
+				<a href="./kbp_webp_046.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				05/28 :<br>h2 삭제, 입력필드 수정<br>
+				05/29 :<br>상품권충전안내 팝업 내용 추가<br>
+				06/02 : <br>상품권충전안내 팝업 내용 추가, validation 문구 적용<br>
+				06/05 : <br>상품권충전안내 팝업 수정<br>
+				<span class="red">06/17 : <br>핀번호/바코드번호 16자리 입력 폼 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>상품권 충전 완료</li> <!--1depth-->
+			<li>kbp_webp_047</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br><span class="red">05-28</span><br><span class="red">05-29</span><br><span class="red">06-02</span><br><span class="red">06-05</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_047.html" target="_aa">kbp_webp_047.html</a>
+				<a href="./kbp_webp_047.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				
+				<span class="red">타이틀 수정</span><br>
+				<span class="red">상품권충전안내 팝업 내용 추가</span><br>
+				<span class="red">상품권충전안내 팝업 내용 추가, 리스트 하단 고정으로 수정</span><br>
+				<span class="red">텍스트 줄바뀜 수정, 상품권충전안내 팝업 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>상품권 충전 실패</li> <!--1depth-->
+			<li>kbp_webp_048</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br><span class="red">05-28</span><br><span class="red">05-29</span><br><span class="red">06-02</span><br><br><span class="red">06-05</span><br><span class="red">06-19</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_048.html" target="_aa">kbp_webp_048.html</a>
+				<a href="./kbp_webp_048.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				
+				<span class="red">타이틀 수정</span><br>
+				<span class="red">상품권충전안내 팝업 내용 추가</span><br>
+				<span class="red">상품권충전안내 팝업 내용 추가, 실패 case 추가, error-txt class 추가 'type02', 리스트 하단 고정으로 변경, 하단 버튼 수정</span><br>
+				<span class="red">06-05 : 상품권충전안내 팝업 수정</span><br>
+				<span class="red">텍스트 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 deleted">
+			<li><span class="red">결제서명 확인(삭제)</span></li> <!--1depth-->
+			<li>kbp_webp_049</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_049.html" target="_aa">kbp_webp_049.html</a>
+				<a href="./kbp_webp_049.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li><span class="red">5/21 기획 삭제</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>(팝업)실명확인 오류 안내</li> <!--1depth-->
+			<li>kbp_webp_050</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br><span class="red">05-28</span><br><span class="red">05-29</span><br><span class="red">06-05</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_050.html" target="_aa">kbp_webp_050.html</a>
+				<a href="./kbp_webp_050.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">타이틀 수정</span><br>
+				<span class="red">사이트 링크 영역 수정</span><br>
+				<span class="red">상단 에러문구 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>(팝업)도용방지설정 안내</li> <!--1depth-->
+			<li>kbp_webp_051</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-22<br><span class="red">05-28</span><br><span class="red">05-29</span><br><span class="red">06-05</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_051.html" target="_aa">kbp_webp_051.html</a>
+				<a href="./kbp_webp_051.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">타이틀 수정</span><br>
+				<span class="red">사이트 링크 영역 수정</span><br>
+				<span class="red">상단 에러문구 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>(팝업)소득공제 신청시 유의사항</li> <!--1depth-->
+			<li>kbp_webp_056</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_056.html" target="_aa">kbp_webp_056.html</a>
+				<a href="./kbp_webp_056.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>kbp_webp_041 에서 노출</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>은행계좌 직접 등록</li> <!--1depth-->
+			<li>kbp_webp_057</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br>05-28<br><span class="red">06-02</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_057.html" target="_aa">kbp_webp_057.html</a>
+				<a href="./kbp_webp_057.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>05/28 :<br>h2 삭제, 에러텍스트 위치 이동<br><span class="red">06/02 :<br>validation 문구 적용(에러텍스트 위치이동)
+			</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>계좌비밀번호 인증</li> <!--1depth-->
+			<li>kbp_webp_063</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-25<br>05-28<br><span class="red">06-02</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_063.html" target="_aa">kbp_webp_063.html</a>
+				<a href="./kbp_webp_063.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>05/28 :<br>입력필드 수정, tooltip 추가<br><span class="red">06/02 :<br>validation 문구 적용</span></li><!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>개인(신용)정보수집,이용,제공 동의서</li> <!--1depth-->
+			<li>kbp_webp_064</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-29
+				<br>06-03
+				<br>07-01
+				<br><span class="red">07-02</span>
+			</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_064.html" target="_aa">kbp_webp_064.html</a>
+				<a href="./kbp_webp_064.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				5/28 기획 : 추가
+				<br>Combo버튼 스크립트함수로 변경
+				<br>7/1 소타이틀 제거, 하단버튼명 변경: 다음->확인
+				<br><span class="red">07/02 내용변경</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>마케팅 수신 동의</li> <!--1depth-->
+			<li>kbp_webp_065</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>05-29<br><span class="red">07-09</span></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_065.html" target="_aa">kbp_webp_065.html</a>
+				<a href="./kbp_webp_065.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">5/29 기획 : 추가</span><br>
+				<span class="red">07/09 : 타이틀 수정, 클래스 수정, 상단 문구 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2">
+			<li>신규가입 불가 안내 : 14세 미만</li> <!--1depth-->
+			<li>kbp_webp_077</li> <!--2depth-->
+			<!--<li></li>--> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-19</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="./kbp_webp_077.html" target="_aa">kbp_webp_077.html</a>
+				<a href="./kbp_webp_077.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>6-19 추가</li> <!--비고-->
+		</ul>
+	</div>
+	<div class="iframe">
+		<iframe src="" name="_aa" style="width:375px;height:740px;" frameborder="0"></iframe>
+	</div>
+</div>
+
+</body>
+</html>

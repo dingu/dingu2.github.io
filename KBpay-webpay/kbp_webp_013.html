@@ -1,0 +1,147 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-13          최초작성
+김수영             2020-05-27          입력필드 마크업 수정
+김수영             2020-06-04          '인증번호재전송' 버튼추가
+김수영             2020-06-05           h2 강조 범위 수정 
+이진규             2020-07-06          팝업 추가
+-->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>인증번호입력</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/jquery-2.2.4.min.js"></script>
+        <script src="./js/ui.js"></script>
+    </head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>본인인증</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+                <!--contents-->
+                <div class="contents kbp_webp_013"> <!-- contents + 페이지별 class 삽입 -->
+                    <h2 class="tit"><span class="underline">인증번호를 입력해주세요</span></h2> <!--//2020-06-05 강조 범위 수정-->
+                   
+                    <div class="passWrap">
+                        <!--2020-05-27 마크업수정-->
+                        <div class="pass-input-match password">
+                            <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                            <div class="pass-input">
+                                <span class="dot on">1</span> <!--활성화 class 'on'-->
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        <!--//2020-05-27 마크업수정-->
+                        
+                        <div class="time">02:59</div>
+                        <em class="error-txt certi">인증번호가 일치하지 않습니다. <br>다시 입력해주세요.</em>
+                    </div>
+                    <p class="resend-tip">
+                        <button class="btnOpenBot" type="button">인증번호재전송</button> <!-- //2020-06-04 버튼 추가 -->
+                        <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom01')">인증번호 미수신 시 조치방법</button>
+                    </p>
+                </div>
+                <!--//contents-->
+
+                <!-- Bottom button area -->
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled> <!-- 인증번호 입력 시 disabled 삭제-->
+                                <span>로그인</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //Bottom button area -->
+
+            </div>
+        </div>
+    </div>
+
+   <!-- 휴대폰 인증번호 문자 미수신 안내 : bottom sheet layer -->
+   <div class="l-dim"></div>
+   <div class="l-bottom kbp_webp_052" id="layerBottom01">
+       <div class="l-bottom-wrap">
+           <div class="head">
+               <h1>휴대폰 인증번호 문자 미수신 안내</h1>
+               <button type="button" class="close">닫기</button>
+           </div>
+           <div class="l-contents">
+               <!-- 컨텐츠영역 -->
+               <p class="txt">고객님의 휴대폰으로 인증번호 문자가 수신되지 않을 경우, 당사 문자알림번호인 1588-1688번 스팸문자 처리 여부 확인해 주시고 아래 내용 확인을 부탁드립니다.</p>
+                <ul class="list-ico">
+                    <li class="li1"><span class="strong">통신사 문의</span>휴대폰 이용정지 (발신정지, 수신정지 등)<br>상태일 경우</li>
+                    <li class="li2"><span class="strong">휴대폰의 설정에서 확인</span>휴대폰 기기에서 스팸처리 된 경우<br>(번호 차단, 문구 차단 등)</li>
+                    <li class="li3"><span class="strong">해당 전화걸기 앱의 설정에서 확인</span>전화 앱(whowho, T전화 등)에서<br>스팸처리 된 경우</li>
+                    <li class="li4"><span class="strong">휴대폰 인증 보호앱 설치</span>SKT 통신사의 휴대폰인증보호서비스 가입<br>고객으로 휴대폰 인증보호 앱을 미설치한 경우</li>
+                </ul>
+                <ul class="list-dot">
+                    <li>KB국민카드 고객센터 : 1588-1688</li>
+                    <li>홈페이지 : https://m.kbcard.com</li>
+                </ul>
+               <!-- //컨텐츠영역 -->
+           </div>
+
+           <div class="btn-group">
+               <button class="btn medium yellow" type="button" onclick="closeBotSheet('layerBottom01')"><span>확인</span></button>
+           </div>
+       </div>
+   </div>
+   <!-- //휴대폰 인증번호 문자 미수신 안내 : bottom sheet layer -->
+
+
+   
+    <!-- 07-03 팝업 추가 -->
+    <div class="l-pop" id="pop01">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <span>
+                        휴대폰 번호를 변경하셨나요?<br>변경된 휴대폰 번호로 회원가입을 진행합니다.
+                    </span>
+                </p>
+            </div>
+            <div class="l-footer">
+                <div class="btn-group pt0 half">
+                    <button class="btn medium gray" type="button">취소</button>
+                    <button class="btn medium yellow" type="button">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="l-pop" id="pop02">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <span>
+                        이미 가입되어 있으시네요<br>로그인페이지로 이동합니다.
+                    </span>
+                </p>
+            </div>
+            <div class="l-footer">
+                <div class="btn-group pt0 half">
+                    <button class="btn medium yellow" type="button">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 07-03 팝업 추가 -->
+
+
+
+
+
+</body>
+</html>

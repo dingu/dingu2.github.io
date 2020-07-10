@@ -1,0 +1,414 @@
+@charset "utf-8";
+
+/* 인덱스 */
+.index {position: relative; background: #fff; overflow: hidden;}
+
+.index .index-header {padding: 11px 16px; height: 40px; background: #f8f8f8;}
+.index .index-header .logo {display: inline-block; width: 100px; height: 18px;}
+.index .index-header .logo img {display: block; width: 100%; height: 100%:}
+
+.index .contents {position: relative; padding-top: 1px; height: 416px; overflow: hidden;}
+.index .bottom-group {padding: 24px 0 0 0;}
+
+/* KBpay 결제 */
+.app-pay-box {padding: 8px 0;}
+.app-pay-box .tit-area {height: 88px; text-align: center;}
+.app-pay-box .tit-area .logo {position: relative; display: inline-block; padding: 30px 96px 25px 0; height: 100%;}
+.app-pay-box .tit-area .logo img {display: block; width: 174px; height: 32.5px;}
+.app-pay-box .tit-area .logo:after {position: absolute; top: 0; right: 0; content: ""; width: 88px; height: 88px; background: url(../images/icon/ico_kbpay_02.png) no-repeat; background-size: 100%;}
+.app-pay-box .btn-list {margin-top: 8px; font-size: 0;}
+.app-pay-box .btn-list button {display: inline-block; width: calc(50% - 4px); height: 48px; background: none;  border-radius: 8px;}
+.app-pay-box .btn-list .gray {background: #eee;}
+.app-pay-box .btn-list .yellow {background: #ffcc00;}
+.app-pay-box .btn-list button span {font-size: 16px; color: #222; font-weight: 500; line-height: 24px; letter-spacing: -0.4px;}
+.app-pay-box .btn-list button + button {margin-left: 8px;}
+
+
+/* 인증서로 결제하기 APP으로 결제하기 */
+.payment-box li {border-bottom: 1px solid #ddd;}
+.payment-box li:last-child {border-bottom: none;}
+.payment-box li + li {margin-top: 8px;}
+.payment-box a {position: relative; display: table; padding: 16px 32px 16px 0; width: 100%;}
+.payment-box a:after {position: absolute; top: calc(50% - 12px); right: 0; content: ""; width: 24px; height: 24px; background: url(../images/icon/ico_arrow_gray_02.png) no-repeat; background-size: 100%;}
+.payment-box a .tit-area {display: table-cell; vertical-align: middle;}
+.payment-box a .tit-area .p-tit {display: block; font-size: 18px; color: #222; font-weight: 500; line-height: 26px; letter-spacing: -0.4px;}
+.payment-box a .tit-area .p-txt {display: block; font-size: 12px; color: #666; line-height: 16px; letter-spacing: -0.2px;}
+.payment-box a .tit-area .p-txt + .p-tit {margin-top: 4px;}
+
+/* 제휴 간편결제 */
+.partner-payment {padding-top: 24px; font-size: 0;}
+.partner-payment li {display: inline-block; width: calc(50% - 7.5px); height: 116px; border: 1px solid #eee; border-radius: 8px; vertical-align: top;}
+.partner-payment li:nth-child(1),
+.partner-payment li:nth-child(2) {margin-bottom: 14px;}
+.partner-payment li:nth-child(2n) {margin-left: 15px;}
+.partner-payment li a {display: table; padding: 0 24px; width: 100%; height: 100%; text-align: center;}
+.partner-payment li a .tit-area {display: table-cell; vertical-align: middle;}
+.partner-payment li a .p-txt {font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px;}
+.partner-payment li a .p-tit {font-size: 18px; color: #222; font-weight: 700; line-height: 26px; letter-spacing: -0.4px;}
+.partner-payment li a .logo {display: inline-block; margin-top: 8px; height: 22px;}
+.partner-payment li a .logo img {display: block; width: 100%; height: 100%;}
+.partner-payment li .samsungpay .logo {width: 138px;}
+.partner-payment li .lgpay .logo {width: 66px;}
+.partner-payment li .payco .logo {width: 76px;}
+
+
+/* Slider */
+.banner-slide {position: absolute; bottom: 0; left: 0; margin: 0 -16px; width: calc(100% + 32px); height: 50px; overflow: hidden;}
+.banner-slide .slide-area {padding: 0 16px; height: 100%;}
+.banner-slide .slide-area .slick-list {height: 100%;}
+.banner-slide .slide-area .slick-list .slick-track {height: 100%;}
+.banner-slide .slide-area .slide{display: block; width: 100%; height: 100%;}
+.banner-slide .slide-area .slide > img {display: block; width: 100%; height: 100%;}
+.banner-slide .slide-area .slide > div {display: block; width: 100%; height: 100%;}
+.banner-slide .slide-nav {position: absolute; top: calc(50% - 10px); right: 32px; font-size: 0; z-index: 10;}
+.banner-slide .slide-nav > span {display: inline-block; height: 20px; font-size: 12px; color: #222; font-weight: 500; line-height: 20px; letter-spacing: -0.2px; vertical-align: top;} 
+.banner-slide .slide-nav .totalIndex:before {content: "/"; display: inline-block; margin: 0 4px; vertical-align: top;}
+.banner-slide .slide-nav button {display: inline-block; text-indent: -9999px; background: none; border: none; vertical-align: top;}
+.banner-slide .slide-nav .btn-active {margin-left: 4px; width:20px; height: 20px; background: url(../images/icon/ico_btn_pause.png) no-repeat; background-size: 100%;}
+.banner-slide .slide-nav .btn-active.play {background: url(../images/icon/ico_btn_play.png) no-repeat; background-size: 100%;}
+
+
+
+/* Tab */
+.tab-ui {margin: 0 -16px;}
+.tab-ui .tab-list.type01 {padding: 0px 16px 0 16px; font-size: 0; border-bottom: 1px solid #ddd;}
+.tab-ui .tab-list.type01 li {display: inline-block; padding: 0; width: 50%;}
+.tab-ui .tab-list.type01 li a {position: relative; display: block; padding: 12px 0; font-size: 16px; color: #666; line-height: 24px; text-align: center; letter-spacing: -0.4px;}
+.tab-ui .tab-list.type01 li a.active {color: #222; font-weight: 700;}
+.tab-ui .tab-list.type01 li a.active:after {position: absolute; bottom: -1px; left: 0; content: ""; width: 100%; height: 2px; background: #222;}
+
+.tab-ui .tab-contents {padding: 0px 16px; height: 100%;}
+.tab-ui .tab-contents .tab-item {display: none;}
+.tab-ui .tab-contents .tab-item:first-child {display: block;}
+
+
+
+/* Button */
+.btn-border {text-align: right;}
+.btn-border button {position: relative; padding: 0 28px 0 12px; height: 24px; font-size: 12px; color: #9e8c6e; font-weight: 700; line-height: 16px; background: none; border: 1px solid #9e8c6e; border-radius: 14px;}
+.btn-border button:after {position: absolute; top: calc(50% - 8px); right: 8px; content: ""; width: 16px; height: 16px; background: url(../images/icon/ico_arrow_brown.png) no-repeat; background-size: 100%;}
+
+
+/* Table */
+.table-type01 {padding: 8px 0;}
+.table-type01 table {text-align: center;}
+.table-type01 table thead {background: #f8f8f8;}
+.table-type01 table thead tr:last-child {border-bottom: none;}
+.table-type01 table tr {border-bottom: 1px solid #eee;}
+.table-type01 table th {padding: 8px 0; height: 40px; font-size: 16px; color: #666; font-weight: 400; line-height: 24px; letter-spacing: -0.4px;}
+.table-type01 table td {padding: 8px 0; height: 40px; font-size: 16px; color: #222; line-height: 24px; letter-spacing: -0.4px;}
+.table-type01 table th + th,
+.table-type01 table th + td,
+.table-type01 table td + td {border-left: 1px solid #eee;}
+.table-type01 table .bb-none {border-bottom: 1px solid transparent;}
+
+/* 043,044 form */
+.form-wrap.point .list-txt04 {position: static; padding: 12px 0 0 0;}
+.form-wrap.point .form_text {height: 68px;}
+.form-wrap.point .form_text input {font-size: 24px; font-weight: 500; line-height: 40px; letter-spacing: 0;}
+
+
+/* 숫자 텍스트 리스트 */
+.list-num li {position: relative; padding-left: 28px; font-size: 16px; color: #222; font-weight: 700; line-height: 24px; letter-spacing: -0.4px;}
+.list-num li:before {position: absolute; top: 0; left: 0; content: ""; width: 20px;}
+.list-num li:nth-child(1):before {content: "01";}
+.list-num li:nth-child(2):before {content: "02";}
+.list-num li:nth-child(3):before {content: "03";}
+.list-num li:nth-child(4):before {content: "04";}
+.list-num li .qr-box {display: table; margin-top: 16px; padding: 16px; width: 100%; height: 120px; border: 1px solid #eee; overflow: hidden;}
+.list-num li .qr-box .img {display: table-cell; width: 50%; height: 100%; text-align: center; overflow: hidden;}
+.list-num li .qr-box .img img {display: inline-block; width: 88px; height: 88px;}
+.list-num li .qr-box .num {display: table-cell; width: 50%; height: 100%; font-size: 0; text-align: center; vertical-align: middle;}
+.list-num li .qr-box .num span {display: inline-block; font-size: 18px; color: #222; font-weight: 500; line-height: 26px; letter-spacing: -0.4px; vertical-align: middle;}
+.list-num li .qr-box .num em {display: inline-block; margin: 14px 0 11px 0; width: 8px; height: 1px; background: #222; vertical-align: middle;}
+.list-num li .qr-box .num span + span {margin-left: 4px;} 
+.list-num li .qr-box .num span + em, 
+.list-num li .qr-box .num em + span {margin-left: 8px;} 
+.list-num li + li {margin-top: 32px;}
+
+/* 타이틀 + 내용 텍스트 리스트 */
+.list-txt01 {margin-top: 16px; padding: 16px 0 8px 0; border-top: 1px solid #ddd;}
+.list-txt01 dt {font-size: 16px; color: #222; font-weight: 700; line-height: 24px; letter-spacing: -0.4px;}
+.list-txt01 dd {font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px;}
+.list-txt01 dt + dd {margin-top: 16px;}
+.list-txt01 dd + dd {margin-top: 8px;}
+.list-txt01 dd + dt {margin-top: 32px;}
+/* 팝업페이지 안에 들어갈 경우 */
+.l-contents .list-txt01 {margin-top: 0; padding: 0; border-top: none;}
+.l-contents .list-txt01 dt + dd {margin-top: 8px;}
+.l-contents .list-txt01 dd + dt {margin-top: 24px;}
+/* 050 팝업 예외처리 */
+.txt08 + .list-txt01 {margin-top: 16px; padding: 16px 0 8px 0; border-top: 1px solid #ddd;}
+
+
+/* 내용만있는 텍스트 리스트 */
+.list-txt02 {margin-top: 16px; padding: 16px 0 8px 0; border-top: 1px solid #ddd;}
+.list-txt02 li {font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px;}
+.list-txt02 li + li {margin-top: 16px;}
+
+/* 도트 블릿 텍스트 리스트 */
+.list-txt03 li {position: relative; padding-left: 12px; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px;}
+.list-txt03 li:before {position: absolute; top: 8px; left: 0; content: ""; width: 4px; height: 4px; background: #999; border-radius: 50%;}
+.list-txt03 li + li {margin-top: 4px;}
+
+
+/* 가로형 타이틀 + 내용 텍스트 리스트 */
+.list-txt04 {position: absolute; bottom: 36px; left: 0; padding: 0 16px; width: 100%;}
+.list-txt04 dl {display: table; width: 100%;}
+.list-txt04 dl + dl {margin-top: 8px;}
+.list-txt04 .total {padding-top: 4px;}
+.list-txt04 .total dt {font-size: 16px; letter-spacing: -0.4px;}
+.list-txt04 .total dd {font-size: 16px; font-weight: 700; letter-spacing: -0.4px;}
+.list-txt04 dl dt {display: table-cell; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px;}
+.list-txt04 dl dd {display: table-cell; font-size: 14px; color: #222; font-weight: 500; line-height: 20px; letter-spacing: -0.2px; text-align: right;}
+/* 하단 기준 레이아웃 */
+.bottom-group .list-txt04 {padding-bottom: 16px;}
+
+
+/* 도트블릿 텍스트 type2 */
+.list-txt05 li {position: relative; padding-left: 12px; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px;}
+.list-txt05 li:before {position: absolute; top: 10px; left: 0; content: ""; width: 4px; height: 4px; background: #999; border-radius: 50%;}
+.list-txt05 li + li {margin-top: 16px;}
+
+
+
+/* 링크버튼 리스트 */
+.list-link {padding-top: 16px;}
+.list-link li + li {margin-top: 8px;}
+.list-link li a {position: relative; display: block; padding: 13px 16px; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.09);}
+.list-link li a.disabled {background: #f8f8f8; border: none; box-shadow: none; cursor: default;}
+.list-link li a.disabled span {color: #888;}
+.list-link li a span {display: inline-block; font-size: 14px; color: #222; line-height: 20px; letter-spacing: -0.2px;}
+
+
+/* 결제수단관리 리스트 */
+.list-card-btn {padding-top: 12px; font-size: 0;}
+.list-card-btn li {display: inline-block; margin-bottom: 8px; width: calc(50% - 4.5px);}
+.list-card-btn li:nth-child(2n) {margin-left: 9px;}
+.list-card-btn li > * {display: table; padding: 9px 16px; width: 100%; border: 1px solid #ddd; border-radius: 8px;}
+.list-card-btn li > a:hover {border-color: #eee; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.09);}
+.list-card-btn li > * span {display: table-cell; font-size: 14px; line-height: 20px; letter-spacing: -0.2px;}
+.list-card-btn li > * .type {color: #222;}
+.list-card-btn li > * .num {font-size: 16px; color: #6d5cda; font-weight: 700; line-height: 24px; letter-spacing: -0.4px; text-align: right;}
+.list-card-btn li > div {background: #f8f8f8;}
+.list-card-btn li > div .type {color: #666;}
+.list-card-btn li > div .num {color: #222;}
+
+
+/* 회원가입 박스 */
+.join-box {margin-top: 32px;}
+.join-box .join-tit {font-size: 16px; color: #222; font-weight: 700; line-height: 24px; letter-spacing: -0.4px;}
+.join-box .join-tb {position: relative; display: table; margin-top: 20px; padding-right: 40px; width: 100%;}
+.join-box .join-tb .icon {display: table-cell; width: 48px; height: 48px; vertical-align: middle;}
+.join-box .join-tb .icon img {display: block; width: 100%; height: 100%;}
+.join-box .join-tb .tit-area {display: table-cell; padding-left: 16px; font-size: 18px; color: #222; font-weight: 700; line-height: 26px; letter-spacing: -0.4px; vertical-align: middle;}
+.join-box .join-tb:after {position: absolute; top: calc(50% - 12px); right: 0; content: ""; width: 24px; height: 24px; background: url(../images/icon/ico_arrow_gray.png) no-repeat; background-size: 100%; overflow: hidden;}
+
+
+/* 14세미만 회원가입 불가영역 */
+.join-failed {position: relative; margin-top: 16px; padding-top: 104px;}
+.join-failed:before {position: absolute; top: 0; left: 0; content: ""; width: 80px; height: 80px; background: url(../images/icon/ico_join_failed.png) no-repeat; background-size: 100%;}
+.join-failed .failed-tit {font-size: 18px; color: #222; font-weight: 700; line-height: 26px; letter-spacing: -0.4px;}
+.join-failed .failed-txt {padding-top: 8px; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px;}
+
+/* 카드 없는 경우 */
+.card-none {padding-top: 90px; text-align: center;}
+.card-none .msg {position: relative; padding-top: 56px; font-size: 14px; color: #888; line-height: 20px; letter-spacing: -0.2px;}
+.card-none .msg:before {position: absolute; top: 0; left: calc(50% - 24px); content: ""; width: 48px; height: 48px; background: url(../images/icon/ico_nodata.png) no-repeat; background-size: 100% 100%;}
+.card-none .btn-line {float: unset;}
+
+
+
+/* 결제수단관리 상품권포인트박스 */
+.gift-box {display: table; margin-bottom: 12px; padding: 9px 16px; width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
+.gift-box dl {display: table-cell; font-size: 0; vertical-align: middle;}
+.gift-box dl dt{display: inline-block; font-size: 14px; color: #222; line-height: 20px; letter-spacing: -0.2px;}
+.gift-box dl dd{display: inline-block; padding-left: 16px; font-size: 16px; color: #6d5cda; font-weight: 700; line-height: 24px; letter-spacing: -0.4px;}
+.gift-box .btn {display: table-cell; font-size: 0; text-align: right; vertical-align: middle;}
+.gift-box .btn a {display: inline-block; padding-bottom: 2px; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px; background: none; border-bottom: 1px solid #aaa;}
+.gift-box .btn a + a {margin-left: 12px;}
+
+
+/* 카드박스 */
+.card-box {position: relative; display: table; padding: 8px 0; width: 100%; table-layout: fixed;}
+.card-box.line {border:1px solid #eee;}
+.card-box > div {display: table-cell;}
+.card-box .img-area {position: relative; display: table-cell; width: 96px; height: 60px; vertical-align: middle; border-radius: 4px;}
+.card-box .img-area.active .img:after {position: absolute; top: -11px; right: -11px; content: ""; width: 30px; height: 30px; background: url(../images/icon/ico_chk_on_type02.png) no-repeat; background-size: contain; box-sizing: border-box; z-index: 10;}
+.card-box .img-area .img {position: relative; display: inline-block; width: 96px; height: 60px; vertical-align: middle;}
+.card-box .img-area .img img{display: block; width: 100%; height: 100%;}
+.card-box .txt-area {display: table-cell; padding-left: 16px; width: 100%; font-size: 0; vertical-align: middle;}
+.card-box .txt-area .card-tit {display: block; margin-bottom: 4px; width: 100%; font-size: 16px; color: #222; font-weight: 500; line-height: 24px; letter-spacing: -0.4px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.card-box .txt-area .card-tit .card-icon {display: inline-block; margin-right: 4px; width: 32px; height: 24px;}
+.card-box .txt-area .card-type {position: relative; display: inline-block; margin-right: 10px; font-size: 14px; color: #666; font-weight: 500; line-height: 20px; letter-spacing: -0.2px; vertical-align: middle;}
+.card-box .txt-area .card-type:after {position: absolute; top: 9px; right: -5px; content: ""; width: 2px; height: 2px; background: #979797;}
+.card-box .txt-area .card-num {display: inline-block; font-size: 12px; color: #666; line-height: 16px; vertical-align: middle;}
+
+
+.list-card-box {position: relative; padding-top: 8px;}
+.list-card-box .card-box {padding: 8px 40px 8px 40px;}
+.list-card-box > button {position: absolute; top: calc(50% - 12px); width: 24px; height: 24px; text-indent: -9999px; background: url(../images/icon/ico_arrow_gray.png) no-repeat; background-size: 100%; z-index: 10;}
+.list-card-box .btn-prev {left: 0; transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+.list-card-box .btn-next {right: 0;}
+.list-card-box + .txt02 {margin-top: 32px;}
+
+
+.bottom-btn.type03 {position: static; margin: 8px 0;}
+
+
+
+.card-box.edit .txt-area {position: relative; padding-right: 40px;}
+.card-box.edit .txt-area .del {position: absolute; top: calc(50% - 12px); right: 0; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px; background: none; border-bottom: 1px solid #aaa;}
+
+.txt + .card-box {margin-top: 8px;}
+
+
+/* ARS 인증 */
+.ars-cert {padding-top: 4px; text-align: center;}
+.ars-cert .msg {position: relative; padding-top: 66px; font-size: 14px; color: #888; line-height: 20px; letter-spacing: -0.2px;}
+.ars-cert .msg:before {position: absolute; top: 0; left: calc(50% - 24px); content: ""; width: 48px; height: 48px; background: url(../images/icon/ico_ars.png) no-repeat; background-size: 100%;}
+.ars-cert .submit {margin-top: 16px; padding-bottom: 1px; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px; background: none; border-bottom: 1px solid #aaa;}
+.ars-cert .code {display: none; margin: 25px auto 0 auto; padding: 15px 0; width: 98px; height: 64px; font-size: 24px; color: #222; font-weight: 700; line-height: 34px; letter-spacing: -0.4px; text-align: center; background: #f8f8f8; border-radius: 32px;}
+
+
+/* 하단고정 .btn-line */
+.btn-group .btn-line {margin-bottom: 16px; padding-top: 0; float: right;}
+.btn-group .btn-line:after {content: ""; display: block; clear: both;}
+
+
+/* 앱설치안내 */
+.app-guide {margin-top: 16px; font-size: 0 !important;/* // 06-25 수정 */ border-top: 1px solid #ddd;} 
+.app-guide li {position: relative; display: inline-block; margin-top: 24px; width: 50%; text-align: center;}
+.app-guide li:nth-child(2):before {position: absolute; top: 0; left: -0.5px; content: ""; width: 1px; height: 100%; border-left: 1px dashed #ddd;}
+.app-guide li .qr {display: inline-block; width: 80px; height: 80px;}
+.app-guide li .qr img {display: block; width: 100%; height: 100%;}
+.app-guide li .market-box {display: table; margin: 0 auto; padding-top: 16px; text-align: center;}
+.app-guide li .market-box .img-area {display: table-cell; width: 32px; height: 32px; vertical-align: middle;}
+.app-guide li .market-box .img-area img {display: block; width: 100%; height: 100%;}
+.app-guide li .market-box .tit-area {display: table-cell; padding-left: 8px; vertical-align: middle; text-align: left;}
+.app-guide li .market-box .tit-area .os {display: block; font-size: 14px; color: #222; font-weight: 700; line-height: 20px; letter-spacing: -0.2px;}
+.app-guide li .market-box .tit-area .market {display: block; font-size: 12px; color: #666; line-height: 16px; letter-spacing: -0.2px;}
+
+
+/* 보안인증 */
+.pc-cert {margin-top: 48px; font-size: 0; text-align: center;}
+.pc-cert li {position: relative; display: inline-block; padding: 16px 0 24px 0; width: 50%; vertical-align: top;}
+.pc-cert li .img {margin: 0 auto; width: 48px; height: 48px;}
+.pc-cert li .img img {display: block; width: 100%; height: 100%;}
+.pc-cert li .tit-area {padding-top: 16px; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px;}
+.pc-cert li .tit-area strong {display: block; padding-top: 8px; font-size: 18px; color: #222; font-weight: 700; line-height: 26px; letter-spacing: -0.4px;}
+.pc-cert li .btn-line-group {margin-top: 24px; font-size: 0;}
+.pc-cert li .btn-line-group button {display: inline-block; padding: 0 0 1px 0; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px; background: none; border-bottom: 1px solid #aaa;}
+.pc-cert li .btn-line-group button + button {margin-left: 16px;}
+.pc-cert li + li:before {position: absolute; top: 0; left: 0.5px; content: ""; width: 1px; height: 100%; border-left: 1px dashed #eee;}
+
+
+/* 앱카드인증 */
+.qr-scan {display: table; margin: 16px 0; padding: 16px 5%; width: 100%; text-align: center; border: 1px solid #eee;}
+.qr-scan .img {display: table-cell; width: 45%; height: 88px; vertical-align: middle;}
+.qr-scan .img img {display: block; margin: 0 auto; width: 88px; height: 88px;}
+.qr-scan .btn-area {display: table-cell; width: 45%; vertical-align: middle;}
+.qr-scan .btn-area .time {font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px;}
+.qr-scan .btn-area .time span {display: inline-block; margin-left: 4px; color: #ff0000;}
+.qr-scan .btn-area .refresh {margin-top: 7px; padding: 0 16px; height: 32px; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px; background: none; border: 1px solid #ddd; border-radius: 8px;}
+
+
+/* 인증받은 기기 */
+.cert-device .list-none {position: relative; margin-top: 112px; padding-top: 56px; font-size: 14px; color: #888; line-height: 20px; letter-spacing: -0.2px; text-align: center;}
+.cert-device .list-none:before {position: absolute; top: 0; left: calc(50% - 24px); content: ""; width: 48px; height: 48px; background: url(../images/icon/ico_nodata.png) no-repeat; background-size: 100%;}
+
+.cert-device .list .tit-area {padding: 16px 0 8px 0; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px;}
+.cert-device .list .item a {position: relative; display: block; padding: 20px 32px 20px 48px; width: 100%;}
+.cert-device .list .item a:before {position: absolute; top: calc(50% - 16px); left: 0; content: ""; width: 32px; height: 32px;}
+.cert-device .list .item .pc:before {background: url(../images/icon/ico_cert_pc.png) no-repeat; background-size: 100%;}
+.cert-device .list .item .mobile:before {background: url(../images/icon/ico_cert_mo.png) no-repeat; background-size: 100%;}
+.cert-device .list .item a:after {position: absolute; top: calc(50% - 12px); right: 0; content: ""; width: 24px; height: 24px; background: url(../images/icon/ico_arrow_gray.png) no-repeat; background-size: 100%;}
+.cert-device .list .item a span {display: inline-block; font-size: 16px; color: #222; font-weight: 700; line-height: 24px; letter-spacing: -0.4px;}
+.cert-device .info-txt {margin-top: 4px; font-size: 14px; color: #888; line-height: 20px; letter-spacing: -0.2px;}
+.cert-device .btn-list {margin-top: 13px; font-size: 0; text-align: right;}
+.cert-device .btn-list a {display: inline-block; padding: 0 0 1px 0; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px; background: none; border-bottom: 1px solid #aaa;}
+.cert-device .btn-list a + a {margin-left: 12px;}
+
+
+.device-info {padding-top: 24px;}
+.device-info .list-none {position: relative; margin-top: 98px; padding-top: 56px; font-size: 14px; color: #888; line-height: 20px; letter-spacing: -0.2px; text-align: center;}
+.device-info .list-none:before {position: absolute; top: 0; left: calc(50% - 24px); content: ""; width: 48px; height: 48px; background: url(../images/icon/ico_nodata.png) no-repeat; background-size: 100%;}
+.device-info .list {padding-bottom: 40px;}
+.device-info .list .tit-area {font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px;}
+.device-info .list .btn-more {width: 100%; height: 48px; background: rgba(255, 255, 255, 0.8); border: 1px solid #eee; border-radius: 8px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);}
+.device-info .list .btn-more span {position: relative; display: inline-block; padding-left: 20px; font-size: 14px; color: #222; font-weight: 500; line-height: 20px; letter-spacing: -0.2px;}
+.device-info .list .btn-more span:before {position: absolute; top: 2px; left: 0; content: ""; width: 16px; height: 16px; background: url(../images/icon/ico_plus.png) no-repeat; background-size: 100%;}
+.device-info .item {padding: 24px 0 32px 0;}
+.device-info .item .date {font-size: 14px; color: #888; font-weight: 700; line-height: 20px; letter-spacing: -0.2px;}
+.device-info .item .name {margin-top: 8px; font-size: 18px; color: #222; font-weight: 700; line-height: 26px; letter-spacing: -0.4px;}
+.device-info .item dl {margin-top: 16px;}
+.device-info .item + .item {margin-top: 8px; border-top: 1px solid #eee;}
+.device-info dl {display: table; width: 100%;}
+.device-info dl + dl {margin-top: 8px;}
+.device-info dl dt {display: table-cell; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px;}
+.device-info dl dd {display: table-cell; font-size: 16px; color: #222; font-weight: 500; line-height: 24px; letter-spacing: -0.4px; text-align: right;}
+.device-info .btn-list {margin-top: 24px; font-size: 0; text-align: right;}
+.device-info .btn-list button {display: inline-block; padding: 0 0 1px 0; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px; background: none; border-bottom: 1px solid #aaa;}
+.device-info .btn-list button + button {margin-left: 12px;}
+
+.l-contents .device-info {padding-top: 0;}
+
+
+
+@media screen and (max-width: 430px) {
+
+    /* kbp_payc_001 */
+    .partner-payment li a {padding: 0;}
+
+    /* kbp_payc_026, kbp_payc_081 */
+    .list-card-btn li > * {padding: 9px 8px; white-space: nowrap;}
+    .list-card-btn li > * .num {font-size: 14px; line-height: 20px;}
+    .gift-box {padding: 9px 8px;}
+    .gift-box dl {white-space: nowrap;}
+    .gift-box dl dd {padding-left: 8px; font-size: 14px; line-height: 20px;}
+    .gift-box .btn a + a {margin-left: 6px;}
+    .list-txt03 li {font-size: 12px; line-height: 16px;}
+    .list-txt03 li:before {top: 6px;}
+
+    .pc-cert li .btn-line-group {margin-top: 24px; font-size: 0;}
+    .pc-cert li .btn-line-group button {display: block; margin: 0 auto; padding: 0 0 1px 0; width: auto; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px; background: none; border-bottom: 1px solid #aaa;}
+    .pc-cert li .btn-line-group button + button {margin: 4px auto 0 auto;}
+
+}
+
+@media screen and (max-width: 400px) {
+    
+
+}
+
+@media screen and (max-width: 374px) {
+
+    /* kbp_payc_001 */
+    .partner-payment li .samsungpay .logo img {transform: scale(0.8);}
+
+    /* kbp_payc_004 */
+    .list-num li .qr-box .num span {font-size: 16px; line-height: 24px;}
+    .list-num li .qr-box .num span + span {margin-left: 2px;}
+    .list-num li .qr-box .num span + em, .list-num li .qr-box .num em + span {margin-left: 4px;}
+    .list-num li .qr-box .num em {margin-top: 12px;}
+    
+
+}
+
+
+
+
+/* 페이지별 스타일 적용 */
+
+/* kbp_payc_026 */
+.kbp_payc_026 {padding-top: 8px;}
+
+
+/* kbp_payc_086 */
+.kbp_payc_086 {padding-top: 8px;}
+
+/* kbp_payc_085 */
+.kbp_payc_085 .list-num li {font-weight: 400;}
+.kbp_payc_085 .list-num li:before {font-weight: 700;}
+.kbp_payc_085 .list-num li + li {margin-top: 8px;}
+.kbp_payc_085 .txt07 {margin-top: 24px; padding-bottom: 16px;}

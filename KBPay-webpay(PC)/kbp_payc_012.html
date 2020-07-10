@@ -1,0 +1,160 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-15          최초작성
+이진규             2020-07-02          텍스트 수정
+이진규             2020-07-06          팝업 case 추가
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원정보 입력</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>휴대폰본인인증</h1> <!-- // 07-02 텍스트 수정 -->
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_012"> <!-- 화면ID -->                
+                <ol class="depth-step">
+                    <li class="on"><span>1</span></li> <!--현재 step 활성화 class 'on'-->
+                    <li><span>2</span></li> 
+                    <li><span>3</span> </li>
+                </ol>
+                <!--form 입력 목록-->
+                <div class="form-wrap">
+                    <ul class="form-text-list">
+                        <li>
+                            <div class="cell">
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="id-number">주민등록번호 앞 7자리</label>
+                                    <input type="number" id="id-number" class="text" value="" placeholder="생년월일+성별">
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="name">이름</label>
+                                    <input type="text" class="text" id="name" placeholder="이름을 입력해주세요">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cell ph-select">
+                                <div class="form_text select"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="ph">통신사</label>
+                                    <select name="ph" id="ph" class="text">
+                                        <option value="">선택</option>
+                                        <option value="">KT</option>
+                                        <option value="">SKT</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="ph-number">휴대전화번호</label> <!-- // 07-02 텍스트 수정 -->
+                                    <input type="tel" class="text ph" id="ph-number" placeholder="휴대전화번호를 입력해주세요"> <!-- // 07-02 텍스트 수정 -->
+                                    <button class="ph-certi-btn" type="button">인증번호 요청</button> <!-- // 07-02 텍스트 수정 -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                <label for="certi-number">인증번호</label>
+                                <input type="number" id="certi-number" class="text" value="" placeholder="6자리 숫자를 입력해 주세요">
+                                <span class="time">05:00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--//form 입력 목록-->
+
+                <div class="bottom-btn">
+                    <button type="button" class="btn-line" onclick="openLayer('layer01', this);">인증번호 미수신 시 조치방법</button>
+                </div>
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>다음</span></button> <!--활성화 시 disabled 삭제-->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+<!-- Layer popup -->
+<div class="l-dim"></div>
+
+<div class="l-pop" id="layer01">
+    <div class="l-pop-wrap kbp_payc_052">
+        <div class="l-header">
+            <h1>휴대폰 인증번호 문자 미수신 안내</h1>
+            <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+        </div>
+
+        <div class="l-contents">
+            <p class="txt01">
+                고객님의 휴대폰으로 인증번호 문자가 수신되지 않을 경우, 당사 문자알림번호인 1588-1688번 스팸문자 처리 여부를 확인해주시고 아래 내용 확인을 부탁드립니다.
+            </p>
+            <ul class="list-ico">
+                <li class="li1"><span class="strong">통신사 문의</span>휴대폰 이용정지 (발신정지, 수신정지 등) 상태일 경우</li>
+                <li class="li2"><span class="strong">휴대폰의 설정에서 확인</span>휴대폰 기기에서 스팸처리 된 경우(번호 차단, 문구 차단 등)</li>
+                <li class="li3"><span class="strong">해당 전화걸기 앱의 설정에서 확인</span>전화 앱(whowho, T전화 등)에서 스팸처리 된 경우</li>
+                <li class="li4"><span class="strong">휴대폰 인증 보호앱 설치</span>SKT 통신사의 휴대폰인증보호서비스 가입 고객으로 휴대폰 인증보호 앱을 미설치한 경우</li>
+            </ul>
+            <ul class="list-dot">
+                <li>KB국민카드 고객센터 : 1588-1688</li>
+                <li>홈페이지 : <a href="https://m.kbcard.com" target="_blank" title="국민카드 모바일 홈페이지 새창열림">https://m.kbcard.com</a> </li>
+            </ul>
+        </div>
+
+        <div class="l-bottom-group">
+            <div class="btn-group">
+                <button type="button" class="btn-type type01" onclick="closeLayer('layer01')"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Layer popup -->
+
+<!-- alert popup -->
+<div class="l-pop-alert" id="alert02" style="display: none;">
+    <div class="alert-wrap">
+        <div class="alert-inner">
+            <p class="msg01 align-c">이미 가입되어 있으시네요<br>로그인페이지로 이동합니다.</p>
+            <!-- <p class="msg01 align-c">휴대폰 번호를 변경하셨나요?<br>변경된 휴대폰 번호로 회원가입을 진행합니다.</p> --> <!-- // 07-06 팝업 case 추가 -->
+
+            <div class="bottom-group pb0">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //alert popup -->
+
+</body>
+</html>

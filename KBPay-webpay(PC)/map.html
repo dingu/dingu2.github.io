@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>WEB Pay (PC버전) map</title>
+<style>
+* {padding:0;margin:0;}
+div,li,ul,ol,p,span,img,a,dl,dt,dd,table,tr,thead,tbody,th,td,button,textarea,input,strong,caption,h1,h2,h3,h4,h5,h6,em,select {padding:0;margin:0;box-sizing:border-box;}
+a {text-decoration:none;}
+li {list-style:none}
+html,body {width:100%;height:100%;}
+h1 {display:block;width:100%;padding:5px 10px;background:#a6d3e3;color:#333;font-size:14px}
+h1 span {float:right;font-size:12px;}
+
+.wrap {position:relative;width:100%;height:100%;padding:0 15px;overflow:hidden;}
+.table {float:left;position:relative;height:100%;width:calc(100% - 469px);width:-webkit-calc(100% - 469px);overflow-y:scroll}
+.iframe {width:459px;float:right;padding:15px 0 0}
+.iframe iframe {border:1px solid #ccc;padding:0;margin:0;float:right}
+
+.depth {width:100%;display:table;table-layout:fixed;padding:15px 0 0}
+.depth li {display:table-cell;background:#888;text-align:center;color:#fff;font-size:13px;padding:15px 0}
+.depth li:nth-child(1) {width:15%}
+.depth li:nth-child(2) {width:10%}
+.depth li:nth-child(3) {width:10%}
+/* .depth li:nth-child(4) {width:14%} */
+.depth li:nth-child(4) {width:7%}
+.depth li:nth-child(5) {width:7%}
+.depth li:nth-child(6) {width:7%}
+.depth li:nth-child(7) {width:18%;text-align:left}
+.depth:first-child li:nth-child(7) {text-align:center}
+
+.depth li + li {border-left:1px solid #fff;}
+
+.depth.type2 {padding:0;}
+.depth.type2 li {background:#fff;border-bottom:0.5px solid #ddd;padding:5px 10px;color:#222;font-size:11px; word-wrap: break-word;}
+.depth.type2 li + li {border-left:1px solid #ddd;}
+.depth.type2 li a {display:inline-block; color: #222;}
+.depth.type2 li:nth-child(1),
+.depth.type2 li:nth-child(2),
+.depth.type2 li:nth-child(3),
+/* .depth.type2 li:nth-child(4), */
+/* .depth.type2 li:nth-child(9) {text-align:left} */
+.depth.type2 li:nth-child(8) {text-align:left}
+.depth.type2 li .red {color: red;}
+.depth.type2.guide li {background:#d6ebf3;padding:10px}
+
+.depth.type2.new li {background: yellow;}
+
+.blank {border-radius:5px;padding:5px 10px;background:#7b6d9a;color:#fff !important;margin-left:5px;font-size:10px;}
+
+.file-nm.active {color: blue !important; text-decoration: underline;}
+.depth.type2.deleted li {background: #ddd;}
+
+</style>
+
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script>
+$(function() {
+	$(".file-nm").click(function() {
+		$(".file-nm").removeClass("active");
+		$(this).addClass("active");
+	});
+});
+</script>
+
+</head>
+<body>
+<div class="wrap">
+	<div class="table">
+		<ul class="depth">
+			<li>화면명</li>
+			<li>화면ID</li>
+			<li>&nbsp;</li>
+			<!-- <li>4Depth</li> -->
+			<li>작업완료</li>
+			<li>작업자</li>
+			<li>폴더명</li>
+			<li>파일명</li>
+			<li>비고</li>
+		</ul>
+		<h1>WEB Pay (PC버전) coding map <span>2020.06.12~</span></h1>
+		<ul class="depth type2 group">
+			<li>가이드</li> <!--1depth-->
+			<li>Layout</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="guide_layout.html" target="_aa">guide_layout.html</a>
+				<a href="guide_layout.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li></li> <!--1depth-->
+			<li>Alert</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="guide_alert.html" target="_aa">guide_alert.html</a>
+				<a href="guide_alert.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li></li> <!--1depth-->
+			<li>Toast popup</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="guide_toast_popup.html" target="_aa">guide_toast_popup.html</a>
+				<a href="guide_toast_popup.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>인덱스</li> <!--1depth-->
+			<li>kbp_payc_001</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-18<br><span class="red">07-09</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_001.html" target="_aa">kbp_payc_001.html</a>
+				<a href="kbp_payc_001.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">07-09 : UI 전체 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>앱 설치결제 안내 레이어팝업</li> <!--1depth-->
+			<li>kbp_payc_002</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_002.html" target="_aa">kbp_payc_002.html</a>
+				<a href="kbp_payc_002.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>KB PAY결제</li> <!--1depth-->
+			<li>kbp_payc_004</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-15</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_004.html" target="_aa">kbp_payc_004.html</a>
+				<a href="kbp_payc_004.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>로그인</li> <!--1depth-->
+			<li>kbp_payc_003</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-15<br><span class="red">07-01</span><br><span class="red">07-06</span><br><span class="red">07-09</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_003.html" target="_aa">kbp_payc_003.html</a>
+				<a href="kbp_payc_003.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">07-01 : 텍스트 수정</span><br>
+				<span class="red">07-06 : 팝업 거래정지 case 추가</span><br>
+				<span class="red">07-09 : 기존 거래정지 팝업 삭제, 거래정지 case별 팝업 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>보안인증</li> <!--1depth-->
+			<li>kbp_payc_084</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-01<br><span class="red">07-06</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_084.html" target="_aa">kbp_payc_084.html</a>
+				<a href="kbp_payc_084.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				신규<br>
+				<span class="red">07-06 : 텍스트 수정, 버튼 갯수 변경</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group deleted">
+			<li><span class="red">앱카드 인증(삭제)</span></li> <!--1depth-->
+			<li>kbp_payc_085</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-02</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_085.html" target="_aa">kbp_payc_085.html</a>
+				<a href="kbp_payc_085.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규<br><span class="red">07-03 : 기획 삭제</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group deleted">
+			<li><span class="red">로그인(삭제)</span></li> <!--1depth-->
+			<li>kbp_payc_006</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_006.html" target="_aa">kbp_payc_006.html</a>
+				<a href="kbp_payc_006.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">07-03 : 기획 삭제</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>(팝업)개인정보 제공동의</li> <!--1depth-->
+			<li>kbp_payc_067</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-15</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_067.html" target="_aa">kbp_payc_067.html</a>
+				<a href="kbp_payc_067.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>공통 : 레이어팝업 샘플</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>로그인</li> <!--1depth-->
+			<li>kbp_payc_066</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_066.html" target="_aa">kbp_payc_066.html</a>
+				<a href="kbp_payc_066.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>회원가입</li> <!--1depth-->
+			<li>kbp_payc_059</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_059.html" target="_aa">kbp_payc_059.html</a>
+				<a href="kbp_payc_059.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>디자인수급필요</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>약관동의 + 상세</li> <!--1depth-->
+			<li>kbp_payc_060</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17<br><span class="red">06-30</span></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_060.html" target="_aa">kbp_payc_060.html</a>
+				<a href="kbp_payc_060.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li><span class="red">06-30 : 약관 항목 추가 및 아이디 변경</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>회원정보입력</li> <!--1depth-->
+			<li>kbp_payc_012</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-15<br><span class="red">07-02</span><br><span class="red">07-06</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_012.html" target="_aa">kbp_payc_012.html</a>
+				<a href="kbp_payc_012.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">07-02 : 텍스트 수정</span><br>
+				<span class="red">07-06 : 팝업 case 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>(팝업)인증번호미수신</li> <!--1depth-->
+			<li>kbp_payc_052</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_052.html" target="_aa">kbp_payc_052.html</a>
+				<a href="kbp_payc_052.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>kbp_payc_012 에서 노출</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>회원정보입력</li> <!--1depth-->
+			<li>kbp_payc_077</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17<br><span class="red">07-02</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_077.html" target="_aa">kbp_payc_077.html</a>
+				<a href="kbp_payc_077.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">07-02 : 텍스트 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>회원가입 약관동의(제목 미정)</li> <!--1depth-->
+			<li>kbp_payc_065</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_065.html" target="_aa">kbp_payc_065.html</a>
+				<a href="kbp_payc_065.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>카드인증</li> <!--1depth-->
+			<li>kbp_payc_014</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-15
+				<br><span class="red">06-22</span>
+				<br><span class="red">07-02</span>
+				<br><span class="red">07-09</span>
+			</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_014.html" target="_aa">kbp_payc_014.html</a>
+				<a href="kbp_payc_014.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">06-22 : 카드박스 구조 변경</span>
+				<br><span class="red">07-02 : 회원가입 중단 알림 팝업 추가</span>
+				<br><span class="red">07-09 UI 전체수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>결재비밀번호등록</li> <!--1depth-->
+			<li>kbp_payc_015</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_015.html" target="_aa">kbp_payc_015.html</a>
+				<a href="kbp_payc_015.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>인증방식선택</li> <!--1depth-->
+			<li>kbp_payc_054</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-15<br><span class="red">07-07</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_054.html" target="_aa">kbp_payc_054.html</a>
+				<a href="kbp_payc_054.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">07-07 : 환금성결제 case 주석 추가, alert 팝업 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>약관동의(약관상세 포함)</li> <!--1depth-->
+			<li>kbp_payc_007</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-18</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_007.html" target="_aa">kbp_payc_007.html</a>
+				<a href="kbp_payc_007.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>카드인증</li> <!--1depth-->
+			<li>kbp_payc_055</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_055.html" target="_aa">kbp_payc_055.html</a>
+				<a href="kbp_payc_055.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>결제 및 카드변경</li> <!--1depth-->
+			<li>kbp_payc_017</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-18<br><span class="red">06-22</span><br><span class="red">06-30</span></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_017.html" target="_aa">kbp_payc_017.html</a>
+				<a href="kbp_payc_017.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">06-22 : 카드박스 구조 변경</span><br>
+				<span class="red">06-30 : 결제수단관리 버튼명 변경</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>결제인증공통</li> <!--1depth-->
+			<li>kbp_payc_021</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_021.html" target="_aa">kbp_payc_021.html</a>
+				<a href="kbp_payc_021.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>결재 및 카드변경 (완료)</li> <!--1depth-->
+			<li>kbp_payc_022</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-18</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_022.html" target="_aa">kbp_payc_022.html</a>
+				<a href="kbp_payc_022.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>결재 및 카드변경 (실패)</li> <!--1depth-->
+			<li>kbp_payc_023</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-18</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_023.html" target="_aa">kbp_payc_023.html</a>
+				<a href="kbp_payc_023.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>결재 및 카드변경 (실패 - 비번3회이상오류)</li> <!--1depth-->
+			<li>kbp_payc_024</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-18</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_024.html" target="_aa">kbp_payc_024.html</a>
+				<a href="kbp_payc_024.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>결재 및 카드변경 (실패 - efds감지)</li> <!--1depth-->
+			<li>kbp_payc_025</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-18</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_025.html" target="_aa">kbp_payc_025.html</a>
+				<a href="kbp_payc_025.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>결재수단관리</li> <!--1depth-->
+			<li>kbp_payc_026</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16<br><span class="red">07-08</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_026.html" target="_aa">kbp_payc_026.html</a>
+				<a href="kbp_payc_026.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">07-08 : 타이틀 수정, 탭 추가, 포인트리 예외처리 삭제, 팝업 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>인증받은 기기</li> <!--1depth-->
+			<li>kbp_payc_086</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-09</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_086.html" target="_aa">kbp_payc_086.html</a>
+				<a href="kbp_payc_086.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				신규
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>연결된 기기</li> <!--1depth-->
+			<li>kbp_payc_092</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-09</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_092.html" target="_aa">kbp_payc_092.html</a>
+				<a href="kbp_payc_092.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				신규
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>(팝업)별칭관리</li> <!--1depth-->
+			<li>kbp_payc_090</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-09</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_090.html" target="_aa">kbp_payc_090.html</a>
+				<a href="kbp_payc_090.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				신규
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>접속이력 조회</li> <!--1depth-->
+			<li>kbp_payc_091</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-09</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_091.html" target="_aa">kbp_payc_091.html</a>
+				<a href="kbp_payc_091.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				신규
+			</li> <!--비고-->
+		</ul>
+		
+		<ul class="depth type2 group new">
+			<li>(팝업)이용안내</li> <!--1depth-->
+			<li>kbp_payc_093</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-09</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_093.html" target="_aa">kbp_payc_093.html</a>
+				<a href="kbp_payc_093.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				신규
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>신용/체크카드 등록 (없을때 포함)</li> <!--1depth-->
+			<li>kbp_payc_027</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16
+				<br><span class="red">06-22</span>
+				<br><span class="red">07-09</span>
+			</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_027.html" target="_aa">kbp_payc_027.html</a>
+				<a href="kbp_payc_027.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">06-22 : 카드박스 구조 변경</span>
+				<br><span class="red">06-22 : 카드 좌우 이동 script 샘플추가 </span>
+				<br><span class="red">07-09 : UI 전체수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>직접입력 (신용/체크카드)</li> <!--1depth-->
+			<li>kbp_payc_029</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_029.html" target="_aa">kbp_payc_029.html</a>
+				<a href="kbp_payc_029.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>(팝업)CVC안내</li> <!--1depth-->
+			<li>kbp_payc_030</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일--> 
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_030.html" target="_aa">kbp_payc_030.html</a>
+				<a href="kbp_payc_030.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>kbp_payc_029, kbp_payc_031, kbp_payc_034, kbp_payc_055 에서 노출</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>직접입력 (기업공용카드)</li> <!--1depth-->
+			<li>kbp_payc_031</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_031.html" target="_aa">kbp_payc_031.html</a>
+				<a href="kbp_payc_031.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>담당자승인요청</li> <!--1depth-->
+			<li>kbp_payc_032</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16<br><span class="red">07-02</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_032.html" target="_aa">kbp_payc_032.html</a>
+				<a href="kbp_payc_032.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li><span class="red">07-02 : 텍스트 수정</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>(팝업)카드사용승인안내</li> <!--1depth-->
+			<li>kbp_payc_033</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_033.html" target="_aa">kbp_payc_033.html</a>
+				<a href="kbp_payc_033.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>kbp_payc_032 에서 노출</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>선택등록</li> <!--1depth-->
+			<li>kbp_payc_097</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-09</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_097.html" target="_aa">kbp_payc_097.html</a>
+				<a href="kbp_payc_097.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>직접입력 (증권카드)</li> <!--1depth-->
+			<li>kbp_payc_034</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_034.html" target="_aa">kbp_payc_034.html</a>
+				<a href="kbp_payc_034.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>(팝업)증권카드이용안내</li> <!--1depth-->
+			<li>kbp_payc_035</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="" target="_aa">kbp_payc_035.html</a>
+				<a href=".html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>디자인수급필요, kbp_payc_034 에서 노출</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>직접입력 (기프트카드)</li> <!--1depth-->
+			<li>kbp_payc_036</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_036.html" target="_aa">kbp_payc_036.html</a>
+				<a href="kbp_payc_036.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>(팝업)약관</li> <!--1depth-->
+			<li>kbp_payc_037</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-18</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_037.html" target="_aa">kbp_payc_037.html</a>
+				<a href="kbp_payc_037.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>카드정보 입력</li> <!--1depth-->
+			<li>kbp_payc_038</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_038.html" target="_aa">kbp_payc_038.html</a>
+				<a href="kbp_payc_038.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>카드비밀번호등록</li> <!--1depth-->
+			<li>kbp_payc_039</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17<br><span class="red">07-02</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_039.html" target="_aa">kbp_payc_039.html</a>
+				<a href="kbp_payc_039.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li><span class="red">07-02 : 텍스트 수정</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>카드비밀번호등록</li> <!--1depth-->
+			<li>kbp_payc_094</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-02</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_094.html" target="_aa">kbp_payc_094.html</a>
+				<a href="kbp_payc_094.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>고객정보입력</li> <!--1depth-->
+			<li>kbp_payc_041</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16<br><span class="red">07-02</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_041.html" target="_aa">kbp_payc_041.html</a>
+				<a href="kbp_payc_041.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">07-02 : 팝업 디자인 변경으로 인한 마크업 수정</span><br>
+				<span class="red">디자인 대기중</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>주소검색</li> <!--1depth-->
+			<li>kbp_payc_088</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_088.html" target="_aa">kbp_payc_088.html</a>
+				<a href="kbp_payc_088.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>신규</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>상세주소 입력 팝업</li> <!--1depth-->
+			<li>kbp_payc_089</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li></li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_088.html" target="_aa">kbp_payc_088.html</a>
+				<a href="kbp_payc_088.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				주소검색 후 하단의 목록 click하면 나오는 팝업
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>은행계좌선택</li> <!--1depth-->
+			<li>kbp_payc_042</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16<br><span class="red">06-22</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_042.html" target="_aa">kbp_payc_042.html</a>
+				<a href="kbp_payc_042.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li><span class="red">06-22 : 카드박스 구조 변경</span></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>해피머니 캐시 충전 약관동의</li> <!--1depth-->
+			<li>kbp_payc_043</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_043.html" target="_aa">kbp_payc_043.html</a>
+				<a href="kbp_payc_043.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>충전포인트 입력 : 충전한도 초과</li> <!--1depth-->
+			<li>kbp_payc_044</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17<br><span class="red">07-09</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_044.html" target="_aa">kbp_payc_044.html</a>
+				<a href="kbp_payc_044.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">07-09 alert 팝업 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>(팝업)상품권포인트 충전 안내</li> <!--1depth-->
+			<li>kbp_payc_045</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_045.html" target="_aa">kbp_payc_045.html</a>
+				<a href="kbp_payc_045.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>해피머니 상품권 정보입력</li> <!--1depth-->
+			<li>kbp_payc_046</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_046.html" target="_aa">kbp_payc_046.html</a>
+				<a href="kbp_payc_046.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>충전완료</li> <!--1depth-->
+			<li>kbp_payc_047</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_047.html" target="_aa">kbp_payc_047.html</a>
+				<a href="kbp_payc_047.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>충전실패</li> <!--1depth-->
+			<li>kbp_payc_048</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_048.html" target="_aa">kbp_payc_048.html</a>
+				<a href="kbp_payc_048.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>(팝업)실명확인 오류 안내</li> <!--1depth-->
+			<li>kbp_payc_050</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_050.html" target="_aa">kbp_payc_050.html</a>
+				<a href="kbp_payc_050.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>(팝업)도용방지 설정 안내</li> <!--1depth-->
+			<li>kbp_payc_051</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_051.html" target="_aa">kbp_payc_051.html</a>
+				<a href="kbp_payc_051.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>(팝업)소득공제 신청시 유의사항</li> <!--1depth-->
+			<li>kbp_payc_056</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16<br><span class="red">07-02</span></li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_056.html" target="_aa">kbp_payc_056.html</a>
+				<a href="kbp_payc_056.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				kbp_payc_041 에서 노출<br>
+				<span class="red">07-02 : 디자인 변경으로 인한 마크업 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>은행계좌 직접 등록</li> <!--1depth-->
+			<li>kbp_payc_057</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_057.html" target="_aa">kbp_payc_057.html</a>
+				<a href="kbp_payc_057.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>공통카드비밀번호 인증</li> <!--1depth-->
+			<li>kbp_payc_061</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_061.html" target="_aa">kbp_payc_061.html</a>
+				<a href="kbp_payc_061.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>(팝업)CVC2안내</li> <!--1depth-->
+			<li>kbp_payc_062</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_062.html" target="_aa">kbp_payc_062.html</a>
+				<a href="kbp_payc_062.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>kbp_payc_036, kbp_payc_038 에서 노출</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>계좌비밀번호 인증</li> <!--1depth-->
+			<li>kbp_payc_063</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_063.html" target="_aa">kbp_payc_063.html</a>
+				<a href="kbp_payc_063.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>개인(신용)정보 수집·이용·제공 동의서</li> <!--1depth-->
+			<li>kbp_payc_064</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-18</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_064.html" target="_aa">kbp_payc_064.html</a>
+				<a href="kbp_payc_064.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">팝업에서 다시 팝업여는 샘플</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>카드인증</li> <!--1depth-->
+			<li>kbp_payc_079</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16
+				<br><span class="red">06-22</span>
+				<br><span class="red">07-02</span>
+				<br><span class="red">07-09</span>
+			</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_079.html" target="_aa">kbp_payc_079.html</a>
+				<a href="kbp_payc_079.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">06-22 : 카드박스 구조 변경</span>
+				<br><span class="red">07-02 : 회원가입 중단 알림 팝업 추가</span>
+				<br><span class="red">07-09 : UI 전체수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group new">
+			<li>증권카드비밀번호 입력</li> <!--1depth-->
+			<li>kbp_payc_096</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>07-09</li> <!--작업일-->
+			<li>유현우</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_096.html" target="_aa">kbp_payc_096.html</a>
+				<a href="kbp_payc_096.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>카드인증</li> <!--1depth-->
+			<li>kbp_payc_080</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16<br><span class="red">07-06</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_080.html" target="_aa">kbp_payc_080.html</a>
+				<a href="kbp_payc_080.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">07-06 : 인증번호 영역 추가, 팝업 추가</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>카드인증(간편인증번호)</li> <!--1depth-->
+			<li>kbp_payc_083</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-17</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_083.html" target="_aa">kbp_payc_083.html</a>
+				<a href="kbp_payc_083.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li></li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>결제수단관리</li> <!--1depth-->
+			<li>kbp_payc_081</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16<br><span class="red">06-25</span></li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_081.html" target="_aa">kbp_payc_081.html</a>
+				<a href="kbp_payc_081.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">06-25 : 버튼 위치 수정</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>결제수단추가</li> <!--1depth-->
+			<li>kbp_payc_082</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-18
+				<br><span class="red">06-22</span>
+				<br><span class="red">07-09</span>
+			</li> <!--작업일-->
+			<li>김수영</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_082.html" target="_aa">kbp_payc_082.html</a>
+				<a href="kbp_payc_082.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">06-22 : 카드박스 구조 변경</span>
+				<br><span class="red">07-09 UI 전체수정 대기중</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>신용/체크카드 관리</li> <!--1depth-->
+			<li>kbp_payc_068</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>06-16
+				<br><span class="red">06-22</span>
+				<br><span class="red">07-08</span>
+			</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_068.html" target="_aa">kbp_payc_068.html</a>
+				<a href="kbp_payc_068.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">06-22 : 카드박스 구조 변경</span>
+				<br><span class="red">07-08 : UI변경 새로코딩</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>기업공용카드 관리</li> <!--1depth-->
+			<li>kbp_payc_069</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>
+				06-16
+				<br><span class="red">06-22</span>
+				<br><span class="red">07-08</span>
+			</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_069.html" target="_aa">kbp_payc_069.html</a>
+				<a href="kbp_payc_069.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">06-22 : 카드박스 구조 변경</span>
+				<br><span class="red">07-08 : UI변경 새로코딩</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>증권카드 관리</li> <!--1depth-->
+			<li>kbp_payc_070</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>
+				06-16
+				<br><span class="red">06-22</span>
+				<br><span class="red">07-08</span>
+			</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_070.html" target="_aa">kbp_payc_070.html</a>
+				<a href="kbp_payc_070.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">06-22 : 카드박스 구조 변경</span>
+				<br><span class="red">07-08 : UI변경 새로코딩</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>기프트카드 관리</li> <!--1depth-->
+			<li>kbp_payc_071</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>
+				06-16
+				<br><span class="red">06-22</span>
+				<br><span class="red">07-08</span>
+			</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_071.html" target="_aa">kbp_payc_071.html</a>
+				<a href="kbp_payc_071.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">06-22 : 카드박스 구조 변경</span>
+				<br><span class="red">07-08 : UI변경 새로코딩</span>
+			</li> <!--비고-->
+		</ul>
+		<ul class="depth type2 group">
+			<li>은행계좌 관리</li> <!--1depth-->
+			<li>kbp_payc_072</li> <!--2depth-->
+			<li></li> <!--3depth-->
+			<!-- <li></li> 4depth -->
+			<li>
+				06-16
+				<br><span class="red">06-22</span>
+				<br><span class="red">07-08</span>
+			</li> <!--작업일-->
+			<li>이진규</li> <!--작업자-->
+			<li>/root</li> <!--파일명-->
+			<li> <!--파일명-->
+				<a class="file-nm" href="kbp_payc_072.html" target="_aa">kbp_payc_072.html</a>
+				<a href="kbp_payc_072.html" class="blank" target="_blank">새창</a>
+			</li>
+			<li>
+				<span class="red">06-22 : 카드박스 구조 변경</span>
+				<br><span class="red">07-08 : UI변경 새로코딩</span>				
+			</li> <!--비고-->
+		</ul>
+		
+
+	</div>
+	<div class="iframe">
+		<iframe src="" name="_aa" style="width:459px;height:430px;" frameborder="0"></iframe>
+	</div>
+</div>
+
+</body>
+</html>

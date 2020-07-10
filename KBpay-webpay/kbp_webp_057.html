@@ -1,0 +1,89 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-25          최초작성
+김수영             2020-05-28          h2 삭제, 에러텍스트 위치 이동
+김수영             2020-06-02          에러텍스트 하단으로 통일 > validation 문구 적용
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>은행계좌 직접 등록</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>은행계좌 등록</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+               
+                <!--contents-->
+                <div class="contents kbp_webp_057"> <!-- contents + 페이지별 class 삽입 -->
+
+                   <!--form 입력 목록-->
+                    <div class="form-wrap">
+                        <ul class="form-text-list">
+                            <!--은행-->
+                            <li>
+                                <div class="form_text on out"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="bank">은행</label>
+                                    <input type="text" id="bank" name="" class="text" value="KB국민은행" readonly>
+                                    <button class="btn-delete" type="button">삭제</button>
+                                </div>
+                                <em class="error-txt">error text</em>
+                            </li>
+                            <!--예금주-->
+                            <li>
+                                <div class="form_text on out"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="name">예금주</label>
+                                    <input type="text" id="email" name="" class="text" value="김국민" readonly>
+                                    <button class="btn-delete" type="button">삭제</button>
+                                </div>
+                                <em class="error-txt">error text</em>
+                            </li>
+                            <!--계좌번호-->
+                            <li>
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="account">계좌번호</label>
+                                    <input type="tel" id="account" name="" class="text" value="">
+                                    <button class="btn-delete" type="button">삭제</button>
+                                </div>
+                                <!-- 2020-06-02 삭제 > 아래로 이동
+                                <em class="error-txt">입출금 계좌만 등록 가능합니다.<br>확인 후 다시 입력해주세요</em> --><!--//케이스별 에러문구 2020-05-28 -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//form 입력 목록-->
+
+                    <!--2020-06-02 validation 문구 적용-->
+                    <!--a : 입출금계좌가 아닌 경우-->
+                    <em class="error-txt certi">입출금 계좌만 등록 가능합니다.<br>확인 후 다시 입력해주세요.</em>
+                    <!--b : KB국민은행 계좌가 아닌 경우-->
+                    <em class="error-txt certi">KB국민은행 계좌가 아닙니다.<br>확인 후 다시 입력해주세요.</em>
+                    <!--c : 본인 계좌가 아닌 경우-->
+                    <em class="error-txt certi">본인 소유의 계좌만 등록 가능합니다.<br>확인 후 다시 입력해주세요.</em>
+                    <!--//2020-06-02 validation 문구 적용-->
+                </div>
+                <!--//contents-->
+
+                <!-- Bottom button area -->
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled><span>등록</span></button> <!-- 활성화 > disabled 삭제 -->
+                    </div>
+                </div>
+                <!-- //Bottom button area -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-17          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드인증</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>간편인증번호</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_083 pass"> <!-- 화면ID -->             
+                <p class="txt02 align-c">간편인증번호</p>
+
+                <div class="passWrap card-pass">
+                    <div class="pass-input-match password">
+                        <input type="number" class="text"> <!--//실제 입력 받는 칸 -->
+                        <div class="pass-input">
+                            <span class="dot yellow on"></span> <!--활성화 class 'on'-->
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>확인</span></button> <!--활성화 시 disabled 삭제-->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+</body>
+</html>

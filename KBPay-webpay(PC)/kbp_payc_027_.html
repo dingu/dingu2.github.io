@@ -1,0 +1,160 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-15          최초작성
+이진규             2020-06-22          카드박스 구조 변경
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제수단관리</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <button type="button" class="btn-tyepe back">Go Back</button>
+                
+                <h1>신용/체크카드 등록</h1>
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_027"> <!-- 화면ID -->
+                <!-- 본문 -->
+
+                <p class="txt">카드발급받은 카드 중 등록 가능한 카드입니다.<br>결제수단으로 등록을 원하시는 카드의 비밀번호를 입력 후 등록해주세요</p>
+
+                <!-- 06-22 카드박스 구조 변경 -->
+                <div class="list-card-box">
+                    <button type="button" class="btn-prev" onclick="changeCard('P')"><span>이전</span></button>
+
+                    <!-- loop -->
+                    <div class="card-box">
+                        <a href="#" class="img-area"> <!-- class="active" 추가시 선택됨 -->
+                            <span class="img">
+                                <img src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
+                            </span>
+                        </a>
+                        <p class="txt-area">
+                            <span class="card-tit">Liiv M 체크카드</span>
+                            <span class="card-type">신속발급</span>
+                            <span class="card-num">9445 - 20** - **** - 4759</span>
+                        </p>
+                    </div>
+                    <!-- //loop -->
+
+                    <div class="card-box" style="display: none;">
+                        <a href="#" class="img-area"> <!-- class="active" 추가시 선택됨 -->
+                            <span class="img">
+                                <img src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
+                            </span>
+                        </a>
+                        <p class="txt-area">
+                            <span class="card-tit">Liiv M 체크카드2</span>
+                            <span class="card-type">신속발급</span>
+                            <span class="card-num">9445 - 20** - **** - 4759</span>
+                        </p>
+                    </div>
+                    <div class="card-box" style="display: none;">
+                        <a href="#" class="img-area"> <!-- class="active" 추가시 선택됨 -->
+                            <span class="img">
+                                <img src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
+                            </span>
+                        </a>
+                        <p class="txt-area">
+                            <span class="card-tit">Liiv M 체크카드3</span>
+                            <span class="card-type">신속발급</span>
+                            <span class="card-num">9445 - 20** - **** - 4759</span>
+                        </p>
+                    </div>
+                    
+                    <button type="button" class="btn-next" onclick="changeCard('N')"><span>다음</span></button>
+                </div>
+                <!-- // 06-22 카드박스 구조 변경 -->
+                
+
+                <div class="bottom-btn type03">
+                    <button type="button" class="btn-line">직접등록</button>
+                </div>
+
+                <p class="txt02 align-c">카드 비밀번호 4자리 입력</p> <!--//비밀번호 4자리 받을 때-->
+                <p class="txt02 align-c" style="display:none">카드 비밀번호 앞 2자리 입력</p> <!--//비밀번호 2자리 받을 때-->
+
+                <div class="passWrap card-pass">
+                    <div class="pass-input-match password">
+                        <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                        <div class="pass-input">
+                            <span class="dot yellow on">1</span> <!--활성화 class 'on'-->
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- //본문 -->                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>등록</span></button>
+                </div>
+
+            </div>
+            <!-- //Bottom area -->
+
+            
+        </div>
+    </div>
+
+
+    <script>
+
+        //card box control
+        var cntCard = 0;        
+        function changeCard(dir) {
+            var lastCntCard = $(".list-card-box .card-box").index($(".list-card-box .card-box").last());
+            if (dir == "N") {
+                // Next
+                if (cntCard < lastCntCard) {
+                    cntCard++;
+                    $(".list-card-box .card-box").hide();
+                    $(".list-card-box .card-box").eq(cntCard).show();
+                }                
+            } else {
+                // Prev
+                if (cntCard > 0) {
+                    cntCard--;
+                    $(".list-card-box .card-box").hide();
+                    $(".list-card-box .card-box").eq(cntCard).show();
+                }
+            }
+        }
+
+
+
+    </script>
+
+</body>
+</html>

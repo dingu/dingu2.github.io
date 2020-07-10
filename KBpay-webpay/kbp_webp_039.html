@@ -1,0 +1,61 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-25          최초작성
+김수영             2020-05-28          입력필드 수정
+이진규             2020-07-02          텍스트 수정
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>카드비밀번호 등록</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/jquery-2.2.4.min.js"></script>
+        <script src="./js/ui.js"></script>
+        <script src="util/placeholder.js"></script>
+    </head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>사용 할 비밀번호 등록</h1> <!-- // 07-02 텍스트 수정 -->
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+                <!--contents-->
+                <div class="contents kbp_webp_039"> <!-- contents + 페이지별 class 삽입 -->
+                    
+                    <p class="txt02 align-c">기프티 카드비밀번호 등록</p> <!-- // 07-02 텍스트 수정 -->
+                    
+                    <div class="passWrap card-pass">
+                        <!--2020-05-28 마크업수정-->
+                        <!--비밀번호 4자리 받을 때-->
+                        <div class="pass-input-match password">
+                            <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                            <div class="pass-input">
+                                <span class="dot yellow on">1</span> <!--활성화 class 'on'-->
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                            </div>
+                        </div>
+                        <!--//비밀번호 4자리 받을 때-->
+                        <!--//2020-05-28 마크업수정-->
+
+                        <!--error text-->
+                        <!-- <em class="error-txt certi">본인 생일, 연속된 숫자, 휴대폰번호<br>등은 사용 불가합니다.</em> --> <!--케이스별 에러문구-->
+                        <!--//error text--> 
+                    </div>
+                </div>
+                <!--//contents-->
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+body {background: #f4f4f4;}
+body, button, input, select, textarea {font-family: Malgun Gothic, AppleGothic, sans-serif;}
+
+.container {overflow: hidden; position: relative; height: 430px; background: #fff;}
+
+.header {position: relative; height: 44px; padding-top: 6px; font-size: 0;}
+.header h1 {display: inline-block; height: 32px; padding-left: 16px; color: #222; font-size: 20px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px;}
+.header .back {display: inline-block; width: 24px; height: 32px; margin-left: 16px; font-size: 0; text-indent: -9999px; background: url(../images/icon/ico_goback.png) no-repeat center; vertical-align: top;}
+.header .close {position: absolute; right: 13px; top: 14px; width: 24px; height: 24px; font-size: 0; text-indent: -9999px; background: url(../images/icon/ico_close_popup.png) no-repeat;}
+
+.contents {overflow-y: auto; overflow-x: hidden; position: relative; /*height: 412px;*/ height: 386px; padding: 16px 16px 0 16px;}
+.contents > [class*="tit"] {padding:0 0 8px}
+
+.bottom-group {padding: 16px;}
+
+
+/* Layer popup */
+.l-dim {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: .4; z-index: 10;}
+
+.l-pop {display: none; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 100%; padding: 16px; z-index: 10;}
+.l-pop-wrap {padding-top: 8px; background: #fff;}
+.l-header {position: relative; padding: 6px 0 20px;}
+.l-header h1 {padding:0 50px 0 16px; color: #222; font-size: 20px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px; word-break:break-all}
+.l-header .close {position: absolute; right: 15px; top: 10px; width: 24px; height: 24px; font-size: 0; text-indent: -9999px; background: url(../images/icon/ico_close_popup.png) no-repeat;}
+.l-contents {overflow-y: auto; overflow-x: hidden; padding: 0 16px;}
+.l-bottom-group {padding: 16px;}
+
+@media only screen and (max-width: 375px) {
+    .l-header h1 {font-size:18px;line-height:30px;}
+    .l-contents * {font-size:14px !important;} 
+}
+
+
+
+
+
+

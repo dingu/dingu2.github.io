@@ -1,0 +1,88 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-16          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>담당자승인요청</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>기업공용카드 등록</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_032"> <!-- 화면ID -->                
+
+
+                <div class="bottom-btn">
+                    <button type="button" class="btn-line" onclick="openLayer('layer01', this);">사용승인 안내</button>
+                </div>
+
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>등록</span></button> <!--활성화 시 disabled 삭제-->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+    <!-- Layer popup -->
+    <div class="l-dim" style="display: block;"></div>
+
+    <div class="l-pop" id="layer01">
+        <div class="l-pop-wrap kbp_payc_033">
+            <div class="l-header">
+                <h1>카드사용승인 안내</h1>
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+                <ol class="list-ico num">
+                    <li class="li1"><span class="strong">카드사용 승인 담당자 정보를 확인해주세요.</span>담당자 이름과 휴대폰번호가 맞으면 [인증요청] 버튼을 탭하세요.</li>
+                    <li class="li2"><span class="strong">SMS 인증번호 확인 후 입력해주세요.</span>승인 담당자에게 전송된 SMS 인증번호를 확인해주세요. 확인된 인증번호 입력 후 [인증]을 진행해주세요.<br>단, 인증은 SMS 인증번호 전송 후 3분 이내에 입력하셔야 합니다.</li>
+                    <li class="li3"><span class="strong">승인된 카드를 결제수단으로 등록해주세요.</span>인증번호 입력 후 인증이 완료되면 결제수단 등록이 가능합니다.<br>[등록]을 탭하면 카드가 결제수단으로 등록이 됩니다.</li>
+                </ol>
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" onclick=""><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+    
+    <script>
+        // 레이어 팝업 호출 함수
+        openLayer('layer01');
+    </script>
+</body>
+</html>

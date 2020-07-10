@@ -1,0 +1,252 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-07-08          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인증받은 기기</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>결제수단/기기관리</h1> 
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_086"> <!-- 화면ID -->
+                <!-- 본문 -->
+
+                <div class="tab-ui tabUI">
+                    <ul class="tab-list type01 tabType01">
+                        <li><a href="./kbp_payc_026.html">결제수단관리</a></li>
+                        <li><a class="active" href="./kbp_payc_086.html">인증받은 기기</a></li>
+                    </ul>
+
+                    <div class="tab-contents">
+                        <div class="tab-item">
+                            
+                            <div class="cert-device">
+
+                                <!-- 기기 정보 없을 때 -->
+                                <p class="list-none" style="display: none;">연결된 기기 정보가 없습니다.</p>
+                                <!-- // 기기 정보 없을 때 -->
+
+
+                                <div class="list" style="display: block;">
+                                    <p class="tit-area">PC, Mobile Web에서 인증 받은 기기를 관리할 수 있습니다.</p>
+                                    <ul>
+                                        <li class="item">
+                                            <a class="pc" href="#"> <!-- PC case -->
+                                                <span>연결된 기기 1</span>
+                                            </a>
+                                        </li>
+                                        <li class="item">
+                                            <a class="mobile" href="#"> <!-- Mobile case -->
+                                                <span>연결된 기기 2</span>
+                                            </a>
+                                        </li>
+                                        <li class="item">
+                                            <a class="pc" href="#"> <!-- PC case -->
+                                                <span>연결된 기기 3</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="info-txt">3개 이상인 경우, 결제일자가 오래된 브라우저 정보부터 삭제됩니다.</p>
+
+                                    <div class="btn-list">
+                                        <a href="#" onclick="openLayer('layer02')">접속이력 조회</a>
+                                        <a href="#" onclick="openLayer('layer01')">이용안내</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- //본문 -->                
+
+            </div>
+
+            
+        </div>
+    </div>
+
+    <!-- Layer popup -->
+    <div class="l-dim"></div>
+
+    <!-- 이용안내 -->
+    <div class="l-pop" id="layer01">
+        <div class="l-pop-wrap">
+            <div class="l-header">
+                <h1>이용안내</h1>
+
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+                
+                <ul class="list-txt05">
+                    <li>1인당 등록 가능한 PC(브라우저)는 최대 5개입니다.<br>(6번째 PC(브라우저) 등록 시 결제일자가 오래된 정보부터 삭제)</li>
+                    <li>50만원 이상 및 환금성 결제는 PC용 앱카드 이용이 제한되오니, 휴대폰을 통해 앱카드 결제 바랍니다.</li>
+                    <li>다수의 사용자가 이용하는 PC에서는 PC용 앱카드 등록 및 이용에 주의 바랍니다.</li>
+                    <li>PC용 앱카드 거래정지 요청 시, 등록된 모든 PC(브라우저) 정보가 삭제되므로 재등록 후 이용 바랍니다.</li>
+                    <li>브라우저를 업데이트하거나 캐시를 삭제하는 경우, 해당 브라우저에 등록된 정보는 삭제되므로 재등록 후 이용 바랍니다.</li>
+                </ul>
+
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" onclick=""><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 이용안내 -->
+
+    <!-- 접속이력 조회 -->
+    <div class="l-pop" id="layer02">
+        <div class="l-pop-wrap">
+            <div class="l-header">
+                <h1>접속이력 조회</h1>
+
+                <button type="button" class="btn-type close" onclick="closeLayer('layer02')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+
+
+                
+                <div class="device-info">
+
+                    <!-- 접속이력 정보 없을 때 -->
+                    <p class="list-none" style="display: none;">접속이력 정보가 없습니다.</p>
+                    <!-- // 접속이력 정보 없을 때 -->
+
+
+                    <div class="list">
+                        <p class="tit-area">PC, Mobile Web, App에서<br>최근 로그인한 내역을 보여줍니다.</p>
+                        <ul>
+                            <!-- PC case -->
+                            <li class="item">
+                                <p class="date">2018-11-14 12:12:12</p>
+                                <p class="name">별칭명</p>
+                                <dl>
+                                    <dt>브라우저</dt>
+                                    <dd>Chrome</dd>
+                                </dl>
+                                <dl>
+                                    <dt>접속채널</dt>
+                                    <dd>PC</dd>
+                                </dl>
+                                <dl>
+                                    <dt>OS</dt>
+                                    <dd>Window</dd>
+                                </dl>
+                                <dl>
+                                    <dt>IP주소</dt>
+                                    <dd>000.00.000.00</dd>
+                                </dl>
+                                <dl>
+                                    <dt>국가</dt>
+                                    <dd>대한민국</dd>
+                                </dl>
+                                <dl>
+                                    <dt>결제여부</dt>
+                                    <dd>결제한 카드명 + 카드번호 끝 4자리</dd>
+                                </dl>
+                            </li>
+                            <!-- // PC case -->
+
+                            <!-- APP case -->
+                            <li class="item">
+                                <p class="date">2018-11-13 12:12:12</p>
+                                <dl>
+                                    <dt>모델번호</dt>
+                                    <dd>SM-N960-N</dd>
+                                </dl>
+                                <dl>
+                                    <dt>접속채널</dt>
+                                    <dd>KBpay 앱</dd>
+                                </dl>
+                                <dl>
+                                    <dt>OS</dt>
+                                    <dd>Android / 안드로이드버전</dd>
+                                </dl>
+                            </li>
+                            <!-- // APP case -->
+
+                            <!-- Mobile Web case -->
+                            <li class="item">
+                                <p class="date">2018-11-12 12:12:12</p>
+                                <p class="name">별칭명</p>
+                                <dl>
+                                    <dt>기기정보</dt>
+                                    <dd>갤럭시 10</dd>
+                                </dl>
+                                <dl>
+                                    <dt>브라우저</dt>
+                                    <dd>Chrome</dd>
+                                </dl>
+                                <dl>
+                                    <dt>접속채널</dt>
+                                    <dd>모바일웹</dd>
+                                </dl>
+                                <dl>
+                                    <dt>OS</dt>
+                                    <dd>Window</dd>
+                                </dl>
+                                <dl>
+                                    <dt>IP주소</dt>
+                                    <dd>000.00.000.00</dd>
+                                </dl>
+                                <dl>
+                                    <dt>국가</dt>
+                                    <dd>대한민국</dd>
+                                </dl>
+                            </li>
+                            <!-- // Mobile Web case -->
+                        </ul>
+                        
+                        <button type="button" class="btn-more"><span>더보기</span></button>
+                        
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- // 접속이력 조회 -->
+    <!-- //Layer popup -->
+
+    <script>
+        openLayer("layer02", this);
+    </script>
+
+
+</body>
+</html>
