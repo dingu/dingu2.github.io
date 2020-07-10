@@ -260,9 +260,9 @@
         /*
             Bottom Sheet
         */
-        console.log( "window : " + ($(window).height()) );
-        console.log( ".l-bottom-wrap .head : " + $(".l-bottom-wrap .head").outerHeight() );
-        console.log( ".l-bottom .btn-group : " + $(".l-bottom .btn-group").outerHeight() );
+        // console.log( "window : " + ($(window).height()) );
+        // console.log( ".l-bottom-wrap .head : " + $(".l-bottom-wrap .head").outerHeight() );
+        // console.log( ".l-bottom .btn-group : " + $(".l-bottom .btn-group").outerHeight() );
 
         if ($(".l-bottom").length > 0) {
             // 레이어마다 각각의 스크롤 되는 높이를 설정
@@ -277,8 +277,6 @@
                         /*
                             팝업 컨텐츠 높이 : 윈도우 높이 - 32(상하단 여백) - 팝업 헤더 - 버튼영역
                         */
-                       console.log($(window).height() - 32 - $(this).find(".l-bottom-wrap .head").outerHeight() - $(this).find(".btn-group").outerHeight());
-
                         $(this).find(".l-contents").height( $(window).height() - 32 - $(this).find(".l-bottom-wrap .head").outerHeight() - $(this).find(".btn-group").outerHeight());
                         $(this).find(".l-bottom-wrap .l-contents").addClass("scroll");
                     }
