@@ -75,15 +75,12 @@
 .banner-slide .slide-area .slide > img {display: block; width: 100%; height: 100%;}
 .banner-slide .slide-area .slide > div {display: block; width: 100%; height: 100%;}
 .banner-slide .slide-nav {position: absolute; top: calc(50% - 10px); right: 16px; display: inline-block; width: auto; height: 20px; font-size: 0; z-index: 10;}
-.banner-slide .slide-nav button {display: inline-block; text-indent: -9999px; background: none; border: none; vertical-align: top;}
-.banner-slide .slide-nav .btn-active {width:20px; height: 20px; background: url(../images/icon/ico_btn_pause.png) no-repeat; background-size: 100%;}
-.banner-slide .slide-nav .btn-active.play {background: url(../images/icon/ico_btn_play.png) no-repeat; background-size: 100%;}
-/* .banner-slide .slide-nav .slide-control button {display: inline-block; margin-top: 6px; padding: 0; width: 6px; height: 8px; background: url(../images/icon/ico_arrow_white.png) no-repeat; background-size: 100% 100%;} 
-.banner-slide .slide-nav .slide-control .btn-prev {margin-right: 4px;} 
-.banner-slide .slide-nav .slide-control .btn-next {margin-left: 4px; transform: rotate(180deg); -webkit-transform: rotate(180deg);} */ 
-.banner-slide .slide-nav {display: inline-block; font-size: 0;} 
 .banner-slide .slide-nav > span {position: relative; display: inline-block; height: 20px; font-size: 12px; color: #222; font-weight: 500; line-height: 20px; letter-spacing: -0.2px; vertical-align: top;} 
 .banner-slide .slide-nav .totalIndex:before {content: "/"; display: inline-block; margin: 0 4px;}
+.banner-slide .slide-nav button {display: inline-block; text-indent: -9999px; background: none; border: none; vertical-align: top;}
+.banner-slide .slide-nav .btn-active {margin-left: 4px; width:20px; height: 20px; background: url(../images/icon/ico_btn_pause.png) no-repeat; background-size: 100%;}
+.banner-slide .slide-nav .btn-active.play {background: url(../images/icon/ico_btn_play.png) no-repeat; background-size: 100%;}
+
 
 
 /* List */
