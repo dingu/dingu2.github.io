@@ -1,0 +1,106 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-19          최초작성
+이진규             2020-07-06          리스트 항목 추가, 텍스트 수정, 팝업 추가
+이진규             2020-07-21          리스트 순서 변경, 텍스트 수정
+이진규             2020-07-22          KBpay -> KB Pay 텍스트 변경
+유현우             2020-08-10          상단텍스트 strong감싸는 영역 변경
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>결제수단추가</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="header">
+            <h1>결제수단추가</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+
+        <div class="container">
+            <div class="contents-wrap">
+                
+                <div class="contents kbp_webp_072">
+                    
+                    <!-- 2020-08-10 : 상단텍스트 strong감싸는 영역 변경 -->
+                    <h2 class="tit"><strong>등록하고자 하는 결제수단을 선택해주세요</strong></h2>
+
+                    <!-- 07-21 리스트 순서 변경, 텍스트 수정 -->
+                    <ul class="list-type10">
+                        <li>
+                            <a href="#"><span>은행계좌</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>증권카드</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>포인트리 충전</span></a>
+                        </li>
+                        <!-- 07-06 항목 추가, 텍스트 수정 -->
+                        <li>
+                            <a href="#"><span>상품권 포인트(해피캐시)</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>상품권 포인트(해피머니)</span></a>
+                        </li>
+                        <!-- // 07-06 항목 추가, 텍스트 수정 -->
+                        <li>
+                            <a href="#"><span>신용/체크카드</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>기프트카드</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>기업공용카드</span></a>
+                        </li>
+                    </ul>
+                    <!-- // 07-21 리스트 순서 변경, 텍스트 수정 -->
+
+
+                    <div class="resend-tip">
+                        <button type="button">다음에 등록</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 07-06 팝업 추가 -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="pop01" tabindex="0">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <span>
+                        포인트리 충전은<br>KB Pay 앱에서만 가능합니다. <!-- // 07-22 KBpay -> KB Pay 텍스트 변경 -->
+                    </span>
+                </p>
+            </div>
+            <div class="l-footer">
+                <div class="btn-group pt0 half">
+                    <button class="btn medium yellow" type="button">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 07-06 팝업 추가 -->
+
+
+
+</body>
+</html>

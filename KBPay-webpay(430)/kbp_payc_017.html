@@ -1,0 +1,290 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+유현우             2020-06-18          최초작성
+이진규             2020-06-22          카드박스 구조 변경
+이진규             2020-06-30          결제수단관리 버튼명 변경
+유현우             2020-07-01          상단 스와이핑 카드에 왼쪽 추가기능 삭제
+유현우             2020-07-21          포인트리 삭제 / tag변경
+유현우             2020-07-27          카드선택 slide 기능 추가
+이진규             2020-08-10          카드종류 추가
+유현우             2020-08-28          UI변경
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>결제</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    <link rel="stylesheet" href="./util/slick.css">
+    <script src="./util/slick.min.js"></script>    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>결제</h1>
+                <button type="button" class="btn-type btn-line02 head ml10"><span>결제수단/기기관리</span></button>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_017"> <!-- 화면ID -->
+                
+                <div class="cd-change">
+                    <p class="cd-name txt04 align-c">
+                        <img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">
+                        <span class="c-nm">펭수 노리 체크카드(펭카)</span>
+                        <span>7099</span>
+                    </p>
+                    <!-- <p class="cd-num align-c v-align-t">
+                        <span class="txt07">체크 ·</span>
+                        <span class="txt11 number">1234-56**-****-1234</span>
+                    </p> -->
+
+                    <!-- CARD Swipe -->
+                    <div class="card-list">
+                        <div class="card-slider slider">
+                            <div>
+                                <span class="card"><img src="./images/etc/sample_card168x104_02.png" alt=""></span>
+                                <button type="button" class="delete-card" onclick="openLayer('alert03', this);"><span>해지</span></button>
+                            </div>
+                            <div>
+                                <span class="card"><img src="./images/etc/sample_card168x104_01.png" alt=""></span>
+                                <button type="button" class="delete-card" onclick="openLayer('alert03', this);"><span>만료</span></button>
+                            </div>
+                            <div>
+                                <span class="card"><img src="./images/etc/sample_card168x104_03.png" alt=""></span>
+                                <button type="button" class="delete-card" onclick="openLayer('alert03', this);"><span>도난분실</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD Swipe -->
+
+                    <!-- <div class="link01 resend-tip">
+                        <a href="#" onclick="openLayer('pop01', this)">삭제</a>
+                        <a href="#" class="ml10">기업공용카드 추가</a>
+                    </div> -->
+                </div>
+
+
+
+
+                <!-- 06-22 카드박스 구조변경 : 08-28 기획 디자인 변경 : 사용안함 -->
+                <div class="list-card-box" style="display: none">
+                    <div class="card-slider cardSlider">
+                        <div class="card-box02">
+                            <div class="img-area">
+                                <span class="img">
+                                    <img src="./images/etc/sample_card03.png" alt="펭수 노리 체크카드">
+                                </span>
+                            </div>
+                            <p class="txt-area"><!-- only 클래스 추가 -->
+                                <span class="card-tit">직장인우대통장</span>
+                                <span class="card-num">********** - 7078</span>
+
+                                <!-- <span class="card-tit only"><img class="card-icon" src="images/icon/ico_card_master.png" alt="MASTER">원(ONE) 체크카드(비RF) 원(ONE) 체크카드(비RF)</span>
+                                <span class="card-type">신용</span>
+                                <span class="card-num">1234 - 12** - **** - 1234</span> -->
+                            </p>
+                        </div>
+
+                        <div class="card-box02">
+                            <div class="img-area">
+                                <span class="img">
+                                    <img src="./images/etc/sample_card03.png" alt="펭수 노리 체크카드">
+                                </span>
+                            </div>
+                            <p class="txt-area"><!-- only 클래스 추가 -->
+                                <span class="card-tit only"><img class="card-icon" src="images/icon/ico_card_master.png" alt="MASTER">원(ONE) 체크카드(비RF) 원(ONE) 체크카드(비RF)</span>
+                                <span class="card-type">신용</span><!-- // 2020-08-10 카드종류 추가 -->
+                                <span class="card-num">1234 - 12** - **** - 1234</span>
+                            </p>
+                        </div>
+
+                        <div class="card-box02">
+                            <div class="img-area">
+                                <span class="img">
+                                    <img src="./images/etc/sample_card03.png" alt="펭수 노리 체크카드">
+                                </span>
+                            </div>
+                            <p class="txt-area">
+                                <span class="card-tit only"><img class="card-icon" src="images/icon/ico_card_master.png" alt="MASTER">원(ONE) 체크카드(비RF) 원(ONE) 체크카드(비RF)</span>
+                                <span class="card-type">신용</span><!-- // 2020-08-10 카드종류 추가 -->
+                                <span class="card-num">1234 - 12** - **** - 1234</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 06-22 카드박스 구조변경: 사용안함 -->
+                
+
+                <!-- 08-28 : 기획 디자인 변경으로 사용안함
+                    <div class="btn-group align-r">
+                    <button type="button" class="btn-type btn-line02"><span>결제수단/기기관리</span></button>
+                    // 06-30 결제수단관리 버튼명 변경
+                </div> -->
+
+                <!-- <p class="msg txt10 align-c">스마트스토어 100,051,000원<br>결제하시겠습니까?</p> -->
+                <p class="msg txt10 align-c">스마트스토어 100,051,000원</p>
+
+                <!--form 입력 목록-->
+                <div class="form-wrap">
+                    <ul class="form-text-list">
+                        <li>
+                            <!-- 2020-07-21 cell class가진 div 제거 -->
+                            <div class="form_text select"> <!-- 오류 class :  'error' 추가 -->
+                                <label for="ph">할부</label>
+                                <select name="ph" id="ph" class="text">
+                                    <option value="">일시불</option>
+                                    <option value="">2개월</option>
+                                    <option value="">3개월</option>
+                                </select>
+                            </div>
+
+                            <!-- 2020-07-21 삭제 -->
+                            <!-- <div class="cell">                                
+                                <label for="usePointry" class="f-chk" tabindex="0"><input type="checkbox" id="usePointry"><span>포인트리 사용</span></label>
+
+                                <div class="form_text" style="display: none">
+                                    <label for="ph-number">보유포인트 10,000P</label>
+                                    <input type="tel" class="text ph" id="ph-number" value="" placeholder="0">
+                                </div>
+                            </div> -->
+                        </li>
+                    </ul>
+                </div>
+                <!--//form 입력 목록-->
+                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" onclick=""><span>결제하기</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+    <div class="l-dim"></div>
+    <!-- alert popup -->
+    <div class="l-pop-alert" id="alert02" style="display: none;" tabindex="0">
+        <div class="alert-wrap">
+            <div class="alert-inner">
+                <p class="msg01 align-c">카드비밀번호가 일치하지 않습니다.</p>
+                
+                <!-- 오류 4회이상 메시지
+                    <p class="msg01 align-c">카드비밀번호 오류 횟수(3회)를 초과하여 이용이 제한되었습니다.<br>잠김해제 우 이용 바랍니다.<br><br>카드 잠김해제 방법<br>KB국민카드 앱 또는 웹사이트의 "비밀번호 오류횟수 해제" 메뉴에서 가능합니다.</p>
+                -->
+
+                <div class="bottom-group pb0">
+                    <div class="btn-group">
+                        <button type="button" class="btn-type type01"><span>확인</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="l-pop-alert" id="alert03" style="display: none;" tabindex="0">
+        <div class="alert-wrap">
+            <div class="alert-inner">
+                <p class="msg01 align-c">해지된 카드입니다.<br>삭제해주세요.</p>
+                
+                <!-- 
+                    <p class="msg01 align-c">해지된 카드입니다.<br>삭제해주세요.</p>
+                    <p class="msg01 align-c">만료된 카드입니다.<br>삭제해주세요.</p>
+                    <p class="msg01 align-c">도난분실된 카드입니다.<br>삭제해주세요.</p>
+                    <p class="msg01 align-c">다른 사용자가 <br>등록해서 이용중인 <br>기업공용카드입니다.<br>삭제해주세요.</p>
+                    <p class="msg01 align-c">관리자에 의해 <br>사용이 제한된 <br>기업공용카드입니다.<br>삭제해주세요.</p>
+                    <p class="msg01 align-c">신규 발급된 <br>카드가 있습니다.<br>삭제해주세요.</p>
+                    <p class="msg01 align-c">거래정지 카드입니다.<br>삭제해주세요.</p>
+                -->
+
+                <div class="bottom-group pb0">
+                    <div class="btn-group half">
+                        <button type="button" class="btn-type type02" onclick="closeLayer('alert03')"><span>취소</span></button>
+                        <button type="button" class="btn-type type01"><span>확인</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //alert popup -->
+
+    <script>
+        $(function() {
+            // $('.cardSlider').slick({
+            //     infinite: false,
+            //     adaptiveHeight: true,
+            //     prevArrow: "<button type='button' class='btn-prev'><span>이전</span></button>",
+            //     nextArrow: "<button type='button' class='btn-next'><span>다음</span></button>",
+            //     swipe: false,
+            // });
+            
+
+            var screenWidth = $(window).width();
+            var cp;
+            if (screenWidth <= 320) {
+                cp = '60px';
+            } else if (screenWidth <= 360) {
+                cp = '82px';
+            } else if (screenWidth <= 375) {
+                cp = '89.5px';
+            } else if (screenWidth <= 414) {
+                cp = '105px';
+            } else {
+                cp = '120px';
+            }
+            
+            $('.card-slider').slick({
+                infinite: false,
+                centerMode: true,
+                centerPadding: cp,
+                slidesToShow: 1,
+                arrows: false,
+                adaptiveHeight: true,
+                arrows: true,
+                swipe: false,
+            });
+
+            $('.card-slider').on("afterChange", function(e, slick, currentSlide) {
+                if (currentSlide > 0) {
+                    // 카드 상단에 v 아이콘
+                    $('.card-slider .slick-slide').removeClass("current");
+                    $('.card-slider .slick-slide').eq(currentSlide).addClass("current");
+                }
+            });
+
+
+            // popup
+            $(".header .close").click(function(e) {
+                $(".l-dim").show();
+                $("#pop01").fadeIn(200);
+                $(this).blur();
+            });
+            $(".l-pop .btn-group button").click(function() {
+                $(this).parents(".l-pop").hide();
+                $(".l-dim").hide();
+            });
+            
+        });
+    </script>
+
+</body>
+</html>

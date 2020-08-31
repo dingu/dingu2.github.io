@@ -1,0 +1,112 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-08-12          최초작성
+이진규             2020-08-26          AMEX 체크 추가
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>카드 본인인증</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="header">
+            <h1>카드 본인인증</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+
+        <div class="container">
+            <div class="contents-wrap">
+                
+                <div class="contents kbp_webp_106">
+                    
+                    <h2 class="tit"><strong>카드정보를 입력해주세요</strong></h2>
+                    
+                    <ul class="form-text-list">
+                        <li>
+                            <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                <label for="ph">휴대폰번호</label>
+                                <input type="tel" id="ph" class="text" value="">
+                                <button class="btn-delete" type="button">삭제</button>
+                            </div>
+                            <em class="error-txt">휴대폰번호를 정확히 입력해주세요</em>
+                        </li>
+                        <li>
+                            <div class="form_text field-4"> <!-- 오류 class :  'error' 추가 -->
+                                <label for="card-number">카드번호</label>
+                                <input type="password" class="text card-number" name="card-number" value="••••" disabled>
+                                <input type="password" class="text card-number" name="card-number" value="••••" disabled>
+                                <input type="password" class="text card-number" name="card-number" id="card-number" value="" maxlength="4" placeholder="">
+                                <input type="password" class="text card-number" name="card-number" value="" maxlength="4" placeholder="">
+
+                                <span class="bar bar-1">-</span>
+                                <span class="bar bar-2">-</span>
+                                <span class="bar bar-3">-</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- 08-26 AMEX 체크 추가 -->
+                    <div class="cash-return">
+                        <label for="chk1" class="f-chk" tabindex="0"><input type="checkbox" id="chk1">아메리칸 익스프레스(AMEX) 카드일 경우 체크</label>
+                    </div>
+                    <!-- // 08-26 AMEX 체크 추가 -->
+
+
+                </div>
+
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled><span>다음</span></button> <!-- disabled 삭제 시 활성화 -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- popup -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="pop01" tabindex="0">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <span>
+                        <!-- case 1 -->
+                        올바른 휴대폰 번호를 입력하세요
+
+                        <!-- case 2 -->
+                        <!-- 올바른 카드번호를 입력하세요 -->
+
+                        <!-- case 3 -->
+                        <!-- 본인확인 제한시간을 초과하였습니다.<br>
+                        안전한 본인확인을 위하여 창을 종료합니다.<br>
+                        처음부터 다시 시도하여 주세요 -->
+                    </span>
+                </p>
+            </div>
+            <div class="l-footer">
+                <div class="btn-group pt0">
+                    <button class="btn medium yellow" type="button">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // popup -->
+
+
+</body>
+</html>

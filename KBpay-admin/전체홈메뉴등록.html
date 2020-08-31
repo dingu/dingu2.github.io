@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>전체홈 메뉴 등록 - 업무포털</title>
+    <script src="./js/jquery-3.5.0.min.js"></script>
+    <!-- util -->
+    <link rel="stylesheet" href="./util/jquery.mCustomScrollbar.min.css">
+    <script src="./util/jquery.mCustomScrollbar.js"></script>
+    <link rel="stylesheet" href="./util/jquery-ui.min.css">
+    <script src="./util/jquery-ui.min.js"></script>
+    <!-- util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+    <a href="#contents" class="skip-navi">본문 바로가기</a>
+
+    <div class="wrap">
+        <div class="wrap-inner">
+            <!-- LEFT 영역 -->
+            <div class="left-side">
+                <div class="top">
+                    <h1><a href=""><img src="./images/logo.png" alt="KB국민카드"></a></h1>
+
+                    <div class="private-info">
+                        <strong>홍길동님 안녕하세요.</strong>
+                        <dl>
+                            <dt>접속시간</dt>
+                            <dd>2020년 05월 10일 16시 55분</dd>
+                        </dl>
+                        <dl>
+                            <dt>현재시간</dt>
+                            <dd>09:16:22</dd>
+                        </dl>
+                    </div>
+
+                    <div class="btn-area">
+                        <button type="button" class="btn-type type01" onclick=""><span>로그아웃</span></button>
+                        <button type="button" class="btn-type type01" onclick=""><span>내결재함</span></button>
+                    </div>
+                </div>
+
+                <!-- 주메뉴 -->
+                <div class="navigation">
+                    <div class="navi-wrap">
+                        <ul>
+                            <li><a href="" onclick="accordionCtr(this); return false;">회원관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">알림/전시 관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">결제관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">인증관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">제휴/가맹점 관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">앱 관리</a>
+                                <ul>
+                                    <li><a href="">앱 버전관리</a></li>
+                                    <li><a href="">앱오류조회</a></li>
+                                    <li><a href="">앱관리</a></li>
+                                    <li><a href="">메뉴관리</a></li>
+                                    <li><a href="">약관관리</a></li>
+                                    <li><a href="">분류별 약관설정 관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">통계</a>
+                                <ul>
+                                    <li><a href=""></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">시스템 관리</a>
+                                <ul>
+                                    <li><a href=""></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- //주메뉴 -->
+            </div>
+            <!-- //LEFT 영역 -->
+
+            <!-- 메인 영역 -->
+            <div class="container">
+                <div class="contents-wrap">
+                    <div class="contents" id="contents">
+                        <!-- 본문 start -->
+
+                        <div class="contents-top">
+                            <div class="left-col">
+                                <h2 class="tit01">Home 전시관리</h2>
+                            </div>
+                            
+                            <div class="right-col">
+                                <span>홈</span>
+                                <span>APP관리</span>
+                                <span>전체홈 메뉴관리</span>
+                            </div>
+                        </div>
+
+                        <div class="article-top mt10">
+                            <div class="left-col">
+                                <h3 class="tit02">전체홈 메뉴 등록</h3>
+                            </div>
+                            
+                            <div class="right-col">
+                                <button type="button" class="btn-type type02 w-95"><span>목록</span></button>
+                                <button type="button" class="btn-type type02 w-95"><span>저장</span></button>
+                            </div>                            
+                        </div>
+                       
+                        <h4 class="tit03 mt30">기본정보 입력</h4>
+                        <div class="board-detail">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 170px;">
+                                    <col style="width: auto;">
+                                    <col style="width: 170px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <tr>
+                                    <td class="tit">버전정보</td>
+                                    <td>
+                                        0.91
+                                    </td>
+                                    <td class="tit">상태</td>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tit">버전관리 명<i class="req">필수</i></td>
+                                    <td>
+                                        <!-- w-full 클래스는 가로길이 100% 채울때 사용 -->
+                                        <input class="f-ipt-txt w-full" type="text" name="" value="" title="버전관리 명" placeholder="">
+                                    </td>
+                                    <td class="tit">사용여부</td>
+                                    <td>
+                                        <!-- 
+                                            ml10 클래스는 간격을 위해 붙입니다.
+                                            radio 첫번째는 ml10을 붙이지 않습니다.
+                                        -->
+                                        <input type="radio" title="사용"> 사용
+                                        <input type="radio" title="사용안함" class="ml10"> 사용안함
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tit">이벤트 노출기간<i class="req">필수</i></td>
+                                    <td colspan="3">
+                                        <label for="" class="dates">
+                                            <input class="" type="text" name="" value="" placeholder="">
+                                        </label>
+                                        <label for="" class="f-select ">
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                            </select>
+                                        </label>
+                                        시
+                                        <label for="" class="f-select ">
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="lo-content half mt30">
+                            <!-- left : width를 조절하면 오른쪽은 자동으로 나머지 가로길이로 세팅됩니다. default는 50% -->
+                            <div style="width: 350px; padding-right: 15px;">
+                                <h4 class="tit03">전체홈 메뉴 설정</h4>
+
+                                <p><span class="txt01">※ 드래그앤드롭으로 메뉴이동이 가능합니다.</span></p>
+
+                                <div class="tree-menu">
+                                    <!-- Tree menu : height를 상황에 맞게 inline으로 정의해서 사용합니다. -->
+                                    <div style="height: 300px;">
+                                        Tree menu 영역
+                                        <!-- app 영역 -->
+
+                                    </div>
+                                    <!-- //Tree menu -->
+                                </div>
+                            </div>
+                            
+                            <!-- right -->
+                            <div>
+                                <h4 class="tit03">메뉴 기본 정보</h4>
+                                <div class="board-detail">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 150px;">
+                                            <col style="width: auto;">
+                                            <col style="width: 150px;">
+                                            <col style="width: auto;">
+                                        </colgroup>
+                                        <tr>
+                                            <td class="tit">현재 위치</td>
+                                            <td colspan="3">
+                                                조회 > 이용내역 조회
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tit">메뉴/카테고리명</td>
+                                            <td>
+                                                이용내역조회
+                                            </td>
+                                            <td class="tit">메뉴ID</td>
+                                            <td>
+                                                kbp_main_002
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tit">Icon</td>
+                                            <td colspan="3">
+                                                <img src="" alt="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tit">OS</td>
+                                            <td>
+                                                이용내역조회
+                                            </td>
+                                            <td class="tit">14세 미만 여부</td>
+                                            <td>
+                                                14세 미만
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tit">대상APP 버전</td>
+                                            <td colspan="3">
+                                                4.3.2 [최신]
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tit">라벨 선택</td>
+                                            <td colspan="3">
+                                                <!-- 
+                                                    ml10 클래스는 간격을 위해 붙입니다.
+                                                    radio 첫번째는 ml10을 붙이지 않습니다.
+                                                -->
+                                                <input type="radio" title="없음"> 없음
+                                                <input type="radio" title="NEW" class="ml10"> NEW
+                                                <input type="radio" title="EVENT" class="ml10"> EVENT
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tit">사용여부</td>
+                                            <td colspan="3">
+                                                <!-- 
+                                                    ml10 클래스는 간격을 위해 붙입니다.
+                                                    radio 첫번째는 ml10을 붙이지 않습니다.
+                                                -->
+                                                <input type="radio" title="사용"> 사용
+                                                <input type="radio" title="사용안함" class="ml10"> 사용안함
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="board-bottom02">
+                            <button type="button" class="btn-type type02 w-95"><span>목록</span></button>
+                            <button type="button" class="btn-type type02 w-95"><span>저장</span></button>
+                        </div>
+
+                        <!-- scroll Top -->
+                        <div class="scrolltop">
+                            <button type="button"><span>TOP</span></button>
+                        </div>
+                        <!-- //scroll Top -->
+
+                        <!-- //본문 end -->
+                    </div>
+
+                    <!-- footer -->
+                    <div class="footer">
+                        <p>KB 국민카드 COPYRIGHT &copy; 2020 KB Kookmin Card. LTD ALL RIGHTS RESERVED</p>
+                    </div>
+                    <!-- //footer -->
+                </div>
+            </div>
+            <!-- //메인 영역 -->
+        </div>
+    </div>
+
+    
+</body>
+</html>

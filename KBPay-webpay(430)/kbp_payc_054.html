@@ -1,0 +1,101 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-15          최초작성
+이진규             2020-07-07          환금성결제 case 주석 추가, alert 팝업 추가
+이진규             2020-08-10          텍스트 수정
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>인증방식 선택</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container kbp_payc_054"> <!-- 화면ID -->
+            <!-- Header -->
+            <div class="header">
+                <h1>인증방식 선택</h1>
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents">                
+                <!-- 본문 -->
+
+                <p class="txt">환금성 결제인 경우 안전한 결제를 위해 휴대폰 본인인증 및 추가 인증을 진행합니다. 휴대폰 본인인증 외 추가 인증을 선택하세요.</p> <!-- // 07-07 환금성결제인 경우에만 노출 --> <!-- // 2020-08-10 텍스트 수정 -->
+
+                <ul class="list-link">
+                    <!-- 07-07 환금성결제인 경우 숨김 -->
+                    <li>
+                        <a href="#"><span>휴대폰번호로 인증</span></a>
+                    </li>
+                    <!-- // 07-07 환금성결제인 경우 숨김 -->
+
+                    <li>
+                        <a href="#"><span>카드 본인인증</span></a><!-- // 2020-08-10 텍스트 수정 -->
+                    </li>
+                    <li>
+                        <!-- <a href="#"><span>간편 QR인증</span></a> -->
+                    </li>
+                    <li>
+                        <a href="#"><span>ARS인증</span></a>
+                    </li>
+                </ul>
+                
+
+
+                <!-- //본문 -->                
+            </div>
+
+            <!-- Bottom area -->
+            <!-- <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>다음</span></button>
+                </div>
+            </div> -->
+            <!-- //Bottom area -->
+
+            
+        </div>
+    </div>
+
+    <!-- 07-07 : alert 팝업 추가 -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop-alert" id="alert03" style="display: none;" tabindex="0">
+        <div class="alert-wrap">
+            <div class="alert-inner">
+                <p class="msg01 align-c">회원가입이 완료되지 않았습니다.<br>회원가입을 중단하시겠습니까?</p>
+                
+                <div class="bottom-group pb0">
+                    <div class="btn-group half">
+                        <button type="button" class="btn-type type02"><span>취소</span></button>
+                        <button type="button" class="btn-type type01"><span>확인</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 07-07 : alert 팝업 추가 -->
+
+
+</body>
+</html>

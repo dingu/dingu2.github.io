@@ -1,0 +1,154 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+유현우             2020-07-09          최초작성
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>주소검색</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header back"><!-- Back버튼이 있는 경우 back class를 붙인다. -->
+            <button type="button" class="btn go-back">이전</button>
+            <h1>주소검색</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+               
+                <!--contents-->
+                <div class="contents kbp_webp_082"> <!-- contents + 페이지별 class 삽입 -->
+
+                    <h2 class="txt02 mt24">찾고자 하는 도로명, 건물명 또는 지번 중<br>
+                        편한 방법으로 검색해주세요.</h2>
+
+                    <p class="addr-example">
+                        <span>도로명 + 건물번호 : ex) 월계로 47길 97</span>
+                        <span>동/읍/면/리 + 번지 : ex) 상계동 731-5</span>
+                        <span>건물명(아파트명) : ex) 라센트레미안</span>
+                    </p>
+
+                    <!--form 입력 목록-->
+                    <div class="form-wrap">                        
+                        <ul class="form-text-list">
+                            <!--이름 입력-->
+                            <li>
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="name">예) 을지로, 성남, 강남</label>
+                                    <input type="text" id="name" name="" class="text" value="">
+                                    <button class="btn-delete" type="button">삭제</button>
+                                </div>
+                                <em class="error-txt">검색어를 입력해주세요</em> <!--// validation 문구 적용-->
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//form 입력 목록-->
+
+                    <div class="addr-list">
+                        <!-- case 1 : 목록이 있을때 -->
+                        <ul>
+                            <li>
+                                <a href="" onclick="opBotSheet('pop01', this); return false">
+                                    <span class="post-num">(우) 04533</span>
+                                    <span class="addr-new">서울특별시 중구 을지로6 (을지로1가)</span>
+                                    <span class="addr-old">서울특별시 중구 을지로1가 192-11 재능빌딩</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" onclick="opBotSheet('pop01', this); return false">
+                                    <span class="post-num">(우) 04533</span>
+                                    <span class="addr-new">서울특별시 중구 을지로6 (을지로1가)</span>
+                                    <span class="addr-old">서울특별시 중구 을지로1가 192-11 재능빌딩</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- case 2 : 목록이 없을때 -->
+                        <!-- <p class="no-data">ㅇㅇㅇ에 대한 검색결과가 없습니다.</p> -->
+                    </div>
+
+                    <div class="btn-group mt8">
+                        <button class="btn large yellow" type="button"><span>검색</span></button>
+                    </div>
+                </div>
+                <!--//contents-->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- bottom layer -->
+    <div class="l-dim"></div>
+
+    <div class="l-bottom" id="pop01" tabindex="0">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>상세주소 입력</h1>
+                <button type="button" class="close" onclick="closeBotSheet('pop01')">닫기</button>
+            </div>
+            <div class="l-contents kbp_webp_083">
+                <!-- 컨텐츠영역 -->
+
+                <div class="addr-top">
+                    <span class="post-num">(우) 04533</span>
+                    <span class="addr-new">서울특별시 중구 을지로6 (을지로1가)</span>
+                    <span class="addr-old">서울특별시 중구 을지로1가 192-11 재능빌딩</span>
+                </div>
+
+                <div class="addr-list-detail rdoGroup">
+                    <dl>
+                        <dt>
+                            <label for="" class="f-rdo only checked"><input type="radio" id="" checked></label>
+                        </dt>
+                        <dd>
+                            <span class="addr-new">도로명</span>
+                            <span class="addr-old">서울특별시 중구 을지로6 (을지로1가)</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <label for="" class="f-rdo only"><input type="radio" id="" checked></label>
+                        </dt>
+                        <dd>
+                            <span class="addr-new">지번</span>
+                            <span class="addr-old">서울특별시 중구 을지로1가 192-11 재능빌딩</span>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="form-wrap">                        
+                    <ul class="form-text-list">
+                        <!--상세주소 입력-->
+                        <li>
+                            <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                <label for="name2">상세주소 입력</label>
+                                <input type="text" id="name2" name="" class="text" value="">
+                                <button class="btn-delete" type="button">삭제</button>
+                            </div>
+                            <em class="error-txt">상세주소를 입력해주세요</em> <!--// validation 문구 적용-->
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- //컨텐츠영역 -->
+            </div>
+            <div class="btn-group">
+                <button class="btn medium yellow" type="button" onclick="closeBotSheet('pop01')"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- // bottom layer -->
+
+
+</body>
+</html>

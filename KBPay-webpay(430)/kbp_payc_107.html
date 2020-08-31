@@ -1,0 +1,79 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-08-12          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>카드 본인인증</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>카드 본인인증</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_107"> <!-- 화면ID -->   
+                
+                <h2 class="tit"><strong>추가정보를 입력해주세요</strong></h2>
+                <ul class="form-text-list">
+                    <li>
+                        <div class="form_text">
+                            <label for="name1">이름</label>
+                            <input type="text" id="name1" class="text" value="" placeholder="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form_text">
+                            <label for="id-number">생년월일 (예 19800101)</label>
+                            <input type="number" id="id-number" class="text" value="" placeholder="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-rdo">
+                            <label for="" class="lb">성별</label>
+                            <div class="rdoGroup rdo-group">
+                                <label for="" class="f-rdo checked"><input type="radio" id="" checked>남성</label>
+                                <label for="" class="f-rdo "><input type="radio" id="">여성</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>다음</span></button> <!-- disabled 제거 시 활성화 -->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+
+            
+        </div>
+    </div>
+
+
+</body>
+</html>

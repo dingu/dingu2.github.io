@@ -1,0 +1,53 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+유현우             2020-07-21          최초작성
+-->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>간편인증번호</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/jquery-2.2.4.min.js"></script>
+        <script src="./js/ui.js"></script>
+        <script src="util/placeholder.js"></script>
+    </head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>간편인증번호</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+                <!--contents-->
+                <div class="contents kbp_webp_021"> <!-- contents + 페이지별 class 삽입 -->
+                    <p class="txt02 align-c">간편 인증번호 입력</p>
+                    
+                    <div class="passWrap card-pass">
+                        <div class="pass-input-match password">
+                            <input type="text" class="text" title="간편 인증번호"> <!--//실제 입력 받는 칸 -->
+                            <div class="pass-input">
+                                <span class="dot yellow on"></span> <!--활성화 class 'on'-->
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                            </div>
+                        </div>
+                        
+                        <!--error text -->
+                        <em class="error-txt certi">간편인증번호가 일치하지 않습니다.</em>
+                    </div>
+                </div>
+                <!--//contents-->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

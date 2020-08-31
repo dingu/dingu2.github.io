@@ -23,13 +23,19 @@
 .board-list table td {padding: 5px 8px; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #666; font-size: 14px; text-align: center; line-height: 20px;}
 .board-list table td:last-child {border-right: 0;}
 .board-list table td .lnk {color: #5431b0; text-decoration: underline;}
-.board-list table .head td {color: #222; font-weight: 700; letter-spacing: -2px; background: #eee;}
+.board-list table .head td,
+.board-list table td.total {color: #222; font-weight: 700; letter-spacing: -2px; background: #eee;}
 .board-list table td.hidden {padding: 0; border: 0; font-size: 0;}
+.board-list table .selected td {background: #fffdf7;}
+.board-list table td pre {color: #666; font-family: AppleGothic, 'Malgun Gothic', sans-serif; font-size: 14px; line-height: 20px;}
 
 .board-list.scroll-horizontal {overflow-x: auto; overflow-y: hidden;}
 .board-list.scroll-horizontal table {width: auto;}
 
-.board-detail {margin-top: 10px; background: #fff;}
+.board-list .list-card-img {height: 40px;}
+
+.board-detail {margin-top: 10px;}
+.board-detail table {background: #fff;}
 .board-detail table td {padding: 10px 20px; border-bottom: 1px solid #ddd; color: #666; font-size: 14px;}
 .board-detail table td.tit {color: #222; font-weight: 700; background: #eee; letter-spacing: -1px;}
 .board-detail table td .req {display: inline-block; font-size: 0;}
@@ -38,6 +44,7 @@
 .board-detail table td .btn-type.type03 {margin-top: 5px;}
 .board-detail table td input[type=checkbox],
 .board-detail table td input[type=radio] {vertical-align: -1px;}
+.board-detail table td.bar-l {border-left: 1px solid #ddd;}
 
 .board-bottom {position: relative; margin-top: 30px;}
 .board-bottom .left-col {position: absolute; left: 0; top: 0;}
@@ -55,7 +62,8 @@
 
 .board-req-guide {height: 20px; text-align: right;}
 .board-req-guide span {display: inline-block; height: 20px; color: #888; font-size: 14px; line-height: 16px; letter-spacing: -0.2px; vertical-align: top;}
-.board-req-guide i::before {content: "*"; display: inline-block; color: #ff0000;}
+.board-req-guide i {display: inline-block; font-size: 0; text-indent: -9999px; vertical-align: top;}
+.board-req-guide i::before {content: "*"; display: inline-block; margin-right: 2px; color: #ff0000; font-size: 14px;}
 
 
 /* Button */
@@ -66,6 +74,7 @@
 .btn-type.type04 {height: 30px; padding: 0 10px; color: #fff; font-size: 14px; font-weight: 500; text-align: center; background: #222;}
 .btn-type.type05 {height: 40px; color: #fff; font-size: 16px; font-weight: 500; line-height: 24px; background: #444;}
 .btn-type.type06 {height: 40px; padding: 0 14px; color: #fff; font-size: 16px; letter-spacing: -0.4px; background: #303030;}
+.btn-type.type07 {height: 40px; padding: 0 14px; border: 1px solid #aaa; color: #222; font-size: 14px; font-weight: 500; text-align: center; background: #fff;}
 
 .btn-type.excel {width: 138px; height: 40px; padding-left: 49px; border: 1px solid #aaa; color: #222; font-size: 14px; font-weight: 500; text-align: left; letter-spacing: -1.5px; background: #fff url(../images/ico_excel.png) no-repeat 20px center;}
 
@@ -87,7 +96,8 @@
 .condition .left-col table td.tit span {display: inline-block; height: 40px; line-height: 38px;}
 .condition .right-col {width: 130px; padding: 0 20px 2px 20px; vertical-align: top;}
 .condition .right-col button {display: block; width: 100%; color: #fff; font-size: 18px; font-weight: 700; background: #303030;}
-
+.condition table td .req {display: inline-block; font-size: 0;}
+.condition table td .req::before {content: "*"; margin-left: 3px; color: #ff0000; font-size: 14px;}
 
 /* Form */
 .f-ipt-txt {height: 40px; padding: 0 15px; border: 1px solid #ddd;}
@@ -151,6 +161,9 @@
  .select-box .r {flex-grow: 1;}
 
 
+/* Tree menu app */
+.tree-menu {margin-top: 10px; background: #fff;}
+
  /* Etc */
 .img-box button {vertical-align: 4px;}
 
@@ -158,4 +171,17 @@
 
 .select-screen .btn-delete {vertical-align: 4px;}
 
+.before-after {display: table; position: relative; width: 100%;}
+.before-after::before {content: ""; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; background: url(../images/icon_arrow_right40x40.png) no-repeat center; background-size: contain;}
+.before-after > div {display: table-cell; width: 50%; padding-right: 30px;}
+.before-after > div + div {padding-left: 30px; padding-right: 0;}
 
+.etc001 {position: relative; margin-top: 30px;}
+.etc001::after {content: ""; display: block; clear: both;}
+.etc001 > div {float: left; width: 50%;}
+.etc001 .l {padding-right: 30px;}
+.etc001 .c {float: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: auto;}
+.etc001 .c button {display: block; width: 30px; height: 30px; font-size: 0;}
+.etc001 .c .go-r {background: url(../images/btn_goright.png) no-repeat;}
+.etc001 .c .go-l {margin-top: 4px; background: url(../images/btn_goright.png) no-repeat; transform: rotate(180deg);}
+.etc001 .r {padding-left: 30px;}

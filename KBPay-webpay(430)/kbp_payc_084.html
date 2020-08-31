@@ -1,0 +1,71 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-07-01          최초작성
+이진규             2020-07-06          텍스트 수정, 버튼 갯수 변경
+이진규             2020-08-11          alt 값 제거
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>기기인증</title> <!-- // 07-06 텍스트 수정 -->
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>기기인증</h1> <!-- // 07-06 텍스트 수정 -->
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_084"> <!-- 화면ID -->                
+
+                <!-- 07-06 텍스트 수정, 버튼 갯수 변경 -->
+                <p class="txt04">앱없이 결제하기 사용을 위한 기기 인증이 필요합니다. 이용하시는 장소나 기기에 맞는 인증방법을 선택해주세요</p>
+
+                <ul class="pc-cert">
+                    <li>
+                        <p class="img"><img src="./images/icon/ico_pc_cert.png" alt=""></p> <!-- // 08-11 alt값 삭제 -->
+                        <p class="tit-area">본인의<br>컴퓨터를 사용<strong>내 기기 인증받기</strong></p>
+                        <div class="btn-line-group">
+                            <button type="button"><span>본인인증</span></button>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="img"><img src="./images/icon/ico_pc_cert_once.png" alt=""></p> <!-- // 08-11 alt값 삭제 -->
+                        <p class="tit-area">공공장소 또는<br>PC방에서 사용<strong>1회용 인증받기</strong></p>
+                        <div class="btn-line-group">
+                            <button type="button"><span>본인인증</span></button>
+                        </div>
+                    </li>
+                </ul>
+                <!-- // 07-06 텍스트 수정, 버튼 갯수 변경 -->
+
+
+
+            </div>
+
+            
+        </div>
+    </div>
+
+
+</body>
+</html>

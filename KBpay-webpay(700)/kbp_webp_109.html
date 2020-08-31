@@ -1,0 +1,93 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-08-25          최초작성
+이진규             2020-08-26          인증 재요청 버튼 추가, 팝업 오류 case 추가
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>카드 본인인증</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="header">
+            <h1>카드 본인인증</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+
+        <div class="container">
+            <div class="contents-wrap">
+                
+                <div class="contents kbp_webp_109">
+                    
+                    <h2 class="tit"><strong>ARS 인증안내</strong></h2>
+                    
+                    <ul class="list-dot">
+                        <li>ARS수신(02-123-4567)후 비밀번호 앞 2자리를 입력하세요.</li>
+                        <li>비밀번호 입력이 완료되면 아래 ‘완료’ 버튼을 누르세요.</li>
+                    </ul>
+
+                    <p class="time-limit">
+                        남은시간
+                        <span>02:29</span>
+                    </p>
+
+                    <div class="resend-tip">
+                        <button type="button"><span>인증 재요청</span></button>
+                    </div>
+
+                </div>
+
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button"><span>완료</span></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="pop01" tabindex="0">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <span>
+                        <!-- case 1 -->
+                        인증에 실패하였습니다. 해당카드사 고객센터로 문의하시어 카드의 인증 가능여부를 확인해주세요.
+
+                        <!-- case 2 -->
+                        <!-- 인증 재시도횟수 혹은 인증제한시간을 초과하였습니다. 다시 시도해주세요. -->
+
+                        <!-- 2020-08-26 팝업 오류 case 추가 -->
+                        <!-- case 3 -->
+                        <!-- ARS 인증이 완료되지 않았습니다.<br>ARS 인증을 먼저 완료해주세요 -->
+                        <!-- // 2020-08-26 팝업 오류 case 추가 -->
+                    </span>
+                </p>
+            </div>
+            <div class="l-footer">
+                <div class="btn-group pt0">
+                    <button class="btn medium yellow" type="button">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-16          최초작성
+이진규             2020-07-02          디자인 변경으로 인한 마크업 수정
+이진규             2020-07-28          텍스트 수정
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Webpay 로그인</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container kbp_webp_062"> <!-- 화면ID -->
+            <!-- Header -->
+            <div class="header">
+                <h1>Webpay 로그인</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents">
+                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>로그인</span></button> 
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+
+    <!-- Layer popup -->
+    <div class="l-dim" style="display:block;"></div>
+
+    <div class="l-pop" id="layer01" tabindex="0">
+        <div class="l-pop-wrap kbp_payc_052">
+            <div class="l-header">
+                <h1>소득공제 신청 시 유의사항</h1>
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+    
+            <div class="l-contents">
+                <!-- <p class="txt01">
+                    선불카드 사용등록 시 전자상거래 이용가능. <br><br>
+                    소득공제 신청 시 신청 시점 이후 선불카드 사용 금액에 대한 소득공제 혜택이 적용됩니다. <br><br>
+                    입력정보와 기존 KB국민카드 등록 정보가 다른 경우 현재 입력한 정보로 변경되오니 정확히 입력하여 주시기 바랍니다.
+                </p> -->
+                <ul class="list-txt05">
+                    <li>선불카드 사용등록 시 전자상거래 이용이 가능합니다.</li> <!-- // 2020-07-28 텍스트 수정 -->
+                    <li>소득공제 신청 시 신청 시점 이후 선불카드 사용금액에 대한 소득공제 혜택이 적용됩니다.</li>
+                    <li>입력정보와 기존 KB국민카드 등록 정보가 다른 경우 현재 입력한 정보로 변경되오니 정확히 입력하여 주시기 바랍니다.</li>
+                </ul>
+            </div>
+    
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+
+
+    <script>
+        // 레이어 팝업 호출 함수
+        openLayer('layer01');
+    </script>
+
+</body>
+</html>

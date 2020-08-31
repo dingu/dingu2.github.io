@@ -1,0 +1,298 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-15          최초작성
+이진규             2020-07-08          UI 전체 수정
+이진규             2020-07-24          IE7 지원을 위한 페이지 전체 수정
+이진규             2020-08-10          하단 메뉴 순서 변경
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>인덱스</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    <![endif]-->
+
+    <!-- util -->
+    <link rel="stylesheet" href="./util/slick.css">
+    <script src="./util/slick.min.js"></script>    
+    <!-- // util -->
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="index">
+            
+            <div class="index-header">
+                <img class="logo" src="./images/icon/ico_kbcard.png" alt="KB국민카드">
+            </div>
+
+            <div class="contents kbp_payc_001"> <!-- 화면ID -->
+                <!-- 본문 -->
+
+                <!-- Tab UI -->
+                <div class="tab-ui tabUI">
+                    <ul class="tab-list tabType01" id="tabList">
+                        <li><a class="active" href="#" onclick="selectTab(1, this); return false;">KB Pay 결제</a></li>
+                        <li><a href="#" onclick="selectTab(2, this); return false;">제휴 간편결제</a></li>
+                    </ul>
+
+                    <div class="tab-contents">
+                        <!-- Tab 1 -->
+                        <div class="tab-item" id="tabView01" style="display: block">                            
+                            <div class="app-pay-box">
+                                <p class="tit-area">
+                                    <span class="logo">
+                                        <img src="./images/etc/kbpay_payment.png" alt="KB Pay 앱 결제">
+                                        <img class="icon" src="./images/icon/ico_kbpay_02.png" alt="">
+                                    </span>
+                                </p>
+
+                                <ul class="btn-list">
+                                    <li><button type="button" class="gray" onclick="openLayer('layer01');"><span>다운로드</span></button></li>
+                                    <li><button type="button" class="yellow"><span>결제하기</span></button></li>
+                                </ul>
+                            </div>
+
+                            <!-- 2020-08-10 하단 메뉴 순서 변경 -->
+                            <ul class="payment-box">
+                                <li>
+                                    <a href="#">
+                                        <p class="tit-area">
+                                            <span class="p-tit">APP 없이 바로결제</span>
+                                        </p>
+                                        <img src="./images/icon/ico_arrow_gray_02.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="tit-area">
+                                            <span class="p-txt">카카오뱅크 / KB증권 / 한화투자증권</span>
+                                            <span class="p-tit">ISP 인증서로 결제하기</span>
+                                        </p>
+                                        <img src="./images/icon/ico_arrow_gray_02.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- // 2020-08-10 하단 메뉴 순서 변경 -->
+
+                        </div>
+                        <!-- //Tab 1 -->
+
+                        <!-- Tab 2 -->
+                        <div class="tab-item" id="tabView02">
+                            <div class="partner-payment">
+                                <div class="inner">
+                                    <div>
+                                        <a href="#" class="samsungpay">
+                                            <div class="tit-area">
+                                                <p class="p-txt">결제비밀번호 / 지문인증 결제</p>
+                                                <p class="logo"><img src="./images/etc/logo_samsungpay.png" alt="삼성페이"></p>
+                                            </div>
+                                            <!-- <img src="./images/etc/logo_samsungpay.png" alt=""> -->
+                                        </a>
+                                    </div>
+
+                                    <div>
+                                        <a href="#" class="lgpay">
+                                            <div class="tit-area">
+                                                <p class="p-txt">결제비밀번호 / 지문인증 결제</p>
+                                                <p class="logo"><img src="./images/etc/logo_lgpay.png" alt="LG페이"></p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div>
+                                        <a href="#" class="payco">
+                                            <div class="tit-area">
+                                                <p class="p-txt">페이코 앱을 통해 결제</p>
+                                                <p class="logo"><img src="./images/etc/logo_payco.png" alt="PAYCO"></p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div>
+                                        <a href="#" class="ars">
+                                            <div class="tit-area">
+                                                <p class="p-tit">ARS 인증</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Tab 2 -->
+                    </div>
+                </div>
+                <!-- //Tab UI -->
+
+
+                <div class="banner-slide" id="bannerSlide">
+                    <div class="slide-area">
+                        <a href="#" class="slide">
+                            <img src="./images/etc/sample_banner.png" alt="앱카드 리뉴얼기념 특별 이벤트">
+                        </a>
+                        <a href="#" class="slide">
+                            <img src="./images/etc/sample_banner.png" alt="앱카드 리뉴얼기념 특별 이벤트">
+                        </a>
+                        <a href="#" class="slide">
+                            <img src="./images/etc/sample_banner.png" alt="앱카드 리뉴얼기념 특별 이벤트">
+                        </a>
+                    </div>
+                    <div class="slide-nav">
+                        <span class="showIndex"></span>
+                        <span class="totalIndex"></span>
+                    </div>
+                    <button type="button" class="btn-active" aria-label="Pause">정지</button>
+                </div>
+
+
+                <!-- //본문 -->                
+            </div>
+
+                
+        </div>
+    </div>
+
+    <!-- Layer popup -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="layer01" tabindex="0">
+        <div class="l-pop-wrap">
+            <div class="l-header">
+                <h1>KB Pay 설치하기</h1>
+
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+                
+                <p class="txt">빠르고 간편한 KB Pay<br>지금 바로 설치해서 사용해보세요</p>
+                
+                <ul class="app-guide">
+                    <li>
+                        <p class="qr"><img src="./images/etc/sample_qr.png" alt="QR"></p>
+                        <div class="market-box">
+                            <p class="img-area"><img src="./images/icon/ico_playstore.png" alt="Play Store"></p>
+                            <p class="tit-area">
+                                <span class="os">Android</span>
+                                <span class="market">Play Store</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="qr"><img src="./images/etc/sample_qr.png" alt="QR"></p>
+                        <div class="market-box">
+                            <p class="img-area"><img src="./images/icon/ico_appstore.png" alt="App Store"></p>
+                            <p class="tit-area">
+                                <span class="os">IOS</span>
+                                <span class="market">App Store</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" onclick="closeLayer('layer01');"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+
+    <script>
+        /* Tab */
+        function selectTab(idx, obj) {
+            document.getElementById("tabList").getElementsByTagName("a")[0].className = "";
+            document.getElementById("tabList").getElementsByTagName("a")[1].className = "";
+            obj.className = "active";
+            if (idx == 1) {
+                document.getElementById("tabView01").style.display = "block";
+                document.getElementById("tabView02").style.display = "none";
+                
+            } else {
+                document.getElementById("tabView01").style.display = "none";
+                document.getElementById("tabView02").style.display = "block";
+            }
+        }
+
+
+
+        // IE 버전 체크
+        var version = -1;
+        if (navigator.appName == "Microsoft Internet Explorer"
+            && navigator.userAgent.toLowerCase().indexOf("msie") != -1
+            && new RegExp("MSIE ([0-9]{1,}[\./0-9]{0,})").exec(navigator.userAgent) != null) {
+            
+            version = parseInt(RegExp.$1);
+        }
+
+
+        if (version < 9 && version >= 7) {
+            document.getElementById("bannerSlide").style.display = "none";
+        } else {
+            /* Slider */
+            var slideState = true;
+            var slideLength = $(".slide-area > a").length;
+
+            // 페이징
+            $(".slide-area").on('init reInit afterChange', function(event, slick, currentSlide){
+                var i = (currentSlide ? currentSlide : 0) + 1;
+                $(".slide-nav .showIndex").text(i);
+                $(".slide-nav .totalIndex").text(slideLength);
+            });
+
+
+            $(".slide-area").slick({
+                dots: false,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: false
+            });
+
+            $(".banner-slide .btn-active").click(function(){
+                if( slideState == true ){
+                    $(this).addClass("play");
+                    $(this).attr("aria-label", "Play");
+                    $(this).text("재생");
+                    $(".slide-area").slick("slickPause");
+                    slideState = false;
+                }else{
+                    $(this).removeClass("play");
+                    $(this).attr("aria-label", "Pause");
+                    $(this).text("정지");
+                    $(".slide-area").slick("slickPlay");
+                    slideState = true;
+                }
+                
+            });
+
+            // 이벤트 1개일 때 슬라이드 종료
+            if( slideLength == 1 ){
+                $(".slide-area").slick("unslick");
+                $(".banner-slide .slide-nav").hide();
+                $(".banner-slide .btn-active").hide();
+            }
+        }
+        
+        
+
+    </script>
+
+</body>
+</html>

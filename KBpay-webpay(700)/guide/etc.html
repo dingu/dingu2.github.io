@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Etc - WEB Pay Style Guide</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./guide.css">
+    <script src="../js/jquery-2.2.4.min.js"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div class="guide-wrap">
+        <header class="guide-header">
+            <h1>WEB Pay - HTML Guide</h1>
+            <ul class="guide-gnb">
+                <li><a href="index.html">기본규칙</a></li>
+                <li><a href="layout.html">Layout</a></li>
+                
+                <li><a href="board.html">Board</a></li>                
+                <li><a href="button.html">Button</a></li>
+                <li><a href="form.html">Form</a></li>
+                
+                
+                <li><a href="popup.html">Popup</a></li>
+                
+                <li><a href="tab.html">Tab</a></li>
+                <li><a class="active" href="etc.html">Etc</a></li>
+            </ul>
+        </header>
+
+        <div class="guide-container">
+            <h2 class="guide-tit">기타</h2>
+
+            <h3 class="guide-tit02">약관동의</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <!-- 약관동의 -->
+                    <div class="agree-terms">
+                        <ul>
+                            <li>
+                                <div class="head">
+                                    <label for="" class="f-chk checkAll"><input type="checkbox"><span>KB Pay 이용약관 전체동의</span></label>
+                                    <button class="ico btn on" type="button" onclick="agreeCombo(this);">KB Pay 이용약관 전체동의 닫기</button>
+                                </div>
+                                <ul class="list">
+                                    <li>
+                                        <label for="" class="f-chk type02"><input type="checkbox"></label>
+                                        <span><a href="" class="show-detail">[필수] 개인정보 수집이용 동의</a></span>
+                                    </li>
+                                    <li>
+                                        <label for="" class="f-chk type02"><input type="checkbox"></label>
+                                        <span><a href="" class="show-detail">[필수] 고객식별정보 처리 동의</a></span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <!-- //약관동의 -->
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">토스트 팝업</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <div class="btn-group">
+                        <button class="btn medium gray" type="button" onclick="showToast('guide-wrap', '결제수단 등록이 완료되었습니다.')"><span>Click</span></button>
+                    </div>
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">Tooltip</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <!--tooltip-->
+                    <div class="tool-tip">
+                        <p><a href="javascript:void(0);" class="tip">카드 잠김해제 방법</a></p>
+                        <div class="tip-box">
+                            <a href="javascript:void(0);" class="btn-close">닫기</a>
+                            <p>KB국민카드 앱 또는 웹사이트의 “비밀번호 오류횟수 해제” 메뉴에서 가능합니다.</p>
+                        </div>
+                    </div>
+                    <!--//tooltip-->
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">(결제/계좌/카드)비밀번호 입력</h3>
+            <ul class="guide-list">
+                <li>
+                    <p class="txt02 align-c">카드 비밀번호 4자리 입력</p> <!--//비밀번호 4자리 받을 때-->
+                    <div class="passWrap card-pass">
+                        <!--비밀번호 4자리 받을 때-->
+                        <div class="pass-input-match password">
+                            <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                            <div class="pass-input">
+                                <span class="dot yellow on">1</span> <!--활성화 class 'on'-->
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                            </div>
+                        </div>
+                        <!--//비밀번호 4자리 받을 때-->
+
+                        <!--error text-->
+                        <em class="error-txt certi">error-txt</em> <!--케이스별 에러문구-->
+                        <!--//error text--> 
+                    </div>
+                </li>
+                <li>
+                    <p class="txt02 align-c" >카드 비밀번호 앞 2자리 입력</p> <!--//비밀번호 2자리 받을 때-->
+                    <div class="passWrap card-pass">
+                        <!--비밀번호 2자리 받을 때-->
+                        <div class="pass-input-match password">
+                            <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                            <div class="pass-input">
+                                <span class="dot yellow"></span> <!--활성화 class 'on'-->
+                                <span class="dot yellow"></span>
+                                <span class="dot black"></span> <!--마킹 활성화 class 'black'-->
+                                <span class="dot black"></span>
+                            </div>
+                        </div>
+                        <!--//비밀번호 4자리 받을 때-->
+
+                        <!--error text-->
+                        <em class="error-txt certi">error-txt</em> <!--케이스별 에러문구-->
+                        <!--//error text--> 
+                    </div>
+                </li>
+            </ul>
+            
+
+        </div>
+
+    </div>
+</body>
+</html>

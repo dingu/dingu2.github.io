@@ -1,0 +1,132 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+유현우             2020-06-18          최초작성
+이진규             2020-07-21          뒤로가기 버튼 삭제
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>약관동의</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <!-- <button type="button" class="btn-tyepe back">Go Back</button> --> <!-- // 07-21 뒤로가기 버튼 삭제 -->
+                <h1>약관동의</h1>
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_webp_037"> <!-- 화면ID -->        
+                <!-- 본문 -->
+
+                <!-- 약관동의 -->
+                <div class="agree-terms mt0">
+                    <ul>
+                        <li>
+                            <div class="head">
+                                <label for="agreeAll" class="f-chk checkAll" tabindex="0"><input type="checkbox" id="agreeAll"><span>약관 전체동의</span></label>
+                                <button class="ico btn on" type="button" onclick="agreeCombo(this);">약관 전체동의 닫기</button>
+                            </div>
+                            <ul class="list">
+                                <li>
+                                    <label for="terms1" class="f-chk type02" tabindex="0"><input id="terms1" name="terms1" type="checkbox"></label>
+                                    <span><a href="" class="show-detail" onclick="openLayer('layer01', this); return false;">[필수] 개인신용정보조회동의</a></span>
+                                </li>
+                                <li>
+                                    <label for="terms2" class="f-chk type02" tabindex="0"><input id="terms2" name="terms2" type="checkbox"></label>
+                                    <span><a href="" class="show-detail" onclick="openLayer('layer01', this); return false;">[필수] 고유식별정보제공동의</a></span>
+                                </li>
+                                <li>
+                                    <label for="terms3" class="f-chk type02" tabindex="0"><input id="terms3" name="terms3" type="checkbox"></label>
+                                    <span><a href="" class="show-detail" onclick="openLayer('layer01', this); return false;">[필수] 개인신용정보조회동의</a></span>
+                                </li>
+                                <li>
+                                    <label for="terms4" class="f-chk type02" tabindex="0"><input id="terms4" name="terms4" type="checkbox"></label>
+                                    <span><a href="" class="show-detail" onclick="openLayer('layer01', this); return false;">[필수] 고유식별정보제공동의</a></span>
+                                </li>
+                                <li>
+                                    <label for="terms5" class="f-chk type02" tabindex="0"><input id="terms5" name="terms4" type="checkbox"></label>
+                                    <span><a href="" class="show-detail" onclick="openLayer('layer01', this); return false;">[선택] 개인신용정보 수집이용동의</a></span>
+                                </li>
+                                <li>
+                                    <label for="terms6" class="f-chk type02" tabindex="0"><input id="terms6" name="terms4" type="checkbox"></label>
+                                    <span><a href="" class="show-detail" onclick="openLayer('layer01', this); return false;">[선택] 고유식별정보 수집이용동의</a></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //약관동의 -->
+
+                <!-- //본문 -->                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <!-- disabled를 제거하면 노란색버튼으로 활성화 됨 -->
+                    <button type="button" class="btn-type type01" disabled><span>다음</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+
+    <!-- Layer popup -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="layer01" tabindex="0">
+        <div class="l-pop-wrap">
+            <div class="l-header">
+                <h1>서비스 이용약관</h1>
+
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents" tabindex="0">
+                
+                <p class="txt01">Masterpass 서비스 (이하 "본 서비스") 이용과 관련하여 본인의 개인(신용)정보 제3자에게 제공하는 경우 “신용정보의 이용 및 보호에 관한 법률 제15조 제2항, 동법 제32조 제1항, 제33조, 제34조”, “개인정보 보호법 제17조 제1항 제1호, 제22조 제3항에 따라 본인의 동의가 필요합니다.<br>
+                <br> 
+                본인은 개인(신용)정보의 제공과 관련하여 동의를 거부할 수 있으나, 미동의 시 본 서비스를 제공받을 수 없습니다.<br>
+                 본인은 귀사가 아래의 목적으로 본인의 개인(신용)정보를 제공하는 것에 동의합니다. Masterpass 서비스 (이하 "본 서비스") 이용과 관련하여 본인의 개인(신용)정보 제3자에게 제공하는 경우 “신용정보의 이용 및 보호에 관한 법률 제15조 제2항, 동법 제32조 제1항, 제33조, 제34조”, “개인정보 보호법 제17조 제1항 제1호, 제22조 제3항에 따라 본인의 동의가 필요합니다.<br>
+                본인은 개인(신용)정보의 제공과 관련하여 동의를 거부할 수 있으나, 미동의 시 본 서비스를 제공받을 수 없습니다. <br>
+                 <br>
+                본인은 귀사가 아래의 목적으로 본인의 개인(신용)정보를 제공하는 것에 동의합니다. <br>
+                Masterpass 서비스 (이하 "본 서비스") 이용과 관련하여 본인의 개인(신용)정보 제3자에게 제공하는 경우 “신용정보의 이용 및 보호에 관한 법률 제15조 제2항, 동법 제32조 제1항, 제33조, 제34조”, “개인정보 보호법 제17조 제1항 제1호, 제22조 제3항에 따라 본인의 동의가 필요합니다.</p>
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" onclick=""><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+
+    
+
+</body>
+</html>

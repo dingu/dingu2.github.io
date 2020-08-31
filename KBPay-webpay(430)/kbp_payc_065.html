@@ -1,0 +1,103 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+유현우             2020-06-16          최초작성
+유현우             2020-07-24          텍스트 수정
+이진규             2020-08-10          텍스트 수정
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>약관동의</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container kbp_webp_065"> <!-- 화면ID -->
+            <!-- Header -->
+            <div class="header">
+                <h1>약관동의</h1>
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents">                
+                <!-- 본문 -->
+
+                <ol class="depth-step">
+                    <li class="on"><span>1</span></li> <!--현재 step 활성화 class 'on'-->
+                    <li><span>2</span></li>
+                    <li><span>3</span> </li>
+                </ol>
+
+                <p class="txt09 mt4">마케팅 정보 수신에 동의해주세요!</p>
+                <!-- 2020-07-24 : 텍스트 수정 -->
+                <!-- <p class="txt07 mt8">마케팅 수신 동의를 통해 KB국민카드의 상품정보, 이벤트 등 다양한 정보를 받아보실 수 있습니다. 원하지 않으실 경우 [다음]을 누르시면 가입절차가 계속 진행됩니다.</p> -->
+                <p class="txt07 mt8">마케팅 수신 동의를 통해 KB국민카드의 상품정보, 이벤트 등 다양한 정보를 받아보실 수 있습니다.</p>
+
+                <!-- 약관동의 -->
+                <div class="agree-terms">
+                    <ul>
+                        <li>
+                            <div class="head">
+                                <label for="agreeAll" class="f-chk checkAll"><input type="checkbox" id="agreeAll"><span>전체동의</span></label>
+                            </div>
+                            <ul class="list">
+                                <li>
+                                    <label for="terms1" class="f-chk type02"><input id="terms1" name="terms1" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[선택] 개인(신용) 정보수집 &middot; 이용 &middot; 제공동의서(상품서비스 안내 등)</a></span> <!-- // 2020-08-10 텍스트 수정 -->
+                                </li>
+                                <!-- 첫번째 항목 click 하면 보여줌 -->
+                                <li style="display: none;">
+                                    <label for="terms5" class="f-chk type02"><input id="terms5" name="terms5" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">마케팅 동의 채널</a></span>
+                                    <ul class="list-2depth">
+                                        <li>
+                                            <label for="terms5_1" class="f-chk type02"><input id="terms5_1" name="terms5_1" type="checkbox"><span class="show-detail">전화</span></label>
+                                        </li>
+                                        <li>
+                                            <label for="terms5_2" class="f-chk type02"><input id="terms5_2" name="terms5_2" type="checkbox"><span class="show-detail">문자메시지</span></label>
+                                        </li>
+                                        <li>
+                                            <label for="terms5_3" class="f-chk type02"><input id="terms5_3" name="terms5_3" type="checkbox"><span class="show-detail">이메일</span></label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //약관동의 -->
+
+                
+
+                <!-- //본문 -->                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>확인</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+</body>
+</html>

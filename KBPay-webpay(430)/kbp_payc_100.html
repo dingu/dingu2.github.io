@@ -1,0 +1,143 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-08-04          최초작성
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>카드사용등록</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>카드사용등록</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_041"> <!-- 화면ID -->                
+                <!--form 입력 목록-->
+                <div class="form-wrap">
+                    <ul class="form-text-list">
+                        <li>
+                            <div class="cell">
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="id-number">주민등록번호 앞 7자리</label>
+                                    <!--준회원 > 직접입력-->
+                                    <input type="text" id="id-number" class="text" value="" placeholder="생년월일+성별" >
+                                    <!--KB회원 > 수정불가
+                                    <input type="text" id="id-number" class="text" value="202001-1&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" placeholder="생년월일+성별" disabled> -->
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="email">이메일</label>
+                                    <input type="text" class="text" id="email" value="test@test.co.kr">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cell ph-select">
+                                <div class="form_text select"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="ph">통신사</label>
+                                    <select name="ph" id="ph" class="text">
+                                        <option value="">선택</option>
+                                        <option value="" selected>KT</option>
+                                        <option value="">SKT</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="form_text ph"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="ph-number">휴대폰번호</label>
+                                    <input type="tel" class="text" id="ph-number" placeholder="휴대폰번호를 입력해주세요" value="01012345678">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_text address clickable"> <!--//2020-06-30 class 추가 'address'--> <!-- 오류 class :  'error' 추가 -->
+                                <label for="address">주소</label>
+                                <!--//2020-06-30 input > textarea 로 변경-->
+                                <!-- 2020-08-20 : rows, readonly 추가 -->
+                                <textarea name="addr" id="address" class="text" placeholder="주소를 입력해주세요" rows="2" readonly>서울특별시 종로구 000로 00길 101동 1201호</textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--//form 입력 목록-->
+
+                <div class="align-c pt16">
+                    <label for="cash" class="f-chk"><input type="checkbox" id="cash" name="cash"><span>소득공제 신청</span></label>
+                </div>
+
+                <div class="bottom-btn">
+                    <button type="button" class="btn-line" onclick="openLayer('layer01', this);">소득공제 신청 시 유의사항</button>
+                </div>
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>등록</span></button> <!--활성화 시 disabled 삭제-->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+<!-- Layer popup -->
+<div class="l-dim"></div>
+
+<div class="l-pop" id="layer02" tabindex="0">
+    <div class="l-pop-wrap">
+        <div class="l-header">
+            <h1>우편물 수령처</h1>
+            <button type="button" class="btn-type close" onclick="closeLayer('layer02')">닫기</button>
+        </div>
+
+        <div class="l-contents kbp_payc_100">
+            <div class="form-rdo">
+                <label for="" class="lb">우편물을 받을 수령처를 선택하세요</label>
+                <div class="rdoGroup rdo-group">
+                    <label for="" class="f-rdo checked"><input type="radio" id="" checked>자택</label><!-- 라디오버튼 선택됨 checked -->
+                    <label for="" class="f-rdo "><input type="radio" id="">직장</label>
+                    <label for="" class="f-rdo "><input type="radio" id="">이메일</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="l-bottom-group">
+            <div class="btn-group">
+                <button type="button" class="btn-type type01"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- //Layer popup -->
+
+<script>
+    openLayer("layer02");
+</script>
+
+</body>
+</html>

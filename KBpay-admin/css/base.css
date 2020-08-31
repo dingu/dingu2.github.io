@@ -80,6 +80,7 @@ select::-ms-expand {display: none;}
 button > span {position: relative;}
 
 /* margin, padding 여백 */
+.mt0 {margin-top: 0 !important;}
 .mt5 {margin-top: 5px !important;}
 .mt10 {margin-top: 10px !important;}
 .mt20 {margin-top: 20px !important;}

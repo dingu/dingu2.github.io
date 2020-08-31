@@ -1,0 +1,234 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-21          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>정보입력</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/ui.js"></script>
+    <script>
+        $(function() {
+            
+            $(".header h1").click(function() {
+                var idx = $(".header h1").index(this);
+                console.log(idx);
+                $(".wrap").hide();
+                if (idx > 0 ) {
+                    $(".wrap").eq(0).show();
+                }else {
+                    $(".wrap").eq(1).show();
+                }
+                
+                
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap" style="display:none">
+        <header class="header">
+            <h1>본인인증 로그인</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+               
+                <!--contents-->
+                <div class="contents kbp_webp_012"> <!-- contents + 페이지별 class 삽입 -->
+
+                    <!--이름 입력 타이틀-->
+                    <h2 class="tit"><span class="underline">이름을 입력</span>해주세요 </h2>
+
+                    <!--주민등록번호 입력 타이틀 : 이름 입력 후 노출
+                    <h2 class="tit"><span class="underline">주민등록번호를 입력</span>해주세요 </h2> -->
+
+                    <!--휴대폰번호 입력 타이틀 : 이름 + 전화번호 입력 후 노출
+                    <h2 class="tit"><span class="underline">휴대폰번호를 입력</span>해주세요 </h2> -->
+                    
+                   <!--form 입력 목록-->
+                    <div class="form-wrap">
+                        <ul class="form-text-list">
+                            <!--전화번호 입력-->
+                            <li>
+                                <!--통신사 선택-->
+                                <div class="ph-cell">
+                                    <div class="form_text ph" onclick="opBotSheet('layerBottom01', this)" tabindex="0"> <!--활성화 class : on 추가, 입력 후 포커스 아웃일때 class : on, out 추가-->
+                                        <label for="ph-co">통신사</label>
+                                        <input type="text" id="ph-co" class="text" value="">
+                                    </div>
+                                </div>
+                                <!--전화번호 번호 입력-->
+                                <div class="ph-cell">
+                                    <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                        <label for="ph">전화번호</label>
+                                        <input type="number" id="ph" class="text" value="">
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </div>
+                                    <em class="error-txt">error text</em>
+                                </div>
+                            </li>
+                            <!--주민등록번호 입력-->
+                            <li>
+                                <div class="form_text match"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="id-number">주민등록번호</label>
+                                    <div class="pass-input-match">
+                                        <div class="pass-input">
+                                            <input type="tel"  id="id-number" class="certi-input first text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tel" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tel" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tel" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tel" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tel" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                        </div>
+                                        <span class="dash"></span>
+                                        <div class="pass-input">
+                                            <input type="tel" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tel" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tel" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tel" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tel" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tel" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tel" class="text black" placeholder="&#9679;" value="" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <em class="error-txt">error text</em>
+                            </li>
+                            <!--이름 입력-->
+                            <li>
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="name">이름</label>
+                                    <input type="text" id="name" name="" class="text" value="">
+                                    <button class="btn-delete" type="button">삭제</button>
+                                </div>
+                                <em class="error-txt">error text</em>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//form 입력 목록-->
+                </div>
+                <!--//contents-->
+
+                <!-- Bottom button area -->
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled><span>다음</span></button> <!-- 활성화 > disabled 삭제 -->
+                    </div>
+                </div>
+                <!-- //Bottom button area -->
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <header class="header">
+            <h1>본인인증 로그인</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+                <!--contents-->
+                <div class="contents kbp_webp_013"> <!-- contents + 페이지별 class 삽입 -->
+                    <h2 class="tit"><span class="underline">인증번호를 입력</span>해주세요 </h2>
+                    <div class="passWrap">
+                        <div class="pass-input">
+                            <input class="certi-input first" name="certi-input" type="tel" size="1" maxlength="1" placeholder="&#9679;" autofocus="autofocus">
+                            <input class="certi-input" name="certi-input" type="tel" size="1" maxlength="1" placeholder="&#9679;">
+                            <input class="certi-input" name="certi-input" type="tel" size="1" maxlength="1" placeholder="&#9679;">
+                            <input class="certi-input" name="certi-input" type="tel" size="1" maxlength="1" placeholder="&#9679;">
+                            <input class="certi-input" name="certi-input" type="tel" size="1" maxlength="1" placeholder="&#9679;">
+                            <input class="certi-input" name="certi-input" type="tel" size="1" maxlength="1" placeholder="&#9679;">
+                        </div>
+                        <div class="time">02:59</div>
+                        <em class="error-txt certi">인증번호가 일치하지 않습니다. <br>다시 입력해주세요.</em>
+                    </div>
+                    <p class="resend-tip">
+                        <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom02')">인증번호 미수신 시 조치방법</button>
+                    </p>
+                </div>
+                <!--//contents-->
+
+                <!-- Bottom button area -->
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled> <!-- 인증번호 입력 시 disabled 삭제-->
+                                <span>로그인</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //Bottom button area -->
+
+            </div>
+        </div>
+    </div>
+
+   <!-- 휴대폰 인증번호 문자 미수신 안내 : bottom sheet layer -->
+   <div class="l-dim"></div>
+   <div class="l-bottom kbp_webp_052" id="layerBottom02">
+       <div class="l-bottom-wrap">
+           <div class="head">
+               <h1>휴대폰 인증번호 문자 미수신 안내</h1>
+               <button type="button" class="close">닫기</button>
+           </div>
+           <div class="l-contents">
+               <!-- 컨텐츠영역 -->
+               <p class="txt">고객님의 휴대폰으로 인증번호 문자가 수신되지 않을 경우, 당사 문자알림번호인 1588-1688번 스팸문자 처리 여부 확인해 주시고 아래 내용 확인을 부탁드립니다.</p>
+                <ul class="list-ico">
+                    <li class="li1"><span class="strong">통신사 문의</span>휴대폰 이용정지 (발신정지, 수신정지 등)<br>상태일 경우</li>
+                    <li class="li2"><span class="strong">휴대폰의 설정에서 확인</span>휴대폰 기기에서 스팸처리 된 경우<br>(번호 차단, 문구 차단 등)</li>
+                    <li class="li3"><span class="strong">해당 전화걸기 앱의 설정에서 확인</span>전화 앱(whowho, T전화 등)에서<br>스팸처리 된 경우</li>
+                    <li class="li4"><span class="strong">휴대폰 인증 보호앱 설치</span>SKT 통신사의 휴대폰인증보호서비스 가입<br>고객으로 휴대폰 인증보호 앱을 미설치한 경우</li>
+                </ul>
+                <ul class="list-dot">
+                    <li>KB국민카드 고객센터 : 1588-1688</li>
+                    <li>홈페이지 : https://m.kbcard.com</li>
+                </ul>
+               <!-- //컨텐츠영역 -->
+           </div>
+
+           <div class="btn-group">
+                <button class="btn medium yellow" type="button" ><span>확인</span></button>
+            </div>
+       </div>
+   </div>
+   <!-- //휴대폰 인증번호 문자 미수신 안내 : bottom sheet layer -->
+
+
+
+    <!-- 통신사 선택 : bottom sheet layer -->
+    <div class="l-bottom" id="layerBottom01" tabindex="0">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>통신사 선택</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div class="l-contents">
+                <!-- 컨텐츠영역 -->
+                <ul class="bottom-list">
+                    <li><button type="button">SKT</button></li>
+                    <li><button type="button">KT</button></li>
+                    <li><button type="button">LG U+</button></li>
+                    <li><button type="button">SKT 알뜰폰</button></li>
+                    <li><button type="button">KT 알뜰폰</button></li>
+                    <li><button type="button">LG U+ 알뜰폰</button></li>
+                </ul>
+                <!-- //컨텐츠영역 -->
+            </div>
+            <div class="btn-group">
+                <button class="btn medium yellow" type="button" ><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- //통신사 선택 : bottom sheet layer -->
+
+</body>
+</html>

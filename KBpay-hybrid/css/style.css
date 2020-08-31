@@ -94,18 +94,14 @@ select::-ms-expand {display: none;}
 .example01 dd {padding-left: 42px;}
 
 /* Icon list */
-.ico-list {margin-top: 8px;}
-.ico-list ul {width: 336px; margin: 0 auto;}
+.ico-list {margin-top: 8px; padding-bottom: 40px;}
 .ico-list ul::after {content: ""; display: block; clear: both;}
-.ico-list ul li {float: left; margin: 16px 12px 0 12px; vertical-align: top;}
-.ico-list.barCode ul li {display: none;}
+.ico-list ul li {display: block !important; float: left; width: 88px; margin-top: 16px; vertical-align: top;}
+.ico-list ul li.hide {display: none !important;}
 .ico-list ul li:nth-child(3n) {margin-right: 0;}
-.ico-list ul li a {display: block; width: 88px; height: 88px; border: 1px solid #eee; border-radius: 50%; pointer-events: none;}
+.ico-list ul li a {display: block; width: 88px; height: 88px; pointer-events: none;}
 .ico-list ul li a img {max-width: 100%;}
-@media (max-width: 320px) {
-    .ico-list ul {width: 300px;}
-    .ico-list ul li {margin: 16px 6px 0 6px;}
-}
+.ico-list.barCode ul li {display: none;}
 
 /* Space */
 .mt16 {margin-top: 16px !important;}

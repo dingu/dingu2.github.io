@@ -1,0 +1,93 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-16          최초작성
+이진규             2020-07-06          인증번호 영역 추가, 팝업 추가
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>ARS 인증</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>ARS 인증</h1>
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_080"> <!-- 화면ID -->
+                <!-- 본문 -->
+                <ol class="depth-step">
+                    <li><span>1</span></li>
+                    <li><span>2</span></li> 
+                    <li class="on"><span>3</span> </li> <!--현재 step 활성화 class 'on'-->
+                </ol>
+
+                <div class="ars-cert">
+                    <p class="msg">아래의 버튼을 통해 ARS안내에 따라<br>ARS인증을 진행해주세요.</p>
+                    <button type="button" class="submit"><span>ARS인증 연결</span></button>
+                    <p class="code" style="display: block;"><span>8901</span></p> <!-- 07-06 인증번호 영역 추가 -->
+                </div>
+
+                <!-- //본문 -->
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>다음</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+
+            
+        </div>
+    </div>
+
+    <!-- 07-06 : 팝업 추가 -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop-alert" id="alert01" style="display: none;" tabindex="0">
+        <div class="alert-wrap">
+            <div class="alert-inner">
+                <p class="msg01 align-c">
+
+                    ARS인증이 완료되었습니다. <!-- ARS 인증 성공 -->
+                    <!-- ARS인증에 실패하였습니다. --> <!-- ARS 인증 실패 -->
+                    <!-- ARS인증 대기중입니다.<br>잠시 후 다시 확인해주세요. --> <!-- ARS 인증 대기 -->
+
+                </p>
+                
+
+                <div class="bottom-group pb0">
+                    <div class="btn-group">
+                        <button type="button" class="btn-type type01"><span>확인</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

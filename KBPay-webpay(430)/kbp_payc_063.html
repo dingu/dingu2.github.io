@@ -1,0 +1,59 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-16          최초작성
+이진규             2020-07-24          텍스트 수정
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>계좌 비밀번호 인증</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>계좌 비밀번호 입력</h1> <!-- // 2020-07-24 텍스트 수정 -->
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_063 pass"> <!-- 화면ID -->                
+                <p class="txt02 align-c">계좌 비밀번호 4자리 입력</p>
+                <div class="passWrap card-pass">
+                    <div class="pass-input-match password">
+                        <input type="text" class="text" title="계좌 비밀번호 4자리"> <!--//실제 입력 받는 칸 -->
+                        <div class="pass-input">
+                            <span class="dot yellow on">1</span> <!--활성화 class 'on'-->
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom area
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>다음</span></button> 
+                </div>
+            </div> -->
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+</body>
+</html>

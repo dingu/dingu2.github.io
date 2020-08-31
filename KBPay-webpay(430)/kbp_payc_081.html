@@ -1,0 +1,121 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-16          최초작성
+이진규             2020-06-25          버튼 위치 수정
+이진규             2020-07-24          버튼 순서 변경, 텍스트 수정
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>결제수단추가</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>결제수단추가</h1> <!-- // 07-24 텍스트 수정 -->
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_081"> <!-- 화면ID -->
+                <!-- 본문 -->
+
+                <!-- 07-24 리스트 구조 변경, 텍스트 수정 -->
+                <ul class="list-card-btn">
+                    <li>
+                        <a href="#">
+                            <span class="type">은행계좌</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="type">증권카드</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="type">포인트리</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="type">신용/체크카드</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="type">기프트카드</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="disabled"><!-- 2020-08-20 비활성화 샘플추가 -->
+                            <span class="type">기업공용카드</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+                <div class="gift-box">
+                    <ul>
+                        <li>상품권 포인트</li>
+                    </ul>
+                    <div class="btn">
+                        <a href="#"><span>해피캐시</span></a>
+                        <a href="#"><span>해피머니</span></a>
+                    </div>
+                </div>
+
+                <ul class="list-txt03">
+                    <li>결제수단의 등록/삭제/충전은 해당 메뉴 버튼을 클릭해주세요.</li>
+                    <li>포인트리는 APP에서만 충전이 가능합니다.</li>
+                </ul>
+                <!-- // 07-24 리스트 구조 변경, 텍스트 수정 -->
+
+
+                <!-- 06-25 버튼 위치 수정 -->
+                <!-- <div class="bottom-btn">
+                    <button type="button" class="btn-line"><span>APP 설치하고 포인트리 충전</span></button>
+                </div> -->
+                <!-- // 06-25 버튼 위치 수정 -->
+
+
+
+
+                <!-- //본문 -->                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-line"><span>APP 설치하고 포인트리 충전</span></button><!-- // 06-25 버튼 위치 수정 -->
+                    <button type="button" class="btn-type type01"><span>다음에 등록</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+
+            
+        </div>
+    </div>
+
+</body>
+</html>

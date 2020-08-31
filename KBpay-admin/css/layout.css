@@ -19,7 +19,7 @@ body {min-width: 1280px;}
 .left-side .top .btn-area {margin-top: 21px;}
 
 .navigation {height: calc(100% - 270px); /*overflow-y: auto; overflow-x: hidden;*/}
-.navi-wrap > ul > li > a {display: block; position: relative; height: 60px; padding: 0 55px 0 20px; color: #222; font-size: 16px; font-weight: 400; line-height: 60px;}
+.navi-wrap > ul > li > a {display: block; position: relative; height: 60px; padding: 0 45px 0 20px; color: #222; font-size: 15px; font-weight: 400; line-height: 60px; letter-spacing: -1.5px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
 .navi-wrap > ul > li > a::after {content: ""; display: block; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); width: 15px; height: 15px; background: url(../images/ico_plus.png) no-repeat center;}
 .navi-wrap > ul > li > a.on {background: rgba(255, 204, 0, 0.03);}
 .navi-wrap > ul > li > a.on::before {content: ""; display: block; position: absolute; left: 0; top: 0; width: 5px; height: 60px; background: #ffcc00;}
@@ -81,9 +81,9 @@ body {min-width: 1280px;}
 
 
 /* Layer popup */
-.l-dim {display: block; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: .4; z-index: 10;}
+.l-dim {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: .4; z-index: 10;}
 
-.l-pop {position: fixed; left: 50%; top: 50%; width: 960px; transform: translate(-50%, -50%); z-index: 10;}
+.l-pop {position: fixed; left: 50%; top: 50%; width: 960px; transform: translate(-50.1%, -50.1%); z-index: 10;}
 .l-pop-wrap {padding: 25px 20px 30px 20px; background: #fff;}
 
 .l-header {position: relative;}
@@ -110,5 +110,6 @@ body.popup {min-width: auto;}
 
 /* Layout */
 .lo-content {display: table; width: 100%;}
-.lo-content > * {display: table-cell;}
-.lo-content.half > * {width: 50%;}
+.lo-content > div {display: table-cell;}
+.lo-content.half > div {width: 50%;}
+.lo-content.half > div + div {width: auto;}

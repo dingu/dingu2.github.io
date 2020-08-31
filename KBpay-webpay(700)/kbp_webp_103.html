@@ -1,0 +1,89 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-08-12          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>카드 본인인증</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="header">
+            <h1>카드 본인인증</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+
+        <div class="container">
+            <div class="contents-wrap">
+                
+                <div class="contents kbp_webp_103">
+                    
+                    <h2 class="tit"><strong>본인인증을 위해 카드를 선택해주세요</strong></h2>
+                    
+                    <div class="form_text ph on out" onclick="opBotSheet('layerBottom01', this)" tabindex="0">
+                        <label for="card-co">카드선택</label>
+                        <input type="text" id="card-co" class="text" value="KB 국민카드" readonly>
+                    </div>
+
+                    <ul class="list-dot">
+                        <li>본인명의의 신용카드 또는 나라사랑 체크카드로만 본인확인이 가능합니다.</li>
+                        <li>법인카드, 가족카드, 선불카드는 본인확인이 불가능합니다.</li>
+                        <li>비씨카드는 비씨카드로고가 표시된 카드만 이용 가능합니다. (예 : 농협BC, 우리카드, IBK카드 등)</li>
+                    </ul>
+
+
+
+                </div>
+
+            </div>
+
+            <div class="bottom-btn-area">
+                <div class="btn-group">
+                    <button class="btn large yellow" type="button"><span>다음</span></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- dimmed -->
+    <div class="l-dim"></div>
+    <!-- // dimmed -->
+
+    <!-- bottom layer -->
+    <div class="l-bottom" id="layerBottom01" tabindex="0">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>카드선택</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div class="l-contents">
+                <!-- 컨텐츠영역 -->
+                <ul class="bottom-list">
+                    <li><button type="button">KB 국민카드</button></li>
+                    <li><button type="button">KB 국민카드</button></li>
+                    <li><button type="button">KB 국민카드</button></li>
+                    <li><button type="button">KB 국민카드</button></li>
+                    <li><button type="button">KB 국민카드</button></li>
+                </ul>
+                <!-- //컨텐츠영역 -->
+            </div>
+        </div>
+    </div>
+    <!-- // bottom layer -->
+
+
+</body>
+</html>

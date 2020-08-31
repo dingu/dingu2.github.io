@@ -1,0 +1,169 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-21          최초작성
+김수영             2020-05-27          통신사선택+전화번호 입력 수정, 통신사선택 팝업 하단 버튼 삭제, 주민등록번호 마크업 수정
+김수영             2020-06-02          전화번호 > 휴대폰번호로 수정, validation 문구 적용
+김수영             2020-06-05           h2 강조 범위 수정
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>휴대폰본인인증</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>휴대폰본인인증</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+               
+                <!--contents-->
+                <div class="contents kbp_webp_012"> <!-- contents + 페이지별 class 삽입 -->
+
+                    <!--이름 입력 타이틀-->
+                    <h2 class="tit"><span class="underline">이름을 입력해주세요 </span></h2> <!--//2020-06-05 강조 범위 수정-->
+
+                    <!--주민등록번호 입력 타이틀 : 이름 입력 후 노출
+                    <h2 class="tit"><span class="underline">주민등록번호를 입력해주세요</span> </h2> --> <!--//2020-06-05 강조 범위 수정-->
+ 
+                    <!--휴대폰번호 입력 타이틀 : 이름 + 전화번호 입력 후 노출
+                    <h2 class="tit"><span class="underline">휴대폰번호를 입력해주세요</span> </h2> --> <!--//2020-06-05 강조 범위 수정-->
+                    
+                   <!--form 입력 목록-->
+                    <div class="form-wrap">
+                        
+                        <ul class="form-text-list">
+                            <!--2020-05-27 수정-->
+                            <!--통신사 선택-->
+                            <li>
+                                <div class="form_text ph" onclick="opBotSheet('layerBottom01', this)" tabindex="0">  <!-- 오류 class :  'error' 추가 --> 
+                                    <label for="ph-co">통신사</label>
+                                    <input type="text" id="ph-co" class="text" value="" readonly>
+                                </div>
+                                <em class="error-txt">통신사를 선택해주세요</em> <!--//2020-06-02 validation 문구 적용-->
+                            </li>
+                            <!--전화번호 번호 입력-->
+                            <li>
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="ph">휴대폰번호</label> <!--//2020-06-02 전화번호 > 휴대폰번호로 수정-->
+                                    <input type="tel" id="ph" class="text" value=""> <!--//2020-05-27 type tel 로 수정-->
+                                    <!-- <button class="btn-delete" type="button">삭제</button> -->
+                                </div>
+                                <em class="error-txt">휴대폰번호를 정확히 입력해주세요</em> <!--//2020-06-02 validation 문구 적용-->
+                            </li>
+                            <!--주민등록번호 앞 7자리 입력-->
+                            <li>
+                                <div class="form_text ssn7"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="ssn1">주민등록번호 앞 7자리</label> <!--//2020-06-02 전화번호 > 휴대폰번호로 수정-->
+                                    <input type="tel" id="ssn1" class="text" value=""> <!--//2020-05-27 type tel 로 수정-->
+                                    <!-- <button class="btn-delete" type="button">삭제</button> -->
+                                </div>
+                                <em class="error-txt">휴대폰번호를 정확히 입력해주세요</em> <!--//2020-06-02 validation 문구 적용-->
+                            </li>
+                            
+                            <!-- 사용안함 -->
+                            <li style="display: none;">
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 --> 
+                                    <label for="id-number">주민등록번호앞7자리</label>
+                                     <div class="pass-input-match id-number">
+                                        <input type="text" class="text" id="id-number"> <!--//실제 입력 받는 칸 -->
+                                        <div class="pass-input">
+                                            <span class="dot on">8</span> <!--활성화 class 'on'-->
+                                            <span class="dot on">5</span>
+                                            <span class="dot on">1</span>
+                                            <span class="dot on">1</span>
+                                            <span class="dot on">0</span>
+                                            <span class="dot on">9</span>
+                                            <!-- <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span> -->
+                                        </div>
+                                        <div class="pass-input">
+                                            <span class="dash">-</span>
+                                            <span class="dot on">2</span>
+                                            <!-- <span class="dot"></span> -->
+                                            <span class="dot black"></span>
+                                            <span class="dot black"></span>
+                                            <span class="dot black"></span>
+                                            <span class="dot black"></span>
+                                            <span class="dot black"></span>
+                                            <span class="dot black"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <em class="error-txt">생년월일과 성별을 정확히 입력해주세요</em> <!--//2020-06-02 validation 문구 적용-->
+                            </li>
+                            <!--//2020-05-27 수정-->
+                            <!--이름 입력-->
+                            <li>
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="name">이름</label>
+                                    <input type="text" id="name" name="" class="text" value="">
+                                    <!-- <button class="btn-delete" type="button">삭제</button> -->
+                                </div>
+                                <em class="error-txt">이름을 정확히 입력해주세요</em> <!--//2020-06-02 validation 문구 적용-->
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//form 입력 목록-->
+                </div>
+                <!--//contents-->
+
+                <!-- Bottom button area -->
+                <div class="bottom-btn-area static">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled><span>다음</span></button> <!-- 활성화 > disabled 삭제 -->
+                    </div>
+                </div>
+                <!-- //Bottom button area -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 통신사 선택 : bottom sheet layer -->
+    <div class="l-dim"></div>
+    <div class="l-bottom" id="layerBottom01" tabindex="0">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>통신사 선택</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div class="l-contents">
+                <!-- 컨텐츠영역 -->
+                <ul class="bottom-list">
+                    <li><button type="button">SKT</button></li>
+                    <li><button type="button">KT</button></li>
+                    <li><button type="button">LG U+</button></li>
+                    <li><button type="button">SKT 알뜰폰</button></li>
+                    <li><button type="button">KT 알뜰폰</button></li>
+                    <li><button type="button">LG U+ 알뜰폰</button></li>
+                    <li><button type="button">SKT</button></li>
+                    <li><button type="button">KT</button></li>
+                    <li><button type="button">LG U+</button></li>
+                    <li><button type="button">SKT 알뜰폰</button></li>
+                    <li><button type="button">KT 알뜰폰</button></li>
+                    <li><button type="button">LG U+ 알뜰폰</button></li>
+                </ul>
+                <!-- //컨텐츠영역 -->
+            </div>
+            <!--2020-05-27 삭제
+            <div class="btn-group">
+                <button class="btn medium yellow" type="button" ><span>확인</span></button>
+            </div>-->
+        </div>
+    </div>
+    <!-- //통신사 선택 : bottom sheet layer -->
+
+</body>
+</html>

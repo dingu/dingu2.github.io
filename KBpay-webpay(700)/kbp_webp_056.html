@@ -1,0 +1,160 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-25          최초작성
+이진규             2020-07-28          텍스트 수정
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>카드사용등록</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>카드사용등록</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+               
+                <!--contents-->
+                <div class="contents kbp_webp_041"> <!-- contents + 페이지별 class 삽입 -->
+
+                    <h2 class="tit">고객정보를 <span class="underline">입력해주세요</span></h2>
+
+                   <!--form 입력 목록-->
+                    <div class="form-wrap">
+                        <ul class="form-text-list">
+                            <!--주민등록번호 입력-->
+                            <li>
+                                <div class="form_text match"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="id-number">주민등록번호</label>
+                                    <div class="pass-input-match">
+                                        <div class="pass-input">
+                                            <input type="tel"  id="id-number" class="certi-input first text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tel" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tel" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tel" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tel" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tel" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                        </div>
+                                        <span class="dash"></span>
+                                        <div class="pass-input">
+                                            <input type="tel" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tel" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tel" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tel" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tel" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tel" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tel" class="text black" placeholder="&#9679;" value="" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <em class="error-txt">error text</em>
+                            </li>
+                            <!--전화번호 입력-->
+                            <li>
+                                <!--통신사 선택-->
+                                <div class="ph-cell">
+                                    <div class="form_text ph on out" onclick="opBotSheet('layerBottom01', this)" tabindex="0">
+                                        <label for="ph-co">통신사</label>
+                                        <input type="text" id="ph-co" class="text" value="SKT" readonly>
+                                    </div>
+                                </div>
+                                <!--전화번호 번호 입력-->
+                                <div class="ph-cell">
+                                    <div class="form_text on out"> <!-- 오류 class :  'error' 추가 -->
+                                        <label for="ph">전화번호</label>
+                                        <input type="number" id="ph" class="text" value="01012345678">
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </div>
+                                    <em class="error-txt">error text</em>
+                                </div>
+                            </li>
+                            <!--이메일 입력-->
+                            <li>
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="email">이메일 ex) example@kbcard.co.kr</label>
+                                    <input type="text" id="email" name="" class="text" value="">
+                                    <button class="btn-delete" type="button">삭제</button>
+                                </div>
+                                <em class="error-txt">error text</em>
+                            </li>
+                            <!--주소 입력-->
+                            <li>
+                                <div class="form_text line2"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="address">주소</label>
+                                    <textarea name="" id="address" class="text"></textarea>
+                                    <button class="btn-delete" type="button">삭제</button>
+                                </div>
+                                <em class="error-txt">error text</em>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//form 입력 목록-->
+
+                    <div class="cash-return">
+                        <p class="txt">소득공제도 함께 신청하실 수 있습니다.</p>
+                        <span class="rdoGroup">
+                            <label for="" class="f-rdo checked"><input type="radio" id="">신청</label>
+                            <label for="" class="f-rdo"><input type="radio" id="">미신청</label>
+                        </span>
+                    </div>
+
+                    <p class="resend-tip">
+                        <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom02', this)">소득공제 신청시 유의사항</button>
+                    </p>
+
+                </div>
+                <!--//contents-->
+
+                <!-- Bottom button area -->
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled><span>다음</span></button> <!-- 활성화 > disabled 삭제 -->
+                    </div>
+                </div>
+                <!-- //Bottom button area -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 소득공제 신청시 유의사항 : bottom sheet layer -->
+    <div class="l-dim"></div>
+    <div class="l-bottom kbp_webp_056" id="layerBottom02">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>유의사항</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div class="l-contents">
+                <!-- 컨텐츠영역 -->
+                <ul class="list-dot type02">
+                    <li>선불카드 사용등록 시 전자상거래 이용이 가능합니다.</li> <!-- // 2020-07-28 텍스트 수정 -->
+                    <li>소득공제 신청 시 신청 시점 이후 선불카드 사용 금액에 대한 소득공제 혜택이 적용됩니다.</li>
+                    <li>입력정보와 기존 KB국민카드 등록 정보가 다른 겅우 현재 입력한 정보로 변경되오니 정확히 입력하여 주시기 바랍니다.</li>
+                </ul>
+                <!-- //컨텐츠영역 -->
+            </div>
+            <div class="btn-group">
+                <button class="btn medium yellow" type="button" onclick="closeBotSheet('layerBottom02')"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- //소득공제 신청시 유의사항 : bottom sheet layer -->
+
+    <script>
+        opBotSheet("layerBottom02", this);
+    </script>
+
+</body>
+</html>

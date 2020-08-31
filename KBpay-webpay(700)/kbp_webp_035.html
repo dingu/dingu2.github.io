@@ -1,0 +1,157 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-22          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>증권카드 등록</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>증권카드 등록</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+               
+                <!--contents-->
+                <div class="contents kbp_webp_034"> <!-- contents + 페이지별 class 삽입 -->
+
+                    <!--2020-05-27 수정 -->
+  
+                    <!--form 입력 목록-->
+                    <div class="form-wrap">
+                         <ul class="form-text-list">
+                             <!--카드번호-->
+                             <li>
+                                 <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                     <label for="card-number">카드번호</label>
+                                     <div class="pass-input-match">
+                                         <input type="text" class="text" id="card-number"> <!--//실제 입력 받는 칸 -->
+                                         <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                                         <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                                         <div class="pass-input">
+                                             <span class="dot on">1</span> <!--활성화 class 'on'-->
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                         </div>
+                                         <div class="pass-input">
+                                             <span class="dash">-</span> 
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                             <span class="dot black"></span>
+                                             <span class="dot black"></span>
+                                         </div>
+                                         <div class="pass-input">
+                                             <span class="dash">-</span> 
+                                             <span class="dot black"></span>
+                                             <span class="dot black"></span>
+                                             <span class="dot black"></span>
+                                             <span class="dot black"></span>
+                                         </div>
+                                         <div class="pass-input">
+                                             <span class="dash">-</span> 
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <em class="error-txt">error text</em>
+                             </li>
+                             <!--유효기간-->
+                             <li>
+                                 <div class="form_text"> <!-- 오류 class :  'error' 추가 --> 
+                                     <label for="date">유효기간</label>
+                                     <div class="pass-input-match">
+                                         <input type="text" class="text" id="date"> <!--//실제 입력 받는 칸 -->
+                                         <div class="pass-input">
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                             <span class="dash">/</span> 
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                         </div>
+                                     </div>
+                                     <button class="btn-delete" type="button">삭제</button>
+                                 </div>
+                                 <em class="error-txt">error text</em>
+                             </li>
+                             <!--CVC-->
+                             <li>
+                                 <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                     <label for="cvc">CVC</label>
+                                     <div class="pass-input-match">
+                                         <input type="text" class="text cvc" id="cvc" placeholder="숫자 3자리를 입력해주세요"> <!--//실제 입력 받는 칸 -->
+                                     </div>
+                                     <button class="btn-delete" type="button">삭제</button>
+                                 </div>
+                                 <em class="error-txt">error text</em>
+                             </li>
+                         </ul>
+                     </div>
+                     <!--//form 입력 목록-->
+  
+                     <!--//2020-05-27 수정 -->
+  
+                      <em class="error-txt certi">결제수단으로 등록 가능한 카드가 아닙니다.<br>확인 후 다시 입력해주세요</em> <!--케이스별 에러문구-->
+  
+                      <p class="resend-tip">
+                          <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom01', this)">증권카드 이용 안내</button>
+                          <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom02', this)">CVC(CVV)란?</button>
+                      </p>
+  
+                  </div>
+                  <!--//contents-->
+
+                <!-- Bottom button area -->
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled><span>등록</span></button> <!-- 활성화 > disabled 삭제 -->
+                    </div>
+                </div>
+                <!-- //Bottom button area -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 증권카드 이용 안내 : bottom sheet layer -->
+    <div class="l-dim"></div>
+    <div class="l-bottom kbp_webp_035" id="layerBottom01">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>증권카드 이용 안내</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div class="l-contents">
+                <!-- 컨텐츠영역 -->
+                컨텐츠 수급 후 디자인 > 퍼블리싱
+                <!-- //컨텐츠영역 -->
+            </div>
+            <div class="btn-group">
+                <button class="btn medium yellow" type="button" onclick="closeBotSheet('layerBottom01')"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- //증권카드 이용 안내 : bottom sheet layer -->
+
+    <script>
+        opBotSheet("layerBottom01", this);
+    </script>
+
+</body>
+</html>

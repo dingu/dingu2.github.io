@@ -1,0 +1,87 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-08-12          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>카드 본인인증</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="header">
+            <h1>카드 본인인증</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+
+        <div class="container">
+            <div class="contents-wrap">
+                
+                <div class="contents kbp_webp_105">
+                    
+                    <h2 class="tit"><strong>약관동의</strong></h2>
+                    
+                    <div class="agree-terms">
+                        <ul>
+                            <li>
+                                <div class="head">
+                                    <label for="" class="f-chk checkAll"><input type="checkbox"><span>전체동의</span></label>
+                                    <button class="ico btn on" type="button" onclick="agreeCombo(this);">전체동의 닫기</button>
+                                </div>
+                                <ul class="list">
+                                    <li>
+                                        <label for="terms1" class="f-chk type02"><input id="terms1" name="terms1" type="checkbox"></label>
+                                        <span><a href="#" class="show-detail">[필수] 카드사 서비스 이용약관</a></span>
+                                    </li>
+                                    <li>
+                                        <label for="terms2" class="f-chk type02"><input id="terms2" name="terms2" type="checkbox"></label>
+                                        <span><a href="#" class="show-detail">[필수] 본인확인 서비스 이용약관</a></span>
+                                    </li>
+                                    <li>
+                                        <label for="terms3" class="f-chk type02"><input id="terms3" name="terms3" type="checkbox"></label>
+                                        <span><a href="#" class="show-detail">[필수] 개인정보 수집 및 이용동의</a></span>
+                                    </li>
+                                    <li>
+                                        <label for="terms4" class="f-chk type02"><input id="terms4" name="terms4" type="checkbox"></label>
+                                        <span><a href="#" class="show-detail">[필수] 고유식별정보 처리동의</a></span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 2020-08-14 KB Pay 설치하기 영역 추가 -->
+                    <p class="resend-tip">
+                        <button type="button"><span>KB Pay 설치하기</span></button>
+                        <span class="msg">KB Pay가 없으신 경우 설치하시기 바랍니다.</span>
+                    </p>
+                    <!-- // 2020-08-14 KB Pay 설치하기 영역 추가 -->
+
+
+                </div>
+
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled><span>다음</span></button> <!-- disabled 삭제 시 활성화 -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

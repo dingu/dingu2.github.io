@@ -1,0 +1,246 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-05-25          최초작성
+이진규             2020-05-28          타이틀 수정
+이진규             2020-05-29          충전안내 팝업 내용 추가
+이진규             2020-06-02          충전안내 팝업 내용 추가, 실패 case 추가, 리스트 하단 고정으로 변경, 하단버튼 변경
+김수영             2020-06-02          error text class 추가
+이진규             2020-06-05          충전안내 팝업 수정
+이진규             2020-06-19          텍스트 수정
+이진규             2020-08-11          하단 리스트 구조 변경
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>해피머니 상품권 충전</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="header">
+            <h1>해피머니 상품권 충전</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+
+        <div class="container">
+            <div class="contents-wrap">
+                
+                <div class="contents kbp_webp_048">
+                    
+                    <h2 class="tit">상품권 포인트 충전에<br><span class="underline">실패하였습니다</span></h2> <!-- // 05-28 타이틀 수정 -->
+                    
+                    <p class="txt">아래의 내용을 확인해주세요</p>
+
+                    <!-- 2020-08-11 하단 리스트 구조 변경 -->
+                    <!-- 06-02 리스트 하단 고정으로 변경 -->
+                    <div class="bottom-fixed-contents">
+                        <!-- 1일 충전 한도 초과 시 -->
+                        <!-- <p class="txt-alert">1일 충전 한도가 초과되었습니다. 확인 후 다시 입력해주세요.</p>
+                        <ul class="list-type06">
+                            <li>
+                                <dl>
+                                    <dt>상품권 금액</dt>
+                                    <dd><span>10,000</span>P</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>1일 충전 가능 잔여한도</dt>
+                                    <dd><span>100,000</span>P</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>월 최대 충전 가능 한도</dt>
+                                    <dd><span>500,000</span>P</dd>
+                                </dl>
+                            </li>
+                        </ul> -->
+                        <!-- // 1일 충전 한도 초과 시 -->
+
+                        <!-- 보유 잔액 한도(50만P) 초과한 경우 -->
+                        <!-- <p class="txt-alert">상품권포인트 잔액은 최대 50만 포인트를 초과할 수 없습니다.</p>
+                        <ul class="list-type06">
+                            <li>
+                                <dl>
+                                    <dt>상품권 금액</dt>
+                                    <dd><span>20,000</span>원</dd>
+                                </dl>
+                            </li>
+                        </ul> -->
+                        <!-- // 보유 잔액 한도(50만P) 초과한 경우 -->
+
+                        <!-- 등록 불가능한 상품권인 경우 -->
+                        <!-- <p class="txt-alert">등록이 불가능한 상품권입니다. 확인 후 다시 입력해주세요.</p>
+                        <ul class="list-type06">
+                            <li>
+                                <dl>
+                                    <dt>핀번호/인증번호</dt>
+                                    <dd>1234-5678-9012-3456</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>유효기간</dt>
+                                    <dd>2020.03.01</dd>
+                                </dl>
+                            </li>
+                        </ul> -->
+                        <!-- // 등록 불가능한 상품권인 경우 -->
+
+                        <!-- 이미 등록된 상품권인 경우 -->
+                        <!-- <p class="txt-alert">이미 사용된 상품권입니다. 확인 후 다시 입력해주세요.</p>
+                        <ul class="list-type06">
+                            <li>
+                                <dl>
+                                    <dt>핀번호/인증번호</dt>
+                                    <dd>1234-5678-9012-3456</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>유효기간</dt>
+                                    <dd>2020.03.01</dd>
+                                </dl>
+                            </li>
+                        </ul> -->
+                        <!-- // 이미 등록된 상품권인 경우 -->
+
+                        <!-- 월간 한도(50만원) 초과한 경우 -->
+                        <p class="txt-alert">월 최대 충전 한도가 초과되었습니다. 다시 입력해주세요.</p> 
+                        <ul class="list-type06">
+                            <li>
+                                <dl>
+                                    <dt>상품권 금액</dt>
+                                    <dd><span>10,000</span>P</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>1일 충전 가능 한도</dt>
+                                    <dd><span>100,000</span>P</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>월 최대 충전 가능 한도</dt>
+                                    <dd><span>500,000</span>P</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <!-- // 월간 한도(50만원) 초과한 경우 -->
+
+                        <p class="resend-tip">
+                            <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom01', this)">상품권포인트 충전 안내</button>
+                        </p>
+                    </div>
+                    <!-- // 06-02 리스트 하단 고정으로 변경 -->
+                    <!-- // 2020-08-11 하단 리스트 구조 변경 -->
+
+
+                    
+
+                </div>
+
+            </div>
+
+            <!-- 06-02 하단 버튼 수정 -->
+            <div class="bottom-btn-area float">
+                <div class="btn-group">
+                    <button class="btn large gray" type="button"><span>다음에 충전</span></button>
+                    <button class="btn large yellow" type="button"><span>다시 입력</span></button>
+                </div>
+            </div>
+            <!-- // 06-02 하단 버튼 수정 -->
+
+        </div>
+    </div>
+
+    <!-- dimmed -->
+    <div class="l-dim"></div>
+    <!-- // dimmed -->
+
+    <!-- bottom layer -->
+    <div class="l-bottom" id="layerBottom01" tabindex="0">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>상품권포인트 충전 안내</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div class="l-contents">
+                <!-- 컨텐츠영역 -->
+
+                <!-- 06-05 충전안내팝업 전체 수정 -->
+                <ul class="list-type09">
+                    <li class="list-txt">충전 후 잔액(상품권포인트) 기준으로 카드회원 및 카드 비회원은 50만P까지 충전 가능합니다.</li>
+                    <li class="list-tit">충전한도(회원/준회원 동일)</li>
+                    <li class="list-txt">
+                        <div class="table-default">
+                            <table>
+                                <caption>상품권 충전한도(회원/준회원 동일)</caption>
+                                <colgroup>
+                                    <col style="width: 36%">
+                                    <col style="width: 32%">
+                                    <col style="width: 32%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2" class="bb-none">구분</th>
+                                        <th scope="col" colspan="2">충전한도</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1일</th>
+                                        <th scope="col">월간</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">해피머니 캐시</th>
+                                        <td>100,000P</td>
+                                        <td>500,000P</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">해피머니 상품권</th>
+                                        <td>100,000P</td>
+                                        <td>500,000P</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li class="list-txt">충전한도는 해피머니 캐시 + 해피머니 상품권 합산된 금액으로 관리됩니다.</li>
+                    <li class="list-tit">수수료</li>
+                    <li class="list-txt">충전 금액의 8% 차감 후 상품권 포인트로 적립됩니다.</li>
+                    <li class="list-tit">소멸</li>
+                    <li class="list-txt">적립월로부터 60개월 후 소멸됩니다.</li>
+                    <li class="list-tit">환급</li>
+                    <li class="list-txt">최근 60개월 충전 금액 총 합계의 80% 이상 사용한 경우 포인트 잔액을 환급 받으실 수 있습니다.</li>
+                    <li class="list-txt">환급은 본인 KB계좌(KB국민은행, KB증권, KB저축은행)로 보내기 가능합니다.</li>
+                    <li class="list-tit">충전 후 취소(환불)</li>
+                    <li class="list-txt">상품권 포인트로 충전 후에는 취소(환불)가 불가능합니다.</li>
+                </ul>
+                <!-- // 06-05 충전안내팝업 전체 수정 -->
+
+                    
+
+                <!-- //컨텐츠영역 -->
+            </div>
+            <div class="btn-group">
+                <button class="btn medium yellow" type="button" onclick="closeBotSheet('layerBottom01')"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- // bottom layer -->
+
+
+</body>
+</html>

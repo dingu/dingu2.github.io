@@ -1,0 +1,172 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-15          최초작성
+이진규             2020-07-14          비밀번호 입력 폼 삭제
+유현우             2020-07-22          카드번호 필드 4개로 변경
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>카드인증</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>카드인증</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_055"> <!-- 화면ID -->                
+                <h2 class="tit02">카드정보를 입력해주세요</h2> 
+
+                <!--form 입력 목록-->
+                <div class="form-wrap">
+                    <ul class="form-text-list">
+                        <li>
+                            <!-- 2020-07-22 변경 -->
+                            <div class="form_text field-4">
+                                <label for="card_number">카드번호</label>
+                                <!-- <input type="text" class="text card-number" name="card_number" id="card_number" maxlength="19" placeholder="카드번호 16자리"> -->
+
+                                <input type="text" class="text card-number" name="card_number" value="" id="card_number" maxlength="4" title="카드번호 첫번째 4자리">
+                                <input type="text" class="text card-number" name="card_number" value="" maxlength="4" title="카드번호 두번째 4자리">
+                                <input type="text" class="text card-number" name="card_number" value="" maxlength="4" title="카드번호 세번째 4자리">
+                                <input type="text" class="text card-number" name="card_number" value="" maxlength="4" title="카드번호 네번째 4자리">
+
+                                <span class="bar bar-1">-</span>
+                                <span class="bar bar-2">-</span>
+                                <span class="bar bar-3">-</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cell">
+                                <div class="form_text">
+                                    <label for="period">유효기간</label>
+                                    <input type="number" id="period" class="text" value="" placeholder="MM/YY">
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="form_text"> 
+                                    <label for="cvc">CVC</label>
+                                    <input type="password" class="text" id="cvc" placeholder="3자리 숫자">
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- 07-14 비밀번호 입력폼 삭제 -->
+                        <!-- <li>
+                            <div class="form_text">
+                                <label for="pass-number">카드비밀번호</label>
+                                <input type="password" id="pass-number" class="text" value="" placeholder="카드 비밀번호 4자리 입력">
+                            </div>
+                        </li> -->
+                        <!-- // 07-14 비밀번호 입력폼 삭제 -->
+
+                    </ul>
+                </div>
+                <!--//form 입력 목록-->
+
+                <div class="bottom-btn">
+                    <button type="button" class="btn-line" onclick="openLayer('layer01', this);">CVC(CVV)란?</button>
+                </div>
+
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>다음</span></button> <!--활성화 시 disabled 삭제-->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+    <!-- Layer popup -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="layer01" tabindex="0">
+        <div class="l-pop-wrap kbp_payc_030">
+            <div class="l-header">
+                <h1>CVC(CVV))란?</h1>
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+                <div class="cvc-wrap">
+                    <div class="cvc-img">
+                        <img src="images/etc/cvc_pop_img.png" alt="">
+                    </div>
+                    <p>카드 뒷면 서명란 번호 중 뒤 3자리 숫자</p>
+                </div>
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" onclick=""><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+
+    <script>
+        //카드번호 하이픈 자동 생성
+        // var cardNumber = document.getElementById('card_number');
+        // cardNumber.onkeyup = function(event){
+        //     event = event || window.event;
+        //     var _val = this.value.trim();
+        //     this.value = autoHypenCard(_val) ;
+        // };
+        // function autoHypenCard(str){
+        //     str = str.replace(/[^0-9]/g, '');
+        //     var tmp = '';
+        //     if( str.length < 4){
+        //         return str;
+        //     }
+        //     else if(str.length < 8){
+        //         tmp += str.substr(0, 4);
+        //         tmp += '-';
+        //         tmp += str.substr(4,4);
+        //         return tmp;
+        //     }else if(str.length < 12){
+        //         tmp += str.substr(0, 4);
+        //         tmp += '-';
+        //         tmp += str.substr(4, 4);
+        //         tmp += '-';
+        //         tmp += str.substr(8,4);
+        //         return tmp;
+        //     }else if(str.length < 17) {
+        //         tmp += str.substr(0, 4);
+        //         tmp += '-';
+        //         tmp += str.substr(4, 4);
+        //         tmp += '-';
+        //         tmp += str.substr(8,4);
+        //         tmp += '-';
+        //         tmp += str.substr(12,4);
+        //         return tmp;
+        //     }
+        //     return str;
+        // }
+    </script>  
+
+</body>
+</html>

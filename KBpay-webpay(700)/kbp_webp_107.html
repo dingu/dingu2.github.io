@@ -1,0 +1,74 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-08-12          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>카드 본인인증</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="header">
+            <h1>카드 본인인증</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+
+        <div class="container">
+            <div class="contents-wrap">
+                
+                <div class="contents kbp_webp_107">
+                    
+                    <h2 class="tit"><strong>추가정보를 입력해주세요</strong></h2>
+                    
+                    <ul class="form-text-list">
+                        <li>
+                            <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                <label for="name1">이름</label>
+                                <input type="text" id="name1" class="text" value="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_text">
+                                <label for="ssn1">생년월일 (예 19800101)</label>
+                                <input type="tel" id="ssn1" class="text" value="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-rdo">
+                                <label for="" class="lb">성별</label>
+                                <div class="rdoGroup rdo-group">
+                                    <label for="" class="f-rdo checked"><input type="radio" id="" checked>남성</label><!-- 라디오버튼 선택됨 checked -->
+                                    <label for="" class="f-rdo "><input type="radio" id="">여성</label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled><span>다음</span></button> <!-- disabled 삭제 시 활성화 -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

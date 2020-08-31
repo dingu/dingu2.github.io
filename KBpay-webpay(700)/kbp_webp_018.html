@@ -1,0 +1,265 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+유현우             2020-05-22          최초작성
+김수영             2020-06-05          카드아이콘 추가, 포인트리 정렬 수정
+이진규             2020-07-03          버튼 텍스트 변경
+유현우             2020-07-21          포인트리사용 삭제
+유현우             2020-08-28          기획변경
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>KB Pay 결제</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!-- slickJs -->
+    <link rel="stylesheet" href="./util/slick.css">
+    <script src="./util/slick.min.js"></script>
+    <!-- // slickJs -->
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>KB Pay 결제</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+                <!--contents-->
+                <div class="contents kbp_webp_018"> <!-- contents + 페이지별 class 삽입 -->
+
+                    <div class="cd-change">
+                        <p class="cd-name txt04 align-c">
+                            <!--2020-06-05 카드 아이콘 추가-->
+                            <img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">
+                            <!--//2020-06-05 카드 아이콘 추가-->
+                            <!-- 2020-08-13 카트명 반응형, 커드넘버 추가 -->
+                            <span class="c-nm">펭수 노리 체크카드(펭카) 펭수 노리 체크카드(펭카)</span>
+                            <span>7109</span>
+                        </p>
+                        <!-- <p class="cd-num txt03 align-c">1234-56**-****-1234</p> -->
+
+                        <!-- CARD Swipe -->
+                        <div class="card-list">
+                            <div class="card-slider slider">
+                                <!-- <div>
+                                    <button type="button" class="add-card"><span>카드추가</span></button>
+                                </div> -->
+
+                                <!-- 20200828 기획변경
+                                    case :
+                                    <span class="delete-card"><button type="button"><span>해지</span></button></span>
+                                    <span class="delete-card"><button type="button"><span>만료</span></button></span>
+                                    <span class="delete-card"><button type="button"><span>도난분실</span></button></span>
+                                    <span class="delete-card"><button type="button"><span>사용제한</span></button></span>
+                                    <span class="delete-card"><button type="button"><span>구카드</span></button></span>
+                                    <span class="delete-card"><button type="button"><span>거래정지</span></button></span>
+                                -->
+
+                                <div>
+                                    <img src="./images/etc/sample_card168x104_02.png" alt="">
+                                    <button type="button" class="delete-card" onclick="openLayerPop('pop02', this);"><span>해지</span></button>
+                                </div>
+                                <div>
+                                    <img src="./images/etc/sample_card168x104_01.png" alt="">
+                                    <button type="button" class="delete-card" onclick="openLayerPop('pop02', this);"><span>만료</span></button>
+                                </div>
+                                <div>
+                                    <img src="./images/etc/sample_card168x104_03.png" alt="">
+                                    <button type="button" class="delete-card" onclick="openLayerPop('pop02', this);"><span>도난분실</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CARD Swipe -->
+
+                        <div class="link01 resend-tip">
+                            <a href="#">결제수단/기기관리</a> <!-- // 07-03 버튼 텍스트 변경 -->
+                        </div>
+
+                        <p class="msg-box txt05 align-c">
+                            <span>스마트스토어</span> 
+                            <span>5,000,000원</span><br>
+                            결제하시겠습니까?
+                        </p>
+                    </div>
+
+                    <!--form 입력 목록-->
+                    <div class="form-wrap">
+                        <ul class="form-text-list">
+                            <!--할부-->
+                            <li>
+                                <div class="form_text ph" onclick="opBotSheet('layerBottom01', this)" tabindex="0">  <!-- 오류 class :  'error' 추가 --> 
+                                    <label for="ph-co">할부</label>
+                                    <input type="text" id="ph-co" class="text" value="">
+                                </div>
+                                <em class="error-txt">error text</em>
+
+                                <!-- 2020-07-21 삭제 -->
+                                <!-- <div class="point"><label for="point" class="f-chk"><input type="checkbox" id="point">포인트리 사용</label></div> -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//form 입력 목록-->
+                </div>
+                <!--//contents-->
+
+                <!-- Bottom button area -->
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large gray" type="button"><span>취소</span></button>
+                        <button class="btn large yellow" type="button"><span>결제하기</span></button>
+                    </div>
+                </div>
+                <!-- //Bottom button area -->
+
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="l-dim"></div>
+    <!-- Confirm Layer -->
+    <div class="l-pop" id="pop01" tabindex="0">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <span>
+                        결제를 종료하시겠어요?
+                    </span>
+                </p>
+            </div>
+            <div class="l-footer">
+                <div class="btn-group pt0">
+                    <button class="btn medium gray" type="button">취소</button>
+                    <button class="btn medium yellow" type="button">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="l-pop" id="pop02" tabindex="0">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <!-- case :
+                        만료된 카드입니다<br>
+                        삭제해주세요.
+
+                        도난분실된 카드입니다<br>
+                        삭제해주세요.
+
+                        다른사용자가<br>
+                        등록해서 이용중인<br>
+                        기업공용카드입니다.<br>
+                        삭제해주세요.
+
+                        관리자에 의해<br>
+                        사용이 제한된<br>
+                        기업공용카드입니다.<br>
+                        삭제해주세요.
+
+                        신규 발급된
+                        카드가 있습니다.<br>
+                        삭제해주세요.
+
+                        거래정지 카드입니다.<br>
+                        삭제해주세요.
+
+                     -->
+                    <span>
+                        해지된 카드입니다.<br>
+                        삭제해주세요.
+                    </span>
+                </p>
+            </div>
+            <div class="l-footer">
+                <div class="btn-group pt0">
+                    <button class="btn medium gray" type="button" onclick="closeLayerPop('pop02')">취소</button>
+                    <button class="btn medium yellow" type="button">삭제</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Sheet -->
+    <div class="l-bottom" id="layerBottom01" tabindex="0"><!-- 웹접근성 수정 : tabindex속성 -->
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>할부선택</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div class="l-contents">
+                <!-- 컨텐츠영역 -->
+                <ul class="bottom-list">
+                    <li><button type="button">일시불</button></li>
+                    <li><button type="button">2개월</button></li>
+                    <li><button type="button">3개월</button></li>
+                    <li><button type="button">6개월</button></li>
+                </ul>
+                <!-- //컨텐츠영역 -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(function() {
+
+            var screenWidth = $(window).width();
+            var cp;
+            if (screenWidth == 320) {
+                cp = '60px';
+            } else if (screenWidth == 360) {
+                cp = '72px';
+            } else if (screenWidth == 375) {
+                cp = '79.5px';
+            } else {
+                cp = '99px';
+            }
+            
+            $('.card-slider').slick({
+                infinite: false,
+                centerMode: true,
+                centerPadding: cp,
+                slidesToShow: 1,
+                arrows: true,
+            });
+            // 2번째 슬라이드로 이동
+            // $('.card-slider').slick('slickGoTo', 1);
+
+            $('.card-slider').on("afterChange", function(e, slick, currentSlide) {
+                if (currentSlide > 0) {
+                    // 카드 상단에 v 아이콘
+                    $('.card-slider .slick-slide').removeClass("current");
+                    $('.card-slider .slick-slide').eq(currentSlide).addClass("current");
+                }
+            });
+
+
+            // popup
+            $(".header .close").click(function(e) {
+                $(".l-dim").show();
+                $("#pop01").fadeIn(200);
+                $(this).blur();
+            });
+            $(".l-pop .btn-group button").click(function() {
+                $(this).parents(".l-pop").hide();
+                $(".l-dim").hide();
+            });
+
+
+
+
+        });
+    </script>
+
+</body>
+</html>

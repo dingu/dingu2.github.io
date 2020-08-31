@@ -1,0 +1,71 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-07-14          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>결제비밀번호 오류</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container kbp_payc_098"> <!-- 화면ID -->
+            <!-- Header -->
+            <div class="header">
+                <h1>결제비밀번호 오류</h1>
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents">                
+                <!-- 본문 -->
+
+                <p class="pass-error">결제비밀번호 일일 오류 횟수(3회)를 초과하여 잠김 처리되었습니다. 익일 재입력이 가능하며, 당일 잠금해제를 원하실 경우 잠금 해제 버튼을 눌러 고객인증 후 잠금을 해지하실 수 있습니다.</p>
+
+                <div class="tool-tip">
+                    <p><a href="javascript:void(0);" class="tip">결제비밀번호 잠김해제 안내</a></p>
+                    <div class="tip-box">
+                        <a href="javascript:void(0);" class="btn-close">닫기</a>
+                        <ul>
+                            <li>결제비밀번호를 잊으신 경우 고객인증(소유카드인증 or 간편인증) 후 새로운 결제비밀번호 설정이 가능합니다.</li>
+                            <li>결제비밀번호를 기억하고 계신 경우 현재 비밀번호 입력 후 새로운 비밀번호를 설정하시면 됩니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- //본문 -->
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>잠김해제</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+
+            
+        </div>
+    </div>
+
+
+</body>
+</html>

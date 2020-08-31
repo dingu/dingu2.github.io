@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>KB Pay</title>
     <!-- Swiper -->
     <link rel="stylesheet" href="./util/swiper.min.css">
@@ -132,6 +132,7 @@
     <script>
         // Swiper
         var swiper = new Swiper(".swiper-container", {
+            autoHeight: true,
             on: {
                 slideChangeTransitionEnd: function() {
                     console.log(this.activeIndex);
@@ -160,7 +161,21 @@
         $(function() {
             // 초기화
             $(".l-pop").css("bottom", -$(".l-pop").height());
-        }); 
+
+
+            // margin setting
+            // ( window 가로 - 리스트길이x3 ) / 4 => 균등한 여백
+            var num = ($(window).width() - ($(".ico-list ul li a").innerWidth() * 3)) / 4;
+
+            $(".ico-list ul").css({
+                "paddingTop": 0,
+                "paddingBottom": 0,
+                "paddingRight": num,
+                "paddingLeft": num
+            });
+            $(".ico-list ul li").css("marginRight", num);
+            $(".ico-list ul li:nth-child(3n)").css("marginRight", 0);
+        });
 
         fnShow('all');     //default 로 전체보여주기
 
@@ -179,10 +194,10 @@
             }
 
             if (category == "all") {
-                $(".barCode ul li").show();
+                $(".barCode ul li").show().removeClass("hide");;
             } else {
-                $(".barCode ul li").hide();
-                $(".barCode ul li." + category).show();
+                $(".barCode ul li").addClass("hide");
+                $(".barCode ul li." + category).show().removeClass("hide");
             }
             $(".btn-combo button").html(str);
         }

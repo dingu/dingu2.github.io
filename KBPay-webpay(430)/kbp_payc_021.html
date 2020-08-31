@@ -1,0 +1,116 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-15          최초작성
+이진규             2020-07-24          띄어쓰기 수정, 텍스트 수정
+이진규             2020-07-30          툴팁 추가, 텍스트 수정
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>결제 비밀번호 인증</title> 
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>결제 비밀번호 인증</h1> <!-- // 07-24 띄어쓰기 수정 -->
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_021 pass"> <!-- 화면ID -->              
+                <h2 class="txt02 align-c">결제 비밀번호 입력</h2>
+                <div class="passWrap card-pass">
+                    <div class="pass-input-match password">
+                        <input type="text" class="text" title="결제 비밀번호"> <!--//실제 입력 받는 칸 -->
+                        <div class="pass-input">
+                            <span class="dot yellow on">1</span> <!--활성화 class 'on'-->
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot yellow"></span>
+                        </div>
+                    </div>
+                    <!--<em class="error-txt certi">연속된 3자리 숫자가 포함되어 있습니다. <br>다시 입력해주세요.</em> //error text--> 
+                </div>
+
+                <!-- 2020-07-30 툴팁 추가 -->
+                <!-- 당일 연속 3회, 익일 2회차 오류 시 -->
+                <!-- <div class="tool-tip">
+                    <p><a href="javascript:void(0);" class="tip">결제 비밀번호 잠김해제 안내</a></p>
+                    <div class="tip-box">
+                        <a href="javascript:void(0);" class="btn-close">닫기</a>
+                        <ul>
+                            <li>결제 비밀번호를 잊으신 경우 고객인증(소유카드인증 or 간편인증) 후 새로운 결제 비밀번호 설정이 가능합니다.</li>
+                            <li>결제 비밀번호를 기억하고 계신 경우 현재 비밀번호 입력 후 새로운 비밀번호를 설정하시면 됩니다.</li>
+                        </ul>
+                    </div>
+                </div> -->
+                <!-- // 당일 연속 3회, 익일 2회차 오류 시 -->
+                <!-- // 2020-07-30 툴팁 추가 -->
+
+
+            </div>
+        </div>
+    </div>
+
+<!-- alert popup -->
+<div class="l-dim"></div>
+
+<div class="l-pop-alert" id="alert02" style="display: none;" tabindex="0">
+    <div class="alert-wrap">
+        <div class="alert-inner">
+
+            <!-- 07-30 텍스트 수정 -->
+            <!-- 07-24 텍스트 수정 -->
+            <p class="msg01 align-c">결제 비밀번호가 일치하지 않습니다. <br>[결제 비밀번호 오류(연속 1회, 당일 1회)입니다.]</p> 
+
+            <!-- 오류 횟수에 따른 메시지
+            <p class="msg01 align-c">결제 비밀번호가 일치하지 않습니다. <br>[결제 비밀번호 오류(연속 2회, 당일 2회)입니다.]</p>  
+
+            <p class="msg01 align-c">
+                결제 비밀번호 일일 오류 횟수(3회)를 초과하여 잠김 처리되었습니다. <br>
+                익일 재시도하시거나 당일 이용을 원하실 경우 해제 후 이용바랍니다.
+            </p>
+
+            <p class="msg01 align-c">결제 비밀번호가 일치하지 않습니다. <br>[결제 비밀번호 오류(연속 4회, 당일 1회)입니다.]</p>
+
+            <p class="msg01 align-c">
+                결제 비밀번호 일일 오류 횟수(2회)를 초과하여 잠김 처리되었습니다. <br>
+                익일 재시도하시거나 당일 이용을 원하실 경우 해제 후 이용바랍니다.
+            </p>
+            -->
+            <!-- // 07-24 텍스트 수정 -->
+            <!-- // 07-30 텍스트 수정 -->
+
+
+            <div class="bottom-group pb0">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //alert popup -->
+
+</body>
+</html>

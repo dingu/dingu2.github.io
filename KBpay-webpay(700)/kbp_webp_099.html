@@ -1,0 +1,85 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-07-14          최초작성
+이진규             2020-07-21          띄어쓰기 수정, 텍스트 수정
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>결제 비밀번호 오류</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>결제 비밀번호 오류</h1> <!-- // 07-21 띄어쓰기 수정 -->
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+
+                <!--contents-->
+                <div class="contents kbp_webp_099"> <!-- contents + 페이지별 class 삽입 -->
+
+                    <p class="pass-error">결제 비밀번호 일일 오류 횟수(3회)를 초과하여 잠김 처리되었습니다.<br>익일 재입력이 가능하며, 당일 잠금해제를 원하실 경우<br>잠금 해제 버튼을 눌러 고객인증 후<br>잠금을 해제하실 수 있습니다.</p> <!-- // 07-21 띄어쓰기 수정 -->
+
+                    <div class="tool-tip">
+                        <p><a href="javascript:void(0);" class="tip">결제 비밀번호 잠김해제 안내</a></p> <!-- // 07-21 띄어쓰기 수정 -->
+                        <div class="tip-box">
+                            <a href="javascript:void(0);" class="btn-close">닫기</a>
+                            <ul>
+                                <li>결제 비밀번호를 잊으신 경우<br>고객인증(소유카드인증 or 간편인증) 후 새로운 결제 비밀번호 설정이 가능합니다.</li> <!--  // 07-21 텍스트 수정 -->
+                                <li>결제 비밀번호를 기억하고 계신 경우<br>현재 비밀번호 입력 후 새로운 비밀번호를 설정하시면 됩니다.</li><!--  // 07-21 텍스트 수정 -->
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!--//contents-->
+
+                <!-- Bottom button area -->
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" onclick="opBotSheet('layerPop01', this)"><span>잠김해제</span></button>
+                    </div>
+                </div>
+                <!-- //Bottom button area -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="l-dim"></div>
+
+    <div class="l-bottom" id="layerPop01" tabindex="0">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>인증수단 선택</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div class="l-contents">
+                <!-- 컨텐츠영역 -->
+                
+                <ul class="bottom-list-type02">
+                    <li><button type="button">카드인증</button></li>
+                    <li><button type="button">간편인증</button></li>
+                    <li><button type="button">계좌인증</button></li>
+                    <li><button type="button">ARS인증</button></li>
+                </ul>
+
+                <!-- //컨텐츠영역 -->
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>

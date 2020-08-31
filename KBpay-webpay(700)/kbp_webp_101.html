@@ -1,0 +1,249 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-25          최초작성
+김수영             2020-05-28          h2삭제, 핀번호/바코드번호 입력필드 수정
+이진규             2020-05-29          상품권충전안내 팝업 내용 추가
+이진규             2020-06-02          상품권충전안내 팝업 내용 추가
+김수영             2020-06-02          validation 문구 적용
+이진규             2020-06-05          상품권 충전안내 팝업 수정
+김수영             2020-06-17          카드번호 입력 폼 수정
+이진규             2020-07-14          텍스트 추가
+이진규             2020-08-11          팝업 추가
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>상품권포인트 충전</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>상품권포인트 충전</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+               
+                <!--contents-->
+                <div class="contents kbp_webp_046"> <!-- contents + 페이지별 class 삽입 -->
+
+                   <!--form 입력 목록-->
+                    <div class="form-wrap">
+                        <ul class="form-text-list">
+                            <!--핀번호/바코드번호 2020-05-28 수정-->
+                            <li>
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="card-number">핀번호/바코드번호 16자리</label>
+                                     <!--2020-06-17 핀번호/바코드번호 입력칸 수정 : 페이지 하단에 하이픈 스크립트-->
+                                   <input type="text" class="text card-number" name="card-number" id="card-number" maxlength="19" placeholder=""> 
+                                   <!--//2020-06-17 핀번호/바코드번호 입력칸 수정-->
+                                </div>
+                                <em class="error-txt">핀번호/바코드번호를 정확히 입력해주세요</em> <!--//2020-06-02 validation 문구 적용-->
+                            </li>
+                            <!--//핀번호/바코드번호 2020-05-28 수정-->
+                            <!--발행일/인증번호 8자리-->
+                            <li>
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="number">발행일/인증번호 8자리</label>
+                                    <input name="" id="number" class="text" value="">
+                                    <button class="btn-delete" type="button">삭제</button>
+                                </div>
+                                <em class="error-txt">발행일/인증번호 8자리를 정확히 입력해주세요</em> <!--//2020-06-02 validation 문구 적용-->
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//form 입력 목록-->
+
+                    <!-- 07-14 텍스트 추가 -->
+                    <p class="txt09">충전수단 발행자(해피머니 상품권)가 부과하는 8%의 사용수수료를 제외한 나머지 금액만큼 충전됩니다.</p>
+                    <!-- // 07-14 텍스트 추가 -->
+
+                    <p class="resend-tip">
+                        <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom01', this)">상품권 포인트 충전 안내</button>
+                    </p>
+
+                </div>
+                <!--//contents-->
+
+                <!-- Bottom button area -->
+                <div class="bottom-btn-area static">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled><span>확인</span></button> <!-- 활성화 > disabled 삭제 -->
+                    </div>
+                </div>
+                <!-- //Bottom button area -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 상품권 포인트 충전 안내 : bottom sheet layer -->
+    <div class="l-dim"></div>
+    <!-- bottom layer -->
+    <div class="l-bottom" id="layerBottom01" tabindex="0">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>상품권포인트 충전 안내</h1>
+                <button type="button" class="close" onclick="closeLayer('layerBottom01')">닫기</button>
+            </div>
+            <div class="l-contents">
+                <!-- 컨텐츠영역 -->
+                
+                <!-- 06-05 충전안내팝업 전체 수정 -->
+                <ul class="list-type09">
+                    <li class="list-txt">충전 후 잔액(상품권포인트) 기준으로 카드회원 및 카드 비회원은 50만P까지 충전 가능합니다.</li>
+                    <li class="list-tit">충전한도(회원/준회원 동일)</li>
+                    <li class="list-txt">
+                        <div class="table-default">
+                            <table>
+                                <caption>상품권 충전한도(회원/준회원 동일)</caption>
+                                <colgroup>
+                                    <col style="width: 36%">
+                                    <col style="width: 32%">
+                                    <col style="width: 32%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2" class="bb-none">구분</th>
+                                        <th scope="col" colspan="2">충전한도</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1일</th>
+                                        <th scope="col">월간</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">해피머니 캐시</th>
+                                        <td>100,000P</td>
+                                        <td>500,000P</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">해피머니 상품권</th>
+                                        <td>100,000P</td>
+                                        <td>500,000P</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li class="list-txt">충전한도는 해피머니 캐시 + 해피머니 상품권 합산된 금액으로 관리됩니다.</li>
+                    <li class="list-tit">수수료</li>
+                    <li class="list-txt">충전 금액의 8% 차감 후 상품권 포인트로 적립됩니다.</li>
+                    <li class="list-tit">소멸</li>
+                    <li class="list-txt">적립월로부터 60개월 후 소멸됩니다.</li>
+                    <li class="list-tit">환급</li>
+                    <li class="list-txt">최근 60개월 충전 금액 총 합계의 80% 이상 사용한 경우 포인트 잔액을 환급 받으실 수 있습니다.</li>
+                    <li class="list-txt">환급은 본인 KB계좌(KB국민은행, KB증권, KB저축은행)로 보내기 가능합니다.</li>
+                    <li class="list-tit">충전 후 취소(환불)</li>
+                    <li class="list-txt">상품권 포인트로 충전 후에는 취소(환불)가 불가능합니다.</li>
+                </ul>
+                <!-- // 06-05 충전안내팝업 전체 수정 -->
+
+                <!-- //컨텐츠영역 -->
+            </div>
+            <div class="btn-group">
+                <button class="btn medium yellow" type="button" onclick="closeBotSheet('layerBottom01')"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- //상품권 포인트 충전 안내 : bottom sheet layer -->
+
+    <!-- 2020-08-11 팝업 추가 -->
+    <div class="l-bottom" id="layerBottom02" tabindex="0">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>상품권 포인트 충전</h1>
+                <button type="button" class="close" onclick="closeLayer('layerBottom02')">닫기</button>
+            </div>
+            <div class="l-contents kbp_webp_101">
+                <!-- 컨텐츠영역 -->
+                
+                <div class="list-type07">
+                    <p class="txt-info">상품권 포인트는 충전 후 취소가 불가합니다.</p>
+                    <ul class="top-area">
+                        <li>
+                            <dl>
+                                <dt>해피머니 상품권 금액</dt>
+                                <dd><span>10,000</span>P</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>충전 수수료(8%)</dt>
+                                <dd><span>-800</span>P</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <ul class="bottom-area">
+                        <li>
+                            <dl>
+                                <dt>충전 예상 상품권 포인트</dt>
+                                <dd><span>9,200</span>P</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- //컨텐츠영역 -->
+            </div>
+            <div class="btn-group">
+                <button class="btn medium gray mr" type="button" onclick="closeBotSheet('layerBottom02')">취소</button>
+                <button class="btn medium yellow" type="button">확인</button>
+            </div>
+        </div>
+    </div>
+    <!-- // 2020-08-11 팝업 추가 -->
+
+
+    <script>
+        //카드번호 하이픈 자동 생성
+        var cardNumber = document.getElementById('card-number');
+        cardNumber.onkeyup = function(event){
+            event = event || window.event;
+            var _val = this.value.trim();
+            this.value = autoHypenCard(_val) ;
+        };
+        function autoHypenCard(str){
+            str = str.replace(/[^0-9]/g, '');
+            var tmp = '';
+            if( str.length < 4){
+                return str;
+            }
+            else if(str.length < 8){
+                tmp += str.substr(0, 4);
+                tmp += '-';
+                tmp += str.substr(4,4);
+                return tmp;
+            }else if(str.length < 12){
+                tmp += str.substr(0, 4);
+                tmp += '-';
+                tmp += str.substr(4, 4);
+                tmp += '-';
+                tmp += str.substr(8,4);
+                return tmp;
+            }else if(str.length < 17) {
+                tmp += str.substr(0, 4);
+                tmp += '-';
+                tmp += str.substr(4, 4);
+                tmp += '-';
+                tmp += str.substr(8,4);
+                tmp += '-';
+                tmp += str.substr(12,4);
+                return tmp;
+            }
+            return str;
+        }
+
+        openLayerPop("layerBottom02");
+    </script>
+
+</body>
+</html>

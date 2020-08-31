@@ -1,0 +1,130 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-16          최초작성
+이진규             2020-07-02          텍스트 수정
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>기업공용카드 등록</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>기업공용카드 등록</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_032"> <!-- 화면ID -->                
+
+                <h2 class="tit02">카드사용 승인요청이 진행됩니다.</h2>
+
+                <!--form 입력 목록-->
+                <div class="form-wrap">
+                    <ul class="form-text-list">
+                        <li>
+                            <div class="cell ph-select">
+                                <div class="form_text">
+                                    <label for="name">담당자명</label>
+                                    <input type="text" id="name" class="text" value="김승인">
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="form_text ph on out"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="ph-number">휴대폰번호</label>
+                                    <input type="tel" class="text" id="ph-number" placeholder="휴대폰번호를 입력해주세요" value="01012345678">
+                                    <button class="ph-certi-btn" type="button" disabled>인증번호 요청</button> <!-- // 07-02 텍스트 수정 -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                <label for="certi-number">인증번호 입력</label>
+                                <input type="number" id="certi-number" class="text" value="" placeholder="6자리 숫자를 입력해 주세요">
+                                <span class="time">05:00 or 인증완료 or 유효시간 초과</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--//form 입력 목록-->
+
+                <div class="bottom-btn">
+                    <button type="button" class="btn-line" onclick="openLayer('layer01', this);">사용승인 안내</button>
+                </div>
+
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>등록</span></button> <!--활성화 시 disabled 삭제-->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+    <!-- Layer popup -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="layer01" tabindex="0">
+        <div class="l-pop-wrap kbp_payc_033">
+            <div class="l-header">
+                <h1>카드사용승인 안내</h1>
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+                <ol class="list-ico num">
+                    <li class="li1"><span class="strong">카드사용 승인 담당자 정보를 확인해주세요.</span>담당자 이름과 휴대폰번호가 맞으면 [인증요청] 버튼을 탭하세요.</li>
+                    <li class="li2"><span class="strong">SMS 인증번호 확인 후 입력해주세요.</span>승인 담당자에게 전송된 SMS 인증번호를 확인해주세요. 확인된 인증번호 입력 후 [인증]을 진행해주세요.<br>단, 인증은 SMS 인증번호 전송 후 3분 이내에 입력하셔야 합니다.</li>
+                    <li class="li3"><span class="strong">승인된 카드를 결제수단으로 등록해주세요.</span>인증번호 입력 후 인증이 완료되면 결제수단 등록이 가능합니다.<br>[등록]을 탭하면 카드가 결제수단으로 등록이 됩니다.</li>
+                </ol>
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" onclick=""><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+    <!-- alert popup -->
+    <div class="l-pop-alert" id="alert02" style="display: none;" tabindex="0">
+        <div class="alert-wrap">
+            <div class="alert-inner">
+                <p class="msg01 align-c">인증번호가 일치하지 않습니다.</p>
+
+                <div class="bottom-group pb0">
+                    <div class="btn-group">
+                        <button type="button" class="btn-type type01"><span>확인</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //alert popup -->
+
+</body>
+</html>

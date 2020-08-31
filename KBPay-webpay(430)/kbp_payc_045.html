@@ -1,0 +1,138 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-17          최초작성
+이진규             2020-08-10          리스트 구조 변경
+유현우             2020-08-24          웹접근성 : tabindex 부여
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>(팝업)상품권포인트 충전 안내</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>본문</h1>
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_045">  <!-- 화면ID -->
+
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>확인</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+    <!-- Layer popup -->
+    <div class="l-dim" style="display: block;"></div>
+
+    <div class="l-pop" id="layer01" style="display: block;" tabindex="0">
+        <div class="l-pop-wrap">
+            <div class="l-header">
+                <h1>상품권포인트 충전 안내</h1>
+
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents" tabindex="0"><!-- 웹접근성 : tabindex 부여 -->
+                
+                <dl class="list-txt01">
+                    <dt>충전한도(회원/준회원 동일)</dt>
+                    <dd>
+                        <div class="table-type01">
+                            <table>
+                                <caption>상품권 충전한도(회원/준회원 동일)</caption>
+                                <colgroup>
+                                    <col style="width: 36%">
+                                    <col style="width: 32%">
+                                    <col style="width: 32%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2" class="bb-none">구분</th>
+                                        <th scope="col" colspan="2">충전한도</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1일</th>
+                                        <th scope="col">월간</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">해피머니 캐시</th>
+                                        <td>100,000P</td>
+                                        <td>500,000P</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">해피머니 상품권</th>
+                                        <td>100,000P</td>
+                                        <td>500,000P</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </dd>
+                    <dd>충전한도는 해피머니 캐시 + 해피머니 상품권 합산된 금액으로 관리됩니다.</dd>
+                    <dt>수수료</dt>
+                    <dd>충전 금액의 8% 차감 후 상품권 포인트로 적립됩니다.</dd>
+                    <dt>소멸</dt>
+                    <dd>적립월로부터 60개월 후 소멸됩니다.</dd>
+                    <dt>환급</dt>
+
+                    <!-- 2020-08-10 리스트 구조 변경 -->
+                    <dd>
+                        <ul>
+                            <li>최근 60개월 충전 금액 총 합계의 80% 이상 사용한 경우 포인트 잔액을 환급 받으실 수 있습니다.</li>
+                            <li>환급은 본인 KB계좌(KB국민은행, KB증권, KB저축은행)로 보내기 가능합니다.</li>
+                        </ul>
+                    </dd>
+                    <!-- // 2020-08-10 리스트 구조 변경 -->
+
+                    <dt>충전 후 취소(환불)</dt>
+                    <dd>상품권 포인트로 충전 후에는 취소(환불)가 불가능합니다.</dd>
+                </dl>
+                
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" onclick=""><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+
+    <script>
+        openLayer('layer01');
+    </script>
+
+</body>
+</html>

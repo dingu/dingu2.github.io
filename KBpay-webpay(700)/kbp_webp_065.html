@@ -1,0 +1,200 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-29          최초작성
+이진규             2020-07-09          타이틀 수정, 클래스 수정, 상단 문구 추가
+이진규             2020-07-21          텍스트 삭제
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>약관동의</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <header class="header">
+        <h1>약관동의</h1> <!-- // 07-09 타이틀 수정 -->
+        <button type="button" class="btn close">닫기</button>
+    </header>
+    <div class="container">
+        <div class="contents-wrap">
+
+            <!--contents-->
+            <div class="contents kbp_webp_065"> <!-- contents + 페이지별 class 삽입 --> <!-- // 07-09 클래스 수정 -->
+
+                <!-- 07-09 상단 문구 추가 -->
+                <p class="tit">마케팅 정보 수신에 동의해주세요!</p>
+                <p class="txt07">마케팅 수신 동의를 통해 KB국민카드의 상품정보, 이벤트 등 다양한 정보를 받아보실 수 있습니다. <!-- 원하지 않으실 경우 [다음]을 누르시면 가입절차가 계속 진행됩니다. --><!-- // 07-21 텍스트 삭제 --> </p>
+                <!-- // 07-09 상단 문구 추가 -->
+
+                <h2 class="tit02">약관동의</h2>
+                <!-- 약관동의 -->
+                <div class="agree-terms02">
+                    <ul>
+                        <li>
+                            <div class="head">
+                                <label for="" class="f-chk checkAll"><input type="checkbox"><span>전체동의</span></label>
+                            </div>
+                            <ul class="list">
+                                <li>
+                                    <label for="terms1" class="f-chk type02 shoHidden"><input id="terms1" name="terms1" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[선택] 개인(신용)정보 수집&middot;이용&middot;제공 동의서(상품서비스 안내 등)</a></span>
+                                </li>
+                                <li style="display: none;" id="hiddenItem">
+                                    <label for="terms5" class="f-chk type02 checkAllSub"><input id="terms5" name="terms5" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">마케팅 동의 채널</a></span>
+                                    <ul class="list-2depth">
+                                        <li>
+                                            <label for="terms5_1" class="f-chk type02"><input id="terms5_1" name="terms5_1" type="checkbox"><span class="show-detail">전화</span></label>
+                                        </li>
+                                        <li>
+                                            <label for="terms5_2" class="f-chk type02"><input id="terms5_2" name="terms5_2" type="checkbox"><span class="show-detail">문자메시지</span></label>
+                                        </li>
+                                        <li>
+                                            <label for="terms5_3" class="f-chk type02"><input id="terms5_3" name="terms5_3" type="checkbox"><span class="show-detail">이메일</span></label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //약관동의 -->
+            </div>
+            <!--//contents-->
+
+            <!-- Bottom button area -->
+            <div class="bottom-btn-area">
+                <div class="btn-group">
+                    <button class="btn large yellow" type="button" disabled> <!-- 약관 전체 동의 시 disabled 삭제-->
+                            <span>확인</span>
+                    </button>
+                </div>
+            </div>
+            <!-- //Bottom button area -->
+
+        </div>
+    </div>
+</div>
+
+<script>
+$(function() {
+    // 유형2 : 슬라이드 없음
+    // 전체동의 click
+    $(".agree-terms02 .checkAll").click(function() {
+        if ($(this).find("input").prop("checked")) {
+            $(this).parent().next().find("label").addClass("checked");
+            $(this).parent().next().find("input").prop("checked", true);
+            $("#hiddenItem").show();
+        } else {
+            $(this).parent().next().find("label").removeClass("checked");
+            $(this).parent().next().find("input").prop("checked", false);
+            $("#hiddenItem").find(".f-chk").removeClass("checked");
+            $("#hiddenItem").find(".f-chk input").prop("checked", false);
+            $("#hiddenItem").hide();
+        }
+        
+    });
+    // 하위내용 체크 click
+    $(".agree-terms02 .list .f-chk").click(function() {
+        var cnt = 0;
+        var cntAll = 0;
+        var cntMax = $(".agree-terms02 .list .f-chk").length;
+        // 레벨별 체크 카운트
+        $(this).parent().parent().find("> li > label").each(function() {
+            if ($(this).find("input").prop("checked")) {
+                cnt++;
+            }
+        });
+        // 전체 체크 카운트
+        $(".agree-terms02 .list .f-chk").each(function() {
+            if ($(this).hasClass("checked")) {
+                cntAll++;
+            }
+        });
+        if (cntAll == cntMax) {
+            // 모두 동의가 되었을때 전체동의에 체크
+            $(".agree-terms02 .checkAll").addClass("checked");
+            $(".agree-terms02 .checkAll input").prop("checked", true);
+        }
+        
+        if ($(this).parent().parent().prev().hasClass("head")) {
+            // 1 Depth 일때
+            if (cnt < $(this).parent().parent().find("> li > .f-chk").length) {
+                // 상위 해제
+                $(this).parent().parent().prev().find("label").removeClass("checked");
+                $(this).parent().parent().prev().find("label input").prop("checked", false);
+
+            } else {
+                // 상위 체크
+                $(this).parent().parent().prev().find("label").addClass("checked");
+                $(this).parent().parent().prev().find("label input").prop("checked", true);
+            }
+
+        } else {
+            // 2 Depth 일때
+            if (cnt < $(this).parent().parent().find("> li > .f-chk").length) {
+                // 상위 해제
+                $(this).parent().parent().parent().find("> label").removeClass("checked");
+                $(this).parent().parent().parent().find("> label input").prop("checked", false);
+
+            } else {
+                // 상위 체크
+                $(this).parent().parent().parent().find("> label").addClass("checked");
+                $(this).parent().parent().parent().find("> label input").prop("checked", true);
+            }
+        }
+    });
+    $(".agree-terms02 .checkAllSub").click(function() {
+        if ($(this).find("input").prop("checked")) {
+            $(this).parent().find("> ul >li > label").addClass("checked");
+            $(this).parent().find("> ul >li > label input").prop("checked", true);
+        } else {
+            $(this).parent().find("> ul >li > label").removeClass("checked");
+            $(this).parent().find("> ul >li > label input").prop("checked", false);
+        }
+    });
+
+    // 우측 콤보버튼 click
+    $(".agree-terms02 .head button").click(function() {
+        if ($(this).hasClass("on")) {
+            $(this).removeClass("on");
+            $(this).parent().next().slideUp(150);
+        } else {
+            $(this).addClass("on");
+            $(this).parent().next().slideDown(150);
+        }
+    });
+
+    // 숨겨진 두번째 항목 보여주기
+    $(".shoHidden").click(function() {
+        if ($(this).hasClass("checked")) {
+            $("#hiddenItem").show();
+            
+        } else {
+            $("#hiddenItem").find(".f-chk").removeClass("checked");
+            $("#hiddenItem").find(".f-chk input").prop("checked", false);
+            $("#hiddenItem").hide();
+        }
+
+
+    });
+
+});
+
+
+
+
+
+</script>
+
+</body>
+</html>

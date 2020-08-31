@@ -3,6 +3,7 @@ $(function() {
     // Left navigation scroll style
     $(".navigation").mCustomScrollbar({
         theme:"minimal-dark",
+        scrollInertia: 400,
         mouseWheel: {scrollAmount: 1000}
     });
 
@@ -67,11 +68,16 @@ function accordionCtr(obj) {
 // 레이어팝업
 function openLayer(id) {
     $("#" + id).show();
+    setSchHeight(id);
     $(".l-dim").show();
 }
 function closeLayer(id) {
     $("#" + id).hide();
     $(".l-dim").hide();
+}
+
+function setSchHeight(id) {
+    $(".condition .right-col button").height($("#" + id + " .condition .right-col").height());
 }
 
 

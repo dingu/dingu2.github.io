@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>카드상품 목록 - 업무포털</title>
+    <script src="./js/jquery-3.5.0.min.js"></script>
+    <!-- util -->
+    <link rel="stylesheet" href="./util/jquery.mCustomScrollbar.min.css">
+    <script src="./util/jquery.mCustomScrollbar.js"></script>
+    <link rel="stylesheet" href="./util/jquery-ui.min.css">
+    <script src="./util/jquery-ui.min.js"></script>
+    <!-- util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+    <a href="#contents" class="skip-navi">본문 바로가기</a>
+
+    <div class="wrap">
+        <div class="wrap-inner">
+            <!-- LEFT 영역 -->
+            <div class="left-side">
+                <div class="top">
+                    <h1><a href=""><img src="./images/logo.png" alt="KB국민카드"></a></h1>
+
+                    <div class="private-info">
+                        <strong>홍길동님 안녕하세요.</strong>
+                        <dl>
+                            <dt>접속시간</dt>
+                            <dd>2020년 05월 10일 16시 55분</dd>
+                        </dl>
+                        <dl>
+                            <dt>현재시간</dt>
+                            <dd>09:16:22</dd>
+                        </dl>
+                    </div>
+
+                    <div class="btn-area">
+                        <button type="button" class="btn-type type01" onclick=""><span>로그아웃</span></button>
+                        <button type="button" class="btn-type type01" onclick=""><span>내결재함</span></button>
+                    </div>
+                </div>
+
+                <!-- 주메뉴 -->
+                <div class="navigation">
+                    <div class="navi-wrap">
+                        <ul>
+                            <li><a href="" onclick="accordionCtr(this); return false;">회원관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">알림/전시 관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">결제관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">인증관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">제휴/가맹점 관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">앱 관리</a>
+                                <ul>
+                                    <li><a href="">앱 버전관리</a></li>
+                                    <li><a href="">앱오류조회</a></li>
+                                    <li><a href="">앱관리</a></li>
+                                    <li><a href="">메뉴관리</a></li>
+                                    <li><a href="">약관관리</a></li>
+                                    <li><a href="">분류별 약관설정 관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">통계</a>
+                                <ul>
+                                    <li><a href=""></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">시스템 관리</a>
+                                <ul>
+                                    <li><a href=""></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- //주메뉴 -->
+            </div>
+            <!-- //LEFT 영역 -->
+
+            <!-- 메인 영역 -->
+            <div class="container">
+                <div class="contents-wrap">
+                    <div class="contents" id="contents">
+                        <!-- 본문 start -->
+
+                        <div class="contents-top">
+                            <div class="left-col">
+                                <h2 class="tit01">카드상품 관리</h2>
+                            </div>
+                            
+                            <div class="right-col">
+                                <span>알림/전시관리</span>
+                                <span>카드상품관리</span>
+                                <span>카드관리</span>
+                            </div>
+                        </div>
+
+                        <div class="tab-type01 four mt10">
+                            <ul>
+                                <li><a href="" class="on">카드 관리</a></li>
+                                <li><a href="">비카드 관리</a></li>
+                                <li><a href="">PA카드 관리</a></li>
+                                <li><a href="">가상카드 이미지 관리</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="article-top mt30">
+                            <div class="left-col">
+                                <h3 class="tit02">카드 목록</h3>
+                            </div>
+                            
+                            <div class="right-col">
+                                <!-- 버튼 -->
+                            </div>                            
+                        </div>
+
+                        <!-- 검색조건 -->
+                        <div class="condition mt10">
+                            <div class="left-col">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 108px;">
+                                        <col style="width: 347px;">
+                                        <col style="width: 148px;">
+                                        <col style="width: auto;">
+                                    </colgroup>
+                                    <tr>
+                                        <td class="tit"><span>조회구분</span></td>
+                                        <td>
+                                            <span class="ipt-group">
+                                                <label for="" class="f-select w-full">
+                                                    <select name="" id="">
+                                                        <option value="">카드명</option>
+                                                    </select>
+                                                </label>
+                                                <input class="f-ipt-txt ml10" type="text" name="" value="" placeholder="">
+                                            </span>
+                                        </td>
+                                        <td class="tit"><span>교통카드여부</span></td>
+                                        <td>
+                                            <label for="" class="f-select w-full">
+                                                <select name="" id="">
+                                                    <option value="">전체</option>
+                                                </select>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tit"><span>구분</span></td>
+                                        <td>
+                                            <label for="" class="f-select w-full">
+                                                <select name="" id="">
+                                                    <option value="">전체</option>
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td class="tit"><span>카드구분</span></td>
+                                        <td>
+                                            <label for="" class="f-select w-full">
+                                                <select name="" id="">
+                                                    <option value="">전체</option>
+                                                </select>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tit"><span>게시여부</span></td>
+                                        <td>
+                                            <label for="" class="f-select w-full">
+                                                <select name="" id="">
+                                                    <option value="">전체</option>
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td class="tit"><span>조회기간</span></td>
+                                        <td>
+                                            <span class="ipt-group">
+                                                <label for="" class="dates">
+                                                    <input class="" type="text" name="" value="" placeholder="">
+                                                </label>
+                                                <span class="f-in-txt w-15 align-c">-</span>
+                                                <label for="" class="dates">
+                                                    <input class="" type="text" name="" value="" placeholder="">
+                                                </label>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="right-col">
+                                <button type="button" class="btn-type"><span>조회</span></button>
+                            </div>
+                        </div>
+                        <!-- 검색조건 -->
+
+                        <!-- 게시판 목록 -->
+                        <div class="board-top">
+                            <div class="left-col">
+                                <span class="result-count">
+                                    조회결과
+                                    <span>250/4580</span>
+                                </span>
+                            </div>
+
+                            <div class="right-col">
+                                <label for="" class="f-select w-120">
+                                    <select name="" id="">
+                                        <option value="">10개보기</option>
+                                    </select>
+                                </label>
+                                <button type="button" class="btn-type excel"><span>엑셀다운로드</span></button>
+                            </div>
+                        </div>
+
+                        <div class="board-list">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 30px;">
+                                    <col style="width: 55px">
+                                    <col style="width: 60px">
+                                    <col style="width: 100px">
+                                    <col style="width: auto;">
+                                    <col style="width: 80px;">
+                                    <col style="width: 80px;">
+                                    <col style="width: 50px;">
+                                    <col style="width: 70px;">
+                                    <col style="width: 90px;">
+                                    <col style="width: 100px;">
+                                    <col style="width: 100px;">
+                                    <col style="width: 45px;">
+                                </colgroup>
+                                <tr class="head">
+                                    <td></td>
+                                    <td>No</td>
+                                    <td>구분</td>
+                                    <td>카드이미지</td>
+                                    <td>카드상품명</td>
+                                    <td>상품코드</td>
+                                    <td>제휴코드</td>
+                                    <td>교통</td>
+                                    <td>신용/체크</td>
+                                    <td>최종수정자</td>
+                                    <td>동기화일시</td>
+                                    <td>최종수정일시</td>
+                                    <td>게시여부</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio">
+                                    </td>
+                                    <td>110</td>
+                                    <td>개인</td>
+                                    <td><img class="list-card-img" src="./images/sample_card03.png" alt=""></td>
+                                    <td class="align-l"><a href="" class="lnk">K마스터 카드</a></td>
+                                    <td>00125842</td>
+                                    <td>02022</td>                                    
+                                    <td>Y</td>
+                                    <td>신용</td>
+                                    <td>홍길동 (me00200)</td>
+                                    <td>2020-05-10 17:05:03</td>
+                                    <td>2020-05-10 17:05:03</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio">
+                                    </td>
+                                    <td>110</td>
+                                    <td>개인</td>
+                                    <td><img class="list-card-img" src="./images/sample_card03.png" alt=""></td>
+                                    <td class="align-l"><a href="" class="lnk">K마스터 카드</a></td>
+                                    <td>00125842</td>
+                                    <td>02022</td>                                    
+                                    <td>Y</td>
+                                    <td>신용</td>
+                                    <td>홍길동 (me00200)</td>
+                                    <td>2020-05-10 17:05:03</td>
+                                    <td>2020-05-10 17:05:03</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio">
+                                    </td>
+                                    <td>110</td>
+                                    <td>개인</td>
+                                    <td><img class="list-card-img" src="./images/sample_card03.png" alt=""></td>
+                                    <td class="align-l"><a href="" class="lnk">K마스터 카드</a></td>
+                                    <td>00125842</td>
+                                    <td>02022</td>                                    
+                                    <td>Y</td>
+                                    <td>신용</td>
+                                    <td>홍길동 (me00200)</td>
+                                    <td>2020-05-10 17:05:03</td>
+                                    <td>2020-05-10 17:05:03</td>
+                                    <td>Y</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="board-bottom">
+                            <div class="left-col">
+                                <button type="button" class="btn-type type04"><span>선택 상품 동기화</span></button>
+                            </div>
+
+                            <div class="paging">
+                                <button type="button" class="btn first">처음</button>
+                                <button type="button" class="btn prev">이전</button>
+
+                                <span class="num">
+                                    <button type="button" class="btn cur"><span>1</span></button>
+                                    <button type="button" class="btn"><span>2</span></button>
+                                    <button type="button" class="btn"><span>3</span></button>
+                                    <button type="button" class="btn"><span>4</span></button>
+                                    <button type="button" class="btn"><span>5</span></button>
+                                </span>
+
+                                <button type="button" class="btn next">다음</button>
+                                <button type="button" class="btn last">마지막</button>
+                            </div>
+
+                            <div class="right-col">
+                            </div>
+                        </div>
+                        <!-- //게시판 목록 -->
+                        
+                        <!-- scroll Top -->
+                        <div class="scrolltop">
+                            <button type="button"><span>TOP</span></button>
+                        </div>
+                        <!-- //scroll Top -->
+
+                        <!-- //본문 end -->
+                    </div>
+
+                    <!-- footer -->
+                    <div class="footer">
+                        <p>KB 국민카드 COPYRIGHT &copy; 2020 KB Kookmin Card. LTD ALL RIGHTS RESERVED</p>
+                    </div>
+                    <!-- //footer -->
+                </div>
+            </div>
+            <!-- //메인 영역 -->
+        </div>
+    </div>
+
+    
+</body>
+</html>

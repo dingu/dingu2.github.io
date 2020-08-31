@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>전체홈 추천 메뉴 등록 - 업무포털</title>
+    <script src="./js/jquery-3.5.0.min.js"></script>
+    <!-- util -->
+    <link rel="stylesheet" href="./util/jquery.mCustomScrollbar.min.css">
+    <script src="./util/jquery.mCustomScrollbar.js"></script>
+    <link rel="stylesheet" href="./util/jquery-ui.min.css">
+    <script src="./util/jquery-ui.min.js"></script>
+    <!-- util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+    <a href="#contents" class="skip-navi">본문 바로가기</a>
+
+    <div class="wrap">
+        <div class="wrap-inner">
+            <!-- LEFT 영역 -->
+            <div class="left-side">
+                <div class="top">
+                    <h1><a href=""><img src="./images/logo.png" alt="KB국민카드"></a></h1>
+
+                    <div class="private-info">
+                        <strong>홍길동님 안녕하세요.</strong>
+                        <dl>
+                            <dt>접속시간</dt>
+                            <dd>2020년 05월 10일 16시 55분</dd>
+                        </dl>
+                        <dl>
+                            <dt>현재시간</dt>
+                            <dd>09:16:22</dd>
+                        </dl>
+                    </div>
+
+                    <div class="btn-area">
+                        <button type="button" class="btn-type type01" onclick=""><span>로그아웃</span></button>
+                        <button type="button" class="btn-type type01" onclick=""><span>내결재함</span></button>
+                    </div>
+                </div>
+
+                <!-- 주메뉴 -->
+                <div class="navigation">
+                    <div class="navi-wrap">
+                        <ul>
+                            <li><a href="" onclick="accordionCtr(this); return false;">회원관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">알림/전시 관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">결제관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">인증관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">제휴/가맹점 관리</a>
+                                <!-- <ul>
+                                    <li><a href="">하위메뉴</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">앱 관리</a>
+                                <ul>
+                                    <li><a href="">앱 버전관리</a></li>
+                                    <li><a href="">앱오류조회</a></li>
+                                    <li><a href="">앱관리</a></li>
+                                    <li><a href="">메뉴관리</a></li>
+                                    <li><a href="">약관관리</a></li>
+                                    <li><a href="">분류별 약관설정 관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">통계</a>
+                                <ul>
+                                    <li><a href=""></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" onclick="accordionCtr(this); return false;">시스템 관리</a>
+                                <ul>
+                                    <li><a href=""></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- //주메뉴 -->
+            </div>
+            <!-- //LEFT 영역 -->
+
+            <!-- 메인 영역 -->
+            <div class="container">
+                <div class="contents-wrap">
+                    <div class="contents" id="contents">
+                        <!-- 본문 start -->
+
+                        <div class="contents-top">
+                            <div class="left-col">
+                                <h2 class="tit01">전체홈 메뉴 관리</h2>
+                            </div>
+                            
+                            <div class="right-col">
+                                <span>홈</span>
+                                <span>APP관리</span>
+                                <span>전체홈 추천메뉴 메뉴관리</span>
+                            </div>
+                        </div>
+
+                        <div class="article-top mt10">
+                            <div class="left-col">
+                                <h3 class="tit02">전체홈 추천메뉴 등록</h3>
+                            </div>
+                            
+                            <div class="right-col">
+                                <button type="button" class="btn-type type02 w-95"><span>목록</span></button>
+                                <button type="button" class="btn-type type02 w-95"><span>저장</span></button>
+                            </div>                            
+                        </div>
+                       
+                        <h4 class="tit03 mt30">기본정보 입력</h4>
+                        <div class="board-detail">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 170px;">
+                                    <col style="width: auto;">
+                                    <col style="width: 170px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <tr>
+                                    <td class="tit">버전정보</td>
+                                    <td>
+                                        0.91
+                                    </td>
+                                    <td class="tit">상태</td>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tit">버전관리 명<i class="req">필수</i></td>
+                                    <td colspan="3">
+                                        <!-- w-full 클래스는 가로길이 100% 채울때 사용 -->
+                                        <input class="f-ipt-txt " type="text" name="" value="" title="버전관리 명" placeholder="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tit">적용일<i class="req">필수</i></td>
+                                    <td>
+                                        <label for="" class="dates">
+                                            <input class="" type="text" name="" value="" placeholder="">
+                                        </label>
+                                        <label for="" class="f-select ">
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                            </select>
+                                        </label>
+                                        시
+                                        <label for="" class="f-select ">
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="tit">사용여부</td>
+                                    <td>
+                                        <!-- 
+                                            ml10 클래스는 간격을 위해 붙입니다.
+                                            radio 첫번째는 ml10을 붙이지 않습니다.
+                                        -->
+                                        <input type="radio" title="사용"> 사용
+                                        <input type="radio" title="사용안함" class="ml10"> 사용안함
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="etc001">
+                            <!-- left : width를 조절하면 오른쪽은 자동으로 나머지 가로길이로 세팅됩니다. default는 50% -->
+                            <div class="l">
+                                <div class="board-top mt0">
+                                    <div class="left-col">                                
+                                        <h4 class="tit03">전체홈 메뉴 목록</h4>
+                                    </div>
+        
+                                    <div class="right-col">
+                                        <label for="" class="f-select ">
+                                            <select name="" id="">
+                                                <option value="">전체</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>                                
+
+                                <div class="board-list">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 54px;">
+                                            <col style="width: 140px">
+                                            <col style="width: 160px">
+                                            <col style="">
+                                        </colgroup>
+                                        <tr class="head">
+                                            <td>선택</td>
+                                            <td>아이콘</td>
+                                            <td>메뉴명</td>
+                                            <td>카테고리명</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>
+                                                <img src="" alt="">
+                                            </td>
+                                            <td>보내기</td>
+                                            <td>포인트리</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>
+                                                <img src="" alt="">
+                                            </td>
+                                            <td>ATM 출금</td>
+                                            <td>포인트리</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>
+                                                <img src="" alt="">
+                                            </td>
+                                            <td>충전</td>
+                                            <td>포인트리</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>
+                                                <img src="" alt="">
+                                            </td>
+                                            <td>ATM 출금</td>
+                                            <td>포인트리</td>
+                                        </tr>
+                                        <tr class="selected">
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>
+                                                <img src="" alt="">
+                                            </td>
+                                            <td>해피머니 상품권충전</td>
+                                            <td>포인트리</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>
+                                                <img src="" alt="">
+                                            </td>
+                                            <td>충전</td>
+                                            <td>상품권포인트</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="board-req-guide mt10">
+                                    <span><i>필수</i>버전 등록 시 추천메뉴는 1개 이상 반드시 등록해 주세요.</span>
+                                </div>
+                            </div>
+
+                            <div class="c">
+                                <button type="button" class="go-r">></button>
+                                <button type="button" class="go-l"><</button>
+                            </div>
+                            
+                            <!-- right -->
+                            <div class="r">
+                                <div class="board-top mt0">
+                                    <div class="left-col">                                
+                                        <h4 class="tit03 disp-ib">추천 메뉴 목록</h4>
+
+                                        <span class="ml20"><strong>1</strong>/3</span>
+                                    </div>
+        
+                                    <div class="right-col">
+                                        <button type="button" class="btn-type type07">현재 버전 보기</button>
+                                    </div>
+                                </div>                                
+
+                                <div class="board-list">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 54px;">
+                                            <col style="width: 140px">
+                                            <col style="width: 160px">
+                                            <col style="">
+                                        </colgroup>
+                                        <tr class="head">
+                                            <td>선택</td>
+                                            <td>아이콘</td>
+                                            <td>메뉴명</td>
+                                            <td>카테고리명</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>
+                                                <img src="" alt="">
+                                            </td>
+                                            <td>보내기</td>
+                                            <td>포인트리</td>
+                                        </tr>
+                                        <tr class="selected">
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>
+                                                <img src="" alt="">
+                                            </td>
+                                            <td>ATM 출금</td>
+                                            <td>포인트리</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="board-bottom02">
+                            <button type="button" class="btn-type type02 w-95"><span>목록</span></button>
+                            <button type="button" class="btn-type type02 w-95"><span>저장</span></button>
+                        </div>
+
+                        <!-- scroll Top -->
+                        <div class="scrolltop">
+                            <button type="button"><span>TOP</span></button>
+                        </div>
+                        <!-- //scroll Top -->
+
+                        <!-- //본문 end -->
+                    </div>
+
+                    <!-- footer -->
+                    <div class="footer">
+                        <p>KB 국민카드 COPYRIGHT &copy; 2020 KB Kookmin Card. LTD ALL RIGHTS RESERVED</p>
+                    </div>
+                    <!-- //footer -->
+                </div>
+            </div>
+            <!-- //메인 영역 -->
+        </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-20          최초작성
+김수영             2020-05-29          플랫폼 마케팅 수신 동의 항목 삭제
+이진규             2020-06-30          약관 항목 추가, 아이디 변경, 텍스트 수정
+이진규             2020-07-22          KBpay -> KB Pay 텍스트 변경
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>휴대폰본인인증</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <header class="header">
+        <h1>휴대폰본인인증</h1>
+        <button type="button" class="btn close">닫기</button>
+    </header>
+    <div class="container">
+        <div class="contents-wrap">
+
+            <!--contents-->
+            <div class="contents kbp_webp_007"> <!-- contents + 페이지별 class 삽입 -->
+                <h2 class="tit02">약관동의</h2>
+
+                <!-- 06-30 약관 항목 추가, 아이디 변경, 텍스트 수정 -->
+                <!-- 약관동의 -->
+                <div class="agree-terms">
+                    <div class="head type02">
+                        <label for="" class="f-chk checkAll"><input type="checkbox"><span>전체동의</span></label>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="head">
+                                <label for="" class="f-chk checkAll"><input type="checkbox"><span>KB Pay 이용약관 전체동의</span></label>
+                                <button class="ico btn on" type="button" onclick="agreeCombo(this);">KB Pay 이용약관 전체동의 닫기</button>
+                            </div>
+                            
+                            <ul class="list">
+                                <li>
+                                    <label for="terms1" class="f-chk type02"><input id="terms1" name="terms1" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[필수] KB Pay 서비스 이용약관</a></span> <!-- // 07-22 KBpay -> KB Pay 텍스트 변경 -->
+                                </li>
+
+                                <li>
+                                    <label for="terms2" class="f-chk type02"><input id="terms2" name="terms2" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[필수] 표준 전자금융거래 기본약관</a></span>
+                                </li>
+
+                                <li>
+                                    <label for="terms3" class="f-chk type02"><input id="terms3" name="terms3" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[필수] 개인정보 수집이용 동의</a></span>
+                                </li>
+                                <li>
+                                    <label for="terms4" class="f-chk type02"><input id="terms4" name="terms4" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[필수] 고객식별정보 처리 동의</a></span>
+                                </li>
+                                <li>
+                                    <label for="terms5" class="f-chk type02"><input id="terms5" name="terms5" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[선택] Push 알림 동의</a></span>
+                                </li>
+                                <!-- 2020-05-29 삭제
+                                <li>
+                                    <label for="terms5" class="f-chk type02"><input id="terms5" name="terms5" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[선택] 플랫폼 마케팅 수신 동의</a></span>
+                                    <ul class="list-2depth">
+                                        <li>
+                                            <label for="terms5_1" class="f-chk type02"><input id="terms5_1" name="terms5_1" type="checkbox"><span class="show-detail">전화</span></label>
+                                        </li>
+                                        <li>
+                                            <label for="terms5_2" class="f-chk type02"><input id="terms5_2" name="terms5_2" type="checkbox"><span class="show-detail">문자메시지</span></label>
+                                        </li>
+                                        <li>
+                                            <label for="terms5_3" class="f-chk type02"><input id="terms5_3" name="terms5_3" type="checkbox"><span class="show-detail">이메일</span></label>
+                                            
+                                        </li>
+                                    </ul>
+                                </li> -->
+                            </ul>
+
+                        </li>
+                        <li>
+                            <div class="head">
+                                <label for="" class="f-chk checkAll"><input type="checkbox"><span>휴대폰 본인인증 이용약관 전체동의</span></label>
+                                <button class="ico btn on" type="button" onclick="agreeCombo(this);">닫기</button>
+                            </div>
+                            <ul class="list">
+                                <li>
+                                    <label for="terms1_1" class="f-chk type02"><input id="terms1_1" name="terms1_1" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[필수] 개인정보 수집이용 동의</a></span>
+                                </li>
+                                <li>
+                                    <label for="terms2_1" class="f-chk type02"><input id="terms2_1" name="terms2_1" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[필수] 고객식별정보 처리 동의</a></span>
+                                </li>
+                                <li>
+                                    <label for="terms3_1" class="f-chk type02"><input id="terms3_1" name="terms3_1" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[필수] 통신사 이용약관 동의</a></span>
+                                </li>
+                                <li>
+                                    <label for="terms4_1" class="f-chk type02"><input id="terms4_1" name="terms4_1" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[필수] 서비스 이용약관 동의</a></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //약관동의 -->
+                <!-- // 06-30 약관 항목 추가, 아이디 변경 -->
+
+            </div>
+            <!--//contents-->
+
+            <!-- Bottom button area -->
+            <div class="bottom-btn-area fixed"><!-- 20200602 fixed 클래스 추가 -->
+                <div class="btn-group">
+                    <button class="btn large yellow" type="button" disabled> <!-- 약관 전체 동의 시 disabled 삭제-->
+                            <span>확인</span>
+                    </button>
+                </div>
+            </div>
+            <!-- //Bottom button area -->
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

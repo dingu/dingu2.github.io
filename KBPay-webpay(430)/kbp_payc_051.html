@@ -1,0 +1,92 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-15          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>본인인증</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>본인인증</h1>
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_051">  <!-- 화면ID -->               
+                
+                본문
+
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>등록</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+    <!-- Layer popup -->
+    <div class="l-dim" style="display: block;"></div>
+
+    <div class="l-pop" id="layer01" tabindex="0" style="display: block;">
+        <div class="l-pop-wrap">
+            <div class="l-header">
+                <h1>도용방지설정 안내</h1>
+
+                <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+            </div>
+
+            <div class="l-contents">
+                
+                <p class="txt08">도용방지설정이 되어 있어 정상적인 실명확인을<br>수행할 수 없습니다.</p>
+
+                <ul class="list-txt02">
+                    <li>고객님은 SCI평가정보(주)에서 도용방지설정이 되어 있어 정상적인 실명확인을 수행할 수 없습니다.</li>
+                    <li>정상적인 실명확인을 위해 고객님께서 SCI평가정보(주)의 SIREN24 사이트에서 도용방지 설정을 일시해제 하셔야만 실명확인이 가능합니다.</li>
+                    <li>도용방지설정 일시해제 후 다시 시도하여 주시기 바랍니다.</li>
+                </ul>
+            </div>
+
+            <div class="l-bottom-group">
+                <div class="btn-group">
+                    <a href="http://www.siren24.com/siren24/sst/name/jsp/name02p_j01.jsp" class="btn-line" target="_blank">SIREN24 도용방지설정 바로가기</a>
+                    <button type="button" class="btn-type type01" onclick=""><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Layer popup -->
+
+
+    <script>
+        openLayer('layer01');
+    </script>
+
+</body>
+</html>

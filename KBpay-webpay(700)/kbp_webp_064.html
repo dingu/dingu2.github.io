@@ -1,0 +1,67 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-29          최초작성
+유현우             2020-07-01          소타이틀 제거, 하단 버튼명 다음->확인 으로 변경
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>약관동의</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <header class="header">
+        <h1>약관동의</h1>
+        <button type="button" class="btn close">닫기</button>
+    </header>
+    <div class="container">
+        <div class="contents-wrap">
+
+            <!--contents-->
+            <div class="contents kbp_webp_037"> <!-- contents + 페이지별 class 삽입 -->
+                <!-- <h2 class="tit02">약관동의</h2> --><!-- 20200701 -->
+                <!-- 약관동의 -->
+                <div class="agree-terms">
+                    <ul>
+                        <li>
+                            <div class="head">
+                                <label for="" class="f-chk checkAll"><input type="checkbox"><span>약관 전체동의</span></label>
+                                <button class="ico btn on" type="button" onclick="agreeCombo(this);">약관 전체동의 닫기</button>
+                            </div>
+                            <ul class="list">
+                                <li>
+                                    <label for="terms1" class="f-chk type02"><input id="terms1" name="terms1" type="checkbox"></label>
+                                    <span><a href="" class="show-detail">[필수] 개인(신용)정보 수집&middot;이용&middot;제공 동의서(KB금융 오픈 API 서비스용)</a></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //약관동의 -->
+            </div>
+            <!--//contents-->
+
+            <!-- Bottom button area -->
+            <div class="bottom-btn-area">
+                <div class="btn-group">
+                    <button class="btn large yellow" type="button" disabled> <!-- 약관 전체 동의 시 disabled 삭제-->
+                        <span>확인</span><!-- 20200701 -->
+                    </button>
+                </div>
+            </div>
+            <!-- //Bottom button area -->
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

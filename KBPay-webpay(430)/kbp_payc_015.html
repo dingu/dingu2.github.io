@@ -1,0 +1,146 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-06-15          최초작성
+유현우             2020-07-16          툴팁 기획 + 디자인 변경 적용
+이진규             2020-07-24          텍스트 수정 + 툴팁추가
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>결제 비밀번호 입력</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="./js/html5.js"></script>
+    
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>결제 비밀번호 입력</h1> <!-- // 2020-07-24 텍스트 수정 -->
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_015"> <!-- 화면ID -->
+                <ol class="depth-step">
+                    <li><span>1</span></li>
+                    <li class="on"><span>2</span></li> <!--현재 step 활성화 class 'on'-->
+                    <li><span>3</span> </li>
+                </ol>                
+                <!--form 입력 목록-->
+                <div class="form-wrap">
+                    <ul class="form-text-list">
+                        <li>
+                            <div class="form_text"> <!-- 오류 class :  'error' 추가 --> 
+                                <label for="pass">결제비밀번호 등록</label><!-- 2020-07-24 텍스트 수정 -->
+                                <div class="pass-input-match">
+                                    <input type="text" class="text" id="pass" name="pass" title="결제비밀번호"> <!--//실제 입력 받는 칸 -->
+                                    <div class="pass-input">
+                                        <span class="dot black"></span> <!--활성화 class 'black'-->
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_text"> 
+                                <label for="pass1">결제비밀번호 확인</label><!-- 2020-07-24 텍스트 수정 -->
+                                <div class="pass-input-match">
+                                    <input type="text" class="text" id="pass1" name="pass1" title="결제비밀번호 확인"> <!--//실제 입력 받는 칸 -->
+                                    <div class="pass-input">
+                                        <span class="dot black"></span> <!--활성화 class 'black'-->
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--//form 입력 목록-->
+
+                <!-- 2020-07-16 수정 -->
+                <div class="tool-tip type02">
+                    <!-- <p><a href="javascript:void(0);" class="tip">등록 제한 결제비밀번호란</a></p> -->
+
+                    <div class="align-c">
+                        <label for="agree" class="f-chk" tabindex="0"><input type="checkbox" id="agree"><span>인증받은 기기로 등록</span></label>
+                        <button type="button" class="btn-type desc">?</button>
+                    </div>
+
+                    <div class="tip-box">
+                        <a href="javascript:void(0);" class="btn-close">닫기</a>
+                        <p>회원가입 후 보안 강화를 위해 현재 사용하고 있는 기기를 기기관리에 등록할 수 있습니다. 공공장소 또는 PC방에서 사용하고 계시면 체크해제 하시기 바랍니다.</p>
+                    </div>
+                </div>
+
+
+                <!-- 2020-07-24 : 말풍선이 위로 나오는 경우 up 클래스 추가 -->
+                <div class="tool-tip up align-r">
+                    <p><a href="javascript:void(0);" class="tip">등록 제한 결제 비밀번호란</a></p>
+                    <div class="tip-box">
+                        <a href="javascript:void(0);" class="btn-close">닫기</a>
+                        <p>연속된 3자리 숫자 또는 동일 4자리 숫자, 주민등록번호, 휴대전화번호를 포함하는 경우 설정이 제한됩니다.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-type type01" disabled><span>확인</span></button> <!--활성화 시 disabled 삭제-->
+                </div>
+            </div>
+            <!-- //Bottom area -->
+        </div>
+    </div>
+
+
+    <div class="l-dim"></div>
+    <!-- alert popup -->
+    <div class="l-pop-alert" id="alert02" style="display: none;" tabindex="0">
+        <div class="alert-wrap">
+            <div class="alert-inner">
+                <p class="msg01 align-c">결제비밀번호가 일치하지 않습니다.</p>
+
+                <!-- 오류 따른 메시지
+                <p class="msg01 align-c">연속된 3자리 숫자가 포함되어 있습니다.<br>다시 입력해주세요.</p>
+                <p class="msg01 align-c">동일한 4자리 숫자가 포함되어 있습니다.<br>다시 입력해주세요.</p>
+                <p class="msg01 align-c">휴대전화번호의 일부가 포함되어 있습니다.<br>다시 입력해주세요.</p>
+                <p class="msg01 align-c">생년월일의 일부가 포함되어 있습니다.<br>다시 입력해주세요.</p>
+                -->
+    
+                <div class="bottom-group pb0">
+                    <div class="btn-group">
+                        <button type="button" class="btn-type type01"><span>확인</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //alert popup -->
+
+</body>
+</html>

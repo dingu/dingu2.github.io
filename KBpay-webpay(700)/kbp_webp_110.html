@@ -1,0 +1,93 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-08-25          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>카드 본인인증</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="header">
+            <h1>카드 본인인증</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+
+        <div class="container">
+            <div class="contents-wrap">
+                
+                <div class="contents kbp_webp_110">
+                    
+                    <h2 class="tit"><strong><em>KB Pay</em> 인증안내</strong></h2>
+                    
+                    <p class="txt"><em>KB Pay</em> 인증을 완료하신 후, 아래 ‘완료’ 버튼을 누르세요.</p>
+
+                    <div class="appcard-cert">
+                        <dl>
+                            <dt>앱카드가 자동으로 실행되지 않는 경우 아래 절차를 따라주세요</dt>
+                            <dd>
+                                <ul class="list-dot">
+                                    <li>앱카드 수동실행</li>
+                                    <li>아래 숫자코드 7자리 입력</li>
+                                    <li>앱카드 인증진행</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <p class="code">0721123</p>
+                        <p class="time-limit">
+                            남은시간
+                            <span>02:29</span>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button"><span>완료</span></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="pop01" tabindex="0">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <span>
+                        <!-- case 1 -->
+                        화면의 안내에 따라 앱카드의 본인확인을 완료하신 후 다시 시도하여 주세요.<br>재시도 횟수(<em>1</em>/<em>5</em>)
+
+                        <!-- case 2 -->
+                        <!-- 인증제한시간 초과로 본인확인을 종료합니다. -->
+                    </span>
+                </p>
+            </div>
+            <div class="l-footer">
+                <div class="btn-group pt0">
+                    <button class="btn medium yellow" type="button">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

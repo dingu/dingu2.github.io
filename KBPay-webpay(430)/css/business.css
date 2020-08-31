@@ -1,0 +1,433 @@
+@charset "utf-8";
+
+/* 인덱스 */
+.index {position: relative; background: #fff; overflow: hidden;}
+.index .index-header {padding: 10px 16px 9px 16px; background: #f8f8f8;}
+.index .index-header .logo {display: inline-block; width: 100px; height: 18px;}
+.index .contents {position: relative; padding-top: 1px; height: 416px; overflow: hidden;}
+
+.index .tab-ui {margin: 0 -16px;}
+.index .tab-ui .tab-list {padding: 0px 16px; height: 48px; font-size: 0; border-bottom: 1px solid #ddd; clear: both;}
+.index .tab-ui .tab-list li {position: relative; display: inline-block; padding: 0; width: 50%; height: 100%; float: left;}
+.index .tab-ui .tab-list li + li {float: right;}
+.index .tab-ui .tab-list li a {position: absolute; top: 2px; .top: 1px; left: 0; display: block; width: 100%; height: 46px; font-size: 16px; color: #666; line-height: 46px; text-align: center; letter-spacing: -0.4px;}
+.index .tab-ui .tab-list li a.active {color: #222; font-weight: 700; border-bottom: 2px solid #222;}
+.index .tab-ui .tab-list li a.active:after {display: none;}
+.index .tab-ui .tab-contents {clear: both;}
+
+.index .bottom-group {padding: 24px 0 0 0;}
+
+.app-pay-box {padding: 8px 16px;}
+.app-pay-box .tit-area {height: 88px; text-align: center;}
+.app-pay-box .tit-area .logo {position: relative; display: inline-block; padding: 30px 96px 25px 0;}
+.app-pay-box .tit-area .logo img {display: block; width: 174px; height: 32.5px;}
+.app-pay-box .tit-area .logo .icon {position: absolute; top: 0; right: 0; display: block; width: 88px; height: 88px;}
+.app-pay-box .btn-list {margin-top: 8px; padding: 0 24px; font-size: 0; overflow: hidden;}
+.app-pay-box .btn-list li {display: inline-block; width: 44.5%; float: left;}
+.app-pay-box .btn-list li + li {padding-left: 8px; width: 55.5%;}
+.app-pay-box .btn-list button {display: inline-block; width: 100%; height: 48px; background: none;  border-radius: 8px;}
+.app-pay-box .btn-list .gray {background: #eee;}
+.app-pay-box .btn-list .yellow {background: #ffcc00;}
+.app-pay-box .btn-list button span {position: relative; font-size: 16px; color: #222; font-weight: 500; line-height: 24px; letter-spacing: -0.4px;}
+.app-pay-box .btn-list button + button {margin-left: 8px;}
+
+.payment-box {padding: 0 16px;}
+.payment-box li {border-bottom: 1px solid #ddd;}
+.payment-box li + li {border-bottom: none;}
+.payment-box li + li {margin-top: 8px;}
+.payment-box a {position: relative; display: block; padding: 16px 32px 16px 0;}
+.payment-box a > img {position: absolute; top: 50%; right: 0; display: block; margin-top: -12px; width: 24px; height: 24px;}
+.payment-box a .tit-area {vertical-align: middle;}
+.payment-box a .tit-area .p-tit {display: block; font-size: 18px; color: #222; font-weight: 500; line-height: 26px; letter-spacing: -0.4px;}
+.payment-box a .tit-area .p-txt {display: block; font-size: 12px; color: #666; line-height: 16px; letter-spacing: -0.2px;}
+.payment-box a .tit-area .p-txt + .p-tit {margin-top: 4px;}
+
+.partner-payment .inner {height: 284px; padding: 24px 8px 0 8px;}
+.partner-payment .inner::after {content: ""; display: block; clear: both;}
+.partner-payment .inner > div {float: left; width: 50%; padding-bottom: 14px;}
+.partner-payment .inner > div a {display: block; height: 114px; margin: 0 8px; text-align: center; border: 1px solid #eee; border-radius: 8px; box-sizing: initial;}
+.partner-payment .inner > div a .tit-area {height: 26px; margin-top: 30px;}
+.partner-payment .inner > div a .p-txt {font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px;}
+.partner-payment .inner > div a .p-tit {font-size: 18px; color: #222; font-weight: 700; line-height: 26px; letter-spacing: -0.4px;}
+.partner-payment .inner > div a .logo {display: inline-block; margin-top: 8px; height: 22px;}
+.partner-payment .inner > div a .logo img {display: block; width: 100%; height: 100%;}
+.partner-payment .inner > div .samsungpay .logo {width: 138px;}
+.partner-payment .inner > div .lgpay .logo {width: 66px;}
+.partner-payment .inner > div .payco .logo {width: 76px;}
+.partner-payment .inner > div .ars .tit-area {margin-top: 45px;}
+@media screen and (max-width: 430px) {
+    .partner-payment .inner > div a {padding: 0;}
+}
+@media screen and (max-width: 374px) {
+    .partner-payment .inner > div .samsungpay .logo img {transform: scale(0.8);}
+}
+
+.banner-slide {position: absolute; bottom: 0; left: 0; margin: 0 -16px; width: calc(100% + 32px); height: 50px; overflow: hidden;}
+.banner-slide .slide-area {padding: 0 16px; height: 100%;}
+.banner-slide .slide-area .slick-list {height: 100%;}
+.banner-slide .slide-area .slick-list .slick-track {height: 100%;}
+.banner-slide .slide-area .slide{display: block; width: 100%; height: 100%;}
+.banner-slide .slide-area .slide > img {display: block; width: 100%; height: 100%;}
+.banner-slide .slide-area .slide > div {display: block; width: 100%; height: 100%;}
+.banner-slide .slide-nav {position: absolute; top: 50%; right: 56px; font-size: 0; z-index: 10; overflow: hidden; transform: translateY(-50%);}
+.banner-slide .slide-nav > span {display: inline-block; height: 12px; font-size: 12px; color: #222; font-weight: 500; line-height: 12px; letter-spacing: -0.2px; vertical-align: top;} 
+.banner-slide .slide-nav .totalIndex:before {content: "/"; display: inline-block; height: 12px; margin-left: 4px; margin-right: 4px; font-size: 12px; line-height: 12px;}
+.banner-slide .btn-active {position: absolute; top: calc(50% - 10px); right: 32px; margin-left: 4px; width:20px; height: 20px; text-indent: -9999px; background: url(../images/icon/ico_btn_pause.png) no-repeat; background-size: 100%; z-index: 10;}
+.banner-slide .btn-active.play {background: url(../images/icon/ico_btn_play.png) no-repeat; background-size: 100%;}
+
+/* 앱설치안내 */
+.app-guide {margin-top: 16px; font-size: 0 !important;/* // 06-25 수정 */ border-top: 1px solid #ddd;} 
+.app-guide li {position: relative; display: inline-block; margin-top: 24px; width: 50%; text-align: center;}
+.app-guide li:nth-child(2):before {position: absolute; top: 0; left: -0.5px; content: ""; width: 1px; height: 100%; border-left: 1px dashed #ddd;}
+.app-guide li .qr {display: inline-block; width: 80px; height: 80px;}
+.app-guide li .qr img {display: block; width: 100%; height: 100%;}
+.app-guide li .market-box {display: table; margin: 0 auto; padding-top: 16px; text-align: center;}
+.app-guide li .market-box .img-area {display: table-cell; width: 32px; height: 32px; vertical-align: middle;}
+.app-guide li .market-box .img-area img {display: block; width: 100%; height: 100%;}
+.app-guide li .market-box .tit-area {display: table-cell; padding-left: 8px; vertical-align: middle; text-align: left;}
+.app-guide li .market-box .tit-area .os {display: block; font-size: 14px; color: #222; font-weight: 700; line-height: 20px; letter-spacing: -0.2px;}
+.app-guide li .market-box .tit-area .market {display: block; font-size: 12px; color: #666; line-height: 16px; letter-spacing: -0.2px;}
+
+
+/* ARS 인증 */
+.ars-cert {padding-top: 4px; text-align: center;}
+.ars-cert .msg {position: relative; padding-top: 66px; font-size: 16px; color: #888; line-height: 24px; letter-spacing: -0.4px;}
+.ars-cert .msg:before {position: absolute; top: 0; left: calc(50% - 24px); content: ""; width: 48px; height: 48px; background: url(../images/icon/ico_ars.png) no-repeat; background-size: 100%;}
+.ars-cert .submit {margin-top: 16px; padding-bottom: 1px; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px; background: none; border-bottom: 1px solid #aaa;}
+.ars-cert .code {display: none; margin: 25px auto 0 auto; padding: 15px 0; width: 98px; height: 64px; font-size: 24px; color: #222; font-weight: 700; line-height: 34px; letter-spacing: -0.4px; text-align: center; background: #f8f8f8; border-radius: 32px;}
+
+
+/* KB Pay 결제 */
+.cd-change .cd-name {margin-top: 8px;}
+.cd-change .cd-num {margin-top: 6px;}
+.cd-name {font-weight: 500;}
+.cd-name .card-icon {display: inline-block; width: 32px; height: 24px;}
+.cd-change .card-list {position: relative; height: 128px; margin: 18px -16px 0;}
+.cd-change .card-list .card {display: inline-block; position: relative; margin-top: 11px; width: 151px; height: 95px;}
+.cd-change .card-list .card img {display: inline-block; width: 151px; height: 95px;}
+.cd-change .card-list .slick-list {overflow: visible !important;}
+.cd-change .card-list .slick-slide {position: relative; height: 128px; text-align: center; transition: all ease-in-out .3s; opacity: .5;}
+.cd-change .card-list .slick-slide.checked .card::after {content: ""; display: block; position: absolute; right: -14px; top: -14px; width: 30px; height: 30px; background: url(../images/icon/ico_current_card_mark.png) no-repeat; background-size: contain;}
+.cd-change .card-list .slick-active {opacity: .5;}
+.cd-change .card-list .slick-current {opacity: 1; background: url(../images/etc/bg_card_shadow.png) no-repeat center 22px; background-size: 168px auto;}
+.cd-change .card-list .slick-current .card {margin-top: 0; width: 168px; height: 106px;}
+.cd-change .card-list .slick-current img {width: 168px; height: 106px;}
+.cd-change .card-list .add-card {display: inline-block; width: 168px; height: 104px; border-radius: 8px; font-size: 0; text-indent: -9999px; background: #ddd url(../images/icon/ico_plus_white.png) no-repeat center; background-size: 32px;}
+.cd-change .card-list .slick-prev {z-index: 1; display: block; position: absolute; left: 24px; top: 35px; width: 32px; height: 32px; border-radius: 50%; font-size: 0; background: #5e5e5e url(../images/icon/ico_arrow_left_white24x24.png) no-repeat center;}
+.cd-change .card-list .slick-next {display: block; position: absolute; right: 24px; top: 35px; width: 32px; height: 32px; border-radius: 50%; font-size: 0; background: #5e5e5e url(../images/icon/ico_arrow_right_white24x24.png) no-repeat center;}
+.cd-change .msg-box {margin-top: 24px;}
+.cd-change .link01 {padding-top: 12px; text-align:center;}
+.cd-change .number {vertical-align: 1px;}
+.cd-change .txt06 {font-size: 16px; line-height: 24px; letter-spacing: -0.4px;}
+.depth-step + .cd-change .cd-name {margin-top: 4px;}
+.txt01 + .cd-change {padding-top: 16px;}
+
+.card-img {position: relative; margin: 16px auto 0 auto; height: 128px; text-align: center; background: url(../images/etc/bg_card_shadow.png) no-repeat center 22px / 168px auto;}
+.card-img img {display: inline-block; width: 168px; height: 104px;}
+
+.cd-name .c-nm {display: inline-block; max-width: 310px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.cd-name > span {vertical-align: top;}
+@media only screen and (max-width: 414px) {
+    .cd-change .c-nm {width: 280px;}
+}
+@media only screen and (max-width: 375px) {
+    .cd-change .c-nm {width: 250px;}
+}
+@media only screen and (max-width: 360px) {
+    .cd-change .c-nm {width: 240px;}
+}
+@media only screen and (max-width: 320px) {
+    .cd-change .c-nm {width: 200px;}
+}
+
+.cd-change .delete-card {display: none; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 168px; height: 106px; border-radius: 4px; background: rgba(0, 0, 0, 0.5);}
+.cd-change .delete-card span {display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); height: 20px; padding: 0 8px; border: 1px solid #fff; border-radius: 10px; color: #fff; background: none;}
+.cd-change .card-list .slick-current .delete-card {display: block;}
+
+
+/* Card */
+.cd-nodata .msg-nodata {margin-top: 104px; color: #888; font-size: 14px; font-weight: 400; line-height: 20px; letter-spacing: -0.2px; text-align: center;}
+.cd-nodata .msg-nodata::before {content: ""; display: block; width: 48px; height: 48px; margin: 0 auto 7px; background: url(../images/icon/ico_nodata.png) no-repeat; background-size: contain;}
+.cd-nodata .resend-tip {padding-top: 16px;}
+
+/* underline link*/
+.resend-tip {padding-top:32px; text-align:right;}
+.resend-tip > button,
+.resend-tip > a {display:inline-block; padding:0 0 2px 0; font-size:16px; color:#666; letter-spacing: -0.2px; border-bottom: 1px solid #aaa; background:#fff}
+.resend-tip > button + button,
+.resend-tip > a + button,
+.resend-tip > button + a {margin-left:13px;}
+.passWrap + .resend-tip {padding-top:16px; text-align:center;}
+
+@media only screen and (max-width: 320px) {
+    .resend-tip > button + button,
+    .resend-tip > a + button,
+    .resend-tip > button + a {margin-top:8px; margin-left: 0;}
+}
+
+/* 회원가입 박스 */
+.join-box {margin-top: 32px;}
+.join-box .join-tit {font-size: 16px; color: #222; font-weight: 700; line-height: 24px; letter-spacing: -0.4px;}
+.join-box .join-tb {position: relative; display: table; margin-top: 20px; padding-right: 40px; width: 100%;}
+.join-box .join-tb .icon {display: table-cell; width: 48px; height: 48px; vertical-align: middle;}
+.join-box .join-tb .icon img {display: block; width: 100%; height: 100%;}
+.join-box .join-tb .tit-area {display: table-cell; padding-left: 16px; font-size: 18px; color: #222; font-weight: 700; line-height: 26px; letter-spacing: -0.4px; vertical-align: middle;}
+.join-box .join-tb:after {position: absolute; top: calc(50% - 12px); right: 0; content: ""; width: 24px; height: 24px; background: url(../images/icon/ico_arrow_gray.png) no-repeat; background-size: 100%; overflow: hidden;}
+
+
+/* 14세미만 회원가입 불가영역 */
+.join-failed {position: relative; margin-top: 16px; padding-top: 104px;}
+.join-failed:before {position: absolute; top: 0; left: 0; content: ""; width: 80px; height: 80px; background: url(../images/icon/ico_join_failed.png) no-repeat; background-size: 100%;}
+.join-failed .failed-tit {font-size: 18px; color: #222; font-weight: 700; line-height: 26px; letter-spacing: -0.4px;}
+.join-failed .failed-txt {padding-top: 8px; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px;}
+
+
+/* 결제수단관리 상품권포인트박스 */
+.gift-box {display: table; margin-bottom: 8px; padding: 9px 16px; width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
+.gift-box dl {display: table-cell; font-size: 0; vertical-align: middle;}
+.gift-box dl dt{display: inline-block; font-size: 14px; color: #222; line-height: 20px; letter-spacing: -0.2px;}
+.gift-box dl dd{display: inline-block; padding-left: 16px; font-size: 16px; color: #6d5cda; font-weight: 700; line-height: 24px; letter-spacing: -0.4px;}
+.gift-box .btn {display: table-cell; font-size: 0; text-align: right; vertical-align: middle;}
+.gift-box .btn a {display: inline-block; padding-bottom: 2px; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px; background: none; border-bottom: 1px solid #aaa;}
+.gift-box .btn a + a {margin-left: 12px;}
+.gift-box.disabled {background: #f8f8f8; border-color: #f8f8f8;}
+.gift-box.disabled dl dt,
+.gift-box.disabled dl dd {color: #888;}
+@media screen and (max-width: 430px) {
+    .gift-box {padding: 9px 8px;}
+    .gift-box dl {white-space: nowrap;}
+    .gift-box dl dd {padding-left: 8px; font-size: 14px; line-height: 20px;}
+    .gift-box .btn a + a {margin-left: 6px;}
+}
+
+
+/* 보안인증 */
+.pc-cert {margin-top: 48px; font-size: 0; text-align: center;}
+.pc-cert li {position: relative; display: inline-block; padding: 16px 0 24px 0; width: 50%; vertical-align: top;}
+.pc-cert li .img {margin: 0 auto; width: 48px; height: 48px;}
+.pc-cert li .img img {display: block; width: 100%; height: 100%;}
+.pc-cert li .tit-area {padding-top: 16px; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px;}
+.pc-cert li .tit-area strong {display: block; padding-top: 8px; font-size: 18px; color: #222; font-weight: 700; line-height: 26px; letter-spacing: -0.4px;}
+.pc-cert li .btn-line-group {margin-top: 16px; font-size: 0;}
+.pc-cert li .btn-line-group button {display: inline-block; padding: 0 0 1px 0; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px; background: none; border-bottom: 1px solid #aaa;}
+.pc-cert li .btn-line-group button + button {margin-left: 16px;}
+.pc-cert li + li:before {position: absolute; top: 0; left: 0.5px; content: ""; width: 1px; height: 100%; border-left: 1px dashed #eee;}
+@media screen and (max-width: 430px) {
+    .pc-cert li .btn-line-group {margin-top: 24px; font-size: 0;}
+    .pc-cert li .btn-line-group button {display: block; margin: 0 auto; padding: 0 0 1px 0; width: auto; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px; background: none; border-bottom: 1px solid #aaa;}
+    .pc-cert li .btn-line-group button + button {margin: 4px auto 0 auto;}
+}
+
+
+/* 앱카드인증 */
+.qr-scan {display: table; margin: 16px 0; padding: 16px 5%; width: 100%; text-align: center; border: 1px solid #eee;}
+.qr-scan .img {display: table-cell; width: 45%; height: 88px; vertical-align: middle;}
+.qr-scan .img img {display: block; margin: 0 auto; width: 88px; height: 88px;}
+.qr-scan .btn-area {display: table-cell; width: 45%; vertical-align: middle;}
+.qr-scan .btn-area .time {font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px;}
+.qr-scan .btn-area .time span {display: inline-block; margin-left: 4px; color: #ff0000;}
+.qr-scan .btn-area .refresh {margin-top: 7px; padding: 0 16px; height: 32px; font-size: 14px; color: #666; line-height: 20px; letter-spacing: -0.2px; background: none; border: 1px solid #ddd; border-radius: 8px;}
+
+
+/* 인증받은 기기 */
+.cert-device .list-none {position: relative; margin-top: 112px; padding-top: 56px; font-size: 14px; color: #888; line-height: 20px; letter-spacing: -0.2px; text-align: center;}
+.cert-device .list-none:before {position: absolute; top: 0; left: calc(50% - 24px); content: ""; width: 48px; height: 48px; background: url(../images/icon/ico_nodata.png) no-repeat; background-size: 100%;}
+
+.cert-device .list .tit-area {padding: 16px 0 8px 0; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px;}
+.cert-device .list .item a {position: relative; display: block; padding: 16px 32px 16px 48px; width: 100%;}
+.cert-device .list .item a:before {position: absolute; top: calc(50% - 16px); left: 0; content: ""; width: 32px; height: 32px;}
+.cert-device .list .item .pc:before {background: url(../images/icon/ico_cert_pc.png) no-repeat; background-size: 100%;}
+.cert-device .list .item .mobile:before {background: url(../images/icon/ico_cert_mo.png) no-repeat; background-size: 100%;}
+.cert-device .list .item a:after {position: absolute; top: calc(50% - 12px); right: 0; content: ""; width: 24px; height: 24px; background: url(../images/icon/ico_arrow_gray.png) no-repeat; background-size: 100%;}
+.cert-device .list .item a span {display: inline-block; font-size: 16px; color: #222; font-weight: 700; line-height: 24px; letter-spacing: -0.4px;}
+.cert-device .info-txt {margin-top: 4px; font-size: 14px; color: #888; line-height: 20px; letter-spacing: -0.2px;}
+.cert-device .btn-list {margin-top: 24px; padding-bottom: 16px; font-size: 0; text-align: right;}
+.cert-device .btn-list a {display: inline-block; padding: 0 0 1px 0; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px; background: none; border-bottom: 1px solid #aaa;}
+.cert-device .btn-list a + a {margin-left: 16px;}
+
+.device-info {padding-top: 24px;}
+.device-info .list-none {position: relative; margin-top: 98px; padding-top: 56px; font-size: 14px; color: #888; line-height: 20px; letter-spacing: -0.2px; text-align: center;}
+.device-info .list-none:before {position: absolute; top: 0; left: calc(50% - 24px); content: ""; width: 48px; height: 48px; background: url(../images/icon/ico_nodata.png) no-repeat; background-size: 100%;}
+.device-info .list {padding-bottom: 40px;}
+.device-info .list .tit-area {font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px;}
+.device-info .list .btn-more {width: 100%; height: 48px; background: rgba(255, 255, 255, 0.8); border: 1px solid #eee; border-radius: 8px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);}
+.device-info .list .btn-more span {position: relative; display: inline-block; padding-left: 20px; font-size: 14px; color: #222; font-weight: 500; line-height: 20px; letter-spacing: -0.2px;}
+.device-info .list .btn-more span:before {position: absolute; top: 2px; left: 0; content: ""; width: 16px; height: 16px; background: url(../images/icon/ico_plus.png) no-repeat; background-size: 100%;}
+.device-info .item {padding: 32px 0 32px 0;}
+.device-info .item:first-child {padding-top: 24px;}
+.device-info .item .date {font-size: 14px; color: #888; font-weight: 700; line-height: 20px; letter-spacing: -0.2px;}
+.device-info .item .name {margin-top: 8px; font-size: 18px; color: #222; font-weight: 700; line-height: 26px; letter-spacing: -0.4px;}
+.device-info .item dl {margin-top: 16px;}
+.device-info .item + .item {border-top: 1px solid #eee;}
+.device-info dl {display: table; width: 100%;}
+.device-info dl + dl {margin-top: 8px;}
+.device-info dl dt {display: table-cell; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px;}
+.device-info dl dd {display: table-cell; font-size: 16px; color: #222; font-weight: 500; line-height: 24px; letter-spacing: -0.4px; text-align: right;}
+.device-info .btn-list {margin-top: 24px; font-size: 0; text-align: right;}
+.device-info .btn-list button {display: inline-block; padding: 0 0 1px 0; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px; background: none; border-bottom: 1px solid #aaa;}
+.device-info .btn-list button + button {margin-left: 16px;}
+.l-contents .device-info {padding-top: 0;}
+
+/* 결제비밀번호 오류 */
+.pass-error {position: relative; margin-top: 32px; padding-top: 56px; font-size: 14px; color: #888; line-height: 20px; letter-spacing: -0.2px; text-align: center;}
+.pass-error:before {position: absolute; top: 0; left: calc(50% - 24px); content: ""; width: 48px; height: 48px; background: url(../images/icon/ico_nodata.png) no-repeat; background-size: 100%;}
+@media only screen and (max-width: 400px) {
+    .pass-error {margin-top: 8px; font-size: 12px; line-height: 18px; letter-spacing: -0.4px;}
+}
+
+/* 카드 본인인증 */
+.card-cert-logo {padding: 8px 0;}
+.card-cert-logo img {display: block; margin: 0 auto; width: 168px; height: 40px;}
+.card-cert-link li + li {border-top: 1px solid #ddd;}
+.card-cert-link a {position: relative; display: table; width: 100%; min-height: 78px;}
+.card-cert-link a:before {position: absolute; top: calc(50% - 12px); right: 0; content: ""; width: 24px; height: 24px; background: url(../images/icon/ico_arrow_gray_02.png) no-repeat; background-size: 100%;}
+.card-cert-link a .icon {position: absolute; top: 50%; left: 0; width: 32px; height: auto; transform: translateY(-50%);}
+.card-cert-link a .icon img {display: block; width: 100%; height: 100%;}
+.card-cert-link a .txt-area {display: table-cell; padding: 16px 40px; vertical-align: middle;}
+.card-cert-link a .txt-area p {font-size: 18px; color: #222; font-weight: 500; line-height: 26px; letter-spacing: -0.4px;}
+.card-cert-link a .txt-area span {display: block; font-size: 12px; color: #666; line-height: 16px; letter-spacing: -0.2px;}
+.card-cert-link a .txt-area p + span {margin-top: 4px;}
+
+/* 앱카드 인증 */
+.qr-cert {margin-top: 16px;}
+.qr-cert .qr-box {display: table; padding: 16px 8%; width: 100%; height: 120px; text-align: left; border: 1px solid #ddd;}
+.qr-cert .qr-box .img {display: table-cell; width: 42%; height: 88px; vertical-align: middle;}
+.qr-cert .qr-box .img img {display: block; margin: 0 auto; width: 88px; height: 88px;}
+.qr-cert .qr-box .num {display: table-cell; width: 42%; font-size: 18px; color: #222; font-weight: 500; line-height: 26px; letter-spacing: 8px; vertical-align: middle;}
+.qr-cert .time {margin-top: 16px; font-size: 14px; color: #222; font-weight: 700; line-height: 20px; letter-spacing: -0.2px; text-align: right;}
+
+.time-limit {margin-top: 16px; font-size: 14px; color: #222; font-weight: 700; line-height: 20px; letter-spacing: -0.2px; text-align: right;}
+
+
+
+.kbp_payc_001 .tab-ui .tab-contents {padding: 0;}
+
+.kbp_webp_003 {height: auto !important; padding-bottom: 24px;}
+.kbp_webp_003 > .tit {font-weight: 700;}
+@media only screen and (max-width: 375px) {
+    .kbp_webp_003 > .tit {font-size: 15px;}
+}
+.kbp_webp_003 + .bottom-group {padding-top: 0;}
+
+.kbp_payc_015 .tool-tip {width:100%;}
+.kbp_payc_015 .tool-tip.up {padding-top: 44px;}
+.kbp_payc_015 .tip-box {/*top:inherit; bottom:30px; left:32px; width:auto;*/ position: relative;}
+
+.kbp_payc_017 .card-box.pay {margin-bottom: 16px;}
+.kbp_payc_017 .msg {margin-top: 2px;}
+.kbp_payc_017 .msg02 {margin-top: 16px;}
+.kbp_payc_017 .form-wrap {margin-top: 20px;}
+.kbp_payc_017 .form-text-list li .cell {width: 45%;}
+.kbp_payc_017 .form-text-list li .cell + .cell {width: 55%; vertical-align: middle;}
+.kbp_payc_017 .form-text-list li .cell .f-chk {color: #666;}
+
+.kbp_payc_017 .btn-prev {position: absolute; left: 0; top: calc(50% - 12px); transform: rotate(180deg); -webkit-transform: rotate(180deg); width: 24px; height: 24px; font-size: 0; background: url(../images/icon/ico_arrow_gray.png) no-repeat; background-size: 100%; z-index: 10;}
+.kbp_payc_017 .btn-next {position: absolute; right: 0; top: calc(50% - 12px); width: 24px; height: 24px; font-size: 0; background: url(../images/icon/ico_arrow_gray.png) no-repeat; background-size: 100%; z-index: 10;}
+
+.kbp_payc_022 .card-box.pay {margin-bottom: 16px;}
+.kbp_payc_022 .pointry-use {display: table; margin: 8px auto 0; font-size: 16px; line-height: 24px; letter-spacing: -0.4px;}
+.kbp_payc_022 .pointry-use > * {display: table-cell;}
+.kbp_payc_022 .pointry-use dt {color: #666;}
+.kbp_payc_022 .pointry-use dd {padding-left: 16px; color: #222; font-weight: 500;}
+
+.kbp_payc_023 .card-box.pay {margin-bottom: 16px;}
+
+.kbp_payc_024 .card-box.pay {margin-bottom: 16px;}
+.kbp_payc_024 .msg02 {margin-top: 8px; font-size: 16px; line-height: 24px; letter-spacing: -0.4px;}
+
+.kbp_payc_025 .card-box.pay {margin-bottom: 16px;}
+.kbp_payc_025 .msg {margin-top: 92px;}
+.kbp_payc_025 .msg02 {margin-top: 16px;}
+
+.kbp_payc_026 {padding-top: 8px;}
+.kbp_payc_026 .bottom-btn {position: static; margin-top: 8px;}
+
+.kbp_webp_037 .head .f-chk.checked:before {background: url(../images/icon/ico_chk_on03.png) no-repeat; background-size: contain;}
+
+.kbp_payc_044 .form-wrap + .list-txt04 {position: relative; bottom: unset; left: unset; margin-top: 28px; padding: 0;}
+
+.kbp_payc_046 .txt12 {margin-top: 12px; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px;}
+
+.kbp_payc_052 .list-ico {margin-top:16px; border-top:1px solid #ddd;}
+.kbp_payc_052 .list-ico > li:first-child {padding-top:16px;}
+.kbp_payc_052 .list-dot {margin-top:16px; padding:16px 0; border-top: 1px solid #eee;}
+
+.kbp_payc_054 .txt {color: #222;}
+
+.kbp_payc_055 .tit02 {font-size: 18px; line-height: 26px;}
+
+.kbp_webp_060 .agree-terms {margin-top: 4px;}
+
+.kbp_payc_064 .head .f-chk.checked:before {background: url(../images/icon/ico_chk_on03.png) no-repeat; background-size: contain;}
+
+.kbp_webp_065 .txt07 {font-size: 16px; line-height: 24px; letter-spacing: -0.4px;}
+.kbp_webp_065 .agree-terms {margin-top: 16px;}
+.kbp_webp_065 .agree-terms .head{border-radius: 4px; border: solid 1px #dddddd; background-color: #ffffff;}
+.kbp_webp_065 .agree-terms .head .f-chk.checked:before {background: url(../images/icon/ico_chk_on03.png) no-repeat; background-size: contain;}
+.kbp_webp_065 .agree-terms .list {border-top: none;}
+.kbp_webp_065 .agree-terms .list > li:last-child .show-detail {text-decoration: none;}
+.kbp_webp_065 .agree-terms .list .list-2depth {margin-top: 14px;}
+
+@media only screen and (max-width: 320px) {
+    .kbp_payc_068 .txt01 {font-size: 14px;}
+}
+
+.kbp_payc_081 {padding-top: 0;}
+.kbp_payc_081 .list-card-btn {padding-top: 8px;}
+.kbp_payc_081 .list-card-btn li > * {padding: 9px 16px;}
+.kbp_payc_081 .list-card-btn li > * .type {color: #666;}
+.kbp_payc_081 .gift-box {padding: 8px 16px 7px 16px;}
+.kbp_payc_081 .gift-box ul li {font-size: 16px; color: #222; line-height: 24px; letter-spacing: -0.4px;}
+.kbp_payc_081 .gift-box .btn a {font-size: 16px; line-height: 24px; letter-spacing: -0.4px;}
+
+
+/* 결제수단추가 */
+.kbp_payc_082 .list-card-box {margin-bottom:0;}
+.kbp_payc_082 .list-card-box + .align-r {padding:8px 0 32px;}
+
+.kbp_payc_085 .list-num li {font-weight: 400;}
+.kbp_payc_085 .list-num li:before {font-weight: 700;}
+.kbp_payc_085 .list-num li + li {margin-top: 8px;}
+.kbp_payc_085 .txt07 {margin-top: 24px; padding-bottom: 16px;}
+
+.kbp_payc_086 {padding-top: 8px;}
+.kbp_payc_086 .list-none .btn-list {position: fixed; right: 16px; bottom: 48px;}
+
+.kbp_payc_088 .txt12 {color: #666;}
+.kbp_payc_088 .form-wrap {margin-top: 28px;}
+
+.kbp_payc_089 .addr-detail-input {margin-top: 28px;}
+
+.kbp_payc_100 .form-rdo {padding-bottom: 8px;}
+.kbp_payc_100 .form-rdo > label {display: block; padding-bottom: 16px; font-size: 16px; color: #666; line-height: 24px; letter-spacing: -0.4px; border-bottom: 1px solid #ddd;}
+.kbp_payc_100 .rdo-group {padding-top: 16px;}
+.kbp_payc_100 .rdo-group .f-rdo:before {margin-right: 8px; font-size: 16px; color: #222; line-height: 24px; letter-spacing: -0.4px; box-sizing: border-box;}
+.kbp_payc_100 .rdo-group .f-rdo + .f-rdo {margin-left: 24px;}
+
+.kbp_payc_102 .list-txt04 {position: static; padding: 0 0 8px 0;}
+
+.kbp_payc_103 .list-txt03 {margin-top: 24px;}
+.kbp_payc_103 .list-txt03 li + li {margin-top: 8px;}
+
+.kbp_payc_105 .agree-terms {margin-top: 0;}
+.kbp_payc_105 .agree-terms .head .f-chk.checked:before {background: url(../images/icon/ico_chk_on03.png) no-repeat; background-size: contain}
+
+.kbp_payc_107 .form-rdo .lb {font-size: 14px; color: #888; line-height: 20px; letter-spacing: -0.2px;}
+.kbp_payc_107 .rdo-group {padding-top: 8px;}
+.kbp_payc_107 .rdo-group .f-rdo:before {margin-right: 8px; font-size: 16px; color: #222; line-height: 24px; letter-spacing: -0.4px; box-sizing: border-box;}
+.kbp_payc_107 .rdo-group .f-rdo + .f-rdo {margin-left: 24px;}
+
+.kbp_payc_108 .list-txt03 {margin-top: 8px;}
+.kbp_payc_108 .list-txt03 li {font-size: 16px; line-height: 24px; letter-spacing: -0.4px;}
+.kbp_payc_108 .list-txt03 li:before {top: 10px;}
+.kbp_payc_108 .list-txt03 li + li {margin-top: 16px;}
+
+.kbp_payc_110 .list-txt05 li + li {margin-top: 8px;}
+
+@media only screen and (max-width: 320px) {
+    .kbp_payc_017 .msg,
+    .kbp_payc_024 .msg,
+    .kbp_payc_025 .msg {font-size: 17px;}
+    .kbp_payc_024 .msg02,
+    .kbp_payc_025 .msg02 {font-size: 12px;}
+}

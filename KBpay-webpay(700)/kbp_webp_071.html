@@ -1,0 +1,83 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-19          최초작성
+이진규             2020-06-30          마크업 변경
+이진규             2020-07-06          텍스트 수정, 인증번호 4자리로 변경, 팝업 추가
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>ARS인증</title> <!-- 07-06 텍스트 수정 -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="header">
+            <h1>ARS 인증</h1> <!-- 07-06 텍스트 수정 -->
+            <button type="button" class="btn close">닫기</button>
+        </header>
+
+        <div class="container">
+            <div class="contents-wrap">
+                
+                <div class="contents kbp_webp_071">
+                    
+                    <!-- 06-30 마크업 구조변경 -->
+                    <div class="ars-cert">
+                        <p class="msg">아래의 버튼을 통해 ARS안내에 따라<br>ARS인증을 진행해주세요.</p>
+                        <button type="button" class="submit">ARS인증 연결</button> <!-- 연결, 재연결 -->
+                        <p class="code" style="display: block;"><span>8901</span></p> <!-- 연결 시 노출 --> <!-- 07-06 인증번호 4자리로 변경 -->
+                    </div>
+                    <!-- // 06-30 마크업 구조변경 -->
+
+                    
+                </div>
+
+                <!-- Bottom button area -->
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled><span>확인</span></button>
+                    </div>
+                </div>
+                <!-- //Bottom button area -->
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 07-06 팝업 추가 -->
+    <div class="l-dim"></div>
+
+    <div class="l-pop" id="pop01" tabindex="0">
+        <div class="pop-wrap">
+            <div class="l-container">
+                <p class="txt">
+                    <span>
+                        회원가입이 완료되지 않았습니다.<br>회원가입을 중단하시겠습니까?
+                    </span>
+                </p>
+            </div>
+            <div class="l-footer">
+                <div class="btn-group pt0 half">
+                    <button class="btn medium gray" type="button">취소</button>
+                    <button class="btn medium yellow" type="button">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 07-06 팝업 추가 -->
+
+
+</body>
+</html>
